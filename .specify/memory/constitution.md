@@ -1,55 +1,43 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT:
+Version change: N/A → 1.0.0
+Added sections: All principles and sections for Physical AI & Humanoid Robotics textbook
+Modified sections: N/A
+Removed sections: N/A
+Templates requiring updates: ✅ Updated / ⚠ pending
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. AI-Driven Development
+All development follows Spec-Kit Plus methodology with Claude Code; Every feature begins with specification → plan → tasks → implementation; Use of AI agents for content generation, code creation, and testing is mandatory; Each component must leverage AI assistance to maximize efficiency and innovation.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Modular Architecture
+Textbook content organized in distinct modules (ROS 2, Gazebo/Unity, NVIDIA Isaac, VLA); Each module must be independently accessible and comprehensible; Components (Docusaurus, RAG chatbot, authentication, personalization) must be loosely coupled with clear interfaces; Reusable subagents must be created for common operations.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test-First (NON-NEGOTIABLE)
+Every feature must be specified with clear acceptance criteria before implementation; All components must include comprehensive tests (unit, integration, end-to-end); Content accuracy must be validated against authoritative sources; Demo functionality must be tested before submission.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Comprehensive Integration
+Critical integration points: Docusaurus + RAG chatbot, Authentication system + personalization engine, Content management + translation system; All integrated components must work seamlessly together; Cross-component dependencies must be clearly documented and tested.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Accessibility & Internationalization
+Content must be accessible to diverse audiences with varying technical backgrounds; Urdu translation capability must be implemented for all textbook content; Personalization features must accommodate different learning styles and skill levels; User onboarding must capture relevant background information for tailored experiences.
 
-### [PRINCIPLE_6_NAME]
+### VI. Performance & Scalability
+All components must perform efficiently under expected load; RAG system must respond to queries within acceptable timeframes; Docusaurus site must load quickly and provide smooth navigation; Authentication and personalization systems must scale appropriately.
 
+## Technical Standards
 
-[PRINCIPLE__DESCRIPTION]
+Docusaurus framework for documentation; FastAPI for RAG backend services; Better Auth for authentication; Qdrant Cloud for vector database; Neon Serverless Postgres for user data; OpenAI or compatible API for LLM integration; Git-based version control with clear commit standards; GitHub Pages for deployment.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Specifications must precede implementation using /sp.specify; Architectural plans created with /sp.plan before coding; Tasks broken down systematically using /sp.tasks; Implementation executed with /sp.implement; All changes documented with Prompt History Records; Regular compliance reviews ensure adherence to principles.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all development activities for the Physical AI & Humanoid Robotics textbook project; All code reviews must verify constitutional compliance; Amendments require explicit approval and documentation; All contributors must acknowledge and follow these principles; Project success measured by adherence to principles and achievement of hackathon requirements.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-22 | **Last Amended**: 2026-01-22
