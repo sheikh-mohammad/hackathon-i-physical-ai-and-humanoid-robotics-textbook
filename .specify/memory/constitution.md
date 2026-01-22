@@ -1,36 +1,46 @@
 <!-- SYNC IMPACT REPORT:
-Version change: N/A → 1.0.0
-Added sections: All principles and sections for Physical AI & Humanoid Robotics textbook
-Modified sections: N/A
+Version change: 1.0.0 → 1.1.0
+Added sections: Separated Book Content Principles from Technical Standards
+Modified sections: Reorganized Core Principles to focus on book content, moved technical standards to separate section
 Removed sections: N/A
 Templates requiring updates: ✅ Updated / ⚠ pending
 Follow-up TODOs: None
 -->
 # Physical AI & Humanoid Robotics Textbook Constitution
 
-## Core Principles
+## Book Content Principles
 
-### I. AI-Driven Development
-All development follows Spec-Kit Plus methodology with Claude Code; Every feature begins with specification → plan → tasks → implementation; Use of AI agents for content generation, code creation, and testing is mandatory; Each component must leverage AI assistance to maximize efficiency and innovation.
+### I. Educational Excellence
+All content must follow pedagogical best practices for teaching Physical AI & Humanoid Robotics; Every chapter begins with clear learning objectives → content → exercises → assessment; Use of AI agents for content generation, visualization, and personalized learning is mandatory; Each concept must be explained with practical examples and real-world applications.
 
-### II. Modular Architecture
-Textbook content organized in distinct modules (ROS 2, Gazebo/Unity, NVIDIA Isaac, VLA); Each module must be independently accessible and comprehensible; Components (Docusaurus, RAG chatbot, authentication, personalization) must be loosely coupled with clear interfaces; Reusable subagents must be created for common operations.
+### II. Modular Learning Architecture
+Textbook content organized in distinct, self-contained modules (ROS 2, Gazebo/Unity, NVIDIA Isaac, VLA); Each module must be independently accessible and comprehensible for different skill levels; Content must be structured with progressive difficulty allowing learners to advance at their own pace; Reusable learning components must be created for common robotics concepts.
 
-### III. Test-First (NON-NEGOTIABLE)
-Every feature must be specified with clear acceptance criteria before implementation; All components must include comprehensive tests (unit, integration, end-to-end); Content accuracy must be validated against authoritative sources; Demo functionality must be tested before submission.
+### III. Quality Assurance (NON-NEGOTIABLE)
+Every chapter must be specified with clear learning outcomes and acceptance criteria before implementation; All content must include comprehensive assessments (quizzes, hands-on exercises, projects); Technical accuracy must be validated against authoritative sources and industry standards; Practical demonstrations and simulations must be verified before publication.
 
-### IV. Comprehensive Integration
-Critical integration points: Docusaurus + RAG chatbot, Authentication system + personalization engine, Content management + translation system; All integrated components must work seamlessly together; Cross-component dependencies must be clearly documented and tested.
+### IV. Integrated Learning Experience
+Critical integration points: Theory + Practice, Interactive tutorials + Real hardware simulation, Content management + adaptive learning engine; All learning components must work seamlessly together to provide cohesive educational journey; Cross-topic dependencies must be clearly documented and logically sequenced for optimal learning flow.
 
-### V. Accessibility & Internationalization
-Content must be accessible to diverse audiences with varying technical backgrounds; Urdu translation capability must be implemented for all textbook content; Personalization features must accommodate different learning styles and skill levels; User onboarding must capture relevant background information for tailored experiences.
+### V. Accessibility & Inclusivity
+Content must be accessible to diverse audiences with varying technical backgrounds and learning preferences; Urdu translation capability must be implemented for all textbook content to serve global audience; Personalization features must accommodate different learning styles, paces, and skill levels; User onboarding must capture relevant background information for tailored educational experiences.
 
-### VI. Performance & Scalability
-All components must perform efficiently under expected load; RAG system must respond to queries within acceptable timeframes; Docusaurus site must load quickly and provide smooth navigation; Authentication and personalization systems must scale appropriately.
+### VI. Performance & Engagement
+All learning components must perform efficiently to maintain student engagement; Interactive elements must respond within acceptable timeframes to ensure smooth learning experience; Content delivery must be optimized for various devices and connection speeds; Adaptive learning systems must scale to accommodate diverse user needs.
 
-## Technical Standards
+## Technical Implementation Standards
 
-Docusaurus framework for documentation; FastAPI for RAG backend services; Better Auth for authentication; Qdrant Cloud for vector database; Neon Serverless Postgres for user data; OpenAI or compatible API for LLM integration; Git-based version control with clear commit standards; GitHub Pages for deployment.
+### Backend Infrastructure
+FastAPI for RAG backend services; Qdrant Cloud for vector database; Neon Serverless Postgres for user data; OpenAI or compatible API for LLM integration; Comprehensive logging and monitoring systems.
+
+### Frontend & Presentation
+Docusaurus framework for documentation and textbook presentation; Responsive design for multi-device compatibility; Modern UI/UX design following accessibility guidelines.
+
+### Authentication & Personalization
+Better Auth for secure authentication and authorization; Personalization engine for adaptive content delivery;
+
+### Development & Deployment
+Git-based version control with clear commit standards; GitHub Pages for deployment; Automated testing at all levels (unit, integration, end-to-end); Code quality and security scanning tools.
 
 ## Development Workflow
 
@@ -38,6 +48,6 @@ Specifications must precede implementation using /sp.specify; Architectural plan
 
 ## Governance
 
-This constitution governs all development activities for the Physical AI & Humanoid Robotics textbook project; All code reviews must verify constitutional compliance; Amendments require explicit approval and documentation; All contributors must acknowledge and follow these principles; Project success measured by adherence to principles and achievement of hackathon requirements.
+This constitution governs all development activities for the Physical AI & Humanoid Robotics textbook project; All code reviews must verify constitutional compliance; Amendments require explicit approval and documentation; All contributors must acknowledge and follow these principles; Project success measured by adherence to principles and achievement of educational objectives.
 
-**Version**: 1.0.0 | **Ratified**: 2026-01-22 | **Last Amended**: 2026-01-22
+**Version**: 1.1.0 | **Ratified**: 2026-01-22 | **Last Amended**: 2026-01-22
