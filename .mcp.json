@@ -4,6 +4,7 @@
             "type": "stdio",
             "command": "npx",
             "args": [
+                "-y",
                 "@upstash/context7-mcp"
             ],
             "env": {}
@@ -15,6 +16,10 @@
                 "@playwright/mcp@latest"
             ],
             "env": {}
+        },
+        "better-auth": {
+            "type": "http",
+            "url": "https://mcp.chonkie.ai/better-auth/better-auth-builder/mcp"
         }
     }
 }
