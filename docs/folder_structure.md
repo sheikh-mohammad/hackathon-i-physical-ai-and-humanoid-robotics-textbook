@@ -1,4 +1,4 @@
-## Docusaurus Folder Structure
+# Folder Structure for Physical AI Humanoid and Robotics Textbook
 
 ```markdown
 docs/
@@ -11,6 +11,28 @@ docs/
 │       ├── workstation-setup.md
 │       ├── edge-kits.md
 │       └── robot-platforms.md
+├── module-0-introduction-physical-ai/
+│   ├── index.md
+│   ├── foundations-physical-ai/
+│   │   ├── what-is-physical-ai.md
+│   │   ├── embodied-intelligence-principles.md
+│   │   ├── digital-vs-physical-ai.md
+│   │   └── historical-context-evolution.md
+│   ├── from-digital-ai-physical/
+│   │   ├── digital-ai-limitations.md
+│   │   ├── physical-laws-constraints.md
+│   │   ├── physics-simulation-basics.md
+│   │   └── real-world-application-challenges.md
+│   ├── humanoid-robotics-landscape/
+│   │   ├── current-state-humanoid-robots.md
+│   │   ├── major-players-technologies.md
+│   │   ├── use-cases-applications.md
+│   │   └── future-trends-predictions.md
+│   └── sensor-systems/
+│       ├── lidar-sensors-applications.md
+│       ├── camera-systems-computer-vision.md
+│       ├── imu-sensors-balance.md
+│       └── force-torque-sensors-feedback.md
 ├── module-1-robotic-nervous-system/
 │   ├── index.md
 │   ├── ros2-architecture-core-concepts/
@@ -92,11 +114,21 @@ docs/
 │   │   ├── costmap-configuration.md
 │   │   ├── path-planning-algorithms.md
 │   │   └── bipedal-navigation-challenges.md
-│   └── ai-perception-manipulation/
-│       ├── object-detection-robotics.md
-│       ├── grasping-manipulation-planning.md
-│       ├── multi-modal-perception-fusion.md
-│       └── real-time-inference-optimization.md
+│   ├── ai-perception-manipulation/
+│   │   ├── object-detection-robotics.md
+│   │   ├── grasping-manipulation-planning.md
+│   │   ├── multi-modal-perception-fusion.md
+│   │   └── real-time-inference-optimization.md
+│   ├── reinforcement-learning-robot-control/
+│   │   ├── rl-fundamentals-robotics.md
+│   │   ├── reward-function-design.md
+│   │   ├── training-simulation.md
+│   │   └── policy-transfer-real-robots.md
+│   └── sim-to-real-transfer/
+│       ├── domain-adaptation-methods.md
+│       ├── reality-gap-minimization.md
+│       ├── calibration-fine-tuning.md
+│       └── validation-testing-strategies.md
 ├── module-4-vision-language-action/
 │   ├── index.md
 │   ├── vla-framework-introduction/
@@ -114,34 +146,17 @@ docs/
 │   │   ├── prompt-engineering-robotics.md
 │   │   ├── reasoning-planning-pipelines.md
 │   │   └── context-management.md
+│   ├── multi-modal-interaction/
+│   │   ├── multimodal-fusion-techniques.md
+│   │   ├── cross-modal-attention.md
+│   │   ├── consistent-behavior-generation.md
+│   │   └── user-experience-design.md
 │   └── capstone-autonomous-humanoid/
 │       ├── system-architecture-design.md
 │       ├── voice-command-processing.md
 │       ├── path-planning-obstacle-navigation.md
 │       ├── object-identification-computer-vision.md
 │       └── manipulation-action-execution.md
-├── module-0-introduction-physical-ai/
-│   ├── index.md
-│   ├── foundations-physical-ai/
-│   │   ├── what-is-physical-ai.md
-│   │   ├── embodied-intelligence-principles.md
-│   │   ├── digital-vs-physical-ai.md
-│   │   └── historical-context-evolution.md
-│   ├── from-digital-ai-physical/
-│   │   ├── digital-ai-limitations.md
-│   │   ├── physical-laws-constraints.md
-│   │   ├── physics-simulation-basics.md
-│   │   └── real-world-application-challenges.md
-│   ├── humanoid-robotics-landscape/
-│   │   ├── current-state-humanoid-robots.md
-│   │   ├── major-players-technologies.md
-│   │   ├── use-cases-applications.md
-│   │   └── future-trends-predictions.md
-│   └── sensor-systems/
-│       ├── lidar-sensors-applications.md
-│       ├── camera-systems-computer-vision.md
-│       ├── imu-sensors-balance.md
-│       └── force-torque-sensors-feedback.md
 ├── module-5-humanoid-robot-development/
 │   ├── index.md
 │   ├── humanoid-kinematics-dynamics/
@@ -164,19 +179,7 @@ docs/
 │       ├── gesture-recognition.md
 │       ├── emotional-expression.md
 │       └── safety-considerations.md
-├── module-6-reinforcement-learning/
-│   ├── index.md
-│   ├── rl-robot-control/
-│   │   ├── rl-fundamentals-robotics.md
-│   │   ├── reward-function-design.md
-│   │   ├── training-simulation.md
-│   │   └── policy-transfer-real-robots.md
-│   └── sim-to-real-transfer/
-│       ├── domain-adaptation-methods.md
-│       ├── reality-gap-minimization.md
-│       ├── calibration-fine-tuning.md
-│       └── validation-testing-strategies.md
-├── module-7-conversational-robotics/
+├── module-6-conversational-robotics/
 │   ├── index.md
 │   ├── gpt-conversational-ai/
 │   │   ├── gpt-integration-robotics.md
@@ -188,12 +191,7 @@ docs/
 │   │   ├── intent-classification.md
 │   │   ├── entity-extraction.md
 │   │   └── dialogue-management.md
-│   └── multi-modal-interaction/
-│       ├── multimodal-fusion-techniques.md
-│       ├── cross-modal-attention.md
-│       ├── consistent-behavior-generation.md
-│       └── user-experience-design.md
-├── module-8-hardware-requirements/
+├── module-7-hardware-requirements/
 │   ├── index.md
 │   ├── workstation-requirements/
 │   │   ├── gpu-requirements-selection.md

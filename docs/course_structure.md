@@ -1,6 +1,29 @@
-# Course Stucture
+# Course Structure for Physical AI Humanoid and Robotics Textbook
 
 Based on the course modules specified in the document:
+
+## Module 0: Introduction to Physical AI
+- Part: Introduction to Physical AI
+  - Chapter: Foundations of Physical AI and Embodied Intelligence
+    - Lesson: What is Physical AI?
+    - Lesson: Embodied Intelligence Principles
+    - Lesson: Differences Between Digital and Physical AI
+    - Lesson: Historical Context and Evolution
+  - Chapter: From Digital AI to Robots Understanding Physical Laws
+    - Lesson: Digital AI Limitations
+    - Lesson: Physical Laws and Constraints
+    - Lesson: Physics Simulation Basics
+    - Lesson: Real-World Application Challenges
+  - Chapter: Overview of Humanoid Robotics Landscape
+    - Lesson: Current State of Humanoid Robots
+    - Lesson: Major Players and Technologies
+    - Lesson: Use Cases and Applications
+    - Lesson: Future Trends and Predictions
+  - Chapter: Sensor Systems: LIDAR, Cameras, IMUs, Force/Torque Sensors
+    - Lesson: LIDAR Sensors and Applications
+    - Lesson: Camera Systems and Computer Vision
+    - Lesson: IMU Sensors and Balance Systems
+    - Lesson: Force/Torque Sensors and Feedback
 
 ## Module 1: The Robotic Nervous System (ROS 2)
 - Part: The Robotic Nervous System (ROS 2)
@@ -90,6 +113,16 @@ Based on the course modules specified in the document:
     - Lesson: Grasping and Manipulation Planning
     - Lesson: Multi-Modal Perception Fusion
     - Lesson: Real-Time Inference Optimization
+  - Chapter: Reinforcement Learning for Robot Control
+    - Lesson: RL Fundamentals for Robotics
+    - Lesson: Reward Function Design
+    - Lesson: Training in Simulation
+    - Lesson: Policy Transfer to Real Robots
+  - Chapter: Sim-to-Real Transfer Techniques
+    - Lesson: Domain Adaptation Methods
+    - Lesson: Reality Gap Minimization
+    - Lesson: Calibration and Fine-Tuning
+    - Lesson: Validation and Testing Strategies
 
 ## Module 4: Vision-Language-Action (VLA)
 - Part: Vision-Language-Action (VLA)
@@ -108,6 +141,11 @@ Based on the course modules specified in the document:
     - Lesson: Prompt Engineering for Robotics
     - Lesson: Reasoning and Planning Pipelines
     - Lesson: Context Management
+  - Chapter: Multi-Modal Interaction: Speech, Gesture, Vision
+    - Lesson: Multimodal Fusion Techniques
+    - Lesson: Cross-Modal Attention
+    - Lesson: Consistent Behavior Generation
+    - Lesson: User Experience Design
   - Chapter: Capstone Project: The Autonomous Humanoid
     - Lesson: System Architecture Design
     - Lesson: Voice Command Processing
@@ -115,29 +153,7 @@ Based on the course modules specified in the document:
     - Lesson: Object Identification with Computer Vision
     - Lesson: Manipulation and Action Execution
 
-## Additional Modules Based on Course Structure
-- Part: Introduction to Physical AI
-  - Chapter: Foundations of Physical AI and Embodied Intelligence
-    - Lesson: What is Physical AI?
-    - Lesson: Embodied Intelligence Principles
-    - Lesson: Differences Between Digital and Physical AI
-    - Lesson: Historical Context and Evolution
-  - Chapter: From Digital AI to Robots Understanding Physical Laws
-    - Lesson: Digital AI Limitations
-    - Lesson: Physical Laws and Constraints
-    - Lesson: Physics Simulation Basics
-    - Lesson: Real-World Application Challenges
-  - Chapter: Overview of Humanoid Robotics Landscape
-    - Lesson: Current State of Humanoid Robots
-    - Lesson: Major Players and Technologies
-    - Lesson: Use Cases and Applications
-    - Lesson: Future Trends and Predictions
-  - Chapter: Sensor Systems: LIDAR, Cameras, IMUs, Force/Torque Sensors
-    - Lesson: LIDAR Sensors and Applications
-    - Lesson: Camera Systems and Computer Vision
-    - Lesson: IMU Sensors and Balance Systems
-    - Lesson: Force/Torque Sensors and Feedback
-
+## Module 5: Humanoid Robot Development
 - Part: Humanoid Robot Development
   - Chapter: Humanoid Robot Kinematics and Dynamics
     - Lesson: Forward and Inverse Kinematics
@@ -160,18 +176,7 @@ Based on the course modules specified in the document:
     - Lesson: Emotional Expression
     - Lesson: Safety Considerations
 
-- Part: Reinforcement Learning and Sim-to-Real Transfer
-  - Chapter: Reinforcement Learning for Robot Control
-    - Lesson: RL Fundamentals for Robotics
-    - Lesson: Reward Function Design
-    - Lesson: Training in Simulation
-    - Lesson: Policy Transfer to Real Robots
-  - Chapter: Sim-to-Real Transfer Techniques
-    - Lesson: Domain Adaptation Methods
-    - Lesson: Reality Gap Minimization
-    - Lesson: Calibration and Fine-Tuning
-    - Lesson: Validation and Testing Strategies
-
+## Module 6: Conversational Robotics
 - Part: Conversational Robotics
   - Chapter: Integrating GPT Models for Conversational AI
     - Lesson: GPT Integration in Robotics
@@ -183,12 +188,8 @@ Based on the course modules specified in the document:
     - Lesson: Intent Classification
     - Lesson: Entity Extraction
     - Lesson: Dialogue Management
-  - Chapter: Multi-Modal Interaction: Speech, Gesture, Vision
-    - Lesson: Multimodal Fusion Techniques
-    - Lesson: Cross-Modal Attention
-    - Lesson: Consistent Behavior Generation
-    - Lesson: User Experience Design
 
+## Module 7: Hardware Requirements and Setup
 - Part: Hardware Requirements and Setup
   - Chapter: Workstation Requirements and Setup
     - Lesson: GPU Requirements and Selection
