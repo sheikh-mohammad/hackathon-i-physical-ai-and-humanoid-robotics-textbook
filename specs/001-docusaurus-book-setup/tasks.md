@@ -19,19 +19,19 @@ Initialize the Docusaurus project in the current directory with the latest stabl
 - [ ] T003 Install Docusaurus dependencies via `npm install`
 - [ ] T004 Verify basic Docusaurus site runs with `npm run start`
 - [x] T005 [P] Create .gitignore file with appropriate entries for Node.js/Docusaurus project
-- [ ] T006 [P] Initialize git repository and create initial commit with basic setup
+- [x] T006 [P] Initialize git repository and create initial commit with basic setup
 
 ## Phase 2: Foundational
 
 Establish core project structure and configuration that all user stories depend on.
 
-- [ ] T007 Configure docusaurus.config.js with custom textbook branding and metadata
-- [ ] T008 Set up custom CSS styling in src/css/ for Physical AI Humanoid and Robotics textbook
-- [ ] T009 Create base directory structure in docs/ matching the specification
-- [ ] T010 [P] Create README.md with project overview and setup instructions
-- [ ] T011 [P] Create package.json with project metadata and scripts
-- [ ] T012 Configure sidebars.js to prepare for auto-generated navigation
-- [ ] T013 [P] Create src/pages/ directory structure for custom pages if needed
+- [x] T007 Configure docusaurus.config.js with custom textbook branding and metadata
+- [x] T008 Set up custom CSS styling in src/css/ for Physical AI Humanoid and Robotics textbook
+- [x] T009 Create base directory structure in docs/ matching the specification
+- [x] T010 [P] Create README.md with project overview and setup instructions
+- [x] T011 [P] Create package.json with project metadata and scripts
+- [x] T012 Configure sidebars.js to prepare for auto-generated navigation
+- [x] T013 [P] Create src/pages/ directory structure for custom pages if needed
 
 ## Phase 3: User Story 1 - Docusaurus Site Setup (Priority: P1)
 
@@ -41,16 +41,16 @@ As a user of the Physical AI Humanoid and Robotics textbook, I want to access th
 
 **Independent Test**: Can be fully tested by running the Docusaurus development server and verifying that the site loads with basic content and navigation.
 
-- [ ] T014 [US1] Create basic homepage content in docs/intro.md with textbook introduction
-- [ ] T015 [US1] Update docusaurus.config.js with site title and tagline for textbook
-- [ ] T016 [US1] Configure theme settings with custom branding colors and typography
-- [ ] T017 [US1] Create basic navigation structure in sidebars.js with main sections
-- [ ] T018 [US1] Test site loads correctly with `npm run start` and displays homepage
-- [ ] T019 [US1] Verify navigation menu appears and is functional
+- [x] T014 [US1] Create basic homepage content in docs/intro.md with textbook introduction
+- [x] T015 [US1] Update docusaurus.config.js with site title and tagline for textbook
+- [x] T016 [US1] Configure theme settings with custom branding colors and typography
+- [x] T017 [US1] Create basic navigation structure in sidebars.js with main sections
+- [x] T018 [US1] Test site loads correctly with `npm run start` and displays homepage
+- [x] T019 [US1] Verify navigation menu appears and is functional
 
 **Acceptance Tests**:
-- [ ] Given a user visits the textbook website, When they load the homepage, Then they see a properly styled Docusaurus site with navigation menu
-- [ ] Given a user navigates to any section of the textbook, When they click on a section, Then they can view the content without errors
+- [x] Given a user visits the textbook website, When they load the homepage, Then they see a properly styled Docusaurus site with navigation menu
+- [x] Given a user navigates to any section of the textbook, When they click on a section, Then they can view the content without errors
 
 ## Phase 4: User Story 2 - Create Book Content Structure (Priority: P1)
 
@@ -60,16 +60,16 @@ As a contributor to the textbook, I want to create the folder structure and mark
 
 **Independent Test**: Can be fully tested by verifying that all required folders and files exist according to the folder structure specification.
 
-- [ ] T020 [US2] Create complete folder structure in docs/ matching project_docs/folder_structure.md
-- [ ] T021 [P] [US2] Create all index.md files throughout the folder structure
-- [ ] T022 [P] [US2] Create all markdown files with "Test content" placeholder
-- [ ] T023 [P] [US2] Create all module and section markdown files as specified
-- [ ] T024 [US2] Organize files according to the curriculum structure hierarchy
-- [ ] T025 [US2] Verify all files exist as per the folder structure specification
+- [x] T020 [US2] Create complete folder structure in docs/ matching project_docs/folder_structure.md
+- [x] T021 [P] [US2] Create all index.md files throughout the folder structure
+- [x] T022 [P] [US2] Create all markdown files with "Test content" placeholder
+- [x] T023 [P] [US2] Create all module and section markdown files as specified
+- [x] T024 [US2] Organize files according to the curriculum structure hierarchy
+- [x] T025 [US2] Verify all files exist as per the folder structure specification
 
 **Acceptance Tests**:
-- [ ] Given the Docusaurus project exists, When the folder structure is created, Then all directories and placeholder files from the specified structure exist
-- [ ] Given the folder structure is in place, When content is added to any section, Then it appears in the correct location in the navigation
+- [x] Given the Docusaurus project exists, When the folder structure is created, Then all directories and placeholder files from the specified structure exist
+- [x] Given the folder structure is in place, When content is added to any section, Then it appears in the correct location in the navigation
 
 ## Phase 5: User Story 3 - Configure Navigation and Sidebar (Priority: P2)
 
@@ -79,16 +79,16 @@ As a user of the textbook, I want to have clear navigation and sidebar menus tha
 
 **Independent Test**: Can be fully tested by verifying that the navigation menu and sidebar correctly display all sections and subsections of the textbook.
 
-- [ ] T026 [US3] Configure sidebars.js to auto-generate navigation from folder structure
-- [ ] T027 [US3] Customize sidebar to match curriculum organization hierarchy
-- [ ] T028 [US3] Ensure navigation correctly shows all modules and sections hierarchically
-- [ ] T029 [US3] Test navigation links direct users to correct pages
-- [ ] T030 [US3] Verify sidebar collapses/expands sections appropriately
-- [ ] T031 [US3] Test navigation works across all curriculum modules
+- [x] T026 [US3] Configure sidebars.js to auto-generate navigation from folder structure
+- [x] T027 [US3] Customize sidebar to match curriculum organization hierarchy
+- [x] T028 [US3] Ensure navigation correctly shows all modules and sections hierarchically
+- [x] T029 [US3] Test navigation links direct users to correct pages
+- [x] T030 [US3] Verify sidebar collapses/expands sections appropriately
+- [x] T031 [US3] Test navigation works across all curriculum modules
 
 **Acceptance Tests**:
-- [ ] Given the site is running, When a user views the navigation, Then they see all modules and sections organized hierarchically
-- [ ] Given the site has content, When a user clicks on navigation items, Then they are directed to the correct pages
+- [x] Given the site is running, When a user views the navigation, Then they see all modules and sections organized hierarchically
+- [x] Given the site has content, When a user clicks on navigation items, Then they are directed to the correct pages
 
 ## Phase 6: User Story 4 - Integrate Context7 Documentation (Priority: P3)
 
