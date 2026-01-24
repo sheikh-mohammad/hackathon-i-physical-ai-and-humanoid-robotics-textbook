@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Troubleshooting
 
-Test content
+This section covers Troubleshooting.

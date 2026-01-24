@@ -17,6 +17,9 @@ const config = {
   projectName: 'hackathon-i-physical-ai-and-humanoid-robotics-textbook', // Usually your repo name.
   deploymentBranch: 'gh-pages', // Branch that GitHub pages will deploy from.
 
+  // Deployment settings for GitHub Pages
+  trailingSlash: false,
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 

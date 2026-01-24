@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Module 2: Digital Twin
+# Index
 
-Test content
+This section covers Index.

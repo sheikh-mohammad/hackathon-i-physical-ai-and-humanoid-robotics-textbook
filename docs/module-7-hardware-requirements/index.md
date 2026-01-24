@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Module 7: Hardware Requirements
+# Index
 
-Test content
+This section covers Index.
