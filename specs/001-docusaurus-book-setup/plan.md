@@ -48,7 +48,7 @@ specs/001-docusaurus-book-setup/
 ### Source Code (repository root)
 
 ```text
-docusaurus-book/
+./ (current directory)
 ├── docs/
 │   ├── intro.md
 │   ├── getting-started/
@@ -316,7 +316,7 @@ docusaurus-book/
 └── README.md
 ```
 
-**Structure Decision**: Single static web documentation site using Docusaurus framework with content organized according to the specified folder structure. The site will be built as a static site and deployed to GitHub Pages.
+**Structure Decision**: Single static web documentation site using Docusaurus framework set up in the current directory (.) with content organized according to the specified folder structure. The site will be built as a static site and deployed to GitHub Pages.
 
 ## Complexity Tracking
 

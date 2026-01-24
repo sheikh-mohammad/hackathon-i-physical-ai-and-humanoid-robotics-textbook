@@ -48,3 +48,11 @@
 **Alternatives considered**:
 - Leave files completely empty - may cause rendering issues
 - Use Lorem ipsum content - less clear indication of placeholder status
+
+## Project Structure Decision
+
+**Decision**: Set up Docusaurus project in current directory (.)
+**Rationale**: This simplifies the project structure by avoiding unnecessary subdirectories and keeps the Docusaurus files at the root level for easier access and management.
+**Alternatives considered**:
+- Subdirectory approach (e.g., docusaurus-book/) - adds unnecessary nesting
+- Monorepo structure - more complex than needed for a single documentation site

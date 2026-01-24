@@ -100,7 +100,7 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 
 ### Functional Requirements
 
-- **FR-001**: System MUST initialize a Docusaurus project with the latest stable version and classic theme
+- **FR-001**: System MUST initialize a Docusaurus project in the current directory (.) with the latest stable version and classic theme
 - **FR-002**: System MUST create the exact folder structure specified in project_docs/folder_structure.md
 - **FR-003**: Users MUST be able to access the textbook content through a web interface
 - **FR-004**: System MUST auto-generate navigation and sidebar based on the folder structure hierarchy
