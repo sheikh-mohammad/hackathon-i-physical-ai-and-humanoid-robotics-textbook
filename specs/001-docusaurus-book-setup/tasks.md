@@ -14,11 +14,11 @@ Build the Docusaurus-based textbook site incrementally, starting with core setup
 
 Initialize the Docusaurus project in the current directory with the latest stable version and classic preset.
 
-- [ ] T001 Verify Node.js and npm are installed and meet requirements (Node.js LTS)
+- [x] T001 Verify Node.js and npm are installed and meet requirements (Node.js LTS)
 - [ ] T002 Initialize Docusaurus project in current directory using latest stable version with classic preset: `npx create-docusaurus@latest . classic`
 - [ ] T003 Install Docusaurus dependencies via `npm install`
 - [ ] T004 Verify basic Docusaurus site runs with `npm run start`
-- [ ] T005 [P] Create .gitignore file with appropriate entries for Node.js/Docusaurus project
+- [x] T005 [P] Create .gitignore file with appropriate entries for Node.js/Docusaurus project
 - [ ] T006 [P] Initialize git repository and create initial commit with basic setup
 
 ## Phase 2: Foundational
