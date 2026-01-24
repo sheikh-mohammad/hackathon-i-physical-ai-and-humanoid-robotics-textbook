@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import Layout from '@docusaurus/Layout';
+import Layout from '@theme/Layout';
 
 function NotFound() {
   return (
@@ -16,22 +16,6 @@ function NotFound() {
                 Back to Homepage
               </Link>
             </p>
-            <p>Or try searching for the content you're looking for:</p>
-            <div className="input-group input-group--outline">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="form-control"
-                onFocus={(e) => {
-                  if (window.DocSearch !== undefined) {
-                    window.DocSearch({
-                      apiKey: 'YOUR_API_KEY',
-                      indexName: 'your_index_name'
-                    });
-                  }
-                }}
-              />
-            </div>
           </div>
         </div>
       </main>

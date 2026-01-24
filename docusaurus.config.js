@@ -35,11 +35,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Configure sidebar behavior
-          sidebar: {
-            hideable: true,
-            autoCollapseCategories: true,
-          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -64,12 +59,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      docs: {
-        sidebar: {
-          hideable: true,
-          autoCollapseCategories: true,
-        },
-      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
