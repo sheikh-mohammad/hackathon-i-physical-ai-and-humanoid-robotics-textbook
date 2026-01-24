@@ -42,6 +42,18 @@
    - Update `sidebars.js` to reflect your textbook structure
    - Auto-generate navigation based on folder structure
 
+4. **Create homepage**
+   - Create `src/pages/index.js` with custom homepage component
+   - Design engaging layout with clear pathways to textbook content
+
+5. **Create test content**
+   - Add `test-page.md` to validate Docusaurus functionality
+   - Include various Docusaurus features for testing
+
+6. **Populate lesson files with test content**
+   - Add test content to all lesson files in chapters
+   - Ensure each lesson file contains placeholder content for validation
+
 ## Running the Development Server
 
 ```bash

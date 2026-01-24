@@ -90,7 +90,48 @@ As a user of the textbook, I want to have clear navigation and sidebar menus tha
 - [x] Given the site is running, When a user views the navigation, Then they see all modules and sections organized hierarchically
 - [x] Given the site has content, When a user clicks on navigation items, Then they are directed to the correct pages
 
-## Phase 6: User Story 4 - Integrate Context7 Documentation (Priority: P3)
+## Phase 6: User Story 4 - Create Homepage and Test Content (Priority: P2)
+
+As a user of the textbook website, I want to see a well-designed homepage and sample content so that I can understand how the site works and navigate the content effectively.
+
+**Goal**: Create engaging homepage and test content to demonstrate functionality.
+
+**Independent Test**: Can be fully tested by visiting the homepage and verifying it displays properly with engaging content.
+
+- [] T032 [US4] Create custom homepage component in src/pages/index.js with engaging layout
+- [] T033 [US4] Design homepage with clear pathways to textbook content
+- [] T034 [US4] Add homepage features showcasing different textbook modules
+- [] T035 [US4] Create test page in docs/test-page.md to validate Docusaurus functionality
+- [] T036 [US4] Include various Docusaurus features in test page for validation
+
+**Acceptance Tests**:
+- [] Given a user visits the textbook website root, When they load the homepage, Then they see a professional, engaging homepage with clear navigation to the textbook content
+- [] Given test content exists, When users navigate to test pages, Then they can verify the Docusaurus functionality works correctly
+
+## Phase 7: User Story 5 - Create Test Content in Lesson Files (Priority: P2)
+
+As a developer validating the textbook structure, I want to populate lesson files with test content so that I can verify the complete folder structure and navigation work properly.
+
+**Goal**: Populate all lesson files with test content for validation.
+
+**Independent Test**: Can be fully tested by verifying that all lesson files exist in the appropriate chapters and contain test content.
+
+- [ ] T037 [US5] Add test content to all lesson files in module-0-introduction-physical-ai
+- [ ] T038 [US5] Add test content to all lesson files in module-1-robotic-nervous-system
+- [ ] T039 [US5] Add test content to all lesson files in module-2-digital-twin
+- [ ] T040 [US5] Add test content to all lesson files in module-3-ai-robot-brain
+- [ ] T041 [US5] Add test content to all lesson files in module-4-vision-language-action
+- [ ] T042 [US5] Add test content to all lesson files in module-5-humanoid-robot-development
+- [ ] T043 [US5] Add test content to all lesson files in module-6-conversational-robotics
+- [ ] T044 [US5] Add test content to all lesson files in module-7-hardware-requirements
+- [ ] T045 [US5] Add test content to all lesson files in appendix
+- [ ] T046 [US5] Verify all lesson files contain appropriate test content
+
+**Acceptance Tests**:
+- [ ] Given the textbook structure exists, When test content is added to lesson files, Then each lesson file contains placeholder content for validation
+- [ ] Given test content exists in lessons, When users navigate to specific lessons, Then they can access the test content without errors
+
+## Phase 8: User Story 6 - Integrate Context7 Documentation (Priority: P3)
 
 As a developer maintaining the textbook, I want to access the latest Docusaurus documentation through Context7 MCP server so that I can implement best practices and stay current with the framework.
 
@@ -98,41 +139,44 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 
 **Independent Test**: Can be verified by successfully retrieving Docusaurus documentation from Context7 and implementing recommended configurations.
 
-- [ ] T032 [US4] Consult Context7 MCP server for Docusaurus best practices and configurations
-- [ ] T033 [US4] Apply recommended Docusaurus configurations from Context7 documentation
-- [ ] T034 [US4] Optimize site performance based on Context7 recommendations
-- [ ] T035 [US4] Implement any recommended theming or styling approaches
-- [ ] T036 [US4] Verify implementation follows current Docusaurus best practices
+- [x] T037 [US5] Consult Context7 MCP server for Docusaurus best practices and configurations
+- [x] T038 [US5] Apply recommended Docusaurus configurations from Context7 documentation
+- [x] T039 [US5] Optimize site performance based on Context7 recommendations
+- [x] T040 [US5] Implement any recommended theming or styling approaches
+- [x] T041 [US5] Verify implementation follows current Docusaurus best practices
 
 **Acceptance Tests**:
-- [ ] Given Context7 MCP server is available, When documentation is requested, Then current Docusaurus practices are accessible
-- [ ] Given Docusaurus best practices are known, When the site is configured, Then it follows current recommended patterns
+- [x] Given Context7 MCP server is available, When documentation is requested, Then current Docusaurus practices are accessible
+- [x] Given Docusaurus best practices are known, When the site is configured, Then it follows current recommended patterns
 
-## Phase 7: Polish & Cross-Cutting Concerns
+## Phase 9: Polish & Cross-Cutting Concerns
 
 Final touches and deployment configuration to meet all success criteria.
 
-- [ ] T037 Configure GitHub Pages deployment settings in docusaurus.config.js
-- [ ] T038 Create GitHub Actions workflow file for automated deployment to GitHub Pages
-- [ ] T039 [P] Optimize site loading performance to meet 3-second requirement
-- [ ] T040 [P] Test site across Chrome, Firefox, Safari, and Edge browsers
-- [ ] T041 [P] Verify site meets accessibility standards
-- [ ] T042 [P] Add search functionality to the site
-- [ ] T043 [P] Create custom 404 page for better user experience
-- [ ] T044 [P] Add site metadata for SEO optimization
-- [ ] T045 Final testing to ensure all success criteria are met
-- [ ] T046 Prepare documentation for deployment and maintenance
+- [ ] T052 Configure GitHub Pages deployment settings in docusaurus.config.js
+- [ ] T053 Create GitHub Actions workflow file for automated deployment to GitHub Pages
+- [ ] T054 [P] Optimize site loading performance to meet 3-second requirement
+- [ ] T055 [P] Test site across Chrome, Firefox, Safari, and Edge browsers
+- [ ] T056 [P] Verify site meets accessibility standards
+- [ ] T057 [P] Add search functionality to the site
+- [ ] T058 [P] Create custom 404 page for better user experience
+- [ ] T059 [P] Add site metadata for SEO optimization
+- [ ] T060 Final testing to ensure all success criteria are met
+- [ ] T061 Prepare documentation for deployment and maintenance
 
 ## Dependencies
 
 - User Story 1 (Site Setup) must be completed before User Story 2 (Content Structure)
 - User Story 2 (Content Structure) must be completed before User Story 3 (Navigation)
-- User Story 3 (Navigation) must be completed before final deployment (Phase 7)
+- User Story 3 (Navigation) must be completed before User Story 4 (Homepage and Test Content)
+- User Story 4 (Homepage and Test Content) must be completed before User Story 5 (Lesson File Test Content)
+- User Story 5 (Lesson File Test Content) must be completed before User Story 6 (Context7 Integration)
+- User Story 6 (Context7 Integration) must be completed before final deployment (Phase 9)
 
 ## Parallel Execution Opportunities
 
 - T021-T023: Multiple files can be created in parallel across different directories
-- T039-T041: Performance optimization and cross-browser testing can happen in parallel
+- T037-T046: Adding test content to lesson files across different modules can happen in parallel
 - T005, T006, T010, T011: Various setup tasks can be done in parallel during initial setup
 
 ## Success Criteria Validation
@@ -143,3 +187,6 @@ Final touches and deployment configuration to meet all success criteria.
 - [ ] SC-004: Navigation accurately reflects the hierarchical structure of the textbook with auto-generated sidebar
 - [ ] SC-005: Site features custom branding for Physical AI Humanoid and Robotics textbook
 - [ ] SC-006: Site is successfully deployed to GitHub Pages via automated workflow
+- [ ] SC-007: Homepage provides engaging user experience with clear pathways to textbook content
+- [ ] SC-008: Test content validates Docusaurus functionality and serves as examples for future content
+- [ ] SC-009: All lesson files in chapters contain test content for proper validation

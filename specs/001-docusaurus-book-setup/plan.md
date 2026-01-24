@@ -30,6 +30,8 @@ Create a Docusaurus-based documentation website for the Physical AI Humanoid and
 - [ ] Compatibility: Must work across major browsers (Chrome, Firefox, Safari, Edge)
 - [ ] Deployment: Must deploy to GitHub Pages via automated workflow
 - [ ] Structure: Must follow the exact folder structure specified
+- [ ] Homepage: Must create engaging homepage for user experience
+- [ ] Testing: Must create test content to validate functionality
 
 ## Project Structure
 

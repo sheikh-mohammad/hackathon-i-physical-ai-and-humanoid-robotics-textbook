@@ -59,11 +59,18 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'Physical AI Humanoid Robotics',
         logo: {
           alt: 'Physical AI Humanoid Robotics Logo',
           src: 'img/logo.svg',
+          width: 32,
+          height: 32,
         },
         items: [
           {
