@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Introduction to Physical AI and Humanoid Robotics
+# Preface: Physical AI and Humanoid Robotics
 
 Welcome to the comprehensive textbook on Physical AI and Humanoid Robotics. This guide covers the fundamental concepts, advanced techniques, and practical applications of physical artificial intelligence and humanoid robotics.
 

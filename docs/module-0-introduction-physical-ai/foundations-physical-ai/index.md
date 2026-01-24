@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Intro
+# Chapter 1: Foundations of Physical AI
 
 This section covers intro.
 

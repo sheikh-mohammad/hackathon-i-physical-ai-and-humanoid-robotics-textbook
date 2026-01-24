@@ -3,213 +3,205 @@
 Based on the course modules specified in the document:
 
 ## Module 0: Introduction to Physical AI
-- Part: Introduction to Physical AI
-  - Chapter: Foundations of Physical AI and Embodied Intelligence
-    - Lesson: What is Physical AI?
-    - Lesson: Embodied Intelligence Principles
-    - Lesson: Differences Between Digital and Physical AI
-    - Lesson: Historical Context and Evolution
-  - Chapter: From Digital AI to Robots Understanding Physical Laws
-    - Lesson: Digital AI Limitations
-    - Lesson: Physical Laws and Constraints
-    - Lesson: Physics Simulation Basics
-    - Lesson: Real-World Application Challenges
-  - Chapter: Overview of Humanoid Robotics Landscape
-    - Lesson: Current State of Humanoid Robots
-    - Lesson: Major Players and Technologies
-    - Lesson: Use Cases and Applications
-    - Lesson: Future Trends and Predictions
-  - Chapter: Sensor Systems: LIDAR, Cameras, IMUs, Force/Torque Sensors
-    - Lesson: LIDAR Sensors and Applications
-    - Lesson: Camera Systems and Computer Vision
-    - Lesson: IMU Sensors and Balance Systems
-    - Lesson: Force/Torque Sensors and Feedback
+- Chapter: Foundations of Physical AI and Embodied Intelligence
+  - Lesson: What is Physical AI?
+  - Lesson: Embodied Intelligence Principles
+  - Lesson: Differences Between Digital and Physical AI
+  - Lesson: Historical Context and Evolution
+- Chapter: From Digital AI to Robots Understanding Physical Laws
+  - Lesson: Digital AI Limitations
+  - Lesson: Physical Laws and Constraints
+  - Lesson: Physics Simulation Basics
+  - Lesson: Real-World Application Challenges
+- Chapter: Overview of Humanoid Robotics Landscape
+  - Lesson: Current State of Humanoid Robots
+  - Lesson: Major Players and Technologies
+  - Lesson: Use Cases and Applications
+  - Lesson: Future Trends and Predictions
+- Chapter: Sensor Systems: LIDAR, Cameras, IMUs, Force/Torque Sensors
+  - Lesson: LIDAR Sensors and Applications
+  - Lesson: Camera Systems and Computer Vision
+  - Lesson: IMU Sensors and Balance Systems
+  - Lesson: Force/Torque Sensors and Feedback
 
 ## Module 1: The Robotic Nervous System (ROS 2)
-- Part: The Robotic Nervous System (ROS 2)
-  - Chapter: ROS 2 Architecture and Core Concepts
-    - Lesson: ROS 2 vs ROS 1 Differences
-    - Lesson: DDS Communication Layer
-    - Lesson: Client Library Implementations
-    - Lesson: Quality of Service Settings
-  - Chapter: Nodes, Topics, Services, and Actions
-    - Lesson: Node Creation and Management
-    - Lesson: Topic-Based Communication
-    - Lesson: Service-Based Communication
-    - Lesson: Action-Based Communication
-  - Chapter: Building ROS 2 Packages with Python
-    - Lesson: Package Structure and Organization
-    - Lesson: Creating Publishers and Subscribers
-    - Lesson: Developing Services and Clients
-    - Lesson: Testing and Debugging Packages
-  - Chapter: Launch Files and Parameter Management
-    - Lesson: XML Launch Files
-    - Lesson: Python Launch Files
-    - Lesson: Parameter Declaration and Handling
-    - Lesson: Configuration Management
-  - Chapter: Bridging Python Agents to ROS Controllers
-    - Lesson: Agent Integration Patterns
-    - Lesson: Using rclpy for Python Integration
-    - Lesson: Message Passing Between Systems
-    - Lesson: Real-Time Control Considerations
-  - Chapter: Understanding URDF for Humanoids
-    - Lesson: URDF Basics and Syntax
-    - Lesson: Joint and Link Definitions
-    - Lesson: Visual and Collision Properties
-    - Lesson: Humanoid-Specific URDF Elements
+- Chapter: ROS 2 Architecture and Core Concepts
+  - Lesson: ROS 2 vs ROS 1 Differences
+  - Lesson: DDS Communication Layer
+  - Lesson: Client Library Implementations
+  - Lesson: Quality of Service Settings
+- Chapter: Nodes, Topics, Services, and Actions
+  - Lesson: Node Creation and Management
+  - Lesson: Topic-Based Communication
+  - Lesson: Service-Based Communication
+  - Lesson: Action-Based Communication
+- Chapter: Building ROS 2 Packages with Python
+  - Lesson: Package Structure and Organization
+  - Lesson: Creating Publishers and Subscribers
+  - Lesson: Developing Services and Clients
+  - Lesson: Testing and Debugging Packages
+- Chapter: Launch Files and Parameter Management
+  - Lesson: XML Launch Files
+  - Lesson: Python Launch Files
+  - Lesson: Parameter Declaration and Handling
+  - Lesson: Configuration Management
+- Chapter: Bridging Python Agents to ROS Controllers
+  - Lesson: Agent Integration Patterns
+  - Lesson: Using rclpy for Python Integration
+  - Lesson: Message Passing Between Systems
+  - Lesson: Real-Time Control Considerations
+- Chapter: Understanding URDF for Humanoids
+  - Lesson: URDF Basics and Syntax
+  - Lesson: Joint and Link Definitions
+  - Lesson: Visual and Collision Properties
+  - Lesson: Humanoid-Specific URDF Elements
 
 ## Module 2: The Digital Twin (Gazebo & Unity)
-- Part: The Digital Twin (Gazebo & Unity)
-  - Chapter: Gazebo Simulation Environment Setup
-    - Lesson: Installing and Configuring Gazebo
-    - Lesson: Basic World Creation
-    - Lesson: Model Import and Placement
-    - Lesson: Simulation Parameters and Settings
-  - Chapter: URDF and SDF Robot Description Formats
-    - Lesson: Converting URDF to SDF
-    - Lesson: SDF World Format
-    - Lesson: Model Customization in SDF
-    - Lesson: Physics Properties in SDF
-  - Chapter: Physics Simulation and Environment Building
-    - Lesson: Physics Engine Configuration
-    - Lesson: Gravity and Environmental Forces
-    - Lesson: Collision Detection and Response
-    - Lesson: Contact Sensors and Feedback
-  - Chapter: High-Fidelity Rendering and Human-Robot Interaction
-    - Lesson: Unity Setup for Robotics Simulation
-    - Lesson: Material and Texture Mapping
-    - Lesson: Lighting and Environmental Effects
-    - Lesson: Realistic Physics Simulation
-  - Chapter: Simulating Sensors
-    - Lesson: Simulating LIDAR Sensors
-    - Lesson: Camera and Depth Sensor Simulation
-    - Lesson: IMU Sensor Simulation
-    - Lesson: Force/Torque Sensor Simulation
+- Chapter: Gazebo Simulation Environment Setup
+  - Lesson: Installing and Configuring Gazebo
+  - Lesson: Basic World Creation
+  - Lesson: Model Import and Placement
+  - Lesson: Simulation Parameters and Settings
+- Chapter: URDF and SDF Robot Description Formats
+  - Lesson: Converting URDF to SDF
+  - Lesson: SDF World Format
+  - Lesson: Model Customization in SDF
+  - Lesson: Physics Properties in SDF
+- Chapter: Physics Simulation and Environment Building
+  - Lesson: Physics Engine Configuration
+  - Lesson: Gravity and Environmental Forces
+  - Lesson: Collision Detection and Response
+  - Lesson: Contact Sensors and Feedback
+- Chapter: High-Fidelity Rendering and Human-Robot Interaction
+  - Lesson: Unity Setup for Robotics Simulation
+  - Lesson: Material and Texture Mapping
+  - Lesson: Lighting and Environmental Effects
+  - Lesson: Realistic Physics Simulation
+- Chapter: Simulating Sensors
+  - Lesson: Simulating LIDAR Sensors
+  - Lesson: Camera and Depth Sensor Simulation
+  - Lesson: IMU Sensor Simulation
+  - Lesson: Force/Torque Sensor Simulation
 
 ## Module 3: The AI-Robot Brain (NVIDIA Isaac™)
-- Part: The AI-Robot Brain (NVIDIA Isaac™)
-  - Chapter: NVIDIA Isaac SDK and Isaac Sim
-    - Lesson: Isaac SDK Installation and Setup
-    - Lesson: Isaac Sim Overview
-    - Lesson: Isaac Apps Framework
-    - Lesson: Isaac Gem Library
-  - Chapter: Photorealistic Simulation and Synthetic Data Generation
-    - Lesson: USD Asset Creation
-    - Lesson: Material and Lighting Systems
-    - Lesson: Synthetic Data Pipeline
-    - Lesson: Domain Randomization Techniques
-  - Chapter: Isaac ROS: Hardware-accelerated VSLAM
-    - Lesson: Visual SLAM Principles
-    - Lesson: Isaac ROS Packages
-    - Lesson: GPU Acceleration Benefits
-    - Lesson: Performance Optimization
-  - Chapter: Nav2: Path Planning for Bipedal Humanoid Movement
-    - Lesson: Nav2 Architecture
-    - Lesson: Costmap Configuration
-    - Lesson: Path Planning Algorithms
-    - Lesson: Bipedal Navigation Challenges
-  - Chapter: AI-Powered Perception and Manipulation
-    - Lesson: Object Detection in Robotics
-    - Lesson: Grasping and Manipulation Planning
-    - Lesson: Multi-Modal Perception Fusion
-    - Lesson: Real-Time Inference Optimization
-  - Chapter: Reinforcement Learning for Robot Control
-    - Lesson: RL Fundamentals for Robotics
-    - Lesson: Reward Function Design
-    - Lesson: Training in Simulation
-    - Lesson: Policy Transfer to Real Robots
-  - Chapter: Sim-to-Real Transfer Techniques
-    - Lesson: Domain Adaptation Methods
-    - Lesson: Reality Gap Minimization
-    - Lesson: Calibration and Fine-Tuning
-    - Lesson: Validation and Testing Strategies
+- Chapter: NVIDIA Isaac SDK and Isaac Sim
+  - Lesson: Isaac SDK Installation and Setup
+  - Lesson: Isaac Sim Overview
+  - Lesson: Isaac Apps Framework
+  - Lesson: Isaac Gem Library
+- Chapter: Photorealistic Simulation and Synthetic Data Generation
+  - Lesson: USD Asset Creation
+  - Lesson: Material and Lighting Systems
+  - Lesson: Synthetic Data Pipeline
+  - Lesson: Domain Randomization Techniques
+- Chapter: Isaac ROS: Hardware-accelerated VSLAM
+  - Lesson: Visual SLAM Principles
+  - Lesson: Isaac ROS Packages
+  - Lesson: GPU Acceleration Benefits
+  - Lesson: Performance Optimization
+- Chapter: Nav2: Path Planning for Bipedal Humanoid Movement
+  - Lesson: Nav2 Architecture
+  - Lesson: Costmap Configuration
+  - Lesson: Path Planning Algorithms
+  - Lesson: Bipedal Navigation Challenges
+- Chapter: AI-Powered Perception and Manipulation
+  - Lesson: Object Detection in Robotics
+  - Lesson: Grasping and Manipulation Planning
+  - Lesson: Multi-Modal Perception Fusion
+  - Lesson: Real-Time Inference Optimization
+- Chapter: Reinforcement Learning for Robot Control
+  - Lesson: RL Fundamentals for Robotics
+  - Lesson: Reward Function Design
+  - Lesson: Training in Simulation
+  - Lesson: Policy Transfer to Real Robots
+- Chapter: Sim-to-Real Transfer Techniques
+  - Lesson: Domain Adaptation Methods
+  - Lesson: Reality Gap Minimization
+  - Lesson: Calibration and Fine-Tuning
+  - Lesson: Validation and Testing Strategies
 
 ## Module 4: Vision-Language-Action (VLA)
-- Part: Vision-Language-Action (VLA)
-  - Chapter: Introduction to Vision-Language-Action Framework
-    - Lesson: VLA Concept and Architecture
-    - Lesson: Multi-Modal Integration
-    - Lesson: Real-Time Processing Requirements
-    - Lesson: Safety and Error Handling
-  - Chapter: Voice-to-Action: Using OpenAI Whisper
-    - Lesson: Whisper Model Integration
-    - Lesson: Audio Preprocessing
-    - Lesson: Noise Reduction Techniques
-    - Lesson: Real-Time Voice Processing
-  - Chapter: Cognitive Planning: Using LLMs
-    - Lesson: LLM Integration in Robotics
-    - Lesson: Prompt Engineering for Robotics
-    - Lesson: Reasoning and Planning Pipelines
-    - Lesson: Context Management
-  - Chapter: Multi-Modal Interaction: Speech, Gesture, Vision
-    - Lesson: Multimodal Fusion Techniques
-    - Lesson: Cross-Modal Attention
-    - Lesson: Consistent Behavior Generation
-    - Lesson: User Experience Design
-  - Chapter: Capstone Project: The Autonomous Humanoid
-    - Lesson: System Architecture Design
-    - Lesson: Voice Command Processing
-    - Lesson: Path Planning and Obstacle Navigation
-    - Lesson: Object Identification with Computer Vision
-    - Lesson: Manipulation and Action Execution
+- Chapter: Introduction to Vision-Language-Action Framework
+  - Lesson: VLA Concept and Architecture
+  - Lesson: Multi-Modal Integration
+  - Lesson: Real-Time Processing Requirements
+  - Lesson: Safety and Error Handling
+- Chapter: Voice-to-Action: Using OpenAI Whisper
+  - Lesson: Whisper Model Integration
+  - Lesson: Audio Preprocessing
+  - Lesson: Noise Reduction Techniques
+  - Lesson: Real-Time Voice Processing
+- Chapter: Cognitive Planning: Using LLMs
+  - Lesson: LLM Integration in Robotics
+  - Lesson: Prompt Engineering for Robotics
+  - Lesson: Reasoning and Planning Pipelines
+  - Lesson: Context Management
+- Chapter: Multi-Modal Interaction: Speech, Gesture, Vision
+  - Lesson: Multimodal Fusion Techniques
+  - Lesson: Cross-Modal Attention
+  - Lesson: Consistent Behavior Generation
+  - Lesson: User Experience Design
+- Chapter: Capstone Project: The Autonomous Humanoid
+  - Lesson: System Architecture Design
+  - Lesson: Voice Command Processing
+  - Lesson: Path Planning and Obstacle Navigation
+  - Lesson: Object Identification with Computer Vision
+  - Lesson: Manipulation and Action Execution
 
 ## Module 5: Humanoid Robot Development
-- Part: Humanoid Robot Development
-  - Chapter: Humanoid Robot Kinematics and Dynamics
-    - Lesson: Forward and Inverse Kinematics
-    - Lesson: Dynamic Modeling
-    - Lesson: Center of Mass Calculations
-    - Lesson: Stability Analysis
-  - Chapter: Bipedal Locomotion and Balance Control
-    - Lesson: Walking Gaits and Patterns
-    - Lesson: Balance Control Algorithms
-    - Lesson: Zero Moment Point (ZMP) Control
-    - Lesson: Disturbance Recovery
-  - Chapter: Manipulation and Grasping with Humanoid Hands
-    - Lesson: Hand Kinematics
-    - Lesson: Grasp Planning
-    - Lesson: Force Control
-    - Lesson: Dexterous Manipulation
-  - Chapter: Natural Human-Robot Interaction Design
-    - Lesson: Social Robotics Principles
-    - Lesson: Gesture Recognition
-    - Lesson: Emotional Expression
-    - Lesson: Safety Considerations
+- Chapter: Humanoid Robot Kinematics and Dynamics
+  - Lesson: Forward and Inverse Kinematics
+  - Lesson: Dynamic Modeling
+  - Lesson: Center of Mass Calculations
+  - Lesson: Stability Analysis
+- Chapter: Bipedal Locomotion and Balance Control
+  - Lesson: Walking Gaits and Patterns
+  - Lesson: Balance Control Algorithms
+  - Lesson: Zero Moment Point (ZMP) Control
+  - Lesson: Disturbance Recovery
+- Chapter: Manipulation and Grasping with Humanoid Hands
+  - Lesson: Hand Kinematics
+  - Lesson: Grasp Planning
+  - Lesson: Force Control
+  - Lesson: Dexterous Manipulation
+- Chapter: Natural Human-Robot Interaction Design
+  - Lesson: Social Robotics Principles
+  - Lesson: Gesture Recognition
+  - Lesson: Emotional Expression
+  - Lesson: Safety Considerations
 
 ## Module 6: Conversational Robotics
-- Part: Conversational Robotics
-  - Chapter: Integrating GPT Models for Conversational AI
-    - Lesson: GPT Integration in Robotics
-    - Lesson: Context Management
-    - Lesson: Prompt Engineering for Robotics
-    - Lesson: Safety and Ethical Considerations
-  - Chapter: Speech Recognition and Natural Language Understanding
-    - Lesson: ASR Systems for Robotics
-    - Lesson: Intent Classification
-    - Lesson: Entity Extraction
-    - Lesson: Dialogue Management
+- Chapter: Integrating GPT Models for Conversational AI
+  - Lesson: GPT Integration in Robotics
+  - Lesson: Context Management
+  - Lesson: Prompt Engineering for Robotics
+  - Lesson: Safety and Ethical Considerations
+- Chapter: Speech Recognition and Natural Language Understanding
+  - Lesson: ASR Systems for Robotics
+  - Lesson: Intent Classification
+  - Lesson: Entity Extraction
+  - Lesson: Dialogue Management
 
 ## Module 7: Hardware Requirements and Setup
-- Part: Hardware Requirements and Setup
-  - Chapter: Workstation Requirements and Setup
-    - Lesson: GPU Requirements and Selection
-    - Lesson: CPU and Memory Specifications
-    - Lesson: OS Installation and Configuration
-    - Lesson: Driver Installation and Optimization
-  - Chapter: Edge Computing Kits
-    - Lesson: Jetson Orin Nano/NX Setup
-    - Lesson: Development Environment Configuration
-    - Lesson: Resource Management
-    - Lesson: Deployment Strategies
-  - Chapter: Sensor Integration
-    - Lesson: RealSense Camera Setup
-    - Lesson: IMU Calibration and Integration
-    - Lesson: Multi-Sensor Synchronization
-    - Lesson: Data Fusion Techniques
-  - Chapter: Robot Platform Selection and Setup
-    - Lesson: Robot Selection Criteria
-    - Lesson: Unitree Go2/Quadruped Setup
-    - Lesson: Unitree G1/Humanoid Setup
-    - Lesson: Alternative Platforms Comparison
+- Chapter: Workstation Requirements and Setup
+  - Lesson: GPU Requirements and Selection
+  - Lesson: CPU and Memory Specifications
+  - Lesson: OS Installation and Configuration
+  - Lesson: Driver Installation and Optimization
+- Chapter: Edge Computing Kits
+  - Lesson: Jetson Orin Nano/NX Setup
+  - Lesson: Development Environment Configuration
+  - Lesson: Resource Management
+  - Lesson: Deployment Strategies
+- Chapter: Sensor Integration
+  - Lesson: RealSense Camera Setup
+  - Lesson: IMU Calibration and Integration
+  - Lesson: Multi-Sensor Synchronization
+  - Lesson: Data Fusion Techniques
+- Chapter: Robot Platform Selection and Setup
+  - Lesson: Robot Selection Criteria
+  - Lesson: Unitree Go2/Quadruped Setup
+  - Lesson: Unitree G1/Humanoid Setup
+  - Lesson: Alternative Platforms Comparison
 
 ---

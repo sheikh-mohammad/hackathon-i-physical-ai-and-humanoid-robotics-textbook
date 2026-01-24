@@ -3,7 +3,7 @@
 ```markdown
 ./ (current directory)
 docs/
-├── intro.md
+├── index.md
 ├── getting-started/
 │   ├── index.md
 │   ├── what-is-physical-ai.md
@@ -37,25 +37,25 @@ docs/
 ├── module-0-introduction-physical-ai/
 │   ├── index.md
 │   ├── foundations-physical-ai/
-│   │   ├── intro.md
+│   │   ├── index.md
 │   │   ├── what-is-physical-ai.md
 │   │   ├── embodied-intelligence-principles.md
 │   │   ├── digital-vs-physical-ai.md
 │   │   └── historical-context-evolution.md
 │   ├── from-digital-ai-physical/
-│   │   ├── intro.md
+│   │   ├── index.md
 │   │   ├── digital-ai-limitations.md
 │   │   ├── physical-laws-constraints.md
 │   │   ├── physics-simulation-basics.md
 │   │   └── real-world-application-challenges.md
 │   ├── humanoid-robotics-landscape/
-│   │   ├── intro.md
+│   │   ├── index.md
 │   │   ├── current-state-humanoid-robots.md
 │   │   ├── major-players-technologies.md
 │   │   ├── use-cases-applications.md
 │   │   └── future-trends-predictions.md
 │   └── sensor-systems/
-│       ├── intro.md
+│       ├── index.md
 │       ├── lidar-sensors-applications.md
 │       ├── camera-systems-computer-vision.md
 │       ├── imu-sensors-balance.md

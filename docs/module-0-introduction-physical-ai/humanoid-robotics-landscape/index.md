@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Intro
+# Chapter 3: Humanoid Robotics Landscape
 
 This section covers intro.
 

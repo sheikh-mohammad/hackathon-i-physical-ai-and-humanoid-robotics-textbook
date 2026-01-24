@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Intro
+# Chapter 4: Sensor Systems
 
 This section covers intro.
 
