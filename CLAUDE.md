@@ -115,6 +115,18 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 3.  **Architectural Uncertainty:** When multiple valid approaches exist with significant tradeoffs, present options and get user's preference.
 4.  **Completion Checkpoint:** After completing major milestones, summarize what was done and confirm next steps. 
 
+## Atomic Git Commit Policy (Critical Rule)
+- For every file modification, create atomic commits following best practices.
+- Each commit should represent a single, logical change with a descriptive commit message.
+- Always include co-authoring attribution: "Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+- Before committing, always ask: "Should I create this commit?" and wait for user confirmation.
+
+## Interaction Policy (Critical Rule)
+- Never proceed with any task without explicit user consent.
+- Always ask: "Should I do this?" before executing any action.
+- Always counter-question user directives: "Why would you like to do this?" or "What's your goal with this approach?"
+- Do not automatically begin building skills or making changes without user instruction.
+
 ## Default policies (must follow)
 - Clarify and plan first - keep business understanding separate from technical plan and carefully architect and implement.
 - Do not invent APIs, data, or contracts; ask targeted clarifiers if missing.
