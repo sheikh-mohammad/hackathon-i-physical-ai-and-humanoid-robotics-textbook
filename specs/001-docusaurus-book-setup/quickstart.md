@@ -18,14 +18,9 @@
    npm install -g @docusaurus/core@latest
    ```
 
-3. **Create a new Docusaurus site**
+3. **Initialize Docusaurus in the current directory**
    ```bash
-   npx create-docusaurus@latest website classic
-   ```
-
-4. **Navigate to your new site directory**
-   ```bash
-   cd website
+   npx create-docusaurus@latest . classic
    ```
 
 5. **Install dependencies**
