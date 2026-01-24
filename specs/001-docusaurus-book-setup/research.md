@@ -49,6 +49,30 @@
 - Leave files completely empty - may cause rendering issues
 - Use Lorem ipsum content - less clear indication of placeholder status
 
+## Homepage Strategy
+
+**Decision**: Create custom homepage using React components with engaging layout
+**Rationale**: A well-designed homepage provides a professional entry point for users and showcases the textbook content effectively. Using Docusaurus's React component system allows for rich interactivity and custom design.
+**Alternatives considered**:
+- Use default Docusaurus homepage - less engaging
+- Static HTML page - less integrated with Docusaurus ecosystem
+
+## Test Content Strategy
+
+**Decision**: Create dedicated test page to validate Docusaurus functionality
+**Rationale**: Having a specific test page allows for validation of various Docusaurus features like navigation, styling, code blocks, and links without interfering with actual textbook content.
+**Alternatives considered**:
+- Use existing intro page for testing - might interfere with actual content
+- No dedicated test page - harder to validate functionality separately
+
+## Lesson Content Strategy
+
+**Decision**: Populate all lesson files with test content to validate complete structure
+**Rationale**: Adding test content to all lesson files ensures that every part of the curriculum structure is functional and accessible through navigation. This provides comprehensive validation of the entire textbook organization.
+**Alternatives considered**:
+- Only create test content in main sections - wouldn't validate complete structure
+- Use minimal placeholder content - less thorough validation
+
 ## Project Structure Decision
 
 **Decision**: Set up Docusaurus project in current directory (.)

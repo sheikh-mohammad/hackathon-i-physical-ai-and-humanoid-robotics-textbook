@@ -75,7 +75,37 @@ As a user of the textbook, I want to have clear navigation and sidebar menus tha
 
 ---
 
-### User Story 4 - Integrate Context7 Documentation (Priority: P3)
+### User Story 4 - Create Homepage and Test Content (Priority: P2)
+
+As a user of the textbook website, I want to see a well-designed homepage and sample content so that I can understand how the site works and navigate the content effectively.
+
+**Why this priority**: Essential for demonstrating the site functionality and providing a professional entry point for users.
+
+**Independent Test**: Can be fully tested by visiting the homepage and verifying it displays properly with engaging content.
+
+**Acceptance Scenarios**:
+
+1. **Given** a user visits the textbook website root, **When** they load the homepage, **Then** they see a professional, engaging homepage with clear navigation to the textbook content
+2. **Given** test content exists, **When** users navigate to test pages, **Then** they can verify the Docusaurus functionality works correctly
+
+---
+
+### User Story 5 - Create Test Content in Lesson Files (Priority: P2)
+
+As a developer validating the textbook structure, I want to populate lesson files with test content so that I can verify the complete folder structure and navigation work properly.
+
+**Why this priority**: Essential for ensuring all lesson files are properly created and accessible through the navigation system.
+
+**Independent Test**: Can be fully tested by verifying that all lesson files exist in the appropriate chapters and contain test content.
+
+**Acceptance Scenarios**:
+
+1. **Given** the textbook structure exists, **When** test content is added to lesson files, **Then** each lesson file contains placeholder content for validation
+2. **Given** test content exists in lessons, **When** users navigate to specific lessons, **Then** they can access the test content without errors
+
+---
+
+### User Story 6 - Integrate Context7 Documentation (Priority: P3)
 
 As a developer maintaining the textbook, I want to access the latest Docusaurus documentation through Context7 MCP server so that I can implement best practices and stay current with the framework.
 
@@ -107,6 +137,9 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - **FR-005**: System MUST serve content with custom textbook branding for Physical AI Humanoid and Robotics
 - **FR-006**: System MUST be deployable to GitHub Pages using GitHub workflow deploy.yaml
 - **FR-007**: System MUST utilize Context7 MCP server during implementation for Docusaurus documentation reference
+- **FR-008**: System MUST create a test and dummy home page for the Docusaurus project to demonstrate functionality
+- **FR-009**: System MUST create basic test files to validate Docusaurus functionality
+- **FR-010**: System MUST create lesson files in all chapters as specified in the folder structure with appropriate placeholder content
 
 ### Key Entities *(include if feature involves data)*
 
@@ -123,3 +156,6 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - **SC-004**: Navigation accurately reflects the hierarchical structure of the textbook with auto-generated sidebar
 - **SC-005**: Site features custom branding for Physical AI Humanoid and Robotics textbook
 - **SC-006**: Site is successfully deployed to GitHub Pages via automated workflow
+- **SC-007**: Homepage provides engaging user experience with clear pathways to textbook content
+- **SC-008**: Test content validates Docusaurus functionality and serves as examples for future content
+- **SC-009**: All lesson files in chapters contain test content for proper validation
