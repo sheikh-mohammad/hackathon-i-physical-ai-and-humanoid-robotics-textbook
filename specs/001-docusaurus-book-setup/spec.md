@@ -140,6 +140,7 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - **FR-008**: System MUST create a test and dummy home page for the Docusaurus project to demonstrate functionality
 - **FR-009**: System MUST create basic test files to validate Docusaurus functionality
 - **FR-010**: System MUST create lesson files in all chapters as specified in the folder structure with appropriate placeholder content
+- **FR-011**: System MUST assign proper sidebar_position metadata to all lesson files to match the order documented in the folder structure
 
 ### Key Entities *(include if feature involves data)*
 
@@ -159,3 +160,4 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - **SC-007**: Homepage provides engaging user experience with clear pathways to textbook content
 - **SC-008**: Test content validates Docusaurus functionality and serves as examples for future content
 - **SC-009**: All lesson files in chapters contain test content for proper validation
+- **SC-010**: All lesson files have proper sidebar_position metadata matching the folder structure order

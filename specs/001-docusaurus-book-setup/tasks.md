@@ -131,7 +131,30 @@ As a developer validating the textbook structure, I want to populate lesson file
 - [ ] Given the textbook structure exists, When test content is added to lesson files, Then each lesson file contains placeholder content for validation
 - [ ] Given test content exists in lessons, When users navigate to specific lessons, Then they can access the test content without errors
 
-## Phase 8: User Story 6 - Integrate Context7 Documentation (Priority: P3)
+## Phase 8: User Story 6 - Assign Proper Sidebar Positions (Priority: P2)
+
+As a user of the textbook website, I want lessons to appear in the correct order in the navigation sidebar so that I can follow the curriculum sequentially and logically.
+
+**Goal**: Assign proper sidebar_position metadata to all lesson files based on the folder structure order.
+
+**Independent Test**: Can be fully tested by verifying that all lesson files have appropriate sidebar_position metadata matching the intended curriculum sequence.
+
+- [ ] T047 [US6] Add sidebar_position metadata to lesson files in module-0-introduction-physical-ai
+- [ ] T048 [US6] Add sidebar_position metadata to lesson files in module-1-robotic-nervous-system
+- [ ] T049 [US6] Add sidebar_position metadata to lesson files in module-2-digital-twin
+- [ ] T050 [US6] Add sidebar_position metadata to lesson files in module-3-ai-robot-brain
+- [ ] T051 [US6] Add sidebar_position metadata to lesson files in module-4-vision-language-action
+- [ ] T052 [US6] Add sidebar_position metadata to lesson files in module-5-humanoid-robot-development
+- [ ] T053 [US6] Add sidebar_position metadata to lesson files in module-6-conversational-robotics
+- [ ] T054 [US6] Add sidebar_position metadata to lesson files in module-7-hardware-requirements
+- [ ] T055 [US6] Add sidebar_position metadata to lesson files in appendix
+- [ ] T056 [US6] Verify all lesson files have correct sidebar_position values matching folder structure order
+
+**Acceptance Tests**:
+- [ ] Given the textbook structure exists, When sidebar_position metadata is assigned, Then each lesson file has appropriate position value matching the curriculum sequence
+- [ ] Given proper sidebar positions are set, When users navigate through the textbook, Then lessons appear in logical sequential order
+
+## Phase 9: User Story 7 - Integrate Context7 Documentation (Priority: P3)
 
 As a developer maintaining the textbook, I want to access the latest Docusaurus documentation through Context7 MCP server so that I can implement best practices and stay current with the framework.
 
@@ -149,20 +172,20 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - [x] Given Context7 MCP server is available, When documentation is requested, Then current Docusaurus practices are accessible
 - [x] Given Docusaurus best practices are known, When the site is configured, Then it follows current recommended patterns
 
-## Phase 9: Polish & Cross-Cutting Concerns
+## Phase 10: Polish & Cross-Cutting Concerns
 
 Final touches and deployment configuration to meet all success criteria.
 
-- [ ] T052 Configure GitHub Pages deployment settings in docusaurus.config.js
-- [ ] T053 Create GitHub Actions workflow file for automated deployment to GitHub Pages
-- [ ] T054 [P] Optimize site loading performance to meet 3-second requirement
-- [ ] T055 [P] Test site across Chrome, Firefox, Safari, and Edge browsers
-- [ ] T056 [P] Verify site meets accessibility standards
-- [ ] T057 [P] Add search functionality to the site
-- [ ] T058 [P] Create custom 404 page for better user experience
-- [ ] T059 [P] Add site metadata for SEO optimization
-- [ ] T060 Final testing to ensure all success criteria are met
-- [ ] T061 Prepare documentation for deployment and maintenance
+- [ ] T062 Configure GitHub Pages deployment settings in docusaurus.config.js
+- [ ] T063 Create GitHub Actions workflow file for automated deployment to GitHub Pages
+- [ ] T064 [P] Optimize site loading performance to meet 3-second requirement
+- [ ] T065 [P] Test site across Chrome, Firefox, Safari, and Edge browsers
+- [ ] T066 [P] Verify site meets accessibility standards
+- [ ] T067 [P] Add search functionality to the site
+- [ ] T068 [P] Create custom 404 page for better user experience
+- [ ] T069 [P] Add site metadata for SEO optimization
+- [ ] T070 Final testing to ensure all success criteria are met
+- [ ] T071 Prepare documentation for deployment and maintenance
 
 ## Dependencies
 
@@ -170,13 +193,15 @@ Final touches and deployment configuration to meet all success criteria.
 - User Story 2 (Content Structure) must be completed before User Story 3 (Navigation)
 - User Story 3 (Navigation) must be completed before User Story 4 (Homepage and Test Content)
 - User Story 4 (Homepage and Test Content) must be completed before User Story 5 (Lesson File Test Content)
-- User Story 5 (Lesson File Test Content) must be completed before User Story 6 (Context7 Integration)
-- User Story 6 (Context7 Integration) must be completed before final deployment (Phase 9)
+- User Story 5 (Lesson File Test Content) must be completed before User Story 6 (Sidebar Position Assignment)
+- User Story 6 (Sidebar Position Assignment) must be completed before User Story 7 (Context7 Integration)
+- User Story 7 (Context7 Integration) must be completed before final deployment (Phase 10)
 
 ## Parallel Execution Opportunities
 
 - T021-T023: Multiple files can be created in parallel across different directories
 - T037-T046: Adding test content to lesson files across different modules can happen in parallel
+- T047-T055: Assigning sidebar positions to lesson files across different modules can happen in parallel
 - T005, T006, T010, T011: Various setup tasks can be done in parallel during initial setup
 
 ## Success Criteria Validation
@@ -190,3 +215,4 @@ Final touches and deployment configuration to meet all success criteria.
 - [ ] SC-007: Homepage provides engaging user experience with clear pathways to textbook content
 - [ ] SC-008: Test content validates Docusaurus functionality and serves as examples for future content
 - [ ] SC-009: All lesson files in chapters contain test content for proper validation
+- [ ] SC-010: All lesson files have proper sidebar_position metadata matching the folder structure order

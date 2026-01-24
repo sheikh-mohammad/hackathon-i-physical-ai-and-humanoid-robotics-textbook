@@ -73,6 +73,14 @@
 - Only create test content in main sections - wouldn't validate complete structure
 - Use minimal placeholder content - less thorough validation
 
+## Sidebar Position Strategy
+
+**Decision**: Assign proper sidebar_position metadata to all lesson files based on folder structure order
+**Rationale**: Proper sidebar positioning ensures that lessons appear in the correct order in the navigation sidebar, following the logical sequence defined in the curriculum structure. This provides intuitive navigation for users following the textbook sequentially.
+**Alternatives considered**:
+- Auto-generated positions - might not match the intended curriculum flow
+- Manual positioning without reference - prone to errors and inconsistencies
+
 ## Project Structure Decision
 
 **Decision**: Set up Docusaurus project in current directory (.)
