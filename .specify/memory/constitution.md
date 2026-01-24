@@ -1,7 +1,7 @@
 <!-- SYNC IMPACT REPORT:
-Version change: 1.3.0 → 1.4.0
-Added sections: Table of Contents, Cross-references, Relationship mappings, Enhanced visual hierarchy
-Modified sections: All sections with improved navigation and connectivity
+Version change: 1.4.0 → 1.4.1
+Modified sections: Development Workflow (updated to clarify specification and implementation roles)
+Added sections: N/A
 Removed sections: N/A
 Templates requiring updates: ✅ Updated / ⚠ pending
 Follow-up TODOs: None
@@ -96,7 +96,7 @@ Follow-up TODOs: None
 
 ## Development Workflow
 
-Specifications must precede implementation using /sp.specify; Architectural plans created with /sp.plan before coding; Tasks broken down systematically using /sp.tasks; Implementation executed with /sp.implement; All changes documented with Prompt History Records; Regular compliance reviews ensure adherence to principles.
+All specification processes are conducted by the user through prompts to Claude Code, defining requirements, features, and acceptance criteria; Architecturally significant decisions are planned using /sp.plan when needed; Tasks are systematically broken down using /sp.tasks; Implementation is executed by Claude Code only when the user explicitly requests it through specific commands; Claude Code does not initiate or perform any implementation work autonomously; All changes are documented with Prompt History Records; Regular compliance reviews ensure adherence to constitutional principles.
 **Relationship to Principles**: Direct implementation pathway for all [Book Content Principles](#book-content-principles) and [Technical Implementation Standards](#technical-implementation-standards).
 
 ## Governance
@@ -104,4 +104,4 @@ Specifications must precede implementation using /sp.specify; Architectural plan
 This constitution governs all development activities for the Physical AI & Humanoid Robotics textbook project; All code reviews must verify constitutional compliance; Amendments require explicit approval and documentation; All contributors must acknowledge and follow these principles; Project success measured by adherence to principles and achievement of educational objectives.
 **Cross-References**: Enforces compliance with all principles and standards through [Development Workflow](#development-workflow) and [Development & Deployment](#development--deployment-cross-cutting-requirement) processes.
 
-**Version**: 1.4.0 | **Ratified**: 2026-01-22 | **Last Amended**: 2026-01-22
+**Version**: 1.4.1 | **Ratified**: 2026-01-22 | **Last Amended**: 2026-01-24
