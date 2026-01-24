@@ -1,6 +1,7 @@
 # Folder Structure for Physical AI Humanoid and Robotics Textbook
 
 ```markdown
+./ (current directory)
 docs/
 ├── intro.md
 ├── getting-started/
