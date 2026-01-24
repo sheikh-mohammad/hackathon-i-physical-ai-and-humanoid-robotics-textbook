@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Module 5: Humanoid Robot Development
+# Index
 
-Test content
+This section covers Index.

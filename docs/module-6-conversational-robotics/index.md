@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Module 6: Conversational Robotics
+# Index
 
-Test content
+This section covers Index.

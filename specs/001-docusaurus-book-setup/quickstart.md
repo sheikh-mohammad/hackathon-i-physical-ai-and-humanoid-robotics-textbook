@@ -54,6 +54,10 @@
    - Add test content to all lesson files in chapters
    - Ensure each lesson file contains placeholder content for validation
 
+7. **Assign proper sidebar positions**
+   - Add appropriate sidebar_position metadata to all lesson files
+   - Match the position order to the folder structure documentation
+
 ## Running the Development Server
 
 ```bash

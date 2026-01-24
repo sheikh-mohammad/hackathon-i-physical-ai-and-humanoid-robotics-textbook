@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Module 1: Robotic Nervous System
+# Index
 
-Test content
+This section covers Index.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Glossary
 
-Test content
+This section covers Glossary.
