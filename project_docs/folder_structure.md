@@ -9,10 +9,31 @@ docs/
 │   ├── what-is-physical-ai.md
 │   ├── course-overview.md
 │   └── hardware-requirements/
-│       ├── intro.md
-│       ├── workstation-setup.md
-│       ├── edge-kits.md
-│       └── robot-platforms.md
+│       ├── index.md
+│       ├── workstation-requirements/
+│       │   ├── index.md
+│       │   ├── gpu-requirements-selection.md
+│       │   ├── cpu-memory-specifications.md
+│       │   ├── os-installation-configuration.md
+│       │   └── driver-installation-optimization.md
+│       ├── edge-computing-kits/
+│       │   ├── index.md
+│       │   ├── jetson-setup.md
+│       │   ├── development-environment.md
+│       │   ├── resource-management.md
+│       │   └── deployment-strategies.md
+│       ├── sensor-integration/
+│       │   ├── index.md
+│       │   ├── realsense-camera-setup.md
+│       │   ├── imu-calibration-integration.md
+│       │   ├── multi-sensor-synchronization.md
+│       │   └── data-fusion-techniques.md
+│       └── robot-platform-selection/
+│           ├── index.md
+│           ├── robot-selection-criteria.md
+│           ├── unitree-go2-setup.md
+│           ├── unitree-g1-setup.md
+│           └── alternative-platforms-comparison.md
 ├── module-0-introduction-physical-ai/
 │   ├── index.md
 │   ├── foundations-physical-ai/
@@ -226,36 +247,4 @@ docs/
 │   │   ├── intent-classification.md
 │   │   ├── entity-extraction.md
 │   │   └── dialogue-management.md
-├── module-7-hardware-requirements/
-│   ├── index.md
-│   ├── workstation-requirements/
-│   │   ├── index.md
-│   │   ├── gpu-requirements-selection.md
-│   │   ├── cpu-memory-specifications.md
-│   │   ├── os-installation-configuration.md
-│   │   └── driver-installation-optimization.md
-│   ├── edge-computing-kits/
-│   │   ├── index.md
-│   │   ├── jetson-setup.md
-│   │   ├── development-environment.md
-│   │   ├── resource-management.md
-│   │   └── deployment-strategies.md
-│   ├── sensor-integration/
-│   │   ├── index.md
-│   │   ├── realsense-camera-setup.md
-│   │   ├── imu-calibration-integration.md
-│   │   ├── multi-sensor-synchronization.md
-│   │   └── data-fusion-techniques.md
-│   └── robot-platform-selection/
-│       ├── index.md
-│       ├── robot-selection-criteria.md
-│       ├── unitree-go2-setup.md
-│       ├── unitree-g1-setup.md
-│       └── alternative-platforms-comparison.md
-└── appendix/
-    ├── index.md
-    ├── glossary.md
-    ├── troubleshooting.md
-    ├── further-reading.md
-    └── faq.md
 ```

@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Index
+# Module 3: AI Robot Brain
 
 This section covers Index.
