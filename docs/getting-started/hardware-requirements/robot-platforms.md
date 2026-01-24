@@ -1,3 +1,0 @@
-# Robot Platforms
-
-Test content

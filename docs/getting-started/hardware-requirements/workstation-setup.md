@@ -1,3 +1,0 @@
-# Workstation Setup
-
-Test content
