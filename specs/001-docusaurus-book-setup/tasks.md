@@ -180,35 +180,35 @@ As a user of the textbook website, I want to see proper index.md files with head
 
 **Independent Test**: Can be fully tested by verifying that all index.md files contain appropriate heading 1 titles and the sidebar is organized correctly.
 
-- [ ] T072 [US8] Update docs/index.md to contain "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
-- [ ] T073 [US8] Update each module index.md file to contain appropriate module name in heading 1
-- [ ] T074 [US8] Update each chapter index.md file to contain appropriate chapter name in heading 1
-- [ ] T075 [US8] Update each lesson index.md file to contain appropriate lesson name in heading 1
-- [ ] T076 [US8] Verify lessons and chapters are arranged in ascending order by file number in the sidebar
-- [ ] T077 [US8] Ensure sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
+- [X] T072 [US8] Update docs/index.md to contain "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- [X] T073 [US8] Update each module index.md file to contain appropriate module name in heading 1
+- [X] T074 [US8] Update each chapter index.md file to contain appropriate chapter name in heading 1
+- [X] T075 [US8] Update each lesson index.md file to contain appropriate lesson name in heading 1
+- [X] T076 [US8] Verify lessons and chapters are arranged in ascending order by file number in the sidebar
+- [X] T077 [US8] Ensure sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
 
 **Acceptance Tests**:
-- [ ] Given the textbook structure exists, When docs/index.md is accessed, Then it contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
-- [ ] Given the textbook structure exists, When module index.md files are accessed, Then they contain appropriate module name in heading 1
-- [ ] Given the textbook structure exists, When chapter index.md files are accessed, Then they contain appropriate chapter name in heading 1
-- [ ] Given the textbook structure exists, When lesson index.md files are accessed, Then they contain appropriate lesson name in heading 1
-- [ ] Given the sidebar configuration, When users navigate the site, Then lessons and chapters appear in ascending order by file number
-- [ ] Given the sidebar configuration, When users view the navigation, Then it is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
+- [X] Given the textbook structure exists, When docs/index.md is accessed, Then it contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- [X] Given the textbook structure exists, When module index.md files are accessed, Then they contain appropriate module name in heading 1
+- [X] Given the textbook structure exists, When chapter index.md files are accessed, Then they contain appropriate chapter name in heading 1
+- [X] Given the textbook structure exists, When lesson index.md files are accessed, Then they contain appropriate lesson name in heading 1
+- [X] Given the sidebar configuration, When users navigate the site, Then lessons and chapters appear in ascending order by file number
+- [X] Given the sidebar configuration, When users view the navigation, Then it is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
 
 ## Phase 12: Polish & Cross-Cutting Concerns
 
 Final touches and deployment configuration to meet all success criteria.
 
-- [ ] T062 Configure GitHub Pages deployment settings in docusaurus.config.js
-- [ ] T063 Create GitHub Actions workflow file for automated deployment to GitHub Pages
-- [ ] T064 [P] Optimize site loading performance to meet 3-second requirement
-- [ ] T065 [P] Test site across Chrome, Firefox, Safari, and Edge browsers
-- [ ] T066 [P] Verify site meets accessibility standards
-- [ ] T067 [P] Add search functionality to the site
-- [ ] T068 [P] Create custom 404 page for better user experience
-- [ ] T069 [P] Add site metadata for SEO optimization
-- [ ] T070 Final testing to ensure all success criteria are met
-- [ ] T071 Prepare documentation for deployment and maintenance
+- [X] T062 Configure GitHub Pages deployment settings in docusaurus.config.js
+- [X] T063 Create GitHub Actions workflow file for automated deployment to GitHub Pages
+- [X] T064 [P] Optimize site loading performance to meet 3-second requirement
+- [X] T065 [P] Test site across Chrome, Firefox, Safari, and Edge browsers
+- [X] T066 [P] Verify site meets accessibility standards
+- [X] T067 [P] Add search functionality to the site
+- [X] T068 [P] Create custom 404 page for better user experience
+- [X] T069 [P] Add site metadata for SEO optimization
+- [X] T070 Final testing to ensure all success criteria are met
+- [X] T071 Prepare documentation for deployment and maintenance
 
 ## Dependencies
 
@@ -230,19 +230,19 @@ Final touches and deployment configuration to meet all success criteria.
 
 ## Success Criteria Validation
 
-- [ ] SC-001: Users can access the textbook website and navigate to any section within 2 clicks
-- [ ] SC-002: All content from the specified folder structure is properly created and accessible
-- [ ] SC-003: Site loads within 3 seconds on average and displays content correctly across Chrome, Firefox, Safari, and Edge
-- [ ] SC-004: Navigation accurately reflects the hierarchical structure of the textbook with auto-generated sidebar
-- [ ] SC-005: Site features custom branding for Physical AI Humanoid and Robotics textbook
-- [ ] SC-006: Site is successfully deployed to GitHub Pages via automated workflow
-- [ ] SC-007: Homepage provides engaging user experience with clear pathways to textbook content
-- [ ] SC-008: Test content validates Docusaurus functionality and serves as examples for future content
-- [ ] SC-009: All lesson files in chapters contain test content for proper validation
-- [ ] SC-010: All lesson files have proper sidebar_position metadata matching the folder structure order
-- [ ] SC-011: Main docs/index.md contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
-- [ ] SC-012: Each module index.md file contains appropriate module name in heading 1
-- [ ] SC-013: Each chapter index.md file contains appropriate chapter name in heading 1
-- [ ] SC-014: Each lesson file should have appropriate lesson name (file name) in heading 1
-- [ ] SC-015: Lessons and chapters are arranged in ascending order by file number in the sidebar
-- [ ] SC-016: Sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
+- [X] SC-001: Users can access the textbook website and navigate to any section within 2 clicks
+- [X] SC-002: All content from the specified folder structure is properly created and accessible
+- [X] SC-003: Site loads within 3 seconds on average and displays content correctly across Chrome, Firefox, Safari, and Edge
+- [X] SC-004: Navigation accurately reflects the hierarchical structure of the textbook with auto-generated sidebar
+- [X] SC-005: Site features custom branding for Physical AI Humanoid and Robotics textbook
+- [X] SC-006: Site is successfully deployed to GitHub Pages via automated workflow
+- [X] SC-007: Homepage provides engaging user experience with clear pathways to textbook content
+- [X] SC-008: Test content validates Docusaurus functionality and serves as examples for future content
+- [X] SC-009: All lesson files in chapters contain test content for proper validation
+- [X] SC-010: All lesson files have proper sidebar_position metadata matching the folder structure order
+- [X] SC-011: Main docs/index.md contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- [X] SC-012: Each module index.md file contains appropriate module name in heading 1
+- [X] SC-013: Each chapter index.md file contains appropriate chapter name in heading 1
+- [X] SC-014: Each lesson file should have appropriate lesson name (file name) in heading 1
+- [X] SC-015: Lessons and chapters are arranged in ascending order by file number in the sidebar
+- [X] SC-016: Sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
