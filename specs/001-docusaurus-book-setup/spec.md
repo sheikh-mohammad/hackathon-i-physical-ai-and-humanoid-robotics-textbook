@@ -5,6 +5,15 @@
 **Status**: Draft
 **Input**: User description: "Now setup the docusorous project using context 7 mcp server to get the latest documentation for it for the users to easily acces the book content and also create folder and files according to this folder structure @project_docs/folder_structure.md  in docs (docusourous)"
 
+## Updated Requirements
+Based on additional requirements, the documentation structure needs to be enhanced with proper index.md files and organized in a hierarchical manner:
+- Main docs/index.md should have heading 1: "PREFACE: Physical AI and Humanoid Robotics Textbook"
+- Each module index.md should have appropriate module name in heading 1
+- Each chapter index.md should have appropriate chapter name in heading 1
+- Each lesson file should have appropriate lesson name (file name) in heading 1
+- Lessons and chapters should be arranged in ascending order by file number
+- Sidebar should be organized with preface first, then modules 0-7, then lessons/chapters in ascending order
+
 ## Clarifications
 
 ### Session 2026-01-24
@@ -141,6 +150,13 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - **FR-009**: System MUST create basic test files to validate Docusaurus functionality
 - **FR-010**: System MUST create lesson files in all chapters as specified in the folder structure with appropriate placeholder content
 - **FR-011**: System MUST assign proper sidebar_position metadata to all lesson files to match the order documented in the folder structure
+- **FR-012**: System MUST create proper index.md files with heading 1 titles for book, modules, and chapters
+- **FR-013**: System MUST ensure main docs/index.md contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 
+- **FR-014**: System MUST ensure each module index.md file contains appropriate module name in heading 1
+- **FR-015**: System MUST ensure each chapter index.md file contains appropriate chapter name in heading 1
+- **FR-016**: System MUST create each lesson file contains appropriate lesson name (file name) in heading 1
+- **FR-017**: System MUST arrange lessons and chapters in ascending order by file number in the sidebar
+- **FR-018**: System MUST organize sidebar with preface first, then modules 0-7, then lessons/chapters in ascending order
 
 ### Key Entities *(include if feature involves data)*
 
@@ -161,3 +177,9 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - **SC-008**: Test content validates Docusaurus functionality and serves as examples for future content
 - **SC-009**: All lesson files in chapters contain test content for proper validation
 - **SC-010**: All lesson files have proper sidebar_position metadata matching the folder structure order
+- **SC-011**: Main docs/index.md contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- **SC-012**: Each module index.md file contains appropriate module name in heading 1
+- **SC-013**: Each chapter index.md file contains appropriate chapter name in heading 1
+- **SC-014**: Each lesson file should have appropriate lesson name (file name) in heading 1
+- **SC-015**: Lessons and chapters are arranged in ascending order by file number in the sidebar
+- **SC-016**: Sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order

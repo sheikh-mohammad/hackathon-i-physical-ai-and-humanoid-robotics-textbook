@@ -130,6 +130,28 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'YOUR_APP_ID',
+
+        // Public API key provided by Algolia
+        apiKey: 'YOUR_SEARCH_API_KEY',
+
+        // Index name provided by Algolia
+        indexName: 'hackathon-i-physical-ai-and-humanoid-robotics-textbook',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead of history.push. Useful when our Algolia config fetches records from external domains.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+      },
     }),
 };
 

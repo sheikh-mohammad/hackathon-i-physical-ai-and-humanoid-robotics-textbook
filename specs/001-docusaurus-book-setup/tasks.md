@@ -172,7 +172,30 @@ As a developer maintaining the textbook, I want to access the latest Docusaurus 
 - [x] Given Context7 MCP server is available, When documentation is requested, Then current Docusaurus practices are accessible
 - [x] Given Docusaurus best practices are known, When the site is configured, Then it follows current recommended patterns
 
-## Phase 10: Polish & Cross-Cutting Concerns
+## Phase 11: User Story 8 - Enhanced Index File Structure (Priority: P2)
+
+As a user of the textbook website, I want to see proper index.md files with heading 1 titles for book, modules, and chapters and lesson files so that I can clearly identify which section I'm viewing and navigate more intuitively.
+
+**Goal**: Create proper index.md files with heading 1 titles for book, modules, chapters and lesson files (file name) with appropriate titles, organized with preface first, then modules 0-7, then lessons/chapters in ascending order.
+
+**Independent Test**: Can be fully tested by verifying that all index.md files contain appropriate heading 1 titles and the sidebar is organized correctly.
+
+- [X] T072 [US8] Update docs/index.md to contain "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- [X] T073 [US8] Update each module index.md file to contain appropriate module name in heading 1
+- [X] T074 [US8] Update each chapter index.md file to contain appropriate chapter name in heading 1
+- [X] T075 [US8] Update each lesson index.md file to contain appropriate lesson name in heading 1
+- [X] T076 [US8] Verify lessons and chapters are arranged in ascending order by file number in the sidebar
+- [X] T077 [US8] Ensure sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
+
+**Acceptance Tests**:
+- [X] Given the textbook structure exists, When docs/index.md is accessed, Then it contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- [X] Given the textbook structure exists, When module index.md files are accessed, Then they contain appropriate module name in heading 1
+- [X] Given the textbook structure exists, When chapter index.md files are accessed, Then they contain appropriate chapter name in heading 1
+- [X] Given the textbook structure exists, When lesson index.md files are accessed, Then they contain appropriate lesson name in heading 1
+- [X] Given the sidebar configuration, When users navigate the site, Then lessons and chapters appear in ascending order by file number
+- [X] Given the sidebar configuration, When users view the navigation, Then it is organized with preface first, then modules 0-7, then lessons/chapters in ascending order
+
+## Phase 12: Polish & Cross-Cutting Concerns
 
 Final touches and deployment configuration to meet all success criteria.
 
@@ -195,7 +218,8 @@ Final touches and deployment configuration to meet all success criteria.
 - User Story 4 (Homepage and Test Content) must be completed before User Story 5 (Lesson File Test Content)
 - User Story 5 (Lesson File Test Content) must be completed before User Story 6 (Sidebar Position Assignment)
 - User Story 6 (Sidebar Position Assignment) must be completed before User Story 7 (Context7 Integration)
-- User Story 7 (Context7 Integration) must be completed before final deployment (Phase 10)
+- User Story 7 (Context7 Integration) must be completed before User Story 8 (Enhanced Index File Structure)
+- User Story 8 (Enhanced Index File Structure) must be completed before final deployment (Phase 12)
 
 ## Parallel Execution Opportunities
 
@@ -216,3 +240,9 @@ Final touches and deployment configuration to meet all success criteria.
 - [X] SC-008: Test content validates Docusaurus functionality and serves as examples for future content
 - [X] SC-009: All lesson files in chapters contain test content for proper validation
 - [X] SC-010: All lesson files have proper sidebar_position metadata matching the folder structure order
+- [X] SC-011: Main docs/index.md contains "# PREFACE: Physical AI and Humanoid Robotics Textbook" as heading 1
+- [X] SC-012: Each module index.md file contains appropriate module name in heading 1
+- [X] SC-013: Each chapter index.md file contains appropriate chapter name in heading 1
+- [X] SC-014: Each lesson file should have appropriate lesson name (file name) in heading 1
+- [X] SC-015: Lessons and chapters are arranged in ascending order by file number in the sidebar
+- [X] SC-016: Sidebar is organized with preface first, then modules 0-7, then lessons/chapters in ascending order

@@ -3,248 +3,247 @@
 ```markdown
 ./ (current directory)
 docs/
-├── intro.md
-├── getting-started/
+├── index.md
+├── module-0-getting-started-with-physical-ai/
 │   ├── index.md
-│   ├── what-is-physical-ai.md
 │   ├── course-overview.md
-│   └── hardware-requirements/
+│   └── chap-0-hardware-requirements/
 │       ├── index.md
-│       ├── workstation-requirements/
+│       ├── chap-0.1-workstation-requirements/
 │       │   ├── index.md
-│       │   ├── gpu-requirements-selection.md
-│       │   ├── cpu-memory-specifications.md
-│       │   ├── os-installation-configuration.md
-│       │   └── driver-installation-optimization.md
-│       ├── edge-computing-kits/
+│       │   ├── 1-gpu-requirements-selection.md
+│       │   ├── 2-cpu-memory-specifications.md
+│       │   ├── 3-os-installation-configuration.md
+│       │   └── 4-driver-installation-optimization.md
+│       ├── chap-0.2-edge-computing-kits/
 │       │   ├── index.md
-│       │   ├── jetson-setup.md
-│       │   ├── development-environment.md
-│       │   ├── resource-management.md
-│       │   └── deployment-strategies.md
-│       ├── sensor-integration/
+│       │   ├── 1-jetson-orin-nano-nx-setup.md
+│       │   ├── 2-development-environment-configuration.md
+│       │   ├── 3-resource-management.md
+│       │   └── 4-deployment-strategies.md
+│       ├── chap-0.3-sensor-integration/
 │       │   ├── index.md
-│       │   ├── realsense-camera-setup.md
-│       │   ├── imu-calibration-integration.md
-│       │   ├── multi-sensor-synchronization.md
-│       │   └── data-fusion-techniques.md
-│       └── robot-platform-selection/
+│       │   ├── 1-realsense-camera-setup.md
+│       │   ├── 2-imu-calibration-integration.md
+│       │   ├── 3-multi-sensor-synchronization.md
+│       │   └── 4-data-fusion-techniques.md
+│       └── chap-0.4-robot-platform-selection/
 │           ├── index.md
-│           ├── robot-selection-criteria.md
-│           ├── unitree-go2-setup.md
-│           ├── unitree-g1-setup.md
-│           └── alternative-platforms-comparison.md
-├── module-0-introduction-physical-ai/
+│           ├── 1-robot-selection-criteria.md
+│           ├── 2-unitree-go2-quadruped-setup.md
+│           ├── 3-unitree-g1-humanoid-setup.md
+│           └── 4-alternative-platforms-comparison.md
+├── module-1-introduction-to-physical-ai/
 │   ├── index.md
-│   ├── foundations-physical-ai/
-│   │   ├── intro.md
-│   │   ├── what-is-physical-ai.md
-│   │   ├── embodied-intelligence-principles.md
-│   │   ├── digital-vs-physical-ai.md
-│   │   └── historical-context-evolution.md
-│   ├── from-digital-ai-physical/
-│   │   ├── intro.md
-│   │   ├── digital-ai-limitations.md
-│   │   ├── physical-laws-constraints.md
-│   │   ├── physics-simulation-basics.md
-│   │   └── real-world-application-challenges.md
-│   ├── humanoid-robotics-landscape/
-│   │   ├── intro.md
-│   │   ├── current-state-humanoid-robots.md
-│   │   ├── major-players-technologies.md
-│   │   ├── use-cases-applications.md
-│   │   └── future-trends-predictions.md
-│   └── sensor-systems/
-│       ├── intro.md
-│       ├── lidar-sensors-applications.md
-│       ├── camera-systems-computer-vision.md
-│       ├── imu-sensors-balance.md
-│       └── force-torque-sensors-feedback.md
-├── module-1-robotic-nervous-system/
-│   ├── index.md
-│   ├── ros2-architecture-core-concepts/
+│   ├── chap-1-foundations-physical-ai/
 │   │   ├── index.md
-│   │   ├── ros2-vs-ros1.md
-│   │   ├── dds-communication.md
-│   │   ├── client-libraries.md
-│   │   └── qos-settings.md
-│   ├── nodes-topics-services-actions/
+│   │   ├── 1-what-is-physical-ai.md
+│   │   ├── 2-embodied-intelligence-principles.md
+│   │   ├── 3-differences-between-digital-and-physical-ai.md
+│   │   └── 4-historical-context-and-evolution.md
+│   ├── chap-2-from-digital-ai-physical/
 │   │   ├── index.md
-│   │   ├── node-creation.md
-│   │   ├── topic-communication.md
-│   │   ├── service-communication.md
-│   │   └── action-communication.md
-│   ├── building-ros2-packages-python/
+│   │   ├── 1-digital-ai-limitations.md
+│   │   ├── 2-physical-laws-and-constraints.md
+│   │   ├── 3-physics-simulation-basics.md
+│   │   └── 4-real-world-application-challenges.md
+│   ├── chap-3-humanoid-robotics-landscape/
 │   │   ├── index.md
-│   │   ├── package-structure.md
-│   │   ├── publishers-subscribers.md
-│   │   ├── services-clients.md
-│   │   └── testing-debugging.md
-│   ├── launch-files-parameter-management/
-│   │   ├── index.md
-│   │   ├── xml-launch-files.md
-│   │   ├── python-launch-files.md
-│   │   ├── parameter-declaration.md
-│   │   └── configuration.md
-│   ├── bridging-python-agents-ros/
-│   │   ├── index.md
-│   │   ├── agent-integration.md
-│   │   ├── rclpy-integration.md
-│   │   ├── message-passing.md
-│   │   └── real-time-control.md
-│   └── understanding-urdf-humanoids/
+│   │   ├── 1-current-state-of-humanoid-robots.md
+│   │   ├── 2-major-players-and-technologies.md
+│   │   ├── 3-use-cases-and-applications.md
+│   │   └── 4-future-trends-and-predictions.md
+│   └── chap-4-sensor-systems/
 │       ├── index.md
-│       ├── urdf-basics.md
-│       ├── joint-link-definitions.md
-│       ├── visual-collision-properties.md
-│       └── humanoid-urdf-elements.md
-├── module-2-digital-twin/
+│       ├── 1-lidar-sensors-and-applications.md
+│       ├── 2-camera-systems-and-computer-vision.md
+│       ├── 3-imu-sensors-and-balance-systems.md
+│       └── 4-force-torque-sensors-and-feedback.md
+├── module-2-robotic-nervous-system/
 │   ├── index.md
-│   ├── gazebo-simulation-setup/
+│   ├── chap-5-ros2-architecture-core-concepts/
 │   │   ├── index.md
-│   │   ├── installing-configuring-gazebo.md
-│   │   ├── basic-world-creation.md
-│   │   ├── model-import-placement.md
-│   │   └── simulation-parameters.md
-│   ├── urdf-sdf-formats/
+│   │   ├── 1-ros2-vs-ros1-differences.md
+│   │   ├── 2-dds-communication-layer.md
+│   │   ├── 3-client-library-implementations.md
+│   │   └── 4-quality-of-service-settings.md
+│   ├── chap-6-nodes-topics-services-actions/
 │   │   ├── index.md
-│   │   ├── converting-urdf-sdf.md
-│   │   ├── sdf-world-format.md
-│   │   ├── model-customization-sdf.md
-│   │   └── physics-properties-sdf.md
-│   ├── physics-simulation-environment/
+│   │   ├── 1-node-creation-and-management.md
+│   │   ├── 2-topic-based-communication.md
+│   │   ├── 3-service-based-communication.md
+│   │   └── 4-action-based-communication.md
+│   ├── chap-7-building-ros2-packages-python/
 │   │   ├── index.md
-│   │   ├── physics-engine-config.md
-│   │   ├── gravity-environmental-forces.md
-│   │   ├── collision-detection-response.md
-│   │   └── contact-sensors-feedback.md
-│   ├── high-fidelity-rendering-hri/
+│   │   ├── 1-package-structure-and-organization.md
+│   │   ├── 2-creating-publishers-and-subscribers.md
+│   │   ├── 3-developing-services-and-clients.md
+│   │   └── 4-testing-and-debugging-packages.md
+│   ├── chap-8-launch-files-and-parameter-management/
 │   │   ├── index.md
-│   │   ├── unity-setup-robotics.md
-│   │   ├── material-texture-mapping.md
-│   │   ├── lighting-environmental-effects.md
-│   │   └── realistic-physics-simulation.md
-│   └── simulating-sensors/
+│   │   ├── 1-xml-launch-files.md
+│   │   ├── 2-python-launch-files.md
+│   │   ├── 3-parameter-declaration-and-handling.md
+│   │   └── 4-configuration-management.md
+│   ├── chap-9-bridging-python-agents-to-ros-controllers/
+│   │   ├── index.md
+│   │   ├── 1-agent-integration-patterns.md
+│   │   ├── 2-using-rclpy-for-python-integration.md
+│   │   ├── 3-message-passing-between-systems.md
+│   │   └── 4-real-time-control-considerations.md
+│   └── chap-10-understanding-urdf-for-humanoids/
 │       ├── index.md
-│       ├── simulating-lidar.md
-│       ├── camera-depth-simulation.md
-│       ├── imu-sensor-simulation.md
-│       └── force-torque-simulation.md
-├── module-3-ai-robot-brain/
+│       ├── 1-urdf-basics-and-syntax.md
+│       ├── 2-joint-and-link-definitions.md
+│       ├── 3-visual-and-collision-properties.md
+│       └── 4-humanoid-specific-urdf-elements.md
+├── module-3-digital-twin/
 │   ├── index.md
-│   ├── nvidia-isaac-sdk/
+│   ├── chap-11-gazebo-simulation-environment-setup/
 │   │   ├── index.md
-│   │   ├── isaac-sdk-setup.md
-│   │   ├── isaac-sim-overview.md
-│   │   ├── isaac-apps-framework.md
-│   │   └── isaac-gem-library.md
-│   ├── photorealistic-simulation/
+│   │   ├── 1-installing-and-configuring-gazebo.md
+│   │   ├── 2-basic-world-creation.md
+│   │   ├── 3-model-import-and-placement.md
+│   │   └── 4-simulation-parameters-and-settings.md
+│   ├── chap-12-urdf-and-sdf-robot-description-formats/
 │   │   ├── index.md
-│   │   ├── usd-asset-creation.md
-│   │   ├── material-lighting-systems.md
-│   │   ├── synthetic-data-pipeline.md
-│   │   └── domain-randomization.md
-│   ├── isaac-ros-vslam/
+│   │   ├── 1-converting-urdf-to-sdf.md
+│   │   ├── 2-sdf-world-format.md
+│   │   ├── 3-model-customization-in-sdf.md
+│   │   └── 4-physics-properties-in-sdf.md
+│   ├── chap-13-physics-simulation-and-environment-building/
 │   │   ├── index.md
-│   │   ├── visual-slam-principles.md
-│   │   ├── isaac-ros-packages.md
-│   │   ├── gpu-acceleration-benefits.md
-│   │   └── performance-optimization.md
-│   ├── nav2-path-planning/
+│   │   ├── 1-physics-engine-configuration.md
+│   │   ├── 2-gravity-and-environmental-forces.md
+│   │   ├── 3-collision-detection-and-response.md
+│   │   └── 4-contact-sensors-and-feedback.md
+│   ├── chap-14-high-fidelity-rendering-and-human-robot-interaction/
 │   │   ├── index.md
-│   │   ├── nav2-architecture.md
-│   │   ├── costmap-configuration.md
-│   │   ├── path-planning-algorithms.md
-│   │   └── bipedal-navigation-challenges.md
-│   ├── ai-perception-manipulation/
-│   │   ├── index.md
-│   │   ├── object-detection-robotics.md
-│   │   ├── grasping-manipulation-planning.md
-│   │   ├── multi-modal-perception-fusion.md
-│   │   └── real-time-inference-optimization.md
-│   ├── reinforcement-learning-robot-control/
-│   │   ├── index.md
-│   │   ├── rl-fundamentals-robotics.md
-│   │   ├── reward-function-design.md
-│   │   ├── training-simulation.md
-│   │   └── policy-transfer-real-robots.md
-│   └── sim-to-real-transfer/
+│   │   ├── 1-unity-setup-for-robotics-simulation.md
+│   │   ├── 2-material-and-texture-mapping.md
+│   │   ├── 3-lighting-and-environmental-effects.md
+│   │   └── 4-realistic-physics-simulation.md
+│   └── chap-15-simulating-sensors/
 │       ├── index.md
-│       ├── domain-adaptation-methods.md
-│       ├── reality-gap-minimization.md
-│       ├── calibration-fine-tuning.md
-│       └── validation-testing-strategies.md
-├── module-4-vision-language-action/
+│       ├── 1-simulating-lidar-sensors.md
+│       ├── 2-camera-and-depth-sensor-simulation.md
+│       ├── 3-imu-sensor-simulation.md
+│       └── 4-force-torque-sensor-simulation.md
+├── module-4-ai-robot-brain/
 │   ├── index.md
-│   ├── vla-framework-introduction/
+│   ├── chap-16-nvidia-isaac-sdk-and-isaac-sim/
 │   │   ├── index.md
-│   │   ├── vla-concept-architecture.md
-│   │   ├── multi-modal-integration.md
-│   │   ├── real-time-processing-requirements.md
-│   │   └── safety-error-handling.md
-│   ├── voice-to-action-whisper/
+│   │   ├── 1-isaac-sdk-installation-and-setup.md
+│   │   ├── 2-isaac-sim-overview.md
+│   │   ├── 3-isaac-apps-framework.md
+│   │   └── 4-isaac-gem-library.md
+│   ├── chap-17-photorealistic-simulation-and-synthetic-data-generation/
 │   │   ├── index.md
-│   │   ├── whisper-model-integration.md
-│   │   ├── audio-preprocessing.md
-│   │   ├── noise-reduction-techniques.md
-│   │   └── real-time-voice-processing.md
-│   ├── cognitive-planning-llms/
+│   │   ├── 1-usd-asset-creation.md
+│   │   ├── 2-material-and-lighting-systems.md
+│   │   ├── 3-synthetic-data-pipeline.md
+│   │   └── 4-domain-randomization-techniques.md
+│   ├── chap-18-isaac-ros-hardware-accelerated-vslam/
 │   │   ├── index.md
-│   │   ├── llm-integration-robotics.md
-│   │   ├── prompt-engineering-robotics.md
-│   │   ├── reasoning-planning-pipelines.md
-│   │   └── context-management.md
-│   ├── multi-modal-interaction/
+│   │   ├── 1-visual-slam-principles.md
+│   │   ├── 2-isaac-ros-packages.md
+│   │   ├── 3-gpu-acceleration-benefits.md
+│   │   └── 4-performance-optimization.md
+│   ├── chap-19-nav2-path-planning-for-bipedal-humanoid-movement/
 │   │   ├── index.md
-│   │   ├── multimodal-fusion-techniques.md
-│   │   ├── cross-modal-attention.md
-│   │   ├── consistent-behavior-generation.md
-│   │   └── user-experience-design.md
-│   └── capstone-autonomous-humanoid/
+│   │   ├── 1-nav2-architecture.md
+│   │   ├── 2-costmap-configuration.md
+│   │   ├── 3-path-planning-algorithms.md
+│   │   └── 4-bipedal-navigation-challenges.md
+│   ├── chap-20-ai-powered-perception-and-manipulation/
+│   │   ├── index.md
+│   │   ├── 1-object-detection-in-robotics.md
+│   │   ├── 2-grasping-and-manipulation-planning.md
+│   │   ├── 3-multi-modal-perception-fusion.md
+│   │   └── 4-real-time-inference-optimization.md
+│   ├── chap-21-reinforcement-learning-for-robot-control/
+│   │   ├── index.md
+│   │   ├── 1-rl-fundamentals-for-robotics.md
+│   │   ├── 2-reward-function-design.md
+│   │   ├── 3-training-in-simulation.md
+│   │   └── 4-policy-transfer-to-real-robots.md
+│   └── chap-22-sim-to-real-transfer-techniques/
 │       ├── index.md
-│       ├── system-architecture-design.md
-│       ├── voice-command-processing.md
-│       ├── path-planning-obstacle-navigation.md
-│       ├── object-identification-computer-vision.md
-│       └── manipulation-action-execution.md
-├── module-5-humanoid-robot-development/
+│       ├── 1-domain-adaptation-methods.md
+│       ├── 2-reality-gap-minimization.md
+│       ├── 3-calibration-and-fine-tuning.md
+│       └── 4-validation-and-testing-strategies.md
+├── module-5-vision-language-action/
 │   ├── index.md
-│   ├── humanoid-kinematics-dynamics/
+│   ├── chap-23-introduction-to-vision-language-action-framework/
 │   │   ├── index.md
-│   │   ├── forward-inverse-kinematics.md
-│   │   ├── dynamic-modeling.md
-│   │   ├── center-mass-calculations.md
-│   │   └── stability-analysis.md
-│   ├── bipedal-locomotion-balance/
+│   │   ├── 1-vla-concept-and-architecture.md
+│   │   ├── 2-multi-modal-integration.md
+│   │   ├── 3-real-time-processing-requirements.md
+│   │   └── 4-safety-and-error-handling.md
+│   ├── chap-24-voice-to-action-using-openai-whisper/
 │   │   ├── index.md
-│   │   ├── walking-gaits-patterns.md
-│   │   ├── balance-control-algorithms.md
-│   │   ├── zero-moment-point-control.md
-│   │   └── disturbance-recovery.md
-│   ├── manipulation-grasping/
+│   │   ├── 1-whisper-model-integration.md
+│   │   ├── 2-audio-preprocessing.md
+│   │   ├── 3-noise-reduction-techniques.md
+│   │   └── 4-real-time-voice-processing.md
+│   ├── chap-25-cognitive-planning-using-llms/
 │   │   ├── index.md
-│   │   ├── hand-kinematics.md
-│   │   ├── grasp-planning.md
-│   │   ├── force-control.md
-│   │   └── dexterous-manipulation.md
-│   └── human-robot-interaction/
+│   │   ├── 1-llm-integration-in-robotics.md
+│   │   ├── 2-prompt-engineering-for-robotics.md
+│   │   ├── 3-reasoning-and-planning-pipelines.md
+│   │   └── 4-context-management.md
+│   ├── chap-26-multi-modal-interaction-speech-gesture-vision/
+│   │   ├── index.md
+│   │   ├── 1-multimodal-fusion-techniques.md
+│   │   ├── 2-cross-modal-attention.md
+│   │   ├── 3-consistent-behavior-generation.md
+│   │   └── 4-user-experience-design.md
+│   └── chap-27-capstone-project-the-autonomous-humanoid/
 │       ├── index.md
-│       ├── social-robotics-principles.md
-│       ├── gesture-recognition.md
-│       ├── emotional-expression.md
-│       └── safety-considerations.md
-├── module-6-conversational-robotics/
+│       ├── 1-system-architecture-design.md
+│       ├── 2-voice-command-processing.md
+│       ├── 3-path-planning-and-obstacle-navigation.md
+│       ├── 4-object-identification-with-computer-vision.md
+│       └── 5-manipulation-and-action-execution.md
+├── module-6-humanoid-robot-development/
 │   ├── index.md
-│   ├── gpt-conversational-ai/
+│   ├── chap-28-humanoid-robot-kinematics-and-dynamics/
 │   │   ├── index.md
-│   │   ├── gpt-integration-robotics.md
-│   │   ├── context-management.md
-│   │   ├── prompt-engineering-robotics.md
-│   │   └── safety-ethical-considerations.md
-│   ├── speech-recognition-nlu/
+│   │   ├── 1-forward-and-inverse-kinematics.md
+│   │   ├── 2-dynamic-modeling.md
+│   │   ├── 3-center-of-mass-calculations.md
+│   │   └── 4-stability-analysis.md
+│   ├── chap-29-bipedal-locomotion-and-balance-control/
 │   │   ├── index.md
-│   │   ├── asr-systems-robotics.md
-│   │   ├── intent-classification.md
-│   │   ├── entity-extraction.md
-│   │   └── dialogue-management.md
+│   │   ├── 1-walking-gaits-and-patterns.md
+│   │   ├── 2-balance-control-algorithms.md
+│   │   ├── 3-zero-moment-point-zmp-control.md
+│   │   └── 4-disturbance-recovery.md
+│   ├── chap-30-manipulation-and-grasping-with-humanoid-hands/
+│   │   ├── index.md
+│   │   ├── 1-hand-kinematics.md
+│   │   ├── 2-grasp-planning.md
+│   │   ├── 3-force-control.md
+│   │   └── 4-dexterous-manipulation.md
+│   └── chap-31-natural-human-robot-interaction-design/
+│       ├── index.md
+│       ├── 1-social-robotics-principles.md
+│       ├── 2-gesture-recognition.md
+│       ├── 3-emotional-expression.md
+│       └── 4-safety-considerations.md
+├── module-7-conversational-robotics/
+│   ├── index.md
+│   ├── chap-32-integrating-gpt-models-for-conversational-ai/
+│   │   ├── index.md
+│   │   ├── 1-gpt-integration-in-robotics.md
+│   │   ├── 2-context-management.md
+│   │   ├── 3-prompt-engineering-for-robotics.md
+│   │   └── 4-safety-and-ethical-considerations.md
+│   └── chap-33-speech-recognition-and-natural-language-understanding/
+│       ├── index.md
+│       ├── 1-asr-systems-for-robotics.md
+│       ├── 2-intent-classification.md
+│       ├── 3-entity-extraction.md
+│       └── 4-dialogue-management.md
 ```
