@@ -3,7 +3,7 @@
 **Feature Branch**: `002-robocraft-homepage`
 **Created**: 2026-01-25
 **Status**: Draft
-**Input**: User description: "Redesign Physical AI Humanoid Robotics Textbook home page with renaming \"RoboCraft\" Holographic Tech Garden aesthetic – semi-transparent glass UI elements, soft blue and teal holographic accents, animated floating botanical motifs mixed with tech schematics, ambient particle effects and glowing interface highlights. Use frontend-design skill. branch: robocraft-homepage. Implementation should use frontend-design skill and be organized in @src\\ all like @src/components\\ @src/css\\ @src/pages\\. Update homepage to include content from @COURSE_DETAILS.md and @Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in aesthetic manner."
+**Input**: User description: "Redesign Physical AI Humanoid Robotics Textbook home page with renaming \"RoboCraft\" Holographic Tech Garden aesthetic – semi-transparent glass UI elements, soft blue and teal holographic accents, animated floating botanical motifs mixed with tech schematics, ambient particle effects and glowing interface highlights. Use frontend-design skill. branch: robocraft-homepage. Implementation should use frontend-design skill and be organized in @src\\ all like @src/components\\ @src/css\\ @src/pages\\. Update homepage to include content from @COURSE_DETAILS.md and @Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in aesthetic manner. Use image-generator skill while implementing the homepage and image will be needed so create images through this skill also all images will be saved in @static\\ and @static/img\\"
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -65,6 +65,21 @@ As a participant, I want to view the hackathon details from Hackathon_I_Physical
 
 ---
 
+### User Story 4 - View Generated Images (Priority: P2)
+
+As a visitor to the RoboCraft website, I want to see high-quality generated images that complement the holographic tech garden aesthetic so that I can better visualize the AI and robotics concepts being taught.
+
+**Why this priority**: Visual elements are crucial for conveying complex AI and robotics concepts and enhancing the immersive experience.
+
+**Independent Test**: Generated images are displayed throughout the homepage that match the holographic theme and are stored in the proper directories.
+
+**Acceptance Scenarios**:
+
+1. **Given** I am on the RoboCraft homepage, **When** I browse the page, **Then** I see AI-generated images that enhance the holographic tech garden theme.
+2. **Given** I inspect the page resources, **When** I check the image sources, **Then** I find they are stored in @static/ and @static/img/ directories.
+
+---
+
 [Add more user stories as needed, each with an assigned priority]
 
 ### Edge Cases
@@ -73,6 +88,7 @@ As a participant, I want to view the hackathon details from Hackathon_I_Physical
 - How does the design adapt to different screen sizes and devices?
 - What occurs when users have reduced motion preferences enabled?
 - How is the content from the markdown files formatted when displayed on the webpage?
+- How are generated images optimized for web delivery?
 
 ## Requirements *(mandatory)*
 
@@ -100,11 +116,16 @@ As a participant, I want to view the hackathon details from Hackathon_I_Physical
 - **FR-015**: System MUST format and display markdown content in an aesthetically pleasing way that matches the holographic theme
 - **FR-016**: System MUST ensure all course and hackathon information is accessible and readable within the holographic design
 - **FR-017**: System MUST maintain the visual integrity of the holographic aesthetic while displaying dense textual content
+- **FR-018**: System MUST use the image-generator skill to create visual assets for the homepage
+- **FR-019**: System MUST store all generated images in the @static/ directory
+- **FR-020**: System MUST store all generated images in the @static/img/ subdirectory
+- **FR-021**: System MUST reference generated images using proper paths from the homepage
+- **FR-022**: System MUST ensure generated images are optimized for web delivery and performance
 
 *Example of marking unclear requirements:*
 
-- **FR-018**: System MUST optimize animations for visual quality allowing maximum visual impact regardless of performance considerations
-- **FR-019**: System MUST handle WCAG 2.1 AA standards with motion reduction options for accessibility
+- **FR-023**: System MUST optimize animations for visual quality allowing maximum visual impact regardless of performance considerations
+- **FR-024**: System MUST handle WCAG 2.1 AA standards with motion reduction options for accessibility
 
 ### Key Entities *(include if feature involves data)*
 
@@ -113,6 +134,7 @@ As a participant, I want to view the hackathon details from Hackathon_I_Physical
 - **Component Architecture**: Organized structure with components in @src/components/, styles in @src/css/, and pages in @src/pages/
 - **Course Content Integration**: Mechanism for incorporating and displaying content from COURSE_DETAILS.md in the holographic design
 - **Hackathon Content Integration**: Mechanism for incorporating and displaying content from Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in the holographic design
+- **Generated Image Assets**: AI-generated images created using the image-generator skill and stored in @static/ and @static/img/ directories
 
 ## Success Criteria *(mandatory)*
 
@@ -131,3 +153,5 @@ As a participant, I want to view the hackathon details from Hackathon_I_Physical
 - **SC-006**: All content from COURSE_DETAILS.md is successfully integrated into the homepage with proper formatting
 - **SC-007**: All content from Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md is successfully integrated into the homepage with proper formatting
 - **SC-008**: The holographic aesthetic is maintained while displaying all required textual content
+- **SC-009**: All required images are generated using the image-generator skill and properly stored in @static/ and @static/img/ directories
+- **SC-010**: Generated images enhance the user experience and complement the holographic design theme
