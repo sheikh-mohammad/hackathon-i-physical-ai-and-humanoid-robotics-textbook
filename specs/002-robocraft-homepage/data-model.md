@@ -13,8 +13,9 @@
 - title: string (RoboCraft branding)
 - subtitle: string (tagline/description)
 - contentSections: array of ContentBlock (structured content from markdown files)
-- visualElements: array of VisualElement (holographic design components)
+- visualElements: array of VisualElement (industrial design components)
 - navigationItems: array of NavigationItem (navigation links)
+- industrialTheme: IndustrialTheme (dark industrial theme configuration)
 - createdAt: datetime (creation timestamp)
 - updatedAt: datetime (last update timestamp)
 
@@ -22,6 +23,7 @@
 - Contains many ContentBlock entities
 - Contains many VisualElement entities
 - Contains many NavigationItem entities
+- Has one IndustrialTheme
 
 ### ContentBlock
 **Description**: Individual content block extracted from markdown files
@@ -39,11 +41,11 @@
 - May reference MediaAsset for embedded images
 
 ### VisualElement
-**Description**: Holographic design elements and animations
+**Description**: Industrial design elements and animations
 
 **Fields**:
 - id: string (unique identifier)
-- type: enum (floatingElement, particle, techIcon, backgroundPattern)
+- type: enum (robotJoint, mechanicalElement, circuitPathway, blueprintElement, backgroundPattern)
 - position: object (x, y coordinates)
 - animationType: string (type of animation - CSS or JS based on complexity)
 - size: string (dimensions)
@@ -118,6 +120,7 @@
 - size must be in valid CSS format
 - animationComplexity must be either 'simple' or 'complex'
 - colorScheme must use specific hex/RGB values from defined palette
+- type must be one of the industrial-specific enum values (robotJoint, mechanicalElement, circuitPathway, blueprintElement)
 
 ### MediaAsset Validation
 - filename must have valid extension (jpg, png, gif, svg, webp)
@@ -125,6 +128,20 @@
 - dimensions must be positive integers
 - size must not exceed 5MB for images
 - storageLocation must be either 'static' or 'static/img'
+
+### IndustrialTheme Validation
+- primaryColor must be a valid hex color value
+- secondaryColor must be a valid hex color value
+- contrastRatio must be at least 4.5 for accessibility
+- blueprintMode must be a boolean value
+- themeType must be 'dark industrial'
+
+### MechanicalAnimation Validation
+- speed must be a positive number between 0.1 and 5.0
+- precision must be a number between 0 and 1
+- realismFactor must be a number between 0 and 1
+- animationType must be one of the mechanical enum values (robotJoint, gearRotation, pistonMovement, conveyorBelt)
+- targetElement must reference a valid VisualElement
 
 ## Relationships & Constraints
 
@@ -142,6 +159,16 @@
 - MediaAssets are stored in either static/ or static/img/ directories
 - MediaAssets must be referenced by at least one ContentBlock to remain active
 - Each MediaAsset has a specific storageLocation indicating which directory it's in
+
+### IndustrialTheme Relationships
+- Each Homepage has exactly one IndustrialTheme
+- IndustrialTheme influences styling of all VisualElements
+- IndustrialTheme affects the appearance of ContentBlocks
+
+### MechanicalAnimation Relationships
+- Each VisualElement may have zero or one MechanicalAnimation
+- MechanicalAnimations are configured by IndustrialTheme settings
+- MechanicalAnimations target specific VisualElements for animation
 
 ## Indexes
 

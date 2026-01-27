@@ -163,12 +163,24 @@ src/
 - Purpose: Extract and format content from markdown files
 
 **Image Service:**
-- `generateHolographicImages(type: ImageType) -> Promise<string>`
+- `generateIndustrialImages(type: ImageType) -> Promise<string>`
 - Purpose: Generate themed images using image-generator skill
 
 **Color Palette Service:**
 - `getColorPalette(): ColorPalette`
-- Purpose: Provide specific color values (hex/RGB) for holographic aesthetic
+- Purpose: Provide specific color values (hex/RGB) for industrial aesthetic
+
+**Industrial Theme Service:**
+- `applyIndustrialTheme(themeOptions: ThemeOptions) -> void`
+- Purpose: Apply dark industrial theme with steel and copper accents throughout the site
+
+**Mechanical Animation Service:**
+- `animateRobotJoints(elementRef: HTMLElement, options: JointAnimationOptions) -> Promise<void>`
+- Purpose: Create realistic mechanical movement patterns for robot joint elements
+
+**Blueprint Rendering Service:**
+- `renderBlueprintElements(content: string) -> HTMLElement`
+- Purpose: Render technical drawing and blueprint-style visual elements
 
 ## Phase 2: Implementation Strategy
 
@@ -229,26 +241,41 @@ src/
 - **Animation Complexity Risk**: Use mixed CSS and JavaScript approach based on complexity needs
 - **Image Generation Risk**: Prepare placeholder images during development
 - **Color Consistency Risk**: Define and use specific color palette values (hex/RGB) throughout
+- **Industrial Theme Risk**: Ensure readability and accessibility standards are maintained with dark theme
+- **Mechanical Animation Risk**: Test robot joint animations for realistic movement patterns
+- **Blueprint Aesthetics Risk**: Verify technical drawing elements are clear and understandable
+- **Circuit Pathway Risk**: Ensure glowing elements don't cause visual distraction
+- **Kinetic Motion Risk**: Balance interactive effects with usability and performance
 
 ## Phase 3: Quality Assurance
 
 ### Testing Strategy
 
-- **Visual Testing**: Ensure holographic effects render correctly across devices
+- **Visual Testing**: Ensure industrial effects render correctly across devices
 - **Content Testing**: Verify all content from markdown files displays properly
 - **Performance Testing**: Monitor page load times and animation smoothness with mixed CSS/JS approach
 - **Accessibility Testing**: Validate color contrast with specific palette values and navigation options
-- **Animation Testing**: Verify animations adapt based on device capabilities
+- **Animation Testing**: Verify mechanical animations adapt based on device capabilities
 - **Image Storage Testing**: Confirm images are properly stored in both @static/ and @static/img/ directories
+- **Industrial Theme Testing**: Ensure dark theme maintains readability and usability
+- **Robot Joint Animation Testing**: Validate realistic mechanical movement patterns
+- **Blueprint Aesthetics Testing**: Confirm technical drawing elements are clear and understandable
+- **Circuit Pathway Testing**: Verify glowing elements enhance rather than distract
+- **Kinetic Motion Testing**: Test interactive effects for usability and performance
 
 ### Acceptance Criteria
 
 - [ ] All content from markdown files renders correctly
-- [ ] Holographic visual effects function as designed with mixed CSS/JS animations
+- [ ] Industrial visual effects function as designed with mixed CSS/JS animations
 - [ ] Generated images display properly and are stored in both @static/ and @static/img/ directories
 - [ ] Page loads within performance targets with adaptive animations
 - [ ] Site remains accessible and usable with specific color palette values
 - [ ] Animations adjust based on device capabilities
+- [ ] Industrial theme maintains readability and usability standards
+- [ ] Robot joint animations appear realistic and mechanically accurate
+- [ ] Blueprint-mode aesthetics are clear and enhance user understanding
+- [ ] Circuit pathway animations enhance rather than distract from content
+- [ ] Kinetic motion effects improve user interaction experience
 
 ## Dependencies
 

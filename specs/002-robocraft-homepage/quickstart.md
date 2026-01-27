@@ -1,4 +1,4 @@
-# Quickstart Guide: RoboCraft Holographic Homepage Development
+# Quickstart Guide: RoboCraft Industrial-Kinetic Futurism Homepage Development
 
 **Feature**: RoboCraft Holographic Homepage Redesign
 **Date**: 2026-01-25
@@ -67,9 +67,11 @@ npm run start
 ### Recommended Image Sizes
 - Background textures: 1920x1080px
 - Tech schematics: 500x500px
-- Botanical motifs: 300x300px
+- Robot joint motifs: 300x300px
 - Hero banners: 1200x600px
 - Decorative elements: 100x100px
+- Technology badges: 200x100px
+- Mechanical elements: 400x400px
 
 ## Content Integration
 
@@ -81,17 +83,20 @@ import hackathonInfo from '@site/../Hackathon_I_Physical_AI_&_Humanoid_Robotics_
 
 ### Processing Content
 - Use Docusaurus' built-in markdown processing
-- Create a MarkdownRenderer component for holographic styling
+- Create a MarkdownRenderer component for industrial styling
 - Transform content to match the aesthetic requirements
+- Structure content in organized modules with clear learning paths
 
-## Holographic Design Implementation
+## Industrial Design Implementation
 
 ### CSS Techniques
-- Use `backdrop-filter: blur()` for glassmorphism effects
-- Apply linear gradients for holographic color shifts using specific hex/RGB values from the defined color palette
-- Implement keyframe animations for floating elements
-- Use pseudo-elements for glowing borders
-- Create a dedicated color-palette module for consistent holographic aesthetic
+- Use industrial-themed styling with dark backgrounds and steel/copper accents
+- Apply linear gradients for industrial color shifts using specific hex/RGB values from the defined color palette
+- Implement keyframe animations for mechanical elements
+- Use pseudo-elements for glowing circuit pathways
+- Create a dedicated color-palette module for consistent industrial aesthetic
+- Implement structured layouts similar to reference education platforms
+- Apply blueprint-mode aesthetics with technical drawing visual elements
 
 ### Performance Optimization
 - Use React.memo() for components that render frequently
@@ -101,6 +106,33 @@ import hackathonInfo from '@site/../Hackathon_I_Physical_AI_&_Humanoid_Robotics_
 - Use JavaScript libraries like GSAP for complex animations that require more control
 - Use CSS containment where appropriate
 - Implement adaptive animations that adjust based on device capabilities
+
+## Enhanced Aesthetic Guidelines
+
+### Module Cards
+- Create structured presentation of course modules
+- Include appropriate icons and clear descriptions
+- Implement numbered modules with learning paths
+- Ensure readability across different screen sizes
+
+### Technology Stack Display
+- Create prominent badges for key technologies (ROS 2, NVIDIA Isaac, Gazebo, etc.)
+- Position strategically to highlight key tools and frameworks
+- Use consistent styling with industrial aesthetic
+
+### Navigation and User Pathways
+- Implement clear navigation pathways with prominent call-to-action buttons
+- Create intuitive user journey progression
+- Ensure accessibility across all interactive elements
+
+### Industrial Theme Guidelines
+- Apply dark industrial theme with appropriate contrast ratios
+- Include blueprint-mode aesthetics with technical drawing visual elements
+- Feature mechanical precision elements mimicking engineering designs
+- Incorporate steel and copper color palette reflecting industrial materials
+- Animate robot joints with realistic mechanical movement patterns
+- Display glowing circuit pathways mimicking electronic schematics
+- Include kinetic motion effects for interactive elements
 
 ## Development Workflow
 

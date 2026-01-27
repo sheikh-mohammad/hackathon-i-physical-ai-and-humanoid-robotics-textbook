@@ -4,7 +4,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Physical AI Humanoid and Robotics Textbook",
   tagline: "Comprehensive guide to Physical AI and Humanoid Robotics",
-  favicon: "static/img/favicon.ico",
+  favicon: "static/img/favicon.png",
 
   // Set the production url of your site here
   url: "https://sheikh-mohammad.github.io",
