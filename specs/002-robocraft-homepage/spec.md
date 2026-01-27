@@ -3,7 +3,7 @@
 **Feature Branch**: `002-robocraft-homepage`
 **Created**: 2026-01-25
 **Status**: Draft
-**Input**: User description: "Redesign Physical AI Humanoid Robotics Textbook home page with renaming \"RoboCraft\" Holographic Tech Garden aesthetic – semi-transparent glass UI elements, soft blue and teal holographic accents, animated floating botanical motifs mixed with tech schematics, ambient particle effects and glowing interface highlights. Use frontend-design skill. branch: robocraft-homepage. Implementation should use frontend-design skill and be organized in @src\\ all like @src/components\\ @src/css\\ @src/pages\\. Update homepage to include content from @COURSE_DETAILS.md and @Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in aesthetic manner. Use image-generator skill while implementing the homepage and image will be needed so create images through this skill also all images will be saved in @static\\ and @static/img\\"
+**Input**: User description: "Redesign Physical AI Humanoid Robotics Textbook home page with renaming \"RoboCraft\" Industrial-Kinetic Futurism aesthetic – dark industrial theme with animated robot joint motifs, blueprint-mode aesthetics, mechanical precision elements, steel and copper accents, glowing circuit pathways and kinetic motion interface highlights. Update aesthetic based on reference sites: https://mjunaidca.github.io/robolearn/, https://rehan-ul-haq.github.io/physical-ai-robotics/, https://robotic-book-psi.vercel.app/, https://hackathon1-aibook-speckit.vercel.app/. Use frontend-design skill. branch: robocraft-homepage. Implementation should use frontend-design skill and be organized in @src\\ all like @src/components\\ @src/css\\ @src/pages\\. Update homepage to include content from @COURSE_DETAILS.md and @Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in aesthetic manner. Use image-generator skill while implementing the homepage and image will be needed so create images through this skill also all images will be saved in @static\\ and @static/img\\"
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -22,16 +22,17 @@
 
 ### User Story 1 - Access Modernized Homepage (Priority: P1)
 
-As a visitor to the RoboCraft website, I want to experience the new holographic tech garden aesthetic so that I can feel immersed in an innovative and futuristic environment that reflects the cutting-edge nature of AI and robotics content.
+As a visitor to the RoboCraft website, I want to experience the Industrial-Kinetic Futurism aesthetic with dark industrial theme and animated robot joint motifs inspired by leading robotics education platforms so that I can feel immersed in a mechanical and futuristic environment that reflects the precision and engineering of AI and robotics content.
 
-**Why this priority**: This is the foundational user experience that defines the brand identity and creates the first impression for all visitors.
+**Why this priority**: This is the foundational user experience that defines the brand identity and creates the first impression for all visitors, now enhanced with design elements from successful reference sites.
 
-**Independent Test**: The homepage can be accessed and displays the complete holographic design with all visual elements (glass UI, color scheme, animations) functioning properly.
+**Independent Test**: The homepage can be accessed and displays the complete Industrial-Kinetic Futurism design with all visual elements (industrial UI, color scheme, animations, module cards, technology badges) functioning properly.
 
 **Acceptance Scenarios**:
 
-1. **Given** I am visiting the RoboCraft homepage, **When** I load the page, **Then** I see the holographic tech garden aesthetic with semi-transparent glass UI elements and soft blue/teal accents.
-2. **Given** I am on the homepage, **When** I scroll or interact with elements, **Then** I see animated floating botanical motifs mixed with tech schematics.
+1. **Given** I am visiting the RoboCraft homepage, **When** I load the page, **Then** I see the Industrial-Kinetic Futurism aesthetic with dark industrial theme, steel/copper accents, blueprint-mode aesthetics, and structured content modules similar to reference sites.
+2. **Given** I am on the homepage, **When** I scroll or interact with elements, **Then** I see animated robot joint motifs and mechanical precision elements with glowing circuit pathways and clear navigation pathways.
+3. **Given** I am exploring the homepage, **When** I view the content organization, **Then** I see well-structured modules and technology stacks presented in an engaging way like on reference platforms.
 
 ---
 
@@ -88,7 +89,19 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - How is the content from the markdown files formatted when displayed on the webpage?
 - How are generated images optimized for web delivery?
 - How does the system detect device capabilities to adjust animation complexity?
-- How are specific color values implemented to maintain holographic aesthetic consistency?
+- How are specific color values implemented to maintain industrial aesthetic consistency?
+- How do structured content modules behave on smaller screens?
+- How do technology stack badges scale across different device sizes?
+- How do module cards maintain readability with varying content lengths?
+- How does the hero section adapt to different viewport dimensions?
+- How do navigation elements maintain usability across all device sizes?
+- How do call-to-action buttons remain prominent without overwhelming content?
+- How do robot joint animations perform on lower-end devices?
+- How does the dark industrial theme affect readability for different users?
+- How do blueprint-mode aesthetics scale across different screen sizes?
+- How do mechanical precision elements maintain clarity when scaled down?
+- How do glowing circuit pathways perform with reduced motion settings?
+- How do kinetic motion effects behave with accessibility settings enabled?
 
 ## Requirements *(mandatory)*
 
@@ -99,12 +112,12 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 
 ### Functional Requirements
 
-- **FR-001**: System MUST display the homepage with a "RoboCraft" branding and holographic tech garden aesthetic
-- **FR-002**: System MUST render semi-transparent glass UI elements throughout the homepage interface
-- **FR-003**: System MUST use soft blue and teal holographic accent colors consistently
-- **FR-004**: System MUST animate floating botanical motifs mixed with tech schematics on the homepage
-- **FR-005**: System MUST include ambient particle effects that enhance the holographic atmosphere
-- **FR-006**: System MUST provide glowing interface highlights on interactive elements
+- **FR-001**: System MUST display the homepage with a "RoboCraft" branding and Industrial-Kinetic Futurism aesthetic
+- **FR-002**: System MUST render industrial-themed UI elements throughout the homepage interface
+- **FR-003**: System MUST use steel and copper industrial accent colors consistently
+- **FR-004**: System MUST animate robot joint motifs mixed with mechanical precision elements on the homepage
+- **FR-005**: System MUST include glowing circuit pathway effects that enhance the industrial atmosphere
+- **FR-006**: System MUST provide kinetic motion interface highlights on interactive elements
 - **FR-007**: System MUST maintain readability and usability despite the decorative visual elements
 - **FR-008**: System MUST ensure the design is responsive across different device sizes
 - **FR-009**: System MUST implement the design using the frontend-design skill for production-grade UI creation
@@ -113,14 +126,32 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - **FR-012**: System MUST organize code in a structured directory layout with @src/pages/ for page-specific components
 - **FR-013**: System MUST incorporate content from COURSE_DETAILS.md file into the homepage design
 - **FR-014**: System MUST incorporate content from Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md file into the homepage design
-- **FR-015**: System MUST format and display markdown content in an aesthetically pleasing way that matches the holographic theme
-- **FR-016**: System MUST ensure all course and hackathon information is accessible and readable within the holographic design
-- **FR-017**: System MUST maintain the visual integrity of the holographic aesthetic while displaying dense textual content
+- **FR-015**: System MUST format and display markdown content in an aesthetically pleasing way that matches the industrial theme
+- **FR-016**: System MUST ensure all course and hackathon information is accessible and readable within the industrial design
+- **FR-017**: System MUST maintain the visual integrity of the industrial aesthetic while displaying dense textual content
 - **FR-018**: System MUST use the image-generator skill to create visual assets for the homepage
 - **FR-019**: System MUST store all generated images in the @static/ directory
 - **FR-020**: System MUST store all generated images in the @static/img/ subdirectory
 - **FR-021**: System MUST reference generated images using proper paths from the homepage
 - **FR-022**: System MUST ensure generated images are optimized for web delivery and performance
+- **FR-023**: System MUST implement structured content modules similar to reference education platforms
+- **FR-024**: System MUST include clear navigation pathways with prominent call-to-action buttons
+- **FR-025**: System MUST display technology stack badges (ROS 2, NVIDIA Isaac, Gazebo, etc.) prominently
+- **FR-026**: System MUST present course content in organized, numbered modules with clear descriptions
+- **FR-027**: System MUST include compelling hero section with value proposition and key benefits
+- **FR-028**: System MUST showcase key robotics concepts with appropriate icons and visual elements
+- **FR-029**: System MUST provide clear pathways for different user entry points (beginners, advanced learners)
+- **FR-030**: System MUST include footer with comprehensive resource links and community connections
+- **FR-031**: System MUST implement dark industrial theme with appropriate background and text contrast
+- **FR-032**: System MUST include blueprint-mode aesthetics with technical drawing visual elements
+- **FR-033**: System MUST feature mechanical precision elements mimicking engineering designs
+- **FR-034**: System MUST incorporate steel and copper color palette reflecting industrial materials
+- **FR-035**: System MUST animate robot joints with realistic mechanical movement patterns
+- **FR-036**: System MUST display glowing circuit pathways mimicking electronic schematics
+- **FR-037**: System MUST include kinetic motion effects for interactive elements
+- **FR-038**: System MUST maintain readability against dark industrial backgrounds
+- **FR-039**: System MUST ensure accessibility standards with industrial theme
+- **FR-040**: System MUST provide blueprint-style visual guides and diagrams
 
 *Example of marking unclear requirements:*
 
@@ -131,12 +162,22 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 
 ### Key Entities *(include if feature involves data)*
 
-- **Homepage Layout**: Represents the visual arrangement of the holographic tech garden aesthetic with associated styling properties
-- **Visual Elements**: Contains the various animated components (botanical motifs, tech schematics, particles) that create the holographic effect
+- **Homepage Layout**: Represents the visual arrangement of the Industrial-Kinetic Futurism aesthetic with associated styling properties
+- **Visual Elements**: Contains the various animated components (robot joint motifs, mechanical elements, circuit pathways) that create the industrial effect
 - **Component Architecture**: Organized structure with components in @src/components/, styles in @src/css/, and pages in @src/pages/
-- **Course Content Integration**: Mechanism for incorporating and displaying content from COURSE_DETAILS.md in the holographic design
-- **Hackathon Content Integration**: Mechanism for incorporating and displaying content from Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in the holographic design
+- **Course Content Integration**: Mechanism for incorporating and displaying content from COURSE_DETAILS.md in the industrial design
+- **Hackathon Content Integration**: Mechanism for incorporating and displaying content from Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md in the industrial design
 - **Generated Image Assets**: AI-generated images created using the image-generator skill and stored in @static/ and @static/img/ directories
+- **Module Cards**: Structured presentation of course modules with icons, descriptions, and learning paths
+- **Technology Stack Display**: Prominent showcasing of robotics technologies (ROS 2, NVIDIA Isaac, Gazebo, etc.)
+- **Navigation Components**: Clear pathways and call-to-action buttons for user journey progression
+- **Hero Section**: Compelling header with value proposition and key benefits messaging
+- **Footer Resources**: Comprehensive collection of links and community connections
+- **Industrial Theme Manager**: Controls dark industrial theme application across all components
+- **Blueprint Aesthetics Engine**: Applies technical drawing visual elements and blueprint-style visuals
+- **Mechanical Animation Controller**: Manages robot joint animations and mechanical movements
+- **Circuit Pathway Renderer**: Displays glowing electronic pathways and schematic elements
+- **Kinetic Motion Handler**: Controls interactive kinetic effects and motion responses
 
 ## Success Criteria *(mandatory)*
 
@@ -154,14 +195,29 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - **SC-005**: Codebase follows organized structure with components, css, and pages directories for maintainability
 - **SC-006**: All content from COURSE_DETAILS.md is successfully integrated into the homepage with proper formatting
 - **SC-007**: All content from Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md is successfully integrated into the homepage with proper formatting
-- **SC-008**: The holographic aesthetic is maintained while displaying all required textual content
+- **SC-008**: The industrial aesthetic is maintained while displaying all required textual content
 - **SC-009**: All required images are generated using the image-generator skill and properly stored in @static/ and @static/img/ directories
-- **SC-010**: Generated images enhance the user experience and complement the holographic design theme
+- **SC-010**: Generated images enhance the user experience and complement the industrial design theme
 - **SC-011**: Animation performance maintains at least 60fps on mid-range devices while balancing visual effects
 - **SC-012**: Site follows WCAG 2.1 AA standards with reduced motion options for accessibility
 - **SC-013**: Animation implementation uses mix of CSS and JavaScript based on complexity needs
-- **SC-014**: Color palette uses specific hex/RGB values defined for the holographic aesthetic
+- **SC-014**: Color palette uses specific hex/RGB values defined for the industrial aesthetic
 - **SC-015**: Generated images are stored in both @static/ and @static/img/ directories with proper linking
+- **SC-016**: Homepage includes structured content modules similar to reference education platforms
+- **SC-017**: Clear navigation pathways and call-to-action buttons achieve 90% user engagement rate
+- **SC-018**: Technology stack badges are prominently displayed and recognized by 85% of users
+- **SC-019**: Course content is presented in organized, numbered modules with clear learning paths
+- **SC-020**: Hero section effectively communicates value proposition to 90% of visitors
+- **SC-021**: Different user entry points (beginner/advanced) are clearly differentiated
+- **SC-022**: Footer provides comprehensive resource access with 80% utilization rate
+- **SC-023**: Industrial dark theme is applied consistently across all components with proper contrast
+- **SC-024**: Blueprint-mode aesthetics are recognizable by 85% of users
+- **SC-025**: Robot joint animations are perceived as realistic by 80% of users
+- **SC-026**: Mechanical precision elements enhance user perception of technical quality
+- **SC-027**: Steel and copper color palette evokes industrial feeling in 90% of users
+- **SC-028**: Circuit pathway animations are visually appealing without causing distraction
+- **SC-029**: Kinetic motion effects enhance user interaction experience
+- **SC-030**: Industrial aesthetic maintains readability and usability standards
 
 ## Clarifications
 

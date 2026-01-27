@@ -7,18 +7,27 @@
 
 ## Technical Context
 
-This plan outlines the redesign of the Physical AI Humanoid Robotics textbook homepage, renamed "RoboCraft", with a holographic tech garden aesthetic. The implementation will use React/JSX for the Docusaurus 3.x-based site, incorporating glass UI elements, animated botanical motifs, and tech schematics. The content will be sourced from COURSE_DETAILS.md and Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md files.
+This plan outlines the redesign of the Physical AI Humanoid Robotics textbook homepage, renamed "RoboCraft", with an Industrial-Kinetic Futurism aesthetic featuring dark industrial theme, animated robot joint motifs, and blueprint-mode aesthetics inspired by successful reference sites (https://mjunaidca.github.io/robolearn/, https://rehan-ul-haq.github.io/physical-ai-robotics/, https://robotic-book-psi.vercel.app/, https://hackathon1-aibook-speckit.vercel.app/). The implementation will use React/JSX for the Docusaurus 3.x-based site, incorporating industrial UI elements, animated robot joint motifs, mechanical precision elements, steel and copper accents, glowing circuit pathways, and kinetic motion interface highlights. The content will be sourced from COURSE_DETAILS.md and Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md files.
 
 **Technologies & Frameworks:**
 - Docusaurus 3.x (React-based static site generator)
 - React/JSX for component development
-- CSS Modules/Styling for holographic effects
+- CSS Modules/Styling for industrial effects
 - Image generation tools for visual assets
 
 **Key Technical Specifications:**
 - Docusaurus 3.x with React/JSX environment
 - Content from COURSE_DETAILS.md and Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md files
 - Generated images at standard sizes: backgrounds (1920x1080px), schematics (500x500px), motifs (300x300px), hero (1200x600px), decorations (100x100px)
+- Module cards with icons, descriptions, and learning paths
+- Technology stack badges for ROS 2, NVIDIA Isaac, Gazebo, etc.
+- Clear navigation pathways with prominent call-to-action buttons
+- Structured content organization similar to reference platforms
+- Robot joint animations with realistic mechanical movement patterns
+- Steel and copper color palette reflecting industrial materials
+- Blueprint-mode aesthetics with technical drawing visual elements
+- Glowing circuit pathways mimicking electronic schematics
+- Kinetic motion effects for interactive elements
 - Animation implementation using mix of CSS and JavaScript based on complexity needs
 - Specific color palette values (hex/RGB) defined for holographic aesthetic
 - Generated images stored in both @static/ and @static/img/ directories with proper linking
@@ -105,27 +114,47 @@ None identified - the holographic design enhances user engagement while maintain
 ```
 src/
 ├── components/
-│   ├── HolographicCard/
-│   ├── FloatingElement/
-│   ├── GlassContainer/
-│   ├── TechIcon/
-│   └── MarkdownRenderer/
+│   ├── IndustrialCard/
+│   ├── RobotJointElement/
+│   ├── IndustrialContainer/
+│   ├── MechIcon/
+│   ├── MarkdownRenderer/
+│   ├── ModuleCard/
+│   ├── TechStackBadge/
+│   ├── NavigationPath/
+│   ├── HeroSection/
+│   ├── FooterResources/
+│   ├── BlueprintRenderer/
+│   ├── IndustrialThemeManager/
+│   ├── MechanicalAnimationController/
+│   ├── CircuitPathwayRenderer/
+│   └── KineticMotionHandler/
 ├── pages/
 │   └── RoboCraftHomepage/
 └── css/
-    ├── holographic-styles.module.css
+    ├── industrial-styles.module.css
     ├── animations.module.css
     └── color-palette.module.css
 ```
 
 **Core Components:**
 - `RoboCraftHomepage`: Main page component
-- `HolographicCard`: Glassmorphism content containers
-- `FloatingElement`: Animated botanical/tech motifs
-- `GlassContainer`: Base glass effect wrapper
-- `TechIcon`: Animated tech-themed icons
-- `MarkdownRenderer`: Renders markdown content with holographic styling
-- `ColorPaletteProvider`: Manages specific color values for holographic aesthetic
+- `IndustrialCard`: Industrial-themed content containers
+- `RobotJointElement`: Animated robot joint motifs and mechanical elements
+- `IndustrialContainer`: Base industrial effect wrapper
+- `MechIcon`: Animated mechanical-themed icons
+- `MarkdownRenderer`: Renders markdown content with industrial styling
+- `ColorPaletteProvider`: Manages specific color values for industrial aesthetic
+- `ModuleCard`: Structured presentation of course modules with icons and descriptions
+- `TechStackBadge`: Displays technology stack items (ROS 2, NVIDIA Isaac, etc.)
+- `NavigationPath`: Clear pathways and call-to-action buttons for user journey
+- `HeroSection`: Compelling header with value proposition and key benefits
+- `FooterResources`: Comprehensive collection of links and community connections
+- `BlueprintRenderer`: Renders technical drawing and blueprint-style visual elements
+- `IndustrialThemeManager`: Controls dark industrial theme application across all components
+- `MechanicalAnimationController`: Manages robot joint animations and mechanical movements
+- `CircuitPathwayRenderer`: Displays glowing electronic pathways and schematic elements
+- `KineticMotionHandler`: Controls interactive kinetic effects and motion responses
 
 ### API Contracts
 
@@ -151,29 +180,46 @@ src/
    - Create directory structure
 
 2. **Base Components**
-   - Create GlassContainer component
-   - Create HolographicCard component
-   - Create basic styling foundation
+   - Create IndustrialContainer component
+   - Create IndustrialCard component
+   - Create basic industrial styling foundation
 
-3. **Content Integration**
+3. **Industrial Aesthetic Components**
+   - Create RobotJointElement component for animated robot joints
+   - Create MechIcon component for mechanical-themed icons
+   - Create BlueprintRenderer component for technical drawing elements
+   - Create CircuitPathwayRenderer component for glowing circuit pathways
+   - Create KineticMotionHandler component for interactive motion effects
+   - Create IndustrialThemeManager component for dark industrial theme
+
+4. **Enhanced Aesthetic Components**
+   - Create HeroSection component with value proposition
+   - Create ModuleCard components for structured content modules
+   - Create TechStackBadge components for technology display
+   - Create NavigationPath components for clear user journey
+   - Create FooterResources component for comprehensive links
+
+5. **Content Integration**
    - Implement MarkdownRenderer component
    - Connect to COURSE_DETAILS.md
    - Connect to Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md
 
-4. **Visual Effects**
-   - Implement FloatingElement component
-   - Add particle effects using mixed CSS and JavaScript approach based on complexity
+6. **Visual Effects**
+   - Implement RobotJointElement component
+   - Add mechanical animations using mixed CSS and JavaScript approach based on complexity
    - Create animation sequences with performance considerations
+   - Add glowing circuit pathway effects
 
-5. **Image Generation**
+7. **Image Generation**
    - Integrate image-generator skill
    - Store images in both @static/ and @static/img/ directories with proper linking
    - Reference images in components
 
-6. **Final Integration**
-   - Assemble complete homepage
+8. **Final Integration**
+   - Assemble complete homepage with all components
    - Fine-tune visual effects
    - Optimize performance
+   - Ensure responsive design across all components
 
 ### Risk Mitigation
 

@@ -1,0 +1,120 @@
+/**
+ * MarkdownRenderer Styles
+ * Styling for markdown content with holographic aesthetic
+ */
+
+.markdownRenderer {
+  color: var(--text-color-primary);
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+.markdownHeading {
+  color: var(--holographic-blue);
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.markdownHeading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--holographic-blue), var(--holographic-teal));
+  border-radius: 2px;
+}
+
+.heading-1 {
+  font-size: 2.2rem;
+  color: var(--accent-cyan);
+}
+
+.heading-2 {
+  font-size: 1.8rem;
+  color: var(--holographic-blue);
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  color: var(--holographic-teal);
+}
+
+.markdownParagraph {
+  margin: 1rem 0;
+  color: var(--text-color-secondary);
+}
+
+.markdownList {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: var(--text-color-secondary);
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.listItem::marker {
+  color: var(--holographic-teal);
+}
+
+.sourceInfo {
+  font-size: 0.8rem;
+  color: var(--text-color-tertiary);
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Code blocks */
+.codeBlock {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  color: var(--accent-cyan);
+}
+
+/* Blockquotes */
+.blockquote {
+  border-left: 3px solid var(--holographic-teal);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--text-color-tertiary);
+  font-style: italic;
+}
+
+/* Links */
+.link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-cyan);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link:hover {
+  color: var(--holographic-blue-light);
+}

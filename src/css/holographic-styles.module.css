@@ -1,0 +1,89 @@
+/**
+ * Holographic Styles Module
+ * Base styles for holographic aesthetic elements
+ */
+
+.holographic-element {
+  position: relative;
+}
+
+.holographic-element::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.glowing-border {
+  position: relative;
+  box-shadow: 0 0 15px var(--glow-blue, rgba(135, 206, 235, 0.5));
+}
+
+.glowing-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--glow-cyan, rgba(0, 255, 255, 0.3)),
+    transparent,
+    var(--glow-teal, rgba(0, 128, 128, 0.3)),
+    transparent
+  );
+  z-index: -1;
+  animation: holographic-border-animation 3s ease-in-out infinite alternate;
+}
+
+@keyframes holographic-border-animation {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.skeuomorphic-button {
+  background: linear-gradient(145deg,
+    var(--holographic-blue-light, #B0E0E6),
+    var(--holographic-blue, #87CEEB));
+  border: 1px solid var(--holographic-blue-dark, #4682B4);
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: var(--text-color-primary, #FFFFFF);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeuomorphic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2),
+    0 0 20px var(--glow-blue, rgba(135, 206, 235, 0.6));
+}
+
+.skeuomorphic-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15),
+    0 0 15px var(--glow-blue, rgba(135, 206, 235, 0.4));
+}
+
+.interactive-element {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.interactive-element:hover {
+  transform: scale(1.02);
+}

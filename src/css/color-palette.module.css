@@ -1,0 +1,92 @@
+/**
+ * Color Palette Module
+ * Defines specific color values (hex/RGB) for holographic aesthetic
+ */
+
+:root {
+  /* Primary holographic blues */
+  --holographic-blue: #87CEEB;        /* Sky Blue */
+  --holographic-blue-light: #B0E0E6;  /* Powder Blue */
+  --holographic-blue-dark: #4682B4;   /* Steel Blue */
+  --holographic-teal: #008080;        /* Teal */
+  --holographic-teal-light: #20B2AA;  /* Light Sea Green */
+  --holographic-teal-dark: #006666;   /* Dark Teal */
+
+  /* Accent colors */
+  --accent-cyan: #00FFFF;             /* Cyan */
+  --accent-lime: #32CD32;             /* Lime Green */
+  --accent-purple: #9370DB;           /* Medium Purple */
+
+  /* Neutral backgrounds */
+  --bg-dark: #0A0F1A;                 /* Deep Space Blue */
+  --bg-medium: #1A1F2A;               /* Space Gray */
+  --bg-light: #2A2F3A;                /* Light Space Gray */
+
+  /* Text colors */
+  --text-color-primary: #FFFFFF;       /* White */
+  --text-color-secondary: #CCCCCC;     /* Light Gray */
+  --text-color-tertiary: #AAAAAA;      /* Medium Gray */
+
+  /* Glow effects */
+  --glow-blue: rgba(135, 206, 235, 0.7);    /* RGBa for transparency */
+  --glow-teal: rgba(0, 128, 128, 0.7);      /* RGBa for transparency */
+  --glow-cyan: rgba(0, 255, 255, 0.7);      /* RGBa for transparency */
+}
+
+/* Utility classes for color application */
+.color-holographic-blue {
+  color: var(--holographic-blue);
+}
+
+.bg-holographic-blue {
+  background-color: var(--holographic-blue);
+}
+
+.color-holographic-teal {
+  color: var(--holographic-teal);
+}
+
+.bg-holographic-teal {
+  background-color: var(--holographic-teal);
+}
+
+.color-accent-cyan {
+  color: var(--accent-cyan);
+}
+
+.color-accent-lime {
+  color: var(--accent-lime);
+}
+
+.color-accent-purple {
+  color: var(--accent-purple);
+}
+
+.bg-dark-theme {
+  background-color: var(--bg-dark);
+}
+
+.text-primary {
+  color: var(--text-color-primary);
+}
+
+.text-secondary {
+  color: var(--text-color-secondary);
+}
+
+.glow-effect {
+  text-shadow: 0 0 10px var(--glow-blue);
+  box-shadow: 0 0 15px var(--glow-blue);
+}
+
+.glow-effect-blue {
+  box-shadow: 0 0 15px var(--glow-blue);
+}
+
+.glow-effect-teal {
+  box-shadow: 0 0 15px var(--glow-teal);
+}
+
+.glow-effect-cyan {
+  box-shadow: 0 0 15px var(--glow-cyan);
+}

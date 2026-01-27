@@ -1,0 +1,83 @@
+/**
+ * HolographicCard Styles
+ * Additional styling for holographic cards beyond basic glass container
+ */
+
+.holographicCard {
+  min-width: 300px;
+  margin: 16px;
+  position: relative;
+}
+
+.holographicCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+    transparent,
+    rgba(135, 206, 250, 0.4),
+    transparent,
+    rgba(0, 128, 128, 0.4),
+    transparent);
+  border-radius: 18px;
+  z-index: -1;
+  animation: holographicGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes holographicGlow {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.cardTitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(135, 206, 250, 0.7);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+/* Variant styles */
+.holographicCard--default {
+  /* Inherits from GlassContainer */
+}
+
+.holographicCard--highlight {
+  animation: subtlePulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes subtlePulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.holographicCard--floating {
+  animation: floatEffect 4s ease-in-out infinite;
+}
+
+@keyframes floatEffect {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
