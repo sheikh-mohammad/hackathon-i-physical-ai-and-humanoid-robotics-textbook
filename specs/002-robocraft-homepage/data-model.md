@@ -45,11 +45,12 @@
 - id: string (unique identifier)
 - type: enum (floatingElement, particle, techIcon, backgroundPattern)
 - position: object (x, y coordinates)
-- animationType: string (type of animation)
+- animationType: string (type of animation - CSS or JS based on complexity)
 - size: string (dimensions)
-- colorScheme: string (color palette)
+- colorScheme: string (color palette with specific hex/RGB values)
 - zIndex: number (layering order)
 - isActive: boolean (whether animation is active)
+- animationComplexity: enum (simple, complex) - determines if CSS or JS animation is used
 
 **Relationships**:
 - Belongs to Homepage
@@ -80,6 +81,7 @@
 - dimensions: object (width, height)
 - size: number (file size in bytes)
 - createdAt: datetime (generation timestamp)
+- storageLocation: enum (static, static/img) - indicates which directory the file is stored in
 
 **Relationships**:
 - Referenced by ContentBlock
@@ -114,12 +116,15 @@
 - animationType must correspond to implemented animations
 - zIndex must be between 0-9999
 - size must be in valid CSS format
+- animationComplexity must be either 'simple' or 'complex'
+- colorScheme must use specific hex/RGB values from defined palette
 
 ### MediaAsset Validation
 - filename must have valid extension (jpg, png, gif, svg, webp)
-- filepath must start with 'static/img/'
+- filepath must start with either 'static/' or 'static/img/'
 - dimensions must be positive integers
 - size must not exceed 5MB for images
+- storageLocation must be either 'static' or 'static/img'
 
 ## Relationships & Constraints
 
@@ -134,8 +139,9 @@
 
 ### MediaAsset Relationships
 - Each MediaAsset may be referenced by zero or many ContentBlocks
-- MediaAssets are stored in the static/img directory
+- MediaAssets are stored in either static/ or static/img/ directories
 - MediaAssets must be referenced by at least one ContentBlock to remain active
+- Each MediaAsset has a specific storageLocation indicating which directory it's in
 
 ## Indexes
 

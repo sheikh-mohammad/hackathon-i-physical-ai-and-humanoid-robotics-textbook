@@ -33,6 +33,12 @@ npm install
 mkdir -p src/pages src/components src/css static/img
 ```
 
+### 3. Additional Static Directory for Images
+```bash
+# Both static/ and static/img/ directories are used for storing generated images
+mkdir -p static static/img
+```
+
 ### 3. Start Development Server
 ```bash
 npm run start
@@ -54,8 +60,9 @@ npm run start
 
 ### Using the Image Generator
 1. Generate images using the image-generator skill
-2. Save images to `static/img/` directory
-3. Reference images using `/img/image-name.ext` path format
+2. Save images to both `static/` and `static/img/` directories as needed
+3. Reference images using appropriate path format (`/@image-name.ext` for static/ or `/img/image-name.ext` for static/img/)
+4. Properly link images between directories when needed
 
 ### Recommended Image Sizes
 - Background textures: 1920x1080px
@@ -81,15 +88,19 @@ import hackathonInfo from '@site/../Hackathon_I_Physical_AI_&_Humanoid_Robotics_
 
 ### CSS Techniques
 - Use `backdrop-filter: blur()` for glassmorphism effects
-- Apply linear gradients for holographic color shifts
+- Apply linear gradients for holographic color shifts using specific hex/RGB values from the defined color palette
 - Implement keyframe animations for floating elements
 - Use pseudo-elements for glowing borders
+- Create a dedicated color-palette module for consistent holographic aesthetic
 
 ### Performance Optimization
 - Use React.memo() for components that render frequently
-- Implement lazy loading for visual effects
-- Optimize animations using `transform` and `opacity` properties
+- Implement adaptive animations that adjust based on device capabilities
+- Use mixed CSS and JavaScript approach based on animation complexity
+- Optimize animations using `transform` and `opacity` properties for simple animations
+- Use JavaScript libraries like GSAP for complex animations that require more control
 - Use CSS containment where appropriate
+- Implement adaptive animations that adjust based on device capabilities
 
 ## Development Workflow
 
@@ -124,7 +135,9 @@ npm run build
 ### Common Issues
 - Glassmorphism not working on older browsers: Implement fallbacks
 - Content not rendering: Check markdown file paths
-- Images not displaying: Verify file paths in static/img/
+- Images not displaying: Verify file paths in both static/ and static/img/ directories
+- Animation performance issues: Review animation complexity and use appropriate approach (CSS for simple, JS for complex)
+- Color inconsistencies: Ensure using specific hex/RGB values from defined color palette
 - Performance issues: Review animations and component rendering
 
 ### Performance Tips
