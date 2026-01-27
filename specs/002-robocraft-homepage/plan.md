@@ -19,6 +19,9 @@ This plan outlines the redesign of the Physical AI Humanoid Robotics textbook ho
 - Docusaurus 3.x with React/JSX environment
 - Content from COURSE_DETAILS.md and Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md files
 - Generated images at standard sizes: backgrounds (1920x1080px), schematics (500x500px), motifs (300x300px), hero (1200x600px), decorations (100x100px)
+- Animation implementation using mix of CSS and JavaScript based on complexity needs
+- Specific color palette values (hex/RGB) defined for holographic aesthetic
+- Generated images stored in both @static/ and @static/img/ directories with proper linking
 
 ## Constitution Check
 
@@ -27,7 +30,7 @@ This plan outlines the redesign of the Physical AI Humanoid Robotics textbook ho
 This implementation aligns with the following constitutional principles:
 - **Modularity**: Components will be designed for reusability across the site
 - **Maintainability**: Code will follow Docusaurus conventions and React best practices
-- **Performance**: Optimized for fast loading while maintaining visual richness
+- **Performance**: Balancing visual richness with performance considerations based on device capabilities
 - **Accessibility**: Following WCAG guidelines for inclusive design
 
 ### Potential Violations
@@ -65,13 +68,14 @@ None identified - the holographic design enhances user engagement while maintain
 
 3. **Holographic Design Implementation**
    - CSS techniques for glassmorphism effects
-   - Animation libraries suitable for floating elements
+   - Specific color palette values (hex/RGB) for holographic aesthetic
+   - Animation approach mixing CSS and JavaScript based on complexity
    - Performance considerations for visual effects
 
 4. **Image Generation Requirements**
    - Types of images needed for the holographic theme
    - Optimal dimensions and formats
-   - Storage and referencing strategy
+   - Storage strategy using both @static/ and @static/img/ directories with proper linking
 
 ### Expected Outcomes
 - Clear understanding of current site architecture
@@ -110,7 +114,8 @@ src/
 │   └── RoboCraftHomepage/
 └── css/
     ├── holographic-styles.module.css
-    └── animations.module.css
+    ├── animations.module.css
+    └── color-palette.module.css
 ```
 
 **Core Components:**
@@ -120,6 +125,7 @@ src/
 - `GlassContainer`: Base glass effect wrapper
 - `TechIcon`: Animated tech-themed icons
 - `MarkdownRenderer`: Renders markdown content with holographic styling
+- `ColorPaletteProvider`: Manages specific color values for holographic aesthetic
 
 ### API Contracts
 
@@ -130,6 +136,10 @@ src/
 **Image Service:**
 - `generateHolographicImages(type: ImageType) -> Promise<string>`
 - Purpose: Generate themed images using image-generator skill
+
+**Color Palette Service:**
+- `getColorPalette(): ColorPalette`
+- Purpose: Provide specific color values (hex/RGB) for holographic aesthetic
 
 ## Phase 2: Implementation Strategy
 
@@ -152,12 +162,12 @@ src/
 
 4. **Visual Effects**
    - Implement FloatingElement component
-   - Add particle effects
-   - Create animation sequences
+   - Add particle effects using mixed CSS and JavaScript approach based on complexity
+   - Create animation sequences with performance considerations
 
 5. **Image Generation**
    - Integrate image-generator skill
-   - Store images in static/img
+   - Store images in both @static/ and @static/img/ directories with proper linking
    - Reference images in components
 
 6. **Final Integration**
@@ -167,10 +177,12 @@ src/
 
 ### Risk Mitigation
 
-- **Performance Risk**: Implement lazy loading for visual effects
+- **Performance Risk**: Implement adaptive animations that adjust based on device capabilities
 - **Compatibility Risk**: Test across browsers early in development
 - **Content Integration Risk**: Create fallback content display methods
+- **Animation Complexity Risk**: Use mixed CSS and JavaScript approach based on complexity needs
 - **Image Generation Risk**: Prepare placeholder images during development
+- **Color Consistency Risk**: Define and use specific color palette values (hex/RGB) throughout
 
 ## Phase 3: Quality Assurance
 
@@ -178,16 +190,19 @@ src/
 
 - **Visual Testing**: Ensure holographic effects render correctly across devices
 - **Content Testing**: Verify all content from markdown files displays properly
-- **Performance Testing**: Monitor page load times and animation smoothness
-- **Accessibility Testing**: Validate color contrast and navigation options
+- **Performance Testing**: Monitor page load times and animation smoothness with mixed CSS/JS approach
+- **Accessibility Testing**: Validate color contrast with specific palette values and navigation options
+- **Animation Testing**: Verify animations adapt based on device capabilities
+- **Image Storage Testing**: Confirm images are properly stored in both @static/ and @static/img/ directories
 
 ### Acceptance Criteria
 
 - [ ] All content from markdown files renders correctly
-- [ ] Holographic visual effects function as designed
-- [ ] Generated images display properly
-- [ ] Page loads within performance targets
-- [ ] Site remains accessible and usable
+- [ ] Holographic visual effects function as designed with mixed CSS/JS animations
+- [ ] Generated images display properly and are stored in both @static/ and @static/img/ directories
+- [ ] Page loads within performance targets with adaptive animations
+- [ ] Site remains accessible and usable with specific color palette values
+- [ ] Animations adjust based on device capabilities
 
 ## Dependencies
 

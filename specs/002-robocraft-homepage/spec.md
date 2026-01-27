@@ -84,11 +84,11 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 
 ### Edge Cases
 
-- What happens when the page loads on slow connections regarding animation performance?
 - How does the design adapt to different screen sizes and devices?
-- What occurs when users have reduced motion preferences enabled?
 - How is the content from the markdown files formatted when displayed on the webpage?
 - How are generated images optimized for web delivery?
+- How does the system detect device capabilities to adjust animation complexity?
+- How are specific color values implemented to maintain holographic aesthetic consistency?
 
 ## Requirements *(mandatory)*
 
@@ -124,8 +124,10 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 
 *Example of marking unclear requirements:*
 
-- **FR-023**: System MUST optimize animations for visual quality allowing maximum visual impact regardless of performance considerations
+- **FR-023**: System MUST optimize animations for visual quality while balancing performance considerations based on device capabilities
 - **FR-024**: System MUST handle WCAG 2.1 AA standards with motion reduction options for accessibility
+- **FR-025**: System MUST implement animations using a mix of CSS and JavaScript based on complexity needs
+- **FR-026**: System MUST define and use specific color palette values (hex/RGB) for the holographic aesthetic
 
 ### Key Entities *(include if feature involves data)*
 
@@ -155,3 +157,18 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - **SC-008**: The holographic aesthetic is maintained while displaying all required textual content
 - **SC-009**: All required images are generated using the image-generator skill and properly stored in @static/ and @static/img/ directories
 - **SC-010**: Generated images enhance the user experience and complement the holographic design theme
+- **SC-011**: Animation performance maintains at least 60fps on mid-range devices while balancing visual effects
+- **SC-012**: Site follows WCAG 2.1 AA standards with reduced motion options for accessibility
+- **SC-013**: Animation implementation uses mix of CSS and JavaScript based on complexity needs
+- **SC-014**: Color palette uses specific hex/RGB values defined for the holographic aesthetic
+- **SC-015**: Generated images are stored in both @static/ and @static/img/ directories with proper linking
+
+## Clarifications
+
+### Session 2026-01-27
+
+- Q: Should performance and accessibility take priority over visual effects? → A: Focus on visual impact with enhanced effects, accepting some performance trade-offs
+- Q: How should accessibility be handled for animations? → A: Focus on visual impact with enhanced effects, accepting some performance trade-offs
+- Q: Which approach should be used for animations? → A: Mix CSS and JavaScript animations based on complexity
+- Q: How should the holographic color palette be defined? → A: Define specific color palette values (hex/RGB) for the holographic aesthetic
+- Q: Where should generated images be stored? → A: Store in both @static/ and @static/img/ with proper linking to ensure organization
