@@ -88,6 +88,35 @@
 **Relationships**:
 - Referenced by ContentBlock
 
+### ThemePreference
+**Description**: User preference for dark/light mode selection
+
+**Fields**:
+- id: string (unique identifier)
+- userId: string (user identifier, null for anonymous users)
+- preferredTheme: enum (dark, light, system)
+- autoSwitchEnabled: boolean (whether to respect system preference)
+- createdAt: datetime (creation timestamp)
+- updatedAt: datetime (last update timestamp)
+
+**Relationships**:
+- Associated with User (optional)
+- Applied to Homepage
+
+### ThemeTransition
+**Description**: Configuration for smooth transitions between dark and light modes
+
+**Fields**:
+- id: string (unique identifier)
+- duration: number (transition duration in milliseconds)
+- easingFunction: string (CSS easing function)
+- affectedElements: array of string (elements that transition)
+- createdAt: datetime (creation timestamp)
+
+**Relationships**:
+- Applied to ThemePreference
+- Influences all VisualElement transitions
+
 ## State Transitions
 
 ### Homepage States
@@ -143,6 +172,19 @@
 - animationType must be one of the mechanical enum values (robotJoint, gearRotation, pistonMovement, conveyorBelt)
 - targetElement must reference a valid VisualElement
 
+### ThemePreference Validation
+- userId must be a valid user identifier or null for anonymous users
+- preferredTheme must be one of the enum values (dark, light, system)
+- autoSwitchEnabled must be a boolean value
+- createdAt must be in the past
+- updatedAt must be equal to or after createdAt
+
+### ThemeTransition Validation
+- duration must be a positive number between 100-1000 milliseconds
+- easingFunction must be a valid CSS easing function string
+- affectedElements must be an array of valid element identifiers
+- createdAt must be in the past
+
 ## Relationships & Constraints
 
 ### ContentBlock Relationships
@@ -170,6 +212,16 @@
 - MechanicalAnimations are configured by IndustrialTheme settings
 - MechanicalAnimations target specific VisualElements for animation
 
+### ThemePreference Relationships
+- Each User may have zero or one ThemePreference
+- ThemePreference applies to one Homepage
+- ThemePreference influences the IndustrialTheme applied to the site
+
+### ThemeTransition Relationships
+- Each ThemePreference has zero or one ThemeTransition configuration
+- ThemeTransition affects multiple VisualElements during theme changes
+- ThemeTransition is applied when switching between dark and light modes
+
 ## Indexes
 
 ### Homepage
@@ -189,3 +241,13 @@
 - Primary: id (unique)
 - Secondary: filepath (unique, for preventing duplicates)
 - Secondary: type (for filtering by media type)
+
+### ThemePreference
+- Primary: id (unique)
+- Secondary: userId (for user-specific preferences)
+- Secondary: preferredTheme (for theme-based filtering)
+
+### ThemeTransition
+- Primary: id (unique)
+- Secondary: duration (for performance optimization)
+- Secondary: easingFunction (for animation filtering)

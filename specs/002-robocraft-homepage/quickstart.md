@@ -134,6 +134,18 @@ import hackathonInfo from '@site/../Hackathon_I_Physical_AI_&_Humanoid_Robotics_
 - Display glowing circuit pathways mimicking electronic schematics
 - Include kinetic motion effects for interactive elements
 
+### Dark/Light Mode Guidelines
+- Implement toggle functionality for seamless switching between dark and light modes
+- Maintain consistent aesthetic across both dark and light modes
+- Ensure all visual elements remain visible and legible in both modes
+- Preserve industrial-themed elements in both dark and light modes
+- Store user theme preference in local storage for persistence
+- Respect system preference for dark/light mode by default
+- Provide smooth transition animations when switching between modes
+- Maintain proper contrast ratios in both dark and light modes (WCAG 2.1 AA compliance)
+- Ensure all interactive elements remain accessible in both modes
+- Test theme switching functionality across different browsers and devices
+
 ## Development Workflow
 
 ### Component Creation Process

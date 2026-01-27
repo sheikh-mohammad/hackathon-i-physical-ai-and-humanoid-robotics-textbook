@@ -102,6 +102,13 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - How do mechanical precision elements maintain clarity when scaled down?
 - How do glowing circuit pathways perform with reduced motion settings?
 - How do kinetic motion effects behave with accessibility settings enabled?
+- How does the dark/light mode toggle function when JavaScript is disabled?
+- How do visual elements maintain visibility and contrast when switching between modes?
+- How does the system handle user preference changes when accessibility mode is active?
+- How does the theme preference persist across different browsers or devices?
+- How do animations behave when switching themes rapidly?
+- How does the system handle system theme changes while the page is active?
+- How do screen readers interpret the theme toggle functionality?
 
 ## Requirements *(mandatory)*
 
@@ -152,6 +159,16 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - **FR-038**: System MUST maintain readability against dark industrial backgrounds
 - **FR-039**: System MUST ensure accessibility standards with industrial theme
 - **FR-040**: System MUST provide blueprint-style visual guides and diagrams
+- **FR-041**: System MUST implement dark/light mode toggle functionality for user preference
+- **FR-042**: System MUST maintain consistent aesthetic across both dark and light modes
+- **FR-043**: System MUST allow seamless switching between dark and light modes with immediate visual feedback
+- **FR-044**: System MUST preserve all industrial-themed elements in both dark and light modes
+- **FR-045**: System MUST ensure accessibility standards are maintained in both dark and light modes
+- **FR-046**: System MUST store user theme preference in local storage for persistence
+- **FR-047**: System MUST respect system preference for dark/light mode by default
+- **FR-048**: System MUST provide smooth transition animations when switching between modes
+- **FR-049**: System MUST ensure all visual elements (robot joints, circuit pathways, etc.) remain visible in both modes
+- **FR-050**: System MUST maintain proper contrast ratios in both dark and light modes
 
 *Example of marking unclear requirements:*
 
@@ -178,6 +195,10 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - **Mechanical Animation Controller**: Manages robot joint animations and mechanical movements
 - **Circuit Pathway Renderer**: Displays glowing electronic pathways and schematic elements
 - **Kinetic Motion Handler**: Controls interactive kinetic effects and motion responses
+- **Theme Toggle Controller**: Manages dark/light mode switching functionality and persistence
+- **Theme Preference Manager**: Stores and retrieves user theme preferences across sessions
+- **Theme Transition Animator**: Handles smooth visual transitions between dark and light modes
+- **Accessibility Theme Validator**: Ensures accessibility standards are maintained in both modes
 
 ## Success Criteria *(mandatory)*
 
@@ -210,6 +231,24 @@ As a visitor to the RoboCraft website, I want to see high-quality generated imag
 - **SC-020**: Hero section effectively communicates value proposition to 90% of visitors
 - **SC-021**: Different user entry points (beginner/advanced) are clearly differentiated
 - **SC-022**: Footer provides comprehensive resource access with 80% utilization rate
+- **SC-023**: Industrial dark theme is applied consistently across all components with proper contrast
+- **SC-024**: Blueprint-mode aesthetics are recognizable by 85% of users
+- **SC-025**: Robot joint animations are perceived as realistic by 80% of users
+- **SC-026**: Mechanical precision elements enhance user perception of technical quality
+- **SC-027**: Steel and copper color palette evokes industrial feeling in 90% of users
+- **SC-028**: Circuit pathway animations are visually appealing without causing distraction
+- **SC-029**: Kinetic motion effects enhance user interaction experience
+- **SC-030**: Industrial aesthetic maintains readability and usability standards
+- **SC-031**: Dark/light mode toggle functionality is accessible and functional for 100% of users
+- **SC-032**: Users can seamlessly switch between dark and light modes in under 1 second
+- **SC-033**: Consistent aesthetic is maintained across both dark and light modes with 95% visual continuity
+- **SC-034**: Theme preference is preserved across sessions for 95% of returning users
+- **SC-035**: Accessibility standards are maintained in both dark and light modes (WCAG 2.1 AA compliance)
+- **SC-036**: Smooth transition animations complete in under 300ms when switching modes
+- **SC-037**: All visual elements remain visible and legible in both dark and light modes
+- **SC-038**: Contrast ratios meet WCAG standards in both dark and light modes (4.5:1 minimum)
+- **SC-039**: System preference for dark/light mode is correctly detected and applied by default
+- **SC-040**: User theme preference is persisted across browser sessions and device restarts
 - **SC-023**: Industrial dark theme is applied consistently across all components with proper contrast
 - **SC-024**: Blueprint-mode aesthetics are recognizable by 85% of users
 - **SC-025**: Robot joint animations are perceived as realistic by 80% of users

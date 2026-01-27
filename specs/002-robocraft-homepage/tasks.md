@@ -37,7 +37,15 @@ Build the RoboCraft homepage incrementally, starting with core structure and vis
 - [ ] T008 [P] Create base CSS modules: industrial-styles.module.css and color-palette.module.css
 - [ ] T009 [P] Create animations.module.css with base keyframes for industrial effects
 
-## Phase 3: Industrial Aesthetic Components
+## Phase 3: Theme System Components
+
+- [ ] T062 [P] Create ThemeToggleController component for dark/light mode switching
+- [ ] T063 [P] Create ThemePreferenceManager component for storing user preferences
+- [ ] T064 [P] Create ThemeTransitionAnimator component for smooth theme transitions
+- [ ] T065 [P] Create AccessibilityThemeValidator component for accessibility compliance
+- [ ] T066 [P] Establish theme context and variables system for consistent application
+
+## Phase 5: Industrial Aesthetic Components
 
 - [ ] T056 [P] Create RobotJointElement component for animated robot joint motifs
 - [ ] T057 [P] Create MechIcon component for mechanical-themed icons
@@ -46,7 +54,7 @@ Build the RoboCraft homepage incrementally, starting with core structure and vis
 - [ ] T060 [P] Create KineticMotionHandler component for interactive motion effects
 - [ ] T061 [P] Create IndustrialThemeManager component for dark industrial theme
 
-## Phase 4: Enhanced Aesthetic Components
+## Phase 6: Enhanced Aesthetic Components
 
 - [ ] T051 [P] Create HeroSection component with compelling value proposition and key benefits
 - [ ] T052 [P] Create ModuleCard component for structured course modules with icons and descriptions
@@ -100,7 +108,7 @@ Build the RoboCraft homepage incrementally, starting with core structure and vis
 - [ ] T039 [P] Implement adaptive animations adjusting based on device capabilities
 - [ ] T040 [P] Optimize animations for performance while maintaining visual quality
 
-## Phase 10: Polish & Cross-Cutting Concerns
+## Phase 10: Theme Integration & Cross-Cutting Concerns
 
 - [ ] T041 Implement WCAG 2.1 AA standards with motion reduction options
 - [ ] T042 Add reduced motion preferences respecting user settings
@@ -110,28 +118,14 @@ Build the RoboCraft homepage incrementally, starting with core structure and vis
 - [ ] T046 Conduct cross-browser compatibility testing
 - [ ] T047 Finalize component architecture with proper directory organization
 - [ ] T048 Perform final integration testing of all user stories
-- [ ] T049 Verify all functional requirements (FR-001 through FR-040) are met
-- [ ] T050 Confirm all success criteria (SC-001 through SC-030) are achieved
+- [ ] T049 Verify all functional requirements (FR-001 through FR-050) are met
+- [ ] T050 Confirm all success criteria (SC-001 through SC-040) are achieved
+- [ ] T067 Integrate theme system with all existing components for dark/light mode support
+- [ ] T068 Test theme consistency across both dark and light modes
+- [ ] T069 Validate theme preference persistence across browser sessions
+- [ ] T070 Verify smooth transition animations between theme modes
+- [ ] T071 Ensure accessibility compliance in both dark and light modes
 
-## Phase 3: User Story 1 - Access Modernized Homepage (Priority: P1)
-
-- [ ] T010 [US1] Create RoboCraftHomepage main page component with basic structure
-- [ ] T011 [US1] Implement industrial-themed UI elements using IndustrialContainer
-- [ ] T012 [US1] Apply steel and copper industrial accent colors from color palette
-- [ ] T013 [US1] Add glowing circuit pathway effects using CSS animations
-- [ ] T014 [US1] Add kinetic motion interface highlights to interactive elements
-- [ ] T015 [US1] Ensure readability and usability despite decorative visual elements
-- [ ] T016 [US1] Test responsive design across different device sizes
-- [ ] T017 [US1] Verify independent test: homepage displays industrial design with all visual elements
-
-## Phase 4: User Story 2 - Access Course Information (Priority: P2)
-
-- [ ] T018 [US2] Create MarkdownRenderer component for industrial-styled content display
-- [ ] T019 [US2] Integrate content from COURSE_DETAILS.md into homepage design
-- [ ] T020 [US2] Format course information with appropriate typography and spacing
-- [ ] T021 [US2] Style course content to match industrial aesthetic
-- [ ] T022 [US2] Ensure course information is clearly organized and readable
-- [ ] T023 [US2] Verify independent test: course details displayed with industrial styling
 
 ## Phase 5: User Story 3 - Access Hackathon Information (Priority: P3)
 

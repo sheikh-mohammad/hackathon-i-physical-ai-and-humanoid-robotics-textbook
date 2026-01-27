@@ -7,13 +7,14 @@
 
 ## Technical Context
 
-This plan outlines the redesign of the Physical AI Humanoid Robotics textbook homepage, renamed "RoboCraft", with an Industrial-Kinetic Futurism aesthetic featuring dark industrial theme, animated robot joint motifs, and blueprint-mode aesthetics inspired by successful reference sites (https://mjunaidca.github.io/robolearn/, https://rehan-ul-haq.github.io/physical-ai-robotics/, https://robotic-book-psi.vercel.app/, https://hackathon1-aibook-speckit.vercel.app/). The implementation will use React/JSX for the Docusaurus 3.x-based site, incorporating industrial UI elements, animated robot joint motifs, mechanical precision elements, steel and copper accents, glowing circuit pathways, and kinetic motion interface highlights. The content will be sourced from COURSE_DETAILS.md and Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md files.
+This plan outlines the redesign of the Physical AI Humanoid Robotics textbook homepage, renamed "RoboCraft", with an Industrial-Kinetic Futurism aesthetic featuring dark industrial theme, animated robot joint motifs, blueprint-mode aesthetics and dark/light mode toggle functionality inspired by successful reference sites (https://mjunaidca.github.io/robolearn/, https://rehan-ul-haq.github.io/physical-ai-robotics/, https://robotic-book-psi.vercel.app/, https://hackathon1-aibook-speckit.vercel.app/). The implementation will use React/JSX for the Docusaurus 3.x-based site, incorporating industrial UI elements, animated robot joint motifs, mechanical precision elements, steel and copper accents, glowing circuit pathways, kinetic motion interface highlights, and consistent theme switching between dark and light modes. The content will be sourced from COURSE_DETAILS.md and Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md files.
 
 **Technologies & Frameworks:**
 - Docusaurus 3.x (React-based static site generator)
 - React/JSX for component development
 - CSS Modules/Styling for industrial effects
 - Image generation tools for visual assets
+- Theme context API for dark/light mode management
 
 **Key Technical Specifications:**
 - Docusaurus 3.x with React/JSX environment
@@ -28,6 +29,10 @@ This plan outlines the redesign of the Physical AI Humanoid Robotics textbook ho
 - Blueprint-mode aesthetics with technical drawing visual elements
 - Glowing circuit pathways mimicking electronic schematics
 - Kinetic motion effects for interactive elements
+- Dark/light mode toggle with persistent user preference storage
+- Consistent aesthetic maintained across both theme modes
+- Smooth transition animations between theme modes
+- Accessibility compliance maintained in both theme modes
 - Animation implementation using mix of CSS and JavaScript based on complexity needs
 - Specific color palette values (hex/RGB) defined for holographic aesthetic
 - Generated images stored in both @static/ and @static/img/ directories with proper linking
@@ -128,13 +133,18 @@ src/
 │   ├── IndustrialThemeManager/
 │   ├── MechanicalAnimationController/
 │   ├── CircuitPathwayRenderer/
-│   └── KineticMotionHandler/
+│   ├── KineticMotionHandler/
+│   ├── ThemeToggleController/
+│   ├── ThemePreferenceManager/
+│   ├── ThemeTransitionAnimator/
+│   └── AccessibilityThemeValidator/
 ├── pages/
 │   └── RoboCraftHomepage/
 └── css/
     ├── industrial-styles.module.css
     ├── animations.module.css
-    └── color-palette.module.css
+    ├── color-palette.module.css
+    └── theme-variables.module.css
 ```
 
 **Core Components:**
@@ -155,6 +165,10 @@ src/
 - `MechanicalAnimationController`: Manages robot joint animations and mechanical movements
 - `CircuitPathwayRenderer`: Displays glowing electronic pathways and schematic elements
 - `KineticMotionHandler`: Controls interactive kinetic effects and motion responses
+- `ThemeToggleController`: Manages dark/light mode switching functionality and persistence
+- `ThemePreferenceManager`: Stores and retrieves user theme preferences across sessions
+- `ThemeTransitionAnimator`: Handles smooth visual transitions between dark and light modes
+- `AccessibilityThemeValidator`: Ensures accessibility standards are maintained in both modes
 
 ### API Contracts
 
@@ -182,6 +196,22 @@ src/
 - `renderBlueprintElements(content: string) -> HTMLElement`
 - Purpose: Render technical drawing and blueprint-style visual elements
 
+**Theme Management Service:**
+- `toggleTheme(newTheme: 'dark' | 'light'): void`
+- Purpose: Switch between dark and light modes with consistent aesthetic application
+
+**Theme Preference Service:**
+- `storeUserThemePreference(theme: 'dark' | 'light'): void`
+- Purpose: Persist user theme preference across sessions
+
+**Theme Transition Service:**
+- `applySmoothTransition(fromTheme: 'dark' | 'light', toTheme: 'dark' | 'light'): Promise<void>`
+- Purpose: Handle smooth visual transitions when switching between themes
+
+**Accessibility Theme Service:**
+- `validateAccessibility(theme: 'dark' | 'light'): boolean`
+- Purpose: Ensure accessibility standards are maintained in both theme modes
+
 ## Phase 2: Implementation Strategy
 
 ### Implementation Order
@@ -196,7 +226,14 @@ src/
    - Create IndustrialCard component
    - Create basic industrial styling foundation
 
-3. **Industrial Aesthetic Components**
+3. **Theme System Components**
+   - Create ThemeToggleController component for dark/light mode switching
+   - Create ThemePreferenceManager component for storing user preferences
+   - Create ThemeTransitionAnimator component for smooth theme transitions
+   - Create AccessibilityThemeValidator component for accessibility compliance
+   - Establish theme context and variables system
+
+4. **Industrial Aesthetic Components**
    - Create RobotJointElement component for animated robot joints
    - Create MechIcon component for mechanical-themed icons
    - Create BlueprintRenderer component for technical drawing elements
@@ -204,34 +241,36 @@ src/
    - Create KineticMotionHandler component for interactive motion effects
    - Create IndustrialThemeManager component for dark industrial theme
 
-4. **Enhanced Aesthetic Components**
+5. **Enhanced Aesthetic Components**
    - Create HeroSection component with value proposition
    - Create ModuleCard components for structured content modules
    - Create TechStackBadge components for technology display
    - Create NavigationPath components for clear user journey
    - Create FooterResources component for comprehensive links
 
-5. **Content Integration**
+6. **Content Integration**
    - Implement MarkdownRenderer component
    - Connect to COURSE_DETAILS.md
    - Connect to Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md
 
-6. **Visual Effects**
+7. **Visual Effects**
    - Implement RobotJointElement component
    - Add mechanical animations using mixed CSS and JavaScript approach based on complexity
    - Create animation sequences with performance considerations
    - Add glowing circuit pathway effects
 
-7. **Image Generation**
+8. **Image Generation**
    - Integrate image-generator skill
    - Store images in both @static/ and @static/img/ directories with proper linking
    - Reference images in components
 
-8. **Final Integration**
+9. **Final Integration**
    - Assemble complete homepage with all components
+   - Integrate theme system with all existing components
    - Fine-tune visual effects
    - Optimize performance
    - Ensure responsive design across all components
+   - Verify accessibility compliance in both themes
 
 ### Risk Mitigation
 
@@ -246,6 +285,12 @@ src/
 - **Blueprint Aesthetics Risk**: Verify technical drawing elements are clear and understandable
 - **Circuit Pathway Risk**: Ensure glowing elements don't cause visual distraction
 - **Kinetic Motion Risk**: Balance interactive effects with usability and performance
+- **Theme Consistency Risk**: Verify aesthetic consistency across both dark and light modes
+- **Theme Transition Risk**: Ensure smooth transitions without jarring visual changes
+- **Persistence Risk**: Implement reliable theme preference storage across different browsers
+- **Accessibility Risk**: Validate that accessibility standards are maintained in both theme modes
+- **Performance Impact Risk**: Ensure theme switching doesn't negatively impact page performance
+- **User Preference Risk**: Properly handle system preference detection vs user preference
 
 ## Phase 3: Quality Assurance
 
@@ -262,6 +307,13 @@ src/
 - **Blueprint Aesthetics Testing**: Confirm technical drawing elements are clear and understandable
 - **Circuit Pathway Testing**: Verify glowing elements enhance rather than distract
 - **Kinetic Motion Testing**: Test interactive effects for usability and performance
+- **Theme Toggle Testing**: Verify dark/light mode switching functionality works properly
+- **Theme Consistency Testing**: Ensure consistent aesthetic across both dark and light modes
+- **Theme Persistence Testing**: Validate theme preference storage across sessions
+- **Theme Transition Testing**: Confirm smooth visual transitions when switching themes
+- **Accessibility Theme Testing**: Verify accessibility standards are maintained in both theme modes
+- **Cross-Browser Theme Testing**: Ensure theme functionality works across different browsers
+- **Performance Impact Testing**: Verify theme switching doesn't degrade performance
 
 ### Acceptance Criteria
 
@@ -276,6 +328,15 @@ src/
 - [ ] Blueprint-mode aesthetics are clear and enhance user understanding
 - [ ] Circuit pathway animations enhance rather than distract from content
 - [ ] Kinetic motion effects improve user interaction experience
+- [ ] Dark/light mode toggle is accessible and functional for all users
+- [ ] Consistent aesthetic is maintained across both dark and light modes
+- [ ] Theme preference is persisted across browser sessions and device restarts
+- [ ] Smooth transition animations complete when switching between themes
+- [ ] Accessibility standards are maintained in both dark and light modes
+- [ ] All visual elements remain visible and legible in both theme modes
+- [ ] Contrast ratios meet WCAG standards in both dark and light modes
+- [ ] System preference for dark/light mode is correctly detected and applied
+- [ ] Theme switching does not negatively impact page performance
 
 ## Dependencies
 
