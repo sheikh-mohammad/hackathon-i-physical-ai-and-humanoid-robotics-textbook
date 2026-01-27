@@ -10,11 +10,11 @@ const config = {
   url: "https://sheikh-mohammad.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/hackathon-i-physical-ai-and-humanoid-robotics-textbook/",
+  baseUrl: "/robocraft/",
 
   // GitHub pages deployment config.
   organizationName: "sheikh-mohammad", // Usually your GitHub org/user name.
-  projectName: "hackathon-i-physical-ai-and-humanoid-robotics-textbook", // Usually your repo name.
+  projectName: "robocraft", // Usually your repo name.
   deploymentBranch: "gh-pages", // Branch that GitHub pages will deploy from.
 
   // Deployment settings for GitHub Pages
@@ -68,10 +68,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "Physical AI Humanoid Robotics",
+        title: "RoboCraft",
         logo: {
-          alt: "Physical AI Humanoid Robotics Logo",
-          src: "img/logo.svg",
+          alt: "RoboCraft Logo",
+          src: "static/img/favicon.png",
           width: 32,
           height: 32,
         },

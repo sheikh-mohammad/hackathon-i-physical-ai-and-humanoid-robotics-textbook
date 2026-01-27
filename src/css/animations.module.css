@@ -1,9 +1,174 @@
 /**
  * Animations Module
- * Base keyframes for holographic effects
+ * Base keyframes for industrial-kinetic futurism effects
  */
 
-/* Floating animation for botanical motifs and tech elements */
+/* Robot joint rotation animation */
+@keyframes robotJointRotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.robotJointElement {
+  animation: robotJointRotate 2s ease-in-out infinite;
+}
+
+/* Mechanical element pulse */
+@keyframes mechanicalPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(184, 115, 51, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(184, 115, 51, 0.8);
+  }
+}
+
+.mechanicalElement {
+  animation: mechanicalPulse 3s ease-in-out infinite;
+}
+
+/* Circuit pathway glow */
+@keyframes circuitGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    background-position: 0% 50%;
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    background-position: 100% 50%;
+  }
+}
+
+.circuitPathway {
+  animation: circuitGlow 2s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  background-size: 200% 200%;
+}
+
+/* Blueprint renderer animation */
+@keyframes blueprintDraw {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.blueprintElement {
+  animation: blueprintDraw 1.5s ease-out forwards;
+}
+
+/* Kinetic motion handler */
+@keyframes kineticMotion {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(2px) translateY(-1px);
+  }
+  50% {
+    transform: translateX(-2px) translateY(1px);
+  }
+  75% {
+    transform: translateX(1px) translateY(2px);
+  }
+}
+
+.kineticMotion {
+  animation: kineticMotion 1.5s ease-in-out infinite;
+}
+
+/* Industrial theme fade */
+@keyframes industrialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.industrialFadeIn {
+  animation: industrialFadeIn 0.8s ease-out forwards;
+}
+
+/* Glowing effect */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    box-shadow: 0 0 5px currentColor, inset 0 0 5px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    box-shadow: 0 0 10px currentColor, inset 0 0 10px currentColor;
+  }
+}
+
+.glowPulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Conveyor belt movement */
+@keyframes conveyorBelt {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+.conveyorBelt {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(184, 115, 51, 0.3) 10px,
+    rgba(184, 115, 51, 0.3) 20px
+  );
+  background-size: 40px 40px;
+  animation: conveyorBelt 1s linear infinite;
+}
+
+/* Gear rotation */
+@keyframes gearRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gearElement {
+  animation: gearRotate 4s linear infinite;
+}
+
+/* Piston movement */
+@keyframes pistonMove {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+}
+
+.pistonElement {
+  animation: pistonMove 1s ease-in-out infinite;
+}
+
+/* Floating animation for industrial elements */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -176,4 +341,33 @@
   animation: float 6s ease-in-out infinite,
              pulse 4s ease-in-out 1s infinite,
              glow 2s ease-in-out 0.5s infinite;
+}
+
+/* Adaptive animation for performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Smooth theme transition */
+.themeTransition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation performance optimization */
+.willChangeTransform {
+  will-change: transform;
+}
+
+.willChangeOpacity {
+  will-change: opacity;
+}
+
+.willChangeAll {
+  will-change: transform, opacity;
 }

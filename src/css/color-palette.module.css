@@ -1,39 +1,160 @@
 /**
  * Color Palette Module
- * Defines specific color values (hex/RGB) for holographic aesthetic
+ * Defines specific color values (hex/RGB) for industrial-kinetic futurism aesthetic
  */
 
 :root {
-  /* Primary holographic blues */
+  /* Steel colors */
+  --steel-dark: #1a1a1a;
+  --steel-medium: #2a2a2a;
+  --steel-light: #3a3a3a;
+  --steel-text: #b0b0b0;
+
+  /* Copper accents */
+  --copper-dark: #8b4513;
+  --copper-medium: #b87333;
+  --copper-light: #cd7f52;
+  --copper-highlight: #daa520;
+
+  /* Holographic blue */
+  --holographic-blue-dark: #004444;
+  --holographic-blue-medium: #008888;
+  --holographic-blue-light: #00cccc;
+  --holographic-blue-highlight: #00ffff;
+
+  /* Circuit colors */
+  --circuit-red: #ff3333;
+  --circuit-green: #33ff33;
+  --circuit-blue: #3333ff;
+  --circuit-yellow: #ffff33;
+
+  /* Neutral industrial */
+  --industrial-gray-dark: #121212;
+  --industrial-gray-medium: #222222;
+  --industrial-gray-light: #333333;
+  --industrial-gray-text: #aaaaaa;
+
+  /* Light theme equivalents */
+  --light-steel-dark: #e0e0e0;
+  --light-steel-medium: #d0d0d0;
+  --light-steel-light: #c0c0c0;
+  --light-steel-text: #555555;
+
+  --light-copper-dark: #d2b48c;
+  --light-copper-medium: #daa520;
+  --light-copper-light: #ffd700;
+  --light-copper-highlight: #ffdf00;
+
+  /* Accessibility colors */
+  --accessible-blue: #0066cc;
+  --accessible-green: #008000;
+  --accessible-orange: #ff6600;
+  --accessible-purple: #800080;
+
+  /* Primary holographic blues (maintained for compatibility) */
   --holographic-blue: #87CEEB;        /* Sky Blue */
   --holographic-blue-light: #B0E0E6;  /* Powder Blue */
-  --holographic-blue-dark: #4682B4;   /* Steel Blue */
+  --holographic-blue-dark-old: #4682B4;   /* Steel Blue */
   --holographic-teal: #008080;        /* Teal */
   --holographic-teal-light: #20B2AA;  /* Light Sea Green */
   --holographic-teal-dark: #006666;   /* Dark Teal */
 
-  /* Accent colors */
+  /* Accent colors (maintained for compatibility) */
   --accent-cyan: #00FFFF;             /* Cyan */
   --accent-lime: #32CD32;             /* Lime Green */
   --accent-purple: #9370DB;           /* Medium Purple */
 
-  /* Neutral backgrounds */
+  /* Neutral backgrounds (maintained for compatibility) */
   --bg-dark: #0A0F1A;                 /* Deep Space Blue */
   --bg-medium: #1A1F2A;               /* Space Gray */
   --bg-light: #2A2F3A;                /* Light Space Gray */
 
-  /* Text colors */
+  /* Text colors (maintained for compatibility) */
   --text-color-primary: #FFFFFF;       /* White */
   --text-color-secondary: #CCCCCC;     /* Light Gray */
   --text-color-tertiary: #AAAAAA;      /* Medium Gray */
 
-  /* Glow effects */
+  /* Glow effects (maintained for compatibility) */
   --glow-blue: rgba(135, 206, 235, 0.7);    /* RGBa for transparency */
   --glow-teal: rgba(0, 128, 128, 0.7);      /* RGBa for transparency */
   --glow-cyan: rgba(0, 255, 255, 0.7);      /* RGBa for transparency */
+
+  /* Dark theme variables */
+  --primary-bg: var(--industrial-gray-dark);
+  --secondary-bg: var(--steel-dark);
+  --accent-color: var(--copper-medium);
+  --highlight-color: var(--holographic-blue-highlight);
+  --text-primary: #ffffff;
+  --text-secondary: var(--industrial-gray-text);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Light theme variables */
+  --light-primary-bg: #ffffff;
+  --light-secondary-bg: var(--light-steel-light);
+  --light-accent-color: var(--light-copper-medium);
+  --light-highlight-color: var(--holographic-blue-dark);
+  --light-text-primary: #000000;
+  --light-text-secondary: #555555;
+  --light-border-color: rgba(0, 0, 0, 0.1);
+  --light-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Utility classes for color application */
+/* Steel utility classes */
+.steelDark { color: var(--steel-dark); }
+.steelMedium { color: var(--steel-medium); }
+.steelLight { color: var(--steel-light); }
+.steelText { color: var(--steel-text); }
+
+.copperDark { color: var(--copper-dark); }
+.copperMedium { color: var(--copper-medium); }
+.copperLight { color: var(--copper-light); }
+.copperHighlight { color: var(--copper-highlight); }
+
+.holographicBlueDark { color: var(--holographic-blue-dark); }
+.holographicBlueMedium { color: var(--holographic-blue-medium); }
+.holographicBlueLight { color: var(--holographic-blue-light); }
+.holographicBlueHighlight { color: var(--holographic-blue-highlight); }
+
+.circuitRed { color: var(--circuit-red); }
+.circuitGreen { color: var(--circuit-green); }
+.circuitBlue { color: var(--circuit-blue); }
+.circuitYellow { color: var(--circuit-yellow); }
+
+.accessibleBlue { color: var(--accessible-blue); }
+.accessibleGreen { color: var(--accessible-green); }
+.accessibleOrange { color: var(--accessible-orange); }
+.accessiblePurple { color: var(--accessible-purple); }
+
+/* Background color utility classes */
+.bgSteelDark { background-color: var(--steel-dark); }
+.bgSteelMedium { background-color: var(--steel-medium); }
+.bgSteelLight { background-color: var(--steel-light); }
+
+.bgCopperDark { background-color: var(--copper-dark); }
+.bgCopperMedium { background-color: var(--copper-medium); }
+.bgCopperLight { background-color: var(--copper-light); }
+
+.bgHolographicBlueDark { background-color: var(--holographic-blue-dark); }
+.bgHolographicBlueMedium { background-color: var(--holographic-blue-medium); }
+.bgHolographicBlueLight { background-color: var(--holographic-blue-light); }
+
+.bgAccessibleBlue { background-color: var(--accessible-blue); }
+.bgAccessibleGreen { background-color: var(--accessible-green); }
+.bgAccessibleOrange { background-color: var(--accessible-orange); }
+
+/* Theme utility classes */
+.dark-theme {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}
+
+.light-theme {
+  background-color: var(--light-primary-bg);
+  color: var(--light-text-primary);
+}
+
+/* Maintained compatibility classes */
 .color-holographic-blue {
   color: var(--holographic-blue);
 }
@@ -72,6 +193,10 @@
 
 .text-secondary {
   color: var(--text-color-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-color-tertiary);
 }
 
 .glow-effect {

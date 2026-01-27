@@ -59,7 +59,7 @@ const RoboCraftHomepage = () => {
   const navigationItems = [
     { label: "Home", href: "/", icon: "robot" },
     { label: "Courses", href: "/courses", icon: "gear" },
-    { label: "Documentation", href: "robocraft/docs", icon: "bolt" },
+    { label: "Documentation", href: "/docs", icon: "bolt" },
     { label: "Community", href: "/community", icon: "sensor", cta: "New" }
   ];
 
