@@ -15,6 +15,8 @@
 - **Eval-003**: Visual audit confirms all industrial signal motifs present
 - **Eval-004**: All functional requirements FR-001 → FR-030 pass
 - **Eval-005**: Responsive behavior validated at 375px, 768px, 1440px
+- **Eval-006**: System Heartbeat Core visual element successfully implemented with all interaction states
+- **Eval-007**: Autonomous Robotic Arm successfully implemented with all interaction states
 
 ---
 
@@ -56,10 +58,12 @@ Implementation Notes:
   - Staggered section reveals
   - Pulsing signal dots
   - Mouse-tracking radial gradient orb (subtle, low opacity)
+  - System Heartbeat Core: rhythmic pulse with interactive states
 - **Visual Motifs**:
   - Robot assembly schematic SVG
   - Grid and alignment overlays
   - Floating system labels and callouts
+  - Central System Heartbeat Core (circular/hexagonal reactor-style node)
 - **Messaging**:
   - Outcome-driven copy
   - Personal builder journey framing
@@ -121,6 +125,21 @@ As a mobile user, I want the experience to feel intentional and usable.
 
 ---
 
+### User Story 5 – System Vitality Communication (Priority: P1)
+
+As a visitor, I want to immediately sense that the platform is alive and operational, not static content, so that I understand this is a dynamic Physical AI system.
+
+**Independent Test**: Load homepage and observe the System Heartbeat Core element.
+
+**Acceptance Scenarios**:
+1. **Given** the page loads, **Then** the System Heartbeat Core appears in the hero section with rhythmic pulse
+2. **Given** I move my cursor, **Then** the core's pulse subtly syncs with cursor movement
+3. **Given** I hover over CTAs, **Then** the heartbeat accelerates slightly with increased glow intensity
+4. **Given** I scroll down the page, **Then** the core gradually transforms into schematic lines/wireframe rings
+5. **Given** the core is visible, **Then** messaging "A live Physical AI system — not a static course" is displayed nearby
+
+---
+
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
@@ -161,6 +180,17 @@ As a mobile user, I want the experience to feel intentional and usable.
 - **FR-023**: Color contrast MUST meet WCAG 2.1 AA
 - **FR-024**: Focus states MUST be visible for keyboard navigation
 
+#### System Heartbeat Core
+- **FR-025**: Page MUST include a central System Heartbeat Core element in the hero section
+- **FR-026**: Core MUST have industrial design (circular/hexagonal/reactor-style) with orange accent glow
+- **FR-027**: Core MUST exhibit slow, rhythmic pulse animation (idle state)
+- **FR-028**: Core pulse MUST subtly sync with cursor movement (mouse movement state)
+- **FR-029**: Core MUST accelerate heartbeat when CTA is hovered (CTA hover state)
+- **FR-030**: Core MUST transform to schematic lines/wireframe on scroll (scroll interaction state)
+- **FR-031**: Core messaging MUST display "A live Physical AI system — not a static course" nearby
+- **FR-032**: Core MUST use performance-friendly SVG/CSS/lightweight JS implementation
+- **FR-033**: Core MUST respect prefers-reduced-motion setting
+
 ---
 
 ### Non-Functional Requirements
@@ -179,6 +209,7 @@ As a mobile user, I want the experience to feel intentional and usable.
 - **Feature Block**: product capability explanation
 - **Hardware Tier Card**: System readiness indicator
 - **CTA Block**: Conversion and commitment section
+- **System Heartbeat Core**: Central industrial element that visually communicates platform vitality
 
 ---
 
@@ -191,7 +222,10 @@ As a mobile user, I want the experience to feel intentional and usable.
 - **SC-005**: Page passes Lighthouse performance and accessibility targets
 - **SC-006**: Motion enhances hierarchy without reducing readability
 - **SC-007**: Visual audit confirms industrial (not sci-fi) aesthetic
-- **SC-008**: “Free forever” messaging is clearly visible and credible
+- **SC-008**: "Free forever" messaging is clearly visible and credible
+- **SC-009**: System Heartbeat Core successfully communicates platform vitality to users
+- **SC-010**: System Heartbeat Core responds appropriately to user interactions (mouse, hover, scroll)
+- **SC-011**: System Heartbeat Core messaging reinforces Physical AI + Robotics identity
 
 ---
 

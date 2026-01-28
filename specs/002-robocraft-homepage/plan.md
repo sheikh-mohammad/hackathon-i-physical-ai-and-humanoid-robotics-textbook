@@ -2,11 +2,11 @@
 
 ## Technical Context
 
-**Feature**: Redesign of the RoboCraft homepage with industrial-themed UI components and styling
+**Feature**: Redesign of the RoboCraft homepage with industrial-themed UI components and styling, including System Heartbeat Core
 **Location**: src/pages/index.js (main homepage file)
 **Technology Stack**: JavaScript, React JS, Docusaurus 3.1.0, CSS Modules
 **Design Theme**: Industrial Confidence — Orange (Deep space dark #08090d with industrial orange #f97316 accents)
-**Primary Goal**: Create a new industrial-themed homepage for RoboCraft robotics education platform
+**Primary Goal**: Create a new industrial-themed homepage for RoboCraft robotics education platform with a System Heartbeat Core that visually communicates platform vitality
 
 ## Design Direction
 
@@ -22,14 +22,16 @@
   - Staggered section reveals
   - Pulsing signal dots
   - Mouse-tracking radial gradient orb (subtle, low opacity)
+  - System Heartbeat Core: rhythmic pulse with interactive states
 - **Visual Motifs**:
   - Robot assembly schematic SVG
   - Grid and alignment overlays
   - Floating system labels and callouts
+  - Central System Heartbeat Core (circular/hexagonal reactor-style node)
 - **Messaging**:
   - Outcome-driven copy
   - Personal builder journey framing
-  - Explicit commitment: **“Free forever. No lock-in.”**
+  - Explicit commitment: **"Free forever. No lock-in."**
 
 ### Dependencies
 - Docusaurus 3.1.0 framework
@@ -223,13 +225,20 @@ Based on the project constitution principles:
 - Props: courses
 - Style: Grid layout with hover effects
 
+**Component 4: SystemHeartbeatCore**
+- Purpose: Central industrial element that visually communicates platform vitality
+- Props: idlePulse, mouseSync, ctaHoverEffect, scrollTransform
+- Style: Circular/hexagonal reactor-style with orange glow, grid background, radial glow
+- Behavior: Rhythmic pulse animation, cursor-synced pulse, CTA hover acceleration, scroll transformation
+
 ### 2.2 Styling Strategy
 
 - Primary theme: Deep space dark (#08090d)
 - Primary accent: Industrial orange (#f97316)
 - Secondary accent: Warm amber (#fb923c)
 - Typography: Space Grotesk for headlines, JetBrains Mono for technical text, IBM Plex Sans for body
-- Motion: Staggered reveals, pulsing dots, subtle radial gradients
+- Motion: Staggered reveals, pulsing dots, subtle radial gradients, System Heartbeat Core animations
+- Visual Motifs: Grid lines, schematic elements, radial glow for System Heartbeat Core
 
 ### 2.3 Implementation Steps
 
@@ -237,9 +246,10 @@ Based on the project constitution principles:
 2. Update src/pages/index.js to use new components
 3. Apply industrial-themed styling with CSS modules
 4. Integrate course content from existing markdown files
-5. Implement responsive design
-6. Add accessibility attributes
-7. Optimize performance
+5. Implement System Heartbeat Core component with all interaction states
+6. Implement responsive design
+7. Add accessibility attributes
+8. Optimize performance
 
 ## Phase 3: Risk Analysis
 
@@ -274,6 +284,12 @@ Based on the project constitution principles:
 - [ ] Navigation works correctly
 - [ ] Mobile responsiveness meets touch target requirements (>= 44px)
 - [ ] All links and CTAs are functional
+- [X] System Heartbeat Core appears in hero section with rhythmic pulse animation
+- [X] System Heartbeat Core responds to cursor movement with subtle pulse syncing
+- [X] System Heartbeat Core accelerates heartbeat when CTAs are hovered
+- [X] System Heartbeat Core transforms to schematic lines/wireframe on scroll
+- [X] System Heartbeat Core messaging "A live Physical AI system — not a static course" is displayed
+- [X] System Heartbeat Core respects prefers-reduced-motion setting
 
 ### 4.2 Non-Functional Requirements
 

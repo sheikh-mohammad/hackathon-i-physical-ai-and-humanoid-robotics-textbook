@@ -1,0 +1,30 @@
+/* Font imports for RoboCraft Industrial Homepage */
+
+/* Space Grotesk for headlines */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* JetBrains Mono for technical/ui elements */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500;600;700&display=swap');
+
+/* IBM Plex Sans for body text */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Font variable definitions */
+:root {
+  --font-headlines: 'Space Grotesk', sans-serif;
+  --font-technical: 'JetBrains Mono', monospace;
+  --font-body: 'IBM Plex Sans', sans-serif;
+}
+
+/* Font usage classes */
+.font-headlines {
+  font-family: var(--font-headlines);
+}
+
+.font-technical {
+  font-family: var(--font-technical);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}

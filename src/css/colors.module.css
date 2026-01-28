@@ -1,0 +1,62 @@
+/* Industrial Color Palette for RoboCraft Homepage */
+
+:root {
+  /* Theme Colors */
+  --theme-bg-dark: #08090d; /* Deep space dark - controlled, premium foundation */
+  --theme-accent-primary: #f97316; /* Industrial orange - CTAs, focus states, interaction */
+  --theme-accent-secondary: #fb923c; /* Warm amber - glows, gradients, hover energy */
+  --theme-success: #22c55e; /* System green - active states, health indicators */
+
+  /* Extended Palette */
+  --color-steel-dark: #1e293b; /* Steel dark for secondary backgrounds */
+  --color-steel-medium: #334155; /* Medium steel for borders */
+  --color-steel-light: #475569; /* Light steel for subtle elements */
+  --color-gray-dark: #0f172a; /* Dark gray alternative */
+  --color-gray-medium: #64748b; /* Medium gray for text */
+  --color-gray-light: #94a3b8; /* Light gray for disabled elements */
+  --color-white: #ffffff; /* Pure white for text */
+  --color-off-white: #f8fafc; /* Off-white for subtle highlights */
+
+  /* Interactive States */
+  --color-hover: #fea04c; /* Hover state for orange elements */
+  --color-active: #ea580c; /* Active state for orange elements */
+  --color-focus: rgba(249, 115, 22, 0.3); /* Focus ring for accessibility */
+
+  /* Background Variants */
+  --bg-primary: var(--theme-bg-dark);
+  --bg-secondary: var(--color-steel-dark);
+  --bg-tertiary: var(--color-steel-medium);
+  --bg-accent: var(--theme-accent-primary);
+
+  /* Text Colors */
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-gray-light);
+  --text-accent: var(--theme-accent-primary);
+  --text-disabled: var(--color-gray-medium);
+
+  /* Border Colors */
+  --border-primary: var(--color-steel-medium);
+  --border-accent: var(--theme-accent-primary);
+
+  /* Shadow Colors */
+  --shadow-base: rgba(0, 0, 0, 0.25);
+  --shadow-accent: rgba(249, 115, 22, 0.2);
+
+  /* Gradient Colors */
+  --gradient-orange-start: var(--theme-accent-primary);
+  --gradient-orange-end: var(--theme-accent-secondary);
+}
+
+/* Utility classes for consistent color usage */
+.bg-dark-theme { background-color: var(--theme-bg-dark); }
+.bg-accent-primary { background-color: var(--theme-accent-primary); }
+.bg-accent-secondary { background-color: var(--theme-accent-secondary); }
+.bg-success { background-color: var(--theme-success); }
+
+.text-dark-theme { color: var(--theme-bg-dark); }
+.text-accent-primary { color: var(--theme-accent-primary); }
+.text-accent-secondary { color: var(--theme-accent-secondary); }
+.text-success { color: var(--theme-success); }
+
+.border-accent-primary { border-color: var(--theme-accent-primary); }
+.border-accent-secondary { border-color: var(--theme-accent-secondary); }
