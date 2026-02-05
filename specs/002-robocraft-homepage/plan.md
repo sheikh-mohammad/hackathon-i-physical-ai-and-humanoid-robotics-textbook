@@ -2,11 +2,11 @@
 
 ## Technical Context
 
-**Feature**: Redesign of the RoboCraft homepage with industrial-themed UI components and styling, including System Heartbeat Core
+**Feature**: Redesign of the RoboCraft homepage with industrial-themed UI components and styling, including System Heartbeat Core and Schematic-Style Robot
 **Location**: src/pages/index.js (main homepage file)
 **Technology Stack**: JavaScript, React JS, Docusaurus 3.1.0, CSS Modules
 **Design Theme**: Industrial Confidence — Orange (Deep space dark #08090d with industrial orange #f97316 accents)
-**Primary Goal**: Create a new industrial-themed homepage for RoboCraft robotics education platform with a System Heartbeat Core that visually communicates platform vitality
+**Primary Goal**: Create a new industrial-themed homepage for RoboCraft robotics education platform with a System Heartbeat Core and Schematic-Style Robot that visually communicates platform vitality and tech stack structure
 
 ## Design Direction
 
@@ -23,11 +23,14 @@
   - Pulsing signal dots
   - Mouse-tracking radial gradient orb (subtle, low opacity)
   - System Heartbeat Core: rhythmic pulse with interactive states
+  - Schematic-Style Robot: subtle pulse and hover interactions
 - **Visual Motifs**:
   - Robot assembly schematic SVG
   - Grid and alignment overlays
   - Floating system labels and callouts
   - Central System Heartbeat Core (circular/hexagonal reactor-style node)
+  - Schematic-Style Robot (technical diagram with core node and peripheral components)
+  - Hover outline effects on cards
 - **Messaging**:
   - Outcome-driven copy
   - Personal builder journey framing
@@ -231,6 +234,36 @@ Based on the project constitution principles:
 - Style: Circular/hexagonal reactor-style with orange glow, grid background, radial glow
 - Behavior: Rhythmic pulse animation, cursor-synced pulse, CTA hover acceleration, scroll transformation
 
+**Component 5: Interactive3DRobotPreview**
+- Purpose: Interactive 3D humanoid robot model that users can drag to rotate, showing the actual robot they'll build/simulate with hover tooltips
+- Props: modelPath, rotationEnabled, hoverTooltips, animationEnabled, position, size
+- Style: 3D rotating humanoid model positioned on the right side of hero section, with subtle breathing motion, eye glow, joint articulation
+- Behavior: Draggable rotation, hover tooltips with technical labels ("Servo motors", "AI vision system", "Balance sensors")
+
+**Component 6: CardHoverEffects**
+- Purpose: Visual feedback system for all cards on the homepage
+- Props: hoverOutline, focusOutline, transitionDuration
+- Style: Outline effects with good contrast, smooth transitions
+- Behavior: Show outline on hover and focus, smooth disappearance when not active
+
+**Component 7: LearningModulesSection**
+- Purpose: Display course modules from project_docs/course_structure.md and COURSE_DETAILS.md
+- Props: modulesData
+- Style: Structured layout with clear progression
+- Behavior: Links to appropriate content sections
+
+**Component 8: NavigationBar**
+- Purpose: Top navigation with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
+- Props: navItems, themeToggle
+- Style: Clean, professional header with RoboCraft branding
+- Behavior: Responsive navigation and theme switching
+
+**Component 9: FooterSection**
+- Purpose: Comprehensive footer with Learn section, Resources and Copyright
+- Props: footerLinks
+- Style: Organized sections with appropriate redirects
+- Behavior: Links to book content, modules, specific chapters
+
 ### 2.2 Styling Strategy
 
 - Primary theme: Deep space dark (#08090d)
@@ -245,11 +278,18 @@ Based on the project constitution principles:
 1. Create new component files in src/components/
 2. Update src/pages/index.js to use new components
 3. Apply industrial-themed styling with CSS modules
-4. Integrate course content from existing markdown files
+4. Integrate course content from existing markdown files (project_docs/course_structure.md, COURSE_DETAILS.md)
 5. Implement System Heartbeat Core component with all interaction states
-6. Implement responsive design
-7. Add accessibility attributes
-8. Optimize performance
+6. Replace Schematic-Style Robot with Interactive 3D Robot Preview component
+7. Implement Interactive 3D Robot Preview component with drag rotation and hover tooltips
+8. Implement Card Hover Effects for all card components
+9. Create Learning Modules section using content from project_docs/course_structure.md and COURSE_DETAILS.md
+10. Implement Navigation Bar with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
+11. Implement comprehensive Footer with Learn section, Resources and Copyright
+12. Update all CTAs to redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
+13. Implement responsive design
+14. Add accessibility attributes
+15. Optimize performance for 3D model interactions
 
 ## Phase 3: Risk Analysis
 
@@ -279,11 +319,31 @@ Based on the project constitution principles:
 
 ### 4.1 Functional Requirements
 
-- [ ] Homepage displays with new industrial design
-- [ ] All course content is accessible and properly displayed
-- [ ] Navigation works correctly
+- [ ] Homepage displays with new industrial design and Interactive 3D Robot Preview
+- [ ] All course content is accessible and properly displayed from project_docs/course_structure.md and COURSE_DETAILS.md
+- [ ] Navigation works correctly with proper redirects
 - [ ] Mobile responsiveness meets touch target requirements (>= 44px)
-- [ ] All links and CTAs are functional
+- [ ] All links and CTAs redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
+- [ ] Interactive 3D Robot Preview appears on the right side of hero section
+- [ ] Interactive 3D Robot Preview is rotatable by dragging
+- [ ] Interactive 3D Robot Preview shows hover tooltips with technical labels ("Servo motors", "AI vision system", "Balance sensors")
+- [ ] Interactive 3D Robot Preview has subtle animations (breathing motion, eye glow, joint articulation)
+- [ ] Interactive 3D Robot Preview does not dominate text content on left side
+- [ ] Content positioned on left, Interactive 3D Robot Preview positioned on right for hierarchical look
+- [ ] "Start Building" CTA changed to "Start Learning" and redirects to robocraft/docs
+- [ ] "View Modules" CTA redirects to modules section below
+- [ ] Bottom CTA "Get Started Today" redirects to robocraft/docs
+- [ ] Modules section created using content from project_docs/course_structure.md and COURSE_DETAILS.md
+- [ ] Weekly breakdown section added from COURSE_DETAILS.md content
+- [ ] Additional sections added from COURSE_DETAILS.md by analyzing it
+- [ ] All cards on homepage show hover outline effects when hovered
+- [ ] Card hover outline is clearly visible with good contrast
+- [ ] Card hover outline disappears smoothly when cursor moves away
+- [ ] Card hover effects are consistent across all card types
+- [ ] Card hover effects are also visible on keyboard focus
+- [ ] Navigation includes RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, Search bar, Dark/Light mode button
+- [ ] Footer includes Learn section (Start Your Journey, Course Modules, Technology subsections), Resources section, Copyright
+- [ ] Footer links redirect to appropriate content (book, modules section, specific chapters)
 - [X] System Heartbeat Core appears in hero section with rhythmic pulse animation
 - [X] System Heartbeat Core responds to cursor movement with subtle pulse syncing
 - [X] System Heartbeat Core accelerates heartbeat when CTAs are hovered
@@ -293,13 +353,15 @@ Based on the project constitution principles:
 
 ### 4.2 Non-Functional Requirements
 
-- [ ] Lighthouse performance score >= 90
-- [ ] Lighthouse accessibility score >= 95
+- [ ] Lighthouse performance score ≥ 90
+- [ ] Lighthouse accessibility score ≥ 95
 - [ ] First Contentful Paint < 1.5s
 - [ ] Largest Contentful Paint < 2.5s
 - [ ] Cumulative Layout Shift < 0.1
 - [ ] WCAG 2.1 AA compliance (contrast ratios: 4.5:1 for text, 3:1 for large text)
 - [ ] Respects prefers-reduced-motion setting
+- [ ] 3D robot model performs smoothly (≥ 30fps) on target devices
+- [ ] Interactive 3D Robot Preview has acceptable performance with fallback for low-end devices
 
 ## Phase 5: Delivery Plan
 
@@ -310,14 +372,16 @@ Based on the project constitution principles:
 - Apply basic industrial theme colors
 - Ensure responsive design foundation
 
-**Iteration 2**: Content integration
-- Connect to existing course data
-- Implement dynamic content display
+**Iteration 2**: Content integration and 3D robot preview
+- Connect to existing course data from project_docs/course_structure.md and COURSE_DETAILS.md
+- Implement Interactive 3D Robot Preview with drag rotation and hover tooltips
 - Add interactive elements
 
-**Iteration 3**: Polish and optimization
+**Iteration 3**: Navigation, footer and polish
+- Implement Navigation Bar with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
+- Add comprehensive Footer with Learn section, Resources and Copyright
 - Fine-tune animations and motion
-- Optimize performance
+- Optimize performance for 3D model interactions
 - Conduct accessibility audit
 - Final testing and validation
 
@@ -328,3 +392,5 @@ Based on the project constitution principles:
 - Accessibility compliance
 - Cross-browser compatibility
 - Mobile usability
+- 3D robot model interaction performance
+- User perception of textbook-focused approach vs platform approach

@@ -30,8 +30,6 @@ const RoboCraftHomepage = () => {
   return (
     <IndustrialHomepage>
       {/* Floating labels for industrial design motif */}
-      <FloatingLabel text="SYSTEM ACTIVE" position="top-left" />
-      <FloatingLabel text="ROBOCRAFT v2.0" position="top-right" />
 
       {/* Hero Section */}
       <HeroSection

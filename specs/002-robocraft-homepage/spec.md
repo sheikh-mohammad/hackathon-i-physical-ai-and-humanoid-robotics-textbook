@@ -1,10 +1,10 @@
-# Feature Specification: RoboCraft Industrial Signal Homepage
+# Feature Specification: RoboCraft Industrial Signal Homepage - Book Focused
 
 **Feature Branch**: `002-robocraft-homepage`
 **Created**: 2026-01-27
 **Status**: Draft
-**Input**: User description:  
-"Redesign Physical AI Robotic Textbook as RoboCraft’s homepage as a serious Physical AI & Robotics product using an orange-driven industrial confidence aesthetic — dark space foundation, warm industrial highlights, mechanical motion language, and solution-first messaging. The page should feel engineered, not decorative."
+**Input**: User description:
+"Redesign Physical AI Robotic Textbook as RoboCraft's homepage as a serious Physical AI & Robotics book using an orange-driven industrial confidence aesthetic — dark space foundation, warm industrial highlights, mechanical motion language, and solution-first messaging. The page should feel engineered, not decorative."
 
 ---
 
@@ -13,21 +13,21 @@
 - **Eval-001**: Lighthouse Performance ≥ 90
 - **Eval-002**: Lighthouse Accessibility ≥ 95
 - **Eval-003**: Visual audit confirms all industrial signal motifs present
-- **Eval-004**: All functional requirements FR-001 → FR-030 pass
+- **Eval-004**: All functional requirements FR-001 → FR-050 pass
 - **Eval-005**: Responsive behavior validated at 375px, 768px, 1440px
-- **Eval-006**: System Heartbeat Core visual element successfully implemented with all interaction states
-- **Eval-007**: Autonomous Robotic Arm successfully implemented with all interaction states
+- **Eval-006**: Interactive 3D Robot Preview successfully implemented with all interaction states
+- **Eval-007**: Hover outline effects implemented on all cards
 
 ---
 
 ## Overview
 
-The RoboCraft homepage establishes a confident, industrial identity for a Physical AI & Humanoid Robotics product.  
-The experience emphasizes *capability, systems thinking, and real-world engineering*, replacing novelty-driven visuals with deliberate structure and motion.
+The RoboCraft homepage establishes a confident, industrial identity for a Physical AI & Humanoid Robotics textbook.
+The experience emphasizes *learning, capability, systems thinking, and real-world engineering*, replacing platform-building visuals with deliberate structure and motion focused on learning.
 
 The design communicates:
-- This is a **product**, not a tutorial
-- This is **built for builders**
+- This is a **comprehensive textbook**, not a tutorial
+- This is **built for learners**
 - This is **free, open, and serious**
 
 ---
@@ -41,6 +41,9 @@ Key Locations:
 Implementation Notes:
 - **The frontend-design skill MUST be invoked at the start of implementation (task 001)** to ensure proper industrial aesthetic design
 - All UI components and styling should leverage the frontend-design skill for consistency
+- Interactive 3D Robot Preview with drag rotation and hover tooltips
+- Content positioned on left, Interactive 3D Robot Preview positioned on right for hierarchical look
+- Buttons should redirect to actual content (e.g., robocraft/docs, modules section) not trigger alerts
 
 ---
 
@@ -58,16 +61,16 @@ Implementation Notes:
   - Staggered section reveals
   - Pulsing signal dots
   - Mouse-tracking radial gradient orb (subtle, low opacity)
-  - System Heartbeat Core: rhythmic pulse with interactive states
+  - Interactive 3D Robot Preview: subtle breathing motion, eye glow, joint articulation
 - **Visual Motifs**:
-  - Robot assembly schematic SVG
+  - Interactive 3D Robot Preview (rotatable model showing actual robot learners will build/simulate)
   - Grid and alignment overlays
-  - Floating system labels and callouts
-  - Central System Heartbeat Core (circular/hexagonal reactor-style node)
+  - Hover tooltips on robot parts ("Servo motors", "AI vision system", "Balance sensors")
+  - Hover outline effects on cards
 - **Messaging**:
-  - Outcome-driven copy
-  - Personal builder journey framing
-  - Explicit commitment: **“Free forever. No lock-in.”**
+  - Learning-focused copy (replacing "platform" language with "book" language)
+  - Personal learning journey framing
+  - Explicit commitment: **"Free forever. No lock-in."**
 
 ---
 
@@ -75,25 +78,25 @@ Implementation Notes:
 
 ### User Story 1 – First Impression & Trust (Priority: P1)
 
-As a first-time visitor, I want to immediately understand that RoboCraft is a serious Physical AI product so that I trust it and continue exploring.
+As a first-time visitor, I want to immediately understand that RoboCraft is a comprehensive Physical AI & Humanoid Robotics textbook so that I trust it and continue exploring the learning materials.
 
 **Independent Test**: Load homepage and evaluate hero section clarity and credibility.
 
 **Acceptance Scenarios**:
 1. **Given** the page loads, **Then** the hero renders within 2 seconds with headline, visual system, and CTA
-2. **Given** the hero is visible, **Then** the product’s Physical AI focus is clear without scrolling
-3. **Given** I see the CTA, **Then** it feels action-oriented and credible
+2. **Given** the hero is visible, **Then** the textbook's Physical AI focus is clear without scrolling
+3. **Given** I see the CTA, **Then** it feels learning-oriented and credible
 
 ---
 
-### User Story 2 – product Capabilities Discovery (Priority: P1)
+### User Story 2 – Learning Content Discovery (Priority: P1)
 
-As a visitor, I want to understand what the product enables, not just what it teaches.
+As a visitor, I want to understand what the textbook teaches, not just what features it has.
 
 **Independent Test**: Scroll to capabilities/modules section.
 
 **Acceptance Scenarios**:
-1. **Given** I scroll, **Then** product modules appear in a clear progression
+1. **Given** I scroll, **Then** learning modules appear in a clear progression
 2. **Given** I hover a module, **Then** visual feedback reinforces interactivity
 3. **Given** advanced modules, **Then** they are visually distinguished
 
@@ -101,7 +104,7 @@ As a visitor, I want to understand what the product enables, not just what it te
 
 ### User Story 3 – Hardware & System Readiness (Priority: P2)
 
-As a learner, I want to quickly assess whether my hardware setup is sufficient.
+As a learner, I want to quickly assess whether my hardware setup is sufficient for learning with the textbook.
 
 **Independent Test**: View hardware/system requirements section.
 
@@ -125,18 +128,63 @@ As a mobile user, I want the experience to feel intentional and usable.
 
 ---
 
-### User Story 5 – System Vitality Communication (Priority: P1)
+### User Story 5 – Interactive 3D Robot Preview (Priority: P1)
 
-As a visitor, I want to immediately sense that the platform is alive and operational, not static content, so that I understand this is a dynamic Physical AI system.
+As a visitor, I want to see an interactive 3D robot model that I can drag to rotate, showing the actual robot I'll learn to build/simulate, with hover states highlighting different parts and tooltips, so that I understand what I'll be creating from the textbook.
 
-**Independent Test**: Load homepage and observe the System Heartbeat Core element.
+**Independent Test**: Load homepage and interact with the Interactive 3D Robot Preview element.
 
 **Acceptance Scenarios**:
-1. **Given** the page loads, **Then** the System Heartbeat Core appears in the hero section with rhythmic pulse
-2. **Given** I move my cursor, **Then** the core's pulse subtly syncs with cursor movement
-3. **Given** I hover over CTAs, **Then** the heartbeat accelerates slightly with increased glow intensity
-4. **Given** I scroll down the page, **Then** the core gradually transforms into schematic lines/wireframe rings
-5. **Given** the core is visible, **Then** messaging "A live Physical AI system — not a static course" is displayed nearby
+1. **Given** the page loads, **Then** the Interactive 3D Robot Preview appears on the right side of the hero section
+2. **Given** I drag the robot model, **Then** it rotates in 3D space providing different perspectives
+3. **Given** I hover over different robot parts, **Then** tooltips appear with technical labels ("Servo motors", "AI vision system", "Balance sensors")
+4. **Given** the robot is visible, **Then** it has subtle animations (breathing motion, eye glow, joint articulation)
+5. **Given** I scroll down the page, **Then** the robot model maintains its interactive capabilities
+
+---
+
+### User Story 6 – Textbook Learning Journey (Priority: P1)
+
+As a visitor, I want to understand this is a learning textbook for building robots, not a platform to build robots, so that I know this is educational content.
+
+**Independent Test**: Load homepage and observe the messaging and content focus.
+
+**Acceptance Scenarios**:
+1. **Given** the page loads, **Then** messaging emphasizes learning and textbook content over platform building
+2. **Given** I see CTAs, **Then** they redirect to actual book content (robocraft/docs) rather than triggering alerts
+3. **Given** I explore the hero content, **Then** it's positioned on the left with the Interactive 3D Robot Preview on the right for hierarchical organization
+4. **Given** I see the "Start Building" CTA, **Then** it's renamed to "Start Learning" and redirects to robocraft/docs
+5. **Given** I see the "View Modules" CTA, **Then** it redirects to modules section below
+
+---
+
+### User Story 7 – Modules Section (Priority: P1)
+
+As a learner, I want to see course modules created from project_docs/course_structure.md and COURSE_DETAILS.md files, organized hierarchically to guide my learning path.
+
+**Independent Test**: Scroll to modules section.
+
+**Acceptance Scenarios**:
+1. **Given** I scroll to modules section, **Then** I see modules created using content from project_docs/course_structure.md and COURSE_DETAILS.md
+2. **Given** I view the modules, **Then** they're organized in a clear learning progression
+3. **Given** I see weekly breakdown, **Then** it's derived from content in COURSE_DETAILS.md
+4. **Given** I explore additional sections, **Then** they're populated from COURSE_DETAILS.md content
+5. **Given** I click on modules, **Then** they link to appropriate content rather than triggering alerts
+
+---
+
+### User Story 8 – Card Hover Effects (Priority: P2)
+
+As a visitor, I want to see hover outline effects on all cards on the homepage so that I get visual feedback when interacting with the cards.
+
+**Independent Test**: Hover over any card on the homepage.
+
+**Acceptance Scenarios**:
+1. **Given** I hover over a card, **Then** an outline appears around the card
+2. **Given** I hover over a card, **Then** the outline is clearly visible with good contrast
+3. **Given** I move my cursor away from a card, **Then** the outline disappears smoothly
+4. **Given** I hover over any card (ModuleCard, HardwareTierCard, etc.), **Then** the hover effect is consistent
+5. **Given** I use keyboard navigation, **Then** the outline effect is also visible on focus
 
 ---
 
@@ -145,51 +193,78 @@ As a visitor, I want to immediately sense that the platform is alive and operati
 ### Functional Requirements
 
 #### Hero & Identity
-- **FR-001**: Hero MUST communicate RoboCraft as a Physical AI product
-- **FR-002**: Hero MUST include industrial schematic or robot assembly visual
-- **FR-003**: Hero MUST include primary CTA using orange accent
-- **FR-004**: Hero MUST include secondary exploratory CTA
+- **FR-001**: Hero MUST communicate RoboCraft as a Physical AI textbook (not a platform)
+- **FR-002**: Hero MUST include Interactive 3D Robot Preview (rotatable 3D model showing what learners will build)
+- **FR-003**: Hero MUST include primary CTA "Start Learning" redirecting to robocraft/docs using orange accent
+- **FR-004**: Hero MUST include secondary CTA "View Modules" redirecting to modules section below
 - **FR-005**: Hero MUST use grid-based animated background
+- **FR-006**: Hero content MUST be positioned on the left with Interactive 3D Robot Preview on the right for hierarchical look
 
-#### product Sections
-- **FR-006**: Page MUST present product modules in structured sequence
-- **FR-007**: Each module MUST include title, description, and signal indicator
-- **FR-008**: Advanced modules MUST have visual differentiation
-- **FR-009**: Feature section MUST highlight at least 6 product capabilities
-- **FR-010**: At least 2 features MUST be marked as “Core”
+#### Learning Sections
+- **FR-007**: Page MUST present learning modules in structured sequence
+- **FR-008**: Each module MUST include title, description, and signal indicator
+- **FR-009**: Advanced modules MUST have visual differentiation
+- **FR-010**: Feature section MUST highlight at least 6 learning capabilities
+- **FR-011**: At least 2 features MUST be marked as "Core"
+- **FR-012**: Modules section MUST be created using content from project_docs/course_structure.md and COURSE_DETAILS.md
 
 #### Hardware & Systems
-- **FR-011**: Page MUST display 3 system/hardware tiers
-- **FR-012**: Each tier MUST include cost and recommendation context
-- **FR-013**: One tier MUST be visually marked as recommended
+- **FR-013**: Page MUST display 3 system/hardware tiers
+- **FR-014**: Each tier MUST include cost and recommendation context
+- **FR-015**: One tier MUST be visually marked as recommended
+
+#### Interactive 3D Robot Preview
+- **FR-016**: Page MUST include Interactive 3D Robot Preview in hero section
+- **FR-017**: Robot Preview MUST be a 3D rotating humanoid model that users can drag to rotate
+- **FR-018**: Robot Preview MUST show the actual robot learners will build/simulate
+- **FR-019**: Robot Preview MUST have subtle animations (breathing motion, eye glow, joint articulation)
+- **FR-020**: Robot Preview MUST have hover states: different parts highlight with tooltips
+- **FR-021**: Robot Preview tooltips MUST show technical labels ("Servo motors", "AI vision system", "Balance sensors")
+- **FR-022**: Robot Preview MUST be positioned on the right side of hero section
+- **FR-023**: Robot Preview MUST not dominate text content on left side
+
+#### Content & Redirects
+- **FR-024**: All buttons MUST redirect to actual content, not trigger alerts
+- **FR-025**: "Start Building" CTA MUST be changed to "Start Learning"
+- **FR-026**: "Start Learning" CTA MUST redirect to robocraft/docs
+- **FR-027**: "View Modules" CTA MUST redirect to modules section below
+- **FR-028**: Bottom CTA "Get Started Today" MUST redirect to robocraft/docs
+- **FR-029**: All content MUST focus on textbook approach, not platform building
+
+#### Course Content Integration
+- **FR-030**: Modules section MUST be created using content from project_docs/course_structure.md
+- **FR-031**: Additional sections MUST be added to homepage from COURSE_DETAILS.md by analyzing it
+- **FR-032**: Weekly breakdown section MUST be added from COURSE_DETAILS.md content
+- **FR-033**: All content MUST emphasize learning over building platforms
 
 #### Visual & Motion
-- **FR-014**: Design MUST use defined CSS color tokens
-- **FR-015**: Orange MUST be reserved for interaction and emphasis
-- **FR-016**: Motion MUST be staggered and non-blocking
-- **FR-017**: Page MUST respect prefers-reduced-motion
+- **FR-034**: Design MUST use defined CSS color tokens
+- **FR-035**: Orange MUST be reserved for interaction and emphasis
+- **FR-036**: Motion MUST be staggered and non-blocking
+- **FR-037**: Page MUST respect prefers-reduced-motion
 
 #### Typography & Layout
-- **FR-018**: Headlines MUST use Space Grotesk
-- **FR-019**: Technical labels MUST use JetBrains Mono
-- **FR-020**: Layout MUST favor sharp edges over rounded cards
+- **FR-038**: Headlines MUST use Space Grotesk
+- **FR-039**: Technical labels MUST use JetBrains Mono
+- **FR-040**: Layout MUST favor sharp edges over rounded cards
 
 #### Responsiveness & Accessibility
-- **FR-021**: Page MUST be responsive from 320px–2560px
-- **FR-022**: Touch targets MUST be ≥ 44px on mobile
-- **FR-023**: Color contrast MUST meet WCAG 2.1 AA
-- **FR-024**: Focus states MUST be visible for keyboard navigation
+- **FR-041**: Page MUST be responsive from 320px–2560px
+- **FR-042**: Touch targets MUST be ≥ 44px on mobile
+- **FR-043**: Color contrast MUST meet WCAG 2.1 AA
+- **FR-044**: Focus states MUST be visible for keyboard navigation
 
-#### System Heartbeat Core
-- **FR-025**: Page MUST include a central System Heartbeat Core element in the hero section
-- **FR-026**: Core MUST have industrial design (circular/hexagonal/reactor-style) with orange accent glow
-- **FR-027**: Core MUST exhibit slow, rhythmic pulse animation (idle state)
-- **FR-028**: Core pulse MUST subtly sync with cursor movement (mouse movement state)
-- **FR-029**: Core MUST accelerate heartbeat when CTA is hovered (CTA hover state)
-- **FR-030**: Core MUST transform to schematic lines/wireframe on scroll (scroll interaction state)
-- **FR-031**: Core messaging MUST display "A live Physical AI system — not a static course" nearby
-- **FR-032**: Core MUST use performance-friendly SVG/CSS/lightweight JS implementation
-- **FR-033**: Core MUST respect prefers-reduced-motion setting
+#### Card Hover Effects
+- **FR-045**: All cards on homepage MUST show hover outline effects when hovered
+- **FR-046**: Card hover outline MUST be clearly visible with good contrast
+- **FR-047**: Card hover outline MUST disappear smoothly when cursor moves away
+- **FR-048**: Card hover effects MUST be consistent across all card types
+- **FR-049**: Card hover effects MUST also be visible on keyboard focus
+
+#### Navigation & Footer
+- **FR-050**: Navbar MUST include RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, Search bar, Dark/Light mode button
+- **FR-051**: Footer MUST include Learn section (Start Your Journey, Course Modules, Technology subsections), Resources section, Copyright
+- **FR-052**: Footer links MUST redirect to appropriate content (book, modules section, specific chapters)
 
 ---
 
@@ -199,33 +274,53 @@ As a visitor, I want to immediately sense that the platform is alive and operati
 - **NFR-002**: Lighthouse Accessibility ≥ 95
 - **NFR-003**: Initial content visible < 2s on 3G
 - **NFR-004**: Animations sustain 60fps on mid-range devices
+- **NFR-005**: 3D robot model interactions perform smoothly on target devices
 
 ---
 
 ## Key Entities
 
 - **Hero System**: Primary identity and trust anchor
-- **Module Signal Card**: Reusable product capability unit
-- **Feature Block**: product capability explanation
+- **Module Signal Card**: Reusable learning capability unit
+- **Feature Block**: Learning capability explanation
 - **Hardware Tier Card**: System readiness indicator
 - **CTA Block**: Conversion and commitment section
-- **System Heartbeat Core**: Central industrial element that visually communicates platform vitality
+- **Interactive 3D Robot Preview**: Rotatable 3D humanoid robot model with hover tooltips showing actual robot learners will build
+- **Card Hover Effects**: Visual feedback system for all cards on the homepage
+- **Learning Modules**: Content organized from project_docs/course_structure.md and COURSE_DETAILS.md
+- **Navigation System**: Top navbar with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
+- **Footer Content**: Comprehensive footer with Learn section, Resources and Copyright
 
 ---
 
 ## Success Criteria *(mandatory)*
 
-- **SC-001**: Users identify RoboCraft as a product within first viewport
+- **SC-001**: Users identify RoboCraft as a comprehensive textbook within first viewport
 - **SC-002**: All five major sections render correctly on mobile and desktop
 - **SC-003**: Orange accent is used consistently and sparingly
-- **SC-004**: Grid and schematic motifs appear in ≥ 2 sections
+- **SC-004**: Grid and technical motifs appear in ≥ 2 sections
 - **SC-005**: Page passes Lighthouse performance and accessibility targets
 - **SC-006**: Motion enhances hierarchy without reducing readability
 - **SC-007**: Visual audit confirms industrial (not sci-fi) aesthetic
 - **SC-008**: "Free forever" messaging is clearly visible and credible
-- **SC-009**: System Heartbeat Core successfully communicates platform vitality to users
-- **SC-010**: System Heartbeat Core responds appropriately to user interactions (mouse, hover, scroll)
-- **SC-011**: System Heartbeat Core messaging reinforces Physical AI + Robotics identity
+- **SC-009**: Interactive 3D Robot Preview gives tactile preview of what learners will create
+- **SC-010**: Interactive 3D Robot Preview responds appropriately to user interactions (drag rotation, hover tooltips)
+- **SC-011**: Interactive 3D Robot Preview reinforces learning-focused Physical AI + Robotics identity
+- **SC-012**: Interactive 3D Robot Preview provides immediate perception of the robot learners will build/simulate
+- **SC-013**: Interactive 3D Robot Preview creates clear association with Professional, serious, industrial aesthetic
+- **SC-014**: Interactive 3D Robot Preview maintains balanced hero composition (content left, robot right)
+- **SC-015**: Interactive 3D Robot Preview does not distract from core textbook messaging
+- **SC-016**: Interactive 3D Robot Preview reinforces learning credibility
+- **SC-017**: Interactive 3D Robot Preview parts, tooltips, and interactions are clearly readable
+- **SC-018**: Interactive 3D Robot Preview enhances hero section without distracting from content
+- **SC-019**: All cards on homepage show hover outline effects
+- **SC-020**: Card hover effects provide clear visual feedback to users
+- **SC-021**: All CTAs redirect to actual content (robocraft/docs, modules section) instead of showing alerts
+- **SC-022**: Content focuses on textbook learning rather than platform building
+- **SC-023**: Modules section effectively presents content from project_docs/course_structure.md and COURSE_DETAILS.md
+- **SC-024**: Weekly breakdown section is properly implemented from COURSE_DETAILS.md content
+- **SC-025**: Navigation and footer include appropriate content and redirects as specified
+- **SC-026**: 3D robot model performs smoothly with acceptable frame rates
 
 ---
 
@@ -234,14 +329,16 @@ As a visitor, I want to immediately sense that the platform is alive and operati
 - **IR-001**: The frontend-design skill MUST be used to generate all UI components and styling
 - **IR-002**: All visual design elements MUST be created using the frontend-design skill during implementation
 - **IR-003**: The first implementation task (task 001) MUST invoke the frontend-design skill
+- **IR-004**: Interactive 3D Robot Preview MUST be implemented with drag-to-rotate functionality
+- **IR-005**: All buttons MUST redirect to actual content instead of triggering alerts
+- **IR-006**: Content MUST emphasize textbook approach over platform-building approach
 
 ## Non-Goals
 
 - Backend, auth, or RAG changes
-- Navigation or footer redesign
-- Internationalization
+- Heavy 3D rendering or WebGL effects beyond basic rotation
 - Gamification or playful visuals
-- Heavy 3D rendering or WebGL effects
+- Complex backend systems beyond static content display
 
 ---
 
@@ -251,5 +348,7 @@ As a visitor, I want to immediately sense that the platform is alive and operati
 |-----|-------|------------|
 | Orange overuse | Visual fatigue | Restrict to interaction tokens |
 | Animation overload | Performance drop | Stagger + reduced-motion support |
+| 3D model performance | Slow rendering | Optimized models + fallbacks |
 | Dark contrast issues | Accessibility | Continuous contrast audits |
 | Complex visuals | Maintenance cost | Tokenized CSS + documented motifs |
+| Redirect failures | UX issues | Thorough link testing |

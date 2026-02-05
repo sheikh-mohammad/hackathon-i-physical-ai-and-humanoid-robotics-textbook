@@ -467,3 +467,300 @@
     height: 50px;
   }
 }
+
+/* Autonomous Robotic Arm Styles */
+.autonomousRoboticArm {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.roboticArmSvg {
+  width: 120px;
+  height: 120px;
+  transition: all 0.3s ease;
+}
+
+.wireframeMode {
+  filter: drop-shadow(0 0 2px rgba(249, 115, 22, 0.5));
+}
+
+.wireframeOverlay {
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.wireframeOverlay.visible {
+  opacity: 0.8;
+}
+
+.calibrating .roboticArmSvg {
+  animation: subtleCalibration 4s ease-in-out infinite;
+}
+
+@keyframes subtleCalibration {
+  0%, 100% {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(-1deg) scale(0.99);
+  }
+  75% {
+    transform: rotate(1deg) scale(1.005);
+  }
+}
+
+.blueprintMode {
+  opacity: 0.7;
+}
+
+.blueprintMode .roboticArmSvg {
+  filter: brightness(1.2) saturate(1.5);
+}
+
+.blueprintMode .wireframeOverlay {
+  opacity: 0.8;
+  stroke: #FB923C;
+}
+
+.armMicrocopy {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: max-content;
+  max-width: 150px;
+}
+
+.microcopyText {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #FB923C;
+  margin: 0;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.microcopyText.blueprintText {
+  color: #22C55E;
+  opacity: 0.9;
+  font-size: 0.65rem;
+}
+
+/* Positioning variants for the arm */
+.armPositionTopRight {
+  top: 15%;
+  left: auto;
+  right: 15%;
+}
+
+.armPositionBottomLeft {
+  top: auto;
+  bottom: 15%;
+  left: 15%;
+}
+
+.armPositionCenterRight {
+  top: 50%;
+  left: auto;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+/* Reduced motion support */
+.reducedMotion .roboticArmSvg,
+.reducedMotion .wireframeOverlay {
+  animation: none !important;
+  transition: none !important;
+}
+
+.reducedMotion .calibrating .roboticArmSvg {
+  animation: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .autonomousRoboticArm {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+  }
+
+  .armMicrocopy {
+    max-width: 120px;
+  }
+
+  .microcopyText {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .autonomousRoboticArm {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    top: 40%;
+  }
+
+  .roboticArmSvg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .armMicrocopy {
+    max-width: 100px;
+  }
+
+  .microcopyText {
+    font-size: 0.55rem;
+  }
+}
+
+/* Full Industrial Robotic Figure Styles */
+.fullIndustrialRoboticFigure {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.roboticFigureSvg {
+  width: 200px;
+  height: 260px;
+  transition: all 0.5s ease;
+}
+
+.subtleMovement {
+  animation: subtleIdleMovement 8s ease-in-out infinite;
+}
+
+@keyframes subtleIdleMovement {
+  0%, 100% {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0.2deg) scale(1.005);
+  }
+  50% {
+    transform: rotate(-0.1deg) scale(0.998);
+  }
+  75% {
+    transform: rotate(0.1deg) scale(1.002);
+  }
+}
+
+.idleMovement {
+  opacity: 1;
+}
+
+.figureIndicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(249, 115, 22, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.indicatorText {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6rem;
+  color: #FB923C;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.monoFont {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Positioning for different layouts */
+.figurePositionRight {
+  right: 5%;
+  left: auto;
+}
+
+.figurePositionCenterRight {
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.figurePositionBottomRight {
+  top: auto;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Reduced motion support */
+.reducedMotion .roboticFigureSvg,
+.reducedMotion .subtleMovement {
+  animation: none !important;
+  transition: none !important;
+}
+
+.reducedMotion .subtleIdleMovement {
+  animation: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .fullIndustrialRoboticFigure {
+    width: 160px;
+    height: 220px;
+    right: 2%;
+  }
+
+  .roboticFigureSvg {
+    width: 160px;
+    height: 220px;
+  }
+
+  .indicatorText {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullIndustrialRoboticFigure {
+    width: 140px;
+    height: 190px;
+    right: 10px;
+    top: 60%;
+  }
+
+  .roboticFigureSvg {
+    width: 140px;
+    height: 190px;
+  }
+
+  .figureIndicator {
+    top: 5px;
+    right: 5px;
+  }
+
+  .indicatorText {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fullIndustrialRoboticFigure {
+    display: none; /* Hide on very small screens to preserve space */
+  }
+}

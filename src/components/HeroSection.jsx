@@ -3,6 +3,7 @@ import IndustrialCTA from './IndustrialCTA';
 import SchematicSVG from './SchematicSVG';
 import GridOverlay from './GridOverlay';
 import SystemHeartbeatCore from './SystemHeartbeatCore';
+import FullIndustrialRoboticFigure from './FullIndustrialRoboticFigure';
 import { conditionalAnimate } from '../utils/motion';
 import styles from '../css/industrial-styles.module.css';
 import colorStyles from '../css/colors.module.css';
@@ -77,7 +78,7 @@ const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, 
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '800px', margin: '0 auto' }}>
         {/* System Heartbeat Core - Central element that visually communicates platform vitality */}
-        <div className="animate-on-load" style={{ marginBottom: '2rem' }}>
+        <div className="animate-on-load" style={{ marginBottom: '2rem', position: 'relative' }}>
           <SystemHeartbeatCore />
         </div>
 
@@ -117,6 +118,11 @@ const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, 
         <div className={`animate-on-load ${styles.technicalText} ${colorStyles.textAccentSecondary}`} style={{ marginTop: '2rem', fontSize: '0.875rem' }}>
           <em>Free forever. No lock-in.</em>
         </div>
+      </div>
+
+      {/* Full Industrial Robotic Figure - Full robotic body on the right side of hero section */}
+      <div className="animate-on-load" style={{ position: 'absolute', top: '50%', right: '5%', zIndex: 1, transform: 'translateY(-50%)' }}>
+        <FullIndustrialRoboticFigure />
       </div>
     </section>
   );

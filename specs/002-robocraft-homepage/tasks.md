@@ -147,7 +147,45 @@
 - [X] T062 Add prefers-reduced-motion support for heartbeat animations in src/components/SystemHeartbeatCore.jsx
 - [X] T063 Integrate SystemHeartbeatCore into HeroSection component in src/components/HeroSection.jsx
 
-## Phase 8: Polish & Cross-Cutting Concerns
+## Phase 8: Interactive 3D Robot Preview Implementation
+
+**Purpose**: Add the Interactive 3D Robot Preview to the right side of hero section to give tactile preview of what learners will create, establish credibility, tech-forward approach
+
+- [ ] T072 Create Interactive3DRobotPreview component in src/components/Interactive3DRobotPreview.jsx
+- [ ] T073 [P] Implement 3D rotating humanoid robot model that users can drag to rotate in src/components/Interactive3DRobotPreview.jsx
+- [ ] T074 [P] Implement showing actual robot learners will build/simulate in src/components/Interactive3DRobotPreview.jsx
+- [ ] T075 Implement subtle animation (breathing motion, eye glow, joint articulation) in src/components/Interactive3DRobotPreview.jsx
+- [ ] T076 Add hover states: Different parts highlight with tooltips ("Servo motors", "AI vision system", "Balance sensors") in src/components/Interactive3DRobotPreview.jsx
+- [ ] T077 Implement positioning on the right side of hero section in src/components/Interactive3DRobotPreview.jsx
+- [ ] T078 Implement not dominating text content on left side in src/components/Interactive3DRobotPreview.jsx
+- [ ] T079 Integrate Interactive 3D Robot Preview into HeroSection component on right side in src/components/HeroSection.jsx
+
+## Phase 9: Card Hover Effects Implementation
+
+**Purpose**: Add hover outline effects to all cards on the homepage for improved user interaction feedback
+
+- [ ] T081 Implement hover outline effects for ModuleCard component in src/components/ModuleCard.jsx
+- [ ] T082 Implement hover outline effects for HardwareTierCard component in src/components/HardwareTierCard.jsx
+- [ ] T083 [P] Implement hover outline effects for other card components in src/components/
+- [ ] T084 Add consistent transition effects for hover states in src/css/industrial-styles.module.css
+- [ ] T085 Ensure hover effects meet accessibility standards in src/components/
+
+## Phase 10: Content Structure & Navigation Implementation
+
+**Purpose**: Update content to focus on textbook approach, implement proper redirects, and add comprehensive navigation and footer
+
+- [ ] T086 Update all CTAs to redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
+- [ ] T087 Change "Start Building" CTA to "Start Learning" and redirect to robocraft/docs in src/components/HeroSection.jsx
+- [ ] T088 Update "View Modules" CTA to redirect to modules section below in src/components/HeroSection.jsx
+- [ ] T089 Create modules section using content from project_docs/course_structure.md and COURSE_DETAILS.md in src/components/ModulesSection.jsx
+- [ ] T090 Add additional sections to homepage from COURSE_DETAILS.md by analyzing it in src/components/
+- [ ] T091 Add weekly breakdown section from COURSE_DETAILS.md content in src/components/WeeklyBreakdownSection.jsx
+- [ ] T092 Update bottom CTA "Get Started Today" to redirect to robocraft/docs in src/components/FooterCTA.jsx
+- [ ] T093 Implement comprehensive footer with Learn section, Resources and Copyright in src/components/Footer.jsx
+- [ ] T094 Implement navigation bar with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode in src/components/Navbar.jsx
+- [ ] T095 Ensure all content emphasizes textbook approach over platform-building approach
+
+## Phase 10: Remove Old Components & Polish
 
 **Purpose**: Improvements that affect multiple user stories
 
@@ -175,7 +213,8 @@
   - User stories can then proceed in parallel (if staffed)
   - Or sequentially in priority order (P1 → P2 → P3)
 - **System Heartbeat Core (Phase 7)**: Depends on Foundational phase completion
-- **Polish (Final Phase)**: Depends on all desired user stories and System Heartbeat Core being complete
+- **Full Industrial Robotic Figure (Phase 8)**: Depends on Foundational phase completion
+- **Remove Old Components & Polish (Final Phase)**: Depends on all desired user stories and System Heartbeat Core being complete
 
 ### User Story Dependencies
 
@@ -184,6 +223,8 @@
 - **User Story 3 (P2)**: Can start after Foundational (Phase 2) - May integrate with US1/US2 but should be independently testable
 - **User Story 4 (P3)**: Can start after Foundational (Phase 2) - Builds on all previous stories for responsive implementation
 - **User Story 5 (P1)**: Can start after Foundational (Phase 2) and System Heartbeat Core (Phase 7) - Builds on hero section for system vitality communication
+- **User Story 6 (P1)**: Can start after Foundational (Phase 2) and Autonomous Robotic Arm (Phase 8) - Builds on hero section for robotic presence communication
+- **User Story 7 (P1)**: Can start after Foundational (Phase 2) and Full Industrial Robotic Figure (Phase 8) - Builds on hero section for full robotic figure communication
 
 ### Within Each User Story
 
@@ -247,6 +288,7 @@ With multiple developers:
    - Developer C: User Story 3
    - Developer D: User Story 4
    - Developer E: System Heartbeat Core (Phase 7)
+   - Developer F: Full Industrial Robotic Figure (Phase 8)
 3. Stories complete and integrate independently
 
 ---
@@ -263,4 +305,6 @@ With multiple developers:
 - Task T052 must integrate existing course content from COURSE_DETAILS.md and project_docs/course_structure
 - Task T054 must update the main homepage file (src/pages/index.js) to use the new industrial components
 - Task T055-T063 must implement the System Heartbeat Core feature with all interaction states
+- Task T064-T071 must implement the Autonomous Robotic Arm feature with all interaction states (to be replaced by Full Industrial Robotic Figure)
+- Task T072-T079 must implement the Full Industrial Robotic Figure feature with all interaction states
 - The frontend-design skill must be used as specified in the requirements (IR-001 through IR-003)
