@@ -143,8 +143,8 @@ const HeroSection = ({ title, subtitle, description }) => {
         {/* System Heartbeat Core - Positioned at top-left of robot */}
         <div className="animate-on-load" style={{
           position: 'absolute',
-          left: '0',
-          top: '0',
+          left: '-230px',
+          top: '-53px',
           zIndex: 2
         }}>
           <SystemHeartbeatCore />

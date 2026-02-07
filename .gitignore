@@ -51,3 +51,6 @@ temp/
 .docusaurus/
 .cache/
 .server/
+
+# MCPs
+.playwright-mcp
