@@ -1,30 +1,27 @@
 /* Font imports for RoboCraft Industrial Homepage */
 
-/* Space Grotesk for headlines */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* Google Sans Code - Using Roboto Mono as Google's monospace alternative with font-display: swap for performance */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
 
-/* JetBrains Mono for technical/ui elements */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500;600;700&display=swap');
+/* Fallback: JetBrains Mono for enhanced monospace support */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
-/* IBM Plex Sans for body text */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
-
-/* Font variable definitions */
+/* Font variable definitions - Google Sans Code aesthetic using Roboto Mono */
 :root {
-  --font-headlines: 'Space Grotesk', sans-serif;
-  --font-technical: 'JetBrains Mono', monospace;
-  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-primary: 'Roboto Mono', 'JetBrains Mono', 'Courier New', monospace;
+  --font-google-sans-code: 'Roboto Mono', 'JetBrains Mono', monospace;
+
+  /* Legacy font variables for backward compatibility */
+  --font-headlines: var(--font-primary);
+  --font-technical: var(--font-primary);
+  --font-body: var(--font-primary);
 }
 
 /* Font usage classes */
-.font-headlines {
-  font-family: var(--font-headlines);
-}
-
-.font-technical {
-  font-family: var(--font-technical);
-}
-
+.font-primary,
+.font-google-sans-code,
+.font-headlines,
+.font-technical,
 .font-body {
-  font-family: var(--font-body);
+  font-family: var(--font-primary);
 }

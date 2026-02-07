@@ -5,20 +5,20 @@ stage: "spec"
 date_iso: "2026-01-28"
 surface: "agent"
 model: "claude-sonnet-4-5-20250929"
-feature: "002-robocraft-homepage"
-branch: "002-robocraft-homepage"
+feature: "002-robocraft-ui"
+branch: "002-robocraft-ui"
 user: "dell"
-command: "/sp.specify Update the 002-robocraft-homepage specs plan and tasks and dont create new branch or new featue update this"
+command: "/sp.specify Update the 002-robocraft-ui specs plan and tasks and dont create new branch or new featue update this"
 labels: ["homepage", "ui", "animation", "interactive", "design", "robotics"]
 links:
-  spec: "specs/002-robocraft-homepage/spec.md"
+  spec: "specs/002-robocraft-ui/spec.md"
   ticket: null
   adr: null
   pr: null
 files_yaml: |
-  - specs/002-robocraft-homepage/spec.md
-  - specs/002-robocraft-homepage/plan.md
-  - specs/002-robocraft-homepage/tasks.md
+  - specs/002-robocraft-ui/spec.md
+  - specs/002-robocraft-ui/plan.md
+  - specs/002-robocraft-ui/tasks.md
   - src/components/AutonomousRoboticArm.jsx
   - src/css/industrial-styles.module.css
   - src/components/HeroSection.jsx
@@ -28,10 +28,10 @@ tests_yaml: |
   - "Interaction testing with mouse movement, scroll, and calibration"
   - "Responsive design validation"
   - "Accessibility testing with reduced motion"
-outcome: "Successfully added Autonomous Robotic Arm feature to existing 002-robocraft-homepage specs"
+outcome: "Successfully added Autonomous Robotic Arm feature to existing 002-robocraft-ui specs"
 evaluation: "All specifications, plans, and tasks updated with new robotic arm functionality"
 prompt_text: |
-  Update the 002-robocraft-homepage specs plan and tasks and dont create new branch or new featue update this
+  Update the 002-robocraft-ui specs plan and tasks and dont create new branch or new featue update this
 
   ## Embedded Hero Enhancement: Autonomous Robotic Arm
 
@@ -119,7 +119,7 @@ prompt_text: |
   - Reinforces Physical AI credibility
   - Complements, not competes with, existing hero content
 response_text: |
-  Successfully updated the 002-robocraft-homepage feature to include the Autonomous Robotic Arm enhancement:
+  Successfully updated the 002-robocraft-ui feature to include the Autonomous Robotic Arm enhancement:
 
   1. Updated specification file (spec.md) with:
      - New success eval (Eval-007) for the robotic arm

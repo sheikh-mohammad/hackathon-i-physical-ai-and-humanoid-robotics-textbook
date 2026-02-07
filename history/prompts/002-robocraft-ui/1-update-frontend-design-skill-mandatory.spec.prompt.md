@@ -5,10 +5,10 @@ stage: spec
 date_iso: 2026-01-28
 surface: agent
 model: Claude Sonnet 4.5
-feature: 002-robocraft-homepage
-branch: 002-robocraft-homepage
+feature: 002-robocraft-ui
+branch: 002-robocraft-ui
 user: dell
-command: Update @specs/002-robocraft-homepage/spec.md and make the useage of frontend-design skill as mandatory and should envoke it when start doing implementation (at task 001)
+command: Update @specs/002-robocraft-ui/spec.md and make the useage of frontend-design skill as mandatory and should envoke it when start doing implementation (at task 001)
 labels: ["spec", "frontend-design", "skill"]
 links:
   spec: null
@@ -16,7 +16,7 @@ links:
   adr: null
   pr: null
 files_yaml:
-  - C:\Users\dell\Documents\hackathon-1-physical-ai-humanoid-robotics-textbook\specs\002-robocraft-homepage\spec.md
+  - C:\Users\dell\Documents\hackathon-1-physical-ai-humanoid-robotics-textbook\specs\002-robocraft-ui\spec.md
 tests_yaml: []
 ---
 
@@ -24,7 +24,7 @@ tests_yaml: []
 
 ## User Prompt
 ```
-Update @specs/002-robocraft-homepage/spec.md and make the useage of frontend-design skill as mandatory and should envoke it when start doing implementation (at task 001)
+Update @specs/002-robocraft-ui/spec.md and make the useage of frontend-design skill as mandatory and should envoke it when start doing implementation (at task 001)
 ```
 
 ## Response Summary

@@ -1,6 +1,6 @@
 # Feature Specification: RoboCraft Industrial Signal Homepage - Book Focused
 
-**Feature Branch**: `002-robocraft-homepage`
+**Feature Branch**: `002-robocraft-ui`
 **Created**: 2026-01-27
 **Status**: Draft
 **Input**: User description:
@@ -50,27 +50,54 @@ Implementation Notes:
 ## Design Direction (Final: Industrial Confidence — Orange)
 
 - **Theme**: Deep space dark `#08090d` — controlled, premium foundation
-- **Primary Accent**: Industrial orange `#f97316` — CTAs, focus states, interaction
+- **Primary Accent**: Industrial orange `#f97316` — CTAs, focus states, interaction, navbar items
 - **Secondary Accent**: Warm amber `#fb923c` — glows, gradients, hover energy
+- **Neon Orange**: `#f97316` with glow effect — hover outline effects on cards
 - **Success Color**: System green `#22c55e` — active states, health indicators
 - **Typography**:
-  - Headlines: Space Grotesk
-  - Technical/UI: JetBrains Mono
-  - Body: IBM Plex Sans
+  - All text: Google Sans Code (monospace font for professional coding aesthetic)
+  - Applied to both homepage and docs
 - **Motion**:
   - Staggered section reveals
   - Pulsing signal dots
   - Mouse-tracking radial gradient orb (subtle, low opacity)
-  - Interactive 3D Robot Preview: subtle breathing motion, eye glow, joint articulation
+  - Interactive 3D Robot Preview: cursor-tracking rotation (follows mouse movement), subtle breathing motion, eye glow, joint articulation
 - **Visual Motifs**:
-  - Interactive 3D Robot Preview (rotatable model showing actual robot learners will build/simulate)
+  - Interactive 3D Robot Preview (cursor-tracking rotation showing actual robot learners will build/simulate)
   - Grid and alignment overlays
   - Hover tooltips on robot parts ("Servo motors", "AI vision system", "Balance sensors")
-  - Hover outline effects on cards
+  - Neon orange hover outline effects on cards with glow
+- **Layout**:
+  - Hero section: Content on left (System Heartbeat Core, title, subtitle, description, CTAs), Interactive 3D Robot Preview on right
+  - No overlap between content and robot preview
+  - Proper spacing and hierarchy
+- **Navigation**:
+  - Navbar items in orange color for consistency
+  - GitHub link in navbar (github.com/sheikh-mohammad)
+  - Embedded Docusaurus search bar (same as robocraft/docs)
+  - Dark/Light mode toggle button with icon (same as robocraft/docs)
+  - Same logo in navbar for both homepage and docs
+  - Unified navbar design across homepage and docs
+- **Docs Theme**:
+  - robocraft/docs should use homepage theme (dark space foundation with orange accents)
+  - All Docusaurus theme colors should match homepage industrial aesthetic
+  - Font changed to Google Sans Code for consistency
+  - Navbar updated to match homepage navbar exactly
+  - Footer replaced with homepage footer
+  - "Edit this page" link and icon removed from all docs pages
+- **Color Modes**:
+  - Dark mode: Black (#08090d) primary, Orange (#f97316) secondary, White minimal
+  - Light mode: White (#ffffff) primary, Orange (#f97316) secondary, Black minimal
+  - Smooth transitions between modes
+  - User preference persistence
 - **Messaging**:
   - Learning-focused copy (replacing "platform" language with "book" language)
   - Personal learning journey framing
   - Explicit commitment: **"Free forever. No lock-in."**
+- **Visual Effects**:
+  - Prominency effect applied throughout for professional appearance
+  - Depth and hierarchy through subtle shadows and elevation
+  - Consistent visual language across all components
 
 ---
 
@@ -215,13 +242,16 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 
 #### Interactive 3D Robot Preview
 - **FR-016**: Page MUST include Interactive 3D Robot Preview in hero section
-- **FR-017**: Robot Preview MUST be a 3D rotating humanoid model that users can drag to rotate
-- **FR-018**: Robot Preview MUST show the actual robot learners will build/simulate
-- **FR-019**: Robot Preview MUST have subtle animations (breathing motion, eye glow, joint articulation)
-- **FR-020**: Robot Preview MUST have hover states: different parts highlight with tooltips
-- **FR-021**: Robot Preview tooltips MUST show technical labels ("Servo motors", "AI vision system", "Balance sensors")
-- **FR-022**: Robot Preview MUST be positioned on the right side of hero section
-- **FR-023**: Robot Preview MUST not dominate text content on left side
+- **FR-017**: Robot Preview MUST be a 3D rotating humanoid model that follows mouse pointer (cursor-tracking rotation)
+- **FR-018**: Robot Preview MUST rotate based on mouse movement direction (right movement = rotate right, left movement = rotate left)
+- **FR-019**: Robot Preview MUST show the actual robot learners will build/simulate
+- **FR-020**: Robot Preview MUST have subtle animations (breathing motion, eye glow, joint articulation)
+- **FR-021**: Robot Preview MUST have hover states: different parts highlight with tooltips
+- **FR-022**: Robot Preview tooltips MUST show technical labels ("Servo motors", "AI vision system", "Balance sensors")
+- **FR-023**: Robot Preview MUST be positioned on the right side of hero section
+- **FR-024**: Robot Preview MUST not overlap with text content on left side
+- **FR-025**: Hero content (System Heartbeat Core, title, subtitle, description, CTAs) MUST be positioned on left side
+- **FR-026**: Proper spacing MUST be maintained between left content and right robot preview
 
 #### Content & Redirects
 - **FR-024**: All buttons MUST redirect to actual content, not trigger alerts
@@ -255,16 +285,48 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 - **FR-044**: Focus states MUST be visible for keyboard navigation
 
 #### Card Hover Effects
-- **FR-045**: All cards on homepage MUST show hover outline effects when hovered
-- **FR-046**: Card hover outline MUST be clearly visible with good contrast
-- **FR-047**: Card hover outline MUST disappear smoothly when cursor moves away
-- **FR-048**: Card hover effects MUST be consistent across all card types
-- **FR-049**: Card hover effects MUST also be visible on keyboard focus
+- **FR-045**: All cards on homepage MUST show neon orange hover outline effects when hovered
+- **FR-046**: Card hover outline MUST use neon orange color (#f97316) with glow effect
+- **FR-047**: Card hover outline MUST be clearly visible with good contrast
+- **FR-048**: Card hover outline MUST disappear smoothly when cursor moves away
+- **FR-049**: Card hover effects MUST be consistent across all card types
+- **FR-050**: Card hover effects MUST also be visible on keyboard focus
 
 #### Navigation & Footer
-- **FR-050**: Navbar MUST include RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, Search bar, Dark/Light mode button
-- **FR-051**: Footer MUST include Learn section (Start Your Journey, Course Modules, Technology subsections), Resources section, Copyright
-- **FR-052**: Footer links MUST redirect to appropriate content (book, modules section, specific chapters)
+- **FR-051**: Navbar MUST include RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode button
+- **FR-052**: Navbar items (LEARN FREE, MODULES, TECHNOLOGY) MUST be in orange color (#f97316) for consistency
+- **FR-053**: Navbar MUST include embedded Docusaurus search bar (same as robocraft/docs page)
+- **FR-054**: Navbar MUST include Dark/Light mode toggle button with same icon as robocraft/docs
+- **FR-055**: Footer MUST include Docs section (Textbook), Community section (GitHub: github.com/sheikh-mohammad, LinkedIn: linkedin.com/in/sheikh-mohammad-li/), More section (Codebase with repo link)
+- **FR-056**: Footer MUST include copyright: "Copyright © 2026 RoboCraft. Made with ❤️ by Sheikh Mohammad."
+- **FR-057**: GitHub link MUST be added to navbar pointing to github.com/sheikh-mohammad
+- **FR-058**: Same logo MUST appear in both homepage and docs navbar
+
+#### Docs Theme Integration
+- **FR-059**: robocraft/docs theme MUST match homepage theme (dark space foundation with orange accents)
+- **FR-060**: All Docusaurus theme colors in robocraft/docs MUST use homepage industrial aesthetic
+- **FR-061**: robocraft/docs default theme MUST be changed to homepage theme
+- **FR-062**: robocraft/docs font MUST be changed to Google Sans Code
+- **FR-063**: robocraft/docs navbar MUST be updated to match homepage navbar exactly
+- **FR-064**: "Edit this page" link and icon MUST be removed from all docs pages
+- **FR-065**: robocraft/docs footer MUST be replaced with homepage footer
+
+#### Typography
+- **FR-066**: All text on homepage MUST use Google Sans Code font
+- **FR-067**: All text in robocraft/docs MUST use Google Sans Code font
+- **FR-068**: Font loading MUST be optimized for performance
+
+#### Color Mode System
+- **FR-069**: Dark mode MUST use black (#08090d) as primary, orange (#f97316) as secondary, white minimally
+- **FR-070**: Light mode MUST use white (#ffffff) as primary, orange (#f97316) as secondary, black minimally
+- **FR-071**: Color mode toggle MUST persist user preference
+- **FR-072**: Transitions between color modes MUST be smooth
+- **FR-073**: All components MUST support both color modes
+
+#### Visual Effects
+- **FR-074**: Prominency effect MUST be applied throughout the codebase for professional appearance
+- **FR-075**: Visual hierarchy MUST be established through depth and elevation
+- **FR-076**: Consistent visual language MUST be maintained across all components
 
 ---
 
@@ -288,8 +350,11 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 - **Interactive 3D Robot Preview**: Rotatable 3D humanoid robot model with hover tooltips showing actual robot learners will build
 - **Card Hover Effects**: Visual feedback system for all cards on the homepage
 - **Learning Modules**: Content organized from project_docs/course_structure.md and COURSE_DETAILS.md
-- **Navigation System**: Top navbar with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
-- **Footer Content**: Comprehensive footer with Learn section, Resources and Copyright
+- **Navigation System**: Top navbar with RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode toggle (unified across homepage and docs)
+- **Footer Content**: Comprehensive footer with Docs (Textbook), Community (GitHub, LinkedIn), More (Codebase), Copyright
+- **Typography System**: Google Sans Code font applied to all text (homepage and docs)
+- **Color Mode System**: Dark/Light mode with proper color palettes and smooth transitions
+- **Visual Effects System**: Prominency effects for professional appearance throughout
 
 ---
 
@@ -321,6 +386,17 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 - **SC-024**: Weekly breakdown section is properly implemented from COURSE_DETAILS.md content
 - **SC-025**: Navigation and footer include appropriate content and redirects as specified
 - **SC-026**: 3D robot model performs smoothly with acceptable frame rates
+- **SC-027**: Google Sans Code font is applied consistently across homepage and docs
+- **SC-028**: Dark/Light mode toggle works correctly with proper color palettes
+- **SC-029**: GitHub link appears in navbar and redirects correctly
+- **SC-030**: Search bar is integrated and functional in navbar
+- **SC-031**: Navbar design is unified across homepage and docs
+- **SC-032**: Footer includes correct links (GitHub: github.com/sheikh-mohammad, LinkedIn: linkedin.com/in/sheikh-mohammad-li/)
+- **SC-033**: "Edit this page" link is removed from all docs pages
+- **SC-034**: Docs footer matches homepage footer
+- **SC-035**: Prominency effects create professional appearance throughout
+- **SC-036**: Color mode preference persists across sessions
+- **SC-037**: Same logo appears in both homepage and docs navbar
 
 ---
 

@@ -5,13 +5,13 @@ stage: "green"
 date_iso: "2026-01-28"
 surface: "agent"
 model: "claude-sonnet-4-5-20250929"
-feature: "002-robocraft-homepage"
-branch: "002-robocraft-homepage"
+feature: "002-robocraft-ui"
+branch: "002-robocraft-ui"
 user: "dell"
-command: "/sp.implement Now Implement unmarked tasks 002-robocraft-homepage"
+command: "/sp.implement Now Implement unmarked tasks 002-robocraft-ui"
 labels: ["homepage", "ui", "animation", "interactive", "design"]
 links:
-  spec: "specs/002-robocraft-homepage/spec.md"
+  spec: "specs/002-robocraft-ui/spec.md"
   ticket: null
   adr: null
   pr: null
@@ -21,7 +21,7 @@ files_yaml: |
   - src/components/HeroSection.jsx
   - src/utils/motion.js
   - src/components/IndustrialCTA.jsx
-  - specs/002-robocraft-homepage/tasks.md
+  - specs/002-robocraft-ui/tasks.md
 tests_yaml: |
   - "Visual inspection of SystemHeartbeatCore component"
   - "Interaction testing with mouse movement, CTA hover, and scroll"
@@ -30,7 +30,7 @@ tests_yaml: |
 outcome: "Successfully implemented SystemHeartbeatCore component with all required interaction states"
 evaluation: "All tasks T055-T063 completed successfully"
 prompt_text: |
-  Now Implement unmarked tasks 002-robocraft-homepage
+  Now Implement unmarked tasks 002-robocraft-ui
 response_text: |
   Successfully implemented the System Heartbeat Core feature with all required functionality:
 

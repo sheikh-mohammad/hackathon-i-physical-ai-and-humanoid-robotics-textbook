@@ -4,7 +4,7 @@
 
 - **Status:** Accepted
 - **Date:** 2026-01-28
-- **Feature:** 002-robocraft-homepage
+- **Feature:** 002-robocraft-ui
 - **Context:** Need to establish performance and accessibility standards for the RoboCraft homepage that meet industry benchmarks while supporting the industrial design aesthetic and complex interactive elements.
 
 <!-- Significance checklist (ALL must be true to justify this ADR)
@@ -65,9 +65,9 @@ Alternative C: Minimalist approach focusing solely on accessibility
 
 ## References
 
-- Feature Spec: specs/002-robocraft-homepage/spec.md
-- Implementation Plan: specs/002-robocraft-homepage/plan.md
-- Research: specs/002-robocraft-homepage/research.md
-- Quickstart Guide: specs/002-robocraft-homepage/quickstart.md
+- Feature Spec: specs/002-robocraft-ui/spec.md
+- Implementation Plan: specs/002-robocraft-ui/plan.md
+- Research: specs/002-robocraft-ui/research.md
+- Quickstart Guide: specs/002-robocraft-ui/quickstart.md
 - Related ADRs: ADR-0004 (Frontend Technology Stack and Industrial Design), ADR-0005 (Data Model and API Architecture)
-- Evaluator Evidence: history/prompts/002-robocraft-homepage/001-create-robocraft-homepage-plan.plan.prompt.md
+- Evaluator Evidence: history/prompts/002-robocraft-ui/001-create-robocraft-homepage-plan.plan.prompt.md

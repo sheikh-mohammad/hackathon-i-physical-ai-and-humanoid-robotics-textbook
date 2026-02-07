@@ -5,20 +5,20 @@ stage: "spec"
 date_iso: "2026-01-28"
 surface: "agent"
 model: "claude-sonnet-4-5-20250929"
-feature: "002-robocraft-homepage"
-branch: "002-robocraft-homepage"
+feature: "002-robocraft-ui"
+branch: "002-robocraft-ui"
 user: "dell"
-command: "/sp.specify Update the 002-robocraft-homepage spec taska and plan and do not create new branchor feaute just change the existing specs plan tasks"
+command: "/sp.specify Update the 002-robocraft-ui spec taska and plan and do not create new branchor feaute just change the existing specs plan tasks"
 labels: ["homepage", "ui", "animation", "interactive", "design", "robotics", "figure"]
 links:
-  spec: "specs/002-robocraft-homepage/spec.md"
+  spec: "specs/002-robocraft-ui/spec.md"
   ticket: null
   adr: null
   pr: null
 files_yaml: |
-  - specs/002-robocraft-homepage/spec.md
-  - specs/002-robocraft-homepage/plan.md
-  - specs/002-robocraft-homepage/tasks.md
+  - specs/002-robocraft-ui/spec.md
+  - specs/002-robocraft-ui/plan.md
+  - specs/002-robocraft-ui/tasks.md
   - src/components/FullIndustrialRoboticFigure.jsx
   - src/css/industrial-styles.module.css
   - src/components/HeroSection.jsx
@@ -28,10 +28,10 @@ tests_yaml: |
   - "Layout validation (content left, robot right)"
   - "Responsive design validation"
   - "Accessibility testing with reduced motion"
-outcome: "Successfully added Full Industrial Robotic Figure feature to existing 002-robocraft-homepage specs"
+outcome: "Successfully added Full Industrial Robotic Figure feature to existing 002-robocraft-ui specs"
 evaluation: "All specifications, plans, and tasks updated with new robotic figure functionality"
 prompt_text: |
-  Update the 002-robocraft-homepage spec taska and plan and do not create new branchor feaute just change the existing specs plan tasks
+  Update the 002-robocraft-ui spec taska and plan and do not create new branchor feaute just change the existing specs plan tasks
 
   ## Hero Section Enhancement Prompt: Full Industrial Robotic Figure (Right Side)
 
@@ -118,7 +118,7 @@ prompt_text: |
   - Balanced hero composition (content left, robot right)
   - No distraction from core messaging
 response_text: |
-  Successfully updated the 002-robocraft-homepage feature to include the Full Industrial Robotic Figure enhancement:
+  Successfully updated the 002-robocraft-ui feature to include the Full Industrial Robotic Figure enhancement:
 
   1. Updated specification file (spec.md) with:
      - New success eval (Eval-006) for the robotic figure

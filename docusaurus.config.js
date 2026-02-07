@@ -38,17 +38,13 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/sheikh-mohammad/hackathon-i-physical-ai-and-humanoid-robotics-textbook/tree/main/",
+          // editUrl removed to hide "Edit this page" link (T128)
+          editUrl: undefined,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/sheikh-mohammad/hackathon-i-physical-ai-and-humanoid-robotics-textbook/tree/main/",
+          // editUrl removed to hide "Edit this page" link
+          editUrl: undefined,
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -63,12 +59,18 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       colorMode: {
-        defaultMode: "light",
+        defaultMode: "dark",
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
       navbar: {
         title: "RoboCraft",
+        style: 'dark',
         logo: {
           alt: "RoboCraft Logo",
           src: "static/img/favicon.png",
@@ -81,11 +83,13 @@ const config = {
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "Textbook",
+            className: 'navbar-item-orange',
           },
           {
-            href: "https://github.com/sheikh-mohammad/hackathon-i-physical-ai-and-humanoid-robotics-textbook",
+            href: "https://github.com/sheikh-mohammad",
             label: "GitHub",
             position: "right",
+            className: 'navbar-item-orange',
           },
         ],
       },
@@ -105,12 +109,12 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "GitHub",
+                href: "https://github.com/sheikh-mohammad",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/sheikh-mohammad-li/",
               },
             ],
           },
@@ -118,7 +122,7 @@ const config = {
             title: "More",
             items: [
               {
-                label: "GitHub",
+                label: "Codebase",
                 href: "https://github.com/sheikh-mohammad/hackathon-i-physical-ai-and-humanoid-robotics-textbook",
               },
             ],

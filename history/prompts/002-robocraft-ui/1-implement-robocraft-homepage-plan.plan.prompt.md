@@ -5,26 +5,26 @@ stage: "plan"
 date_iso: "2026-01-28"
 surface: "agent"
 model: "Claude Sonnet 4.5"
-feature: "002-robocraft-homepage"
-branch: "002-robocraft-homepage"
+feature: "002-robocraft-ui"
+branch: "002-robocraft-ui"
 user: "dell"
-command: "sp.plan for @specs/002-robocraft-homepage/spec.md"
+command: "sp.plan for @specs/002-robocraft-ui/spec.md"
 labels: ["homepage", "redesign", "planning", "ui-ux"]
-spec: "specs/002-robocraft-homepage/spec.md"
+spec: "specs/002-robocraft-ui/spec.md"
 ticket: null
 adr: null
 pr: null
 files_yaml: |
-  - specs/002-robocraft-homepage/plan.md
-  - specs/002-robocraft-homepage/research.md
-  - specs/002-robocraft-homepage/data-model.md
-  - specs/002-robocraft-homepage/quickstart.md
-  - specs/002-robocraft-homepage/contracts/homepage-api.yaml
+  - specs/002-robocraft-ui/plan.md
+  - specs/002-robocraft-ui/research.md
+  - specs/002-robocraft-ui/data-model.md
+  - specs/002-robocraft-ui/quickstart.md
+  - specs/002-robocraft-ui/contracts/homepage-api.yaml
 tests_yaml: |
-  - specs/002-robocraft-homepage/research.md
-  - specs/002-robocraft-homepage/data-model.md
+  - specs/002-robocraft-ui/research.md
+  - specs/002-robocraft-ui/data-model.md
 prompt_text: |
-  for @specs/002-robocraft-homepage/spec.md
+  for @specs/002-robocraft-ui/spec.md
 response_text: |
   Created implementation plan for RoboCraft Industrial Homepage Redesign including:
   - Technical plan with architecture decisions
@@ -38,7 +38,7 @@ evaluation: "All plan requirements met, ready for task breakdown"
 
 ## Implementation Plan: RoboCraft Industrial Homepage Redesign
 
-**Branch**: `002-robocraft-homepage` | **Date**: 2026-01-28 | **Spec**: [link]
+**Branch**: `002-robocraft-ui` | **Date**: 2026-01-28 | **Spec**: [link]
 **Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
 **Note**: This template is filled in by the `/sp.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
@@ -75,7 +75,7 @@ Redesign the RoboCraft homepage to establish a serious Physical AI & Humanoid Ro
 #### Documentation (this feature)
 
 ```text
-specs/002-robocraft-homepage/
+specs/002-robocraft-ui/
 ├── plan.md              # This file (/sp.plan command output)
 ├── research.md          # Phase 0 output (/sp.plan command)
 ├── data-model.md        # Phase 1 output (/sp.plan command)

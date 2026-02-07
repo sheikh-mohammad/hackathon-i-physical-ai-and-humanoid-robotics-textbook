@@ -33,9 +33,9 @@ This project successfully updated the RoboCraft homepage specification to transf
 
 ## Files Updated
 
-1. **specs/002-robocraft-homepage/spec.md** - Complete specification updated with new requirements
-2. **specs/002-robocraft-homepage/plan.md** - Implementation plan updated to reflect changes
-3. **specs/002-robocraft-homepage/tasks.md** - Task list updated with new requirements
+1. **specs/002-robocraft-ui/spec.md** - Complete specification updated with new requirements
+2. **specs/002-robocraft-ui/plan.md** - Implementation plan updated to reflect changes
+3. **specs/002-robocraft-ui/tasks.md** - Task list updated with new requirements
 4. **project_docs/ui_analysis.md** - UI analysis documenting current state and recommendations
 5. **project_docs/recommendations.md** - Detailed recommendations for implementation
 6. **project_docs/README.md** - Project documentation overview

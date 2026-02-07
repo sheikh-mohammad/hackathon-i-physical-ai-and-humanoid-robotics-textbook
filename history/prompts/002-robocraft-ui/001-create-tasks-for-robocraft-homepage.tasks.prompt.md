@@ -5,10 +5,10 @@ stage: tasks
 date_iso: 2026-01-28
 surface: agent
 model: Claude Sonnet 4.5
-feature: 002-robocraft-homepage
-branch: 002-robocraft-homepage
+feature: 002-robocraft-ui
+branch: 002-robocraft-ui
 user: dell
-command: "/sp.tasks Create tasks for @specs/002-robocraft-homepage\\"
+command: "/sp.tasks Create tasks for @specs/002-robocraft-ui\\"
 labels: ["tasks", "homepage", "robocraft", "spec-driven-development"]
 links:
   spec: null
@@ -21,7 +21,7 @@ links:
 
 ## Prompt Text
 ```
-Create tasks for @specs/002-robocraft-homepage\
+Create tasks for @specs/002-robocraft-ui\
 ```
 
 ## Response Text
@@ -38,7 +38,7 @@ Generated comprehensive tasks.md file for the RoboCraft Industrial Signal Homepa
 Each task follows the required format: `- [ ] T### [P?] [US#] Description with file path`. Dependencies and parallel execution opportunities are documented.
 
 ## Files Changed
- - specs/002-robocraft-homepage/tasks.md
+ - specs/002-robocraft-ui/tasks.md
 
 ## Tests Performed
  - Verified all tasks follow the checklist format (checkbox, ID, labels, file paths)

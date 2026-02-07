@@ -4,7 +4,7 @@
 
 - **Status:** Accepted
 - **Date:** 2026-01-28
-- **Feature:** 002-robocraft-homepage
+- **Feature:** 002-robocraft-ui
 - **Context:** Need to establish a cohesive frontend technology stack and industrial design language for the RoboCraft homepage that aligns with the product's engineering-focused identity while maintaining performance and accessibility standards.
 
 <!-- Significance checklist (ALL must be true to justify this ADR)
@@ -61,7 +61,7 @@ Alternative Design C: Friendly/Approachable aesthetic with bright colors
 
 ## References
 
-- Feature Spec: specs/002-robocraft-homepage/spec.md
-- Implementation Plan: specs/002-robocraft-homepage/plan.md
+- Feature Spec: specs/002-robocraft-ui/spec.md
+- Implementation Plan: specs/002-robocraft-ui/plan.md
 - Related ADRs: ADR-0001 (Docusaurus Technology Stack), ADR-0003 (Navigation Architecture)
-- Evaluator Evidence: history/prompts/002-robocraft-homepage/001-create-robocraft-homepage-plan.plan.prompt.md
+- Evaluator Evidence: history/prompts/002-robocraft-ui/001-create-robocraft-homepage-plan.plan.prompt.md

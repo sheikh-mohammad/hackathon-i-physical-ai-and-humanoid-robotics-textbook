@@ -26,17 +26,32 @@ const HardwareTierCard = ({
         overflow: 'hidden',
         cursor: 'pointer',
         minHeight: '300px', // Ensure adequate touch target size
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+        transition: 'transform 0.2s ease, box-shadow 0.2s ease, outline 0.2s ease',
+        outline: '2px solid transparent',
+        outlineOffset: '2px'
       }}
       onClick={onClick}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-5px)';
-        e.currentTarget.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+        e.currentTarget.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(249, 115, 22, 0.2)';
+        e.currentTarget.style.outline = isRecommended ? '2px solid #f97316' : '2px solid #fb923c';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        e.currentTarget.style.outline = '2px solid transparent';
       }}
+      onFocus={(e) => {
+        e.currentTarget.style.outline = isRecommended ? '2px solid #f97316' : '2px solid #fb923c';
+        e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(249, 115, 22, 0.2)';
+      }}
+      onBlur={(e) => {
+        e.currentTarget.style.outline = '2px solid transparent';
+        e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+      }}
+      tabIndex={0}
+      role="button"
+      aria-label={`${name} - ${cost}${isRecommended ? ' (Recommended)' : ''}`}
     >
       {isRecommended && (
         <div

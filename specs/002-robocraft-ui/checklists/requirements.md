@@ -2,7 +2,7 @@
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2026-01-28
-**Feature**: specs/002-robocraft-homepage/spec.md
+**Feature**: specs/002-robocraft-ui/spec.md
 
 ## Content Quality
 

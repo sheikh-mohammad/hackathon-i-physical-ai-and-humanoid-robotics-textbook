@@ -5,32 +5,117 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/* Import Google Sans Code font (Roboto Mono) */
+@import url('./fonts.css');
+
+/* Import prominency effects */
+@import url('./prominency.module.css');
+
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Typography - Google Sans Code (Roboto Mono) for all text */
+  --ifm-font-family-base: 'Roboto Mono', 'JetBrains Mono', 'Courier New', monospace;
+  --ifm-font-family-monospace: 'Roboto Mono', 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Color palette - Industrial Orange Theme */
+  --ifm-color-primary: #f97316;
+  --ifm-color-primary-dark: #ea580c;
+  --ifm-color-primary-darker: #dc2626;
+  --ifm-color-primary-darkest: #b91c1c;
+  --ifm-color-primary-light: #fb923c;
+  --ifm-color-primary-lighter: #fdba74;
+  --ifm-color-primary-lightest: #fed7aa;
+
+  /* Dark mode colors (default) */
+  --ifm-background-color: #08090d;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-navbar-background-color: #08090d;
+  --ifm-footer-background-color: #08090d;
+  --ifm-font-color-base: #ffffff;
+  --ifm-font-color-secondary: #e2e8f0;
+  --docusaurus-highlighted-code-line-bg: rgba(249, 115, 22, 0.1);
+
+  /* Transition for smooth color mode switching */
+  --ifm-transition-fast: 150ms;
+  --ifm-transition-slow: 300ms;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode */
+/* Dark mode theme */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Black primary, Orange secondary, White minimal */
+  --ifm-color-primary: #f97316;
+  --ifm-color-primary-dark: #ea580c;
+  --ifm-color-primary-darker: #dc2626;
+  --ifm-color-primary-darkest: #b91c1c;
+  --ifm-color-primary-light: #fb923c;
+  --ifm-color-primary-lighter: #fdba74;
+  --ifm-color-primary-lightest: #fed7aa;
+  --ifm-background-color: #08090d;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-navbar-background-color: #08090d;
+  --ifm-footer-background-color: #08090d;
+  --ifm-font-color-base: #ffffff;
+  --ifm-font-color-secondary: #e2e8f0;
+  --docusaurus-highlighted-code-line-bg: rgba(249, 115, 22, 0.3);
+}
+
+/* Light mode theme */
+[data-theme='light'] {
+  /* White primary, Orange secondary, Black minimal */
+  --ifm-color-primary: #f97316;
+  --ifm-color-primary-dark: #ea580c;
+  --ifm-color-primary-darker: #dc2626;
+  --ifm-color-primary-darkest: #b91c1c;
+  --ifm-color-primary-light: #fb923c;
+  --ifm-color-primary-lighter: #fdba74;
+  --ifm-color-primary-lightest: #fed7aa;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #ffffff;
+  --ifm-font-color-base: #08090d;
+  --ifm-font-color-secondary: #475569;
+  --docusaurus-highlighted-code-line-bg: rgba(249, 115, 22, 0.1);
+}
+
+/* Smooth transitions between color modes */
+* {
+  transition: background-color var(--ifm-transition-slow) ease,
+              color var(--ifm-transition-slow) ease,
+              border-color var(--ifm-transition-slow) ease;
+}
+
+/* Apply Google Sans Code font to all elements */
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button,
+input, textarea, select,
+.navbar, .footer, .menu,
+.markdown, .docusaurus-highlight-code-line {
+  font-family: var(--ifm-font-family-base) !important;
+}
+
+/* Navbar item orange styling */
+.navbar-item-orange {
+  color: #f97316 !important;
+}
+
+.navbar-item-orange:hover {
+  color: #fb923c !important;
+}
+
+/* Navbar link styling for orange accent */
+.navbar__link {
+  color: #f97316 !important;
+}
+
+.navbar__link:hover {
+  color: #fb923c !important;
 }
 
 /* Custom styling for Physical AI Humanoid and Robotics Textbook */
 .textbook-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: white;
   padding: 2rem 0;
   margin-bottom: 2rem;
@@ -42,10 +127,93 @@
   margin: 1.5rem 0;
 }
 
-.robotics-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-right: 0.5rem;
-  vertical-align: middle;
+/* Apply prominency effects to navbar */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='light'] .navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Apply prominency effects to footer */
+.footer {
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='light'] .footer {
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Apply prominency effects to cards */
+.card,
+.markdown > .card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15),
+              0 2px 4px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover,
+.markdown > .card:hover {
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.15),
+              0 3px 6px rgba(249, 115, 22, 0.10);
+  transform: translateY(-4px);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+[data-theme='light'] .card,
+[data-theme='light'] .markdown > .card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10),
+              0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Apply prominency effects to buttons */
+.button,
+.button--primary {
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button--primary:hover {
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+  transform: translateY(-2px);
+}
+
+.button:active,
+.button--primary:active {
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+  transform: translateY(0);
+}
+
+/* Apply prominency effects to docs sidebar */
+.menu {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .menu {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Apply prominency effects to docs content */
+.markdown {
+  position: relative;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, transparent);
 }

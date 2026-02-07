@@ -57,6 +57,25 @@
   border-radius: 0; /* Sharp edges as per requirements */
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, outline 0.2s ease, box-shadow 0.2s ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.card:hover {
+  outline: 2px solid #f97316;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(249, 115, 22, 0.4),
+    0 0 40px rgba(249, 115, 22, 0.2);
+}
+
+.card:focus-within {
+  outline: 2px solid #f97316;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(249, 115, 22, 0.4),
+    0 0 40px rgba(249, 115, 22, 0.2);
 }
 
 /* Grid layout */

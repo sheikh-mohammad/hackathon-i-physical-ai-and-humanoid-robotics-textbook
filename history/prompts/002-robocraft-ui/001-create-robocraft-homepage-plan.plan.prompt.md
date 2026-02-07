@@ -5,10 +5,10 @@ stage: "plan"
 date_iso: "2026-01-28"
 surface: "agent"
 model: "Claude Sonnet 4.5"
-feature: "002-robocraft-homepage"
-branch: "002-robocraft-homepage"
+feature: "002-robocraft-ui"
+branch: "002-robocraft-ui"
 user: "dell"
-command: "sp.plan Create plan for @specs/002-robocraft-homepage\\ using @project_docs/002-robocraft-homepage/planning.md this file"
+command: "sp.plan Create plan for @specs/002-robocraft-ui\\ using @project_docs/002-robocraft-ui/planning.md this file"
 labels: ["planning", "homepage", "design", "robocraft"]
 links:
   spec: "null"
@@ -23,7 +23,7 @@ evaluation: "All plan components completed: technical context, research, data mo
 
 ## PROMPT_TEXT
 
-Create plan for @specs/002-robocraft-homepage\ using @project_docs/002-robocraft-homepage/planning.md this file
+Create plan for @specs/002-robocraft-ui\ using @project_docs/002-robocraft-ui/planning.md this file
 
 ## RESPONSE_TEXT
 
@@ -36,15 +36,15 @@ Created comprehensive implementation plan for RoboCraft homepage redesign includ
 - Risk analysis and mitigation strategies
 - Acceptance criteria aligned with requirements
 
-All artifacts created in specs/002-robocraft-homepage/: plan.md, research.md, data-model.md, quickstart.md, and contracts/homepage-api-contracts.md
+All artifacts created in specs/002-robocraft-ui/: plan.md, research.md, data-model.md, quickstart.md, and contracts/homepage-api-contracts.md
 
 ## ARTIFACTS CREATED
 
-- specs/002-robocraft-homepage/plan.md
-- specs/002-robocraft-homepage/research.md
-- specs/002-robocraft-homepage/data-model.md
-- specs/002-robocraft-homepage/quickstart.md
-- specs/002-robocraft-homepage/contracts/homepage-api-contracts.md
+- specs/002-robocraft-ui/plan.md
+- specs/002-robocraft-ui/research.md
+- specs/002-robocraft-ui/data-model.md
+- specs/002-robocraft-ui/quickstart.md
+- specs/002-robocraft-ui/contracts/homepage-api-contracts.md
 
 ## TECHNICAL APPROACH
 

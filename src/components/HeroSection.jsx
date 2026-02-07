@@ -3,7 +3,7 @@ import IndustrialCTA from './IndustrialCTA';
 import SchematicSVG from './SchematicSVG';
 import GridOverlay from './GridOverlay';
 import SystemHeartbeatCore from './SystemHeartbeatCore';
-import FullIndustrialRoboticFigure from './FullIndustrialRoboticFigure';
+import Interactive3DRobotPreview from './Interactive3DRobotPreview';
 import { conditionalAnimate } from '../utils/motion';
 import styles from '../css/industrial-styles.module.css';
 import colorStyles from '../css/colors.module.css';
@@ -11,9 +11,23 @@ import colorStyles from '../css/colors.module.css';
 /**
  * HeroSection Component
  * Landing area with main CTA for the industrial homepage
+ * Updated to focus on textbook learning approach
  */
-const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, onCtaClick, onSecondaryCtaClick }) => {
+const HeroSection = ({ title, subtitle, description }) => {
   const heroRef = useRef(null);
+
+  // Handle CTA clicks with proper redirects
+  const handlePrimaryCtaClick = () => {
+    window.location.href = '/robocraft/docs';
+  };
+
+  const handleSecondaryCtaClick = () => {
+    // Scroll to modules section
+    const modulesSection = document.getElementById('modules-section');
+    if (modulesSection) {
+      modulesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     // Apply staggered reveal animation when component mounts
@@ -47,12 +61,11 @@ const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, 
         backgroundColor: '#08090d',
         border: '1px solid #f97316',
         padding: '3rem 2rem',
-        textAlign: 'center',
         marginBottom: '3rem',
-        minHeight: '600px', // Ensure hero renders within 2 seconds with headline
+        minHeight: '600px',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between'
       }}
     >
       {/* Grid-based animated background */}
@@ -76,12 +89,14 @@ const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, 
         <SchematicSVG width="100" height="100" />
       </div>
 
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '800px', margin: '0 auto' }}>
-        {/* System Heartbeat Core - Central element that visually communicates platform vitality */}
-        <div className="animate-on-load" style={{ marginBottom: '2rem', position: 'relative' }}>
-          <SystemHeartbeatCore />
-        </div>
-
+      {/* Left Content Section */}
+      <div style={{
+        position: 'relative',
+        zIndex: 2,
+        maxWidth: '600px',
+        flex: '1',
+        paddingRight: '2rem'
+      }}>
         <h1 className={`animate-on-load ${styles.headline} ${colorStyles.textAccentPrimary}`} style={{ fontSize: '3rem', marginBottom: '1rem' }}>
           {title}
         </h1>
@@ -94,24 +109,20 @@ const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, 
           {description}
         </p>
 
-        <div className="animate-on-load" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          {ctaText && (
-            <IndustrialCTA
-              text={ctaText}
-              variant="primary"
-              onClick={onCtaClick}
-              style={{ minWidth: '200px' }}
-            />
-          )}
+        <div className="animate-on-load" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <IndustrialCTA
+            text="Start Learning"
+            variant="primary"
+            onClick={handlePrimaryCtaClick}
+            style={{ minWidth: '200px' }}
+          />
 
-          {secondaryCtaText && (
-            <IndustrialCTA
-              text={secondaryCtaText}
-              variant="secondary"
-              onClick={onSecondaryCtaClick}
-              style={{ minWidth: '200px' }}
-            />
-          )}
+          <IndustrialCTA
+            text="View Modules"
+            variant="secondary"
+            onClick={handleSecondaryCtaClick}
+            style={{ minWidth: '200px' }}
+          />
         </div>
 
         {/* Free forever messaging */}
@@ -120,9 +131,26 @@ const HeroSection = ({ title, subtitle, description, ctaText, secondaryCtaText, 
         </div>
       </div>
 
-      {/* Full Industrial Robotic Figure - Full robotic body on the right side of hero section */}
-      <div className="animate-on-load" style={{ position: 'absolute', top: '50%', right: '5%', zIndex: 1, transform: 'translateY(-50%)' }}>
-        <FullIndustrialRoboticFigure />
+      {/* Right Section - Interactive 3D Robot Preview with Signal Dot */}
+      <div className="animate-on-load" style={{
+        position: 'relative',
+        zIndex: 1,
+        flex: '0 0 auto',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        {/* System Heartbeat Core - Positioned at top-left of robot */}
+        <div className="animate-on-load" style={{
+          position: 'absolute',
+          left: '0',
+          top: '0',
+          zIndex: 2
+        }}>
+          <SystemHeartbeatCore />
+        </div>
+
+        <Interactive3DRobotPreview />
       </div>
     </section>
   );

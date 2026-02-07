@@ -4,7 +4,7 @@
 
 - **Status:** Accepted
 - **Date:** 2026-01-28
-- **Feature:** 002-robocraft-homepage
+- **Feature:** 002-robocraft-ui
 - **Context:** Need to define a flexible yet structured data model and API architecture for the RoboCraft homepage that supports dynamic content, industrial design elements, and performance requirements while maintaining accessibility and extensibility.
 
 <!-- Significance checklist (ALL must be true to justify this ADR)
@@ -64,9 +64,9 @@ Alternative C: Monolithic content entity with unstructured fields
 
 ## References
 
-- Feature Spec: specs/002-robocraft-homepage/spec.md
-- Implementation Plan: specs/002-robocraft-homepage/plan.md
-- Data Model: specs/002-robocraft-homepage/data-model.md
-- API Contracts: specs/002-robocraft-homepage/contracts/homepage-api-contracts.md
+- Feature Spec: specs/002-robocraft-ui/spec.md
+- Implementation Plan: specs/002-robocraft-ui/plan.md
+- Data Model: specs/002-robocraft-ui/data-model.md
+- API Contracts: specs/002-robocraft-ui/contracts/homepage-api-contracts.md
 - Related ADRs: ADR-0001 (Docusaurus Technology Stack), ADR-0004 (Frontend Technology Stack and Industrial Design)
-- Evaluator Evidence: history/prompts/002-robocraft-homepage/001-create-robocraft-homepage-plan.plan.prompt.md
+- Evaluator Evidence: history/prompts/002-robocraft-ui/001-create-robocraft-homepage-plan.plan.prompt.md

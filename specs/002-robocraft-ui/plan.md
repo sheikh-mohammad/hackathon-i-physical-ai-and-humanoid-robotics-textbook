@@ -1,4 +1,4 @@
-# Implementation Plan: 002-robocraft-homepage
+# Implementation Plan: 002-robocraft-ui
 
 ## Technical Context
 
@@ -11,30 +11,58 @@
 ## Design Direction
 
 - **Theme**: Deep space dark `#08090d` — controlled, premium foundation
-- **Primary Accent**: Industrial orange `#f97316` — CTAs, focus states, interaction
+- **Primary Accent**: Industrial orange `#f97316` — CTAs, focus states, interaction, navbar items
 - **Secondary Accent**: Warm amber `#fb923c` — glows, gradients, hover energy
+- **Neon Orange**: `#f97316` with glow effect — hover outline effects on cards
 - **Success Color**: System green `#22c55e` — active states, health indicators
 - **Typography**:
-  - Headlines: Space Grotesk
-  - Technical/UI: JetBrains Mono
-  - Body: IBM Plex Sans
+  - All text: Google Sans Code (monospace font for professional coding aesthetic)
+  - Applied to both homepage and docs
+- **Color Modes**:
+  - Dark mode: Black (#08090d) primary, Orange (#f97316) secondary, White minimal
+  - Light mode: White (#ffffff) primary, Orange (#f97316) secondary, Black minimal
+  - Smooth transitions between modes
+  - User preference persistence
 - **Motion**:
   - Staggered section reveals
   - Pulsing signal dots
   - Mouse-tracking radial gradient orb (subtle, low opacity)
   - System Heartbeat Core: rhythmic pulse with interactive states
-  - Schematic-Style Robot: subtle pulse and hover interactions
+  - Interactive 3D Robot Preview: cursor-tracking rotation (follows mouse movement), breathing motion, eye glow, joint articulation
 - **Visual Motifs**:
   - Robot assembly schematic SVG
   - Grid and alignment overlays
   - Floating system labels and callouts
   - Central System Heartbeat Core (circular/hexagonal reactor-style node)
-  - Schematic-Style Robot (technical diagram with core node and peripheral components)
-  - Hover outline effects on cards
+  - Interactive 3D Robot Preview (cursor-tracking rotation with hover tooltips)
+  - Neon orange hover outline effects on cards with glow
+- **Layout**:
+  - Hero section: Content on left (System Heartbeat Core, title, subtitle, description, CTAs), Interactive 3D Robot Preview on right
+  - No overlap between content and robot preview
+  - Proper spacing and hierarchy maintained
+- **Navigation**:
+  - Navbar items in orange color for consistency
+  - GitHub link in navbar (github.com/sheikh-mohammad)
+  - Embedded Docusaurus search bar (same as robocraft/docs)
+  - Dark/Light mode toggle button with same icon as robocraft/docs
+  - Same logo in navbar for both homepage and docs
+  - Unified navbar design across homepage and docs
+- **Docs Theme**:
+  - robocraft/docs should use homepage theme (dark space foundation with orange accents)
+  - All Docusaurus theme colors should match homepage industrial aesthetic
+  - Font changed to Google Sans Code for consistency
+  - Navbar updated to match homepage navbar exactly
+  - Footer replaced with homepage footer
+  - "Edit this page" link and icon removed from all docs pages
+  - Same logo in navbar as homepage
 - **Messaging**:
   - Outcome-driven copy
-  - Personal builder journey framing
+  - Personal learning journey framing
   - Explicit commitment: **"Free forever. No lock-in."**
+- **Visual Effects**:
+  - Prominency effect applied throughout for professional appearance
+  - Depth and hierarchy through subtle shadows and elevation
+  - Consistent visual language across all components
 
 ### Dependencies
 - Docusaurus 3.1.0 framework
@@ -235,16 +263,17 @@ Based on the project constitution principles:
 - Behavior: Rhythmic pulse animation, cursor-synced pulse, CTA hover acceleration, scroll transformation
 
 **Component 5: Interactive3DRobotPreview**
-- Purpose: Interactive 3D humanoid robot model that users can drag to rotate, showing the actual robot they'll build/simulate with hover tooltips
-- Props: modelPath, rotationEnabled, hoverTooltips, animationEnabled, position, size
+- Purpose: Interactive 3D humanoid robot model with cursor-tracking rotation, showing the actual robot they'll build/simulate with hover tooltips
+- Props: modelPath, cursorTracking, hoverTooltips, animationEnabled, position, size
 - Style: 3D rotating humanoid model positioned on the right side of hero section, with subtle breathing motion, eye glow, joint articulation
-- Behavior: Draggable rotation, hover tooltips with technical labels ("Servo motors", "AI vision system", "Balance sensors")
+- Behavior: Cursor-tracking rotation (follows mouse movement - right movement = rotate right, left movement = rotate left), hover tooltips with technical labels ("Servo motors", "AI vision system", "Balance sensors")
+- Layout: Positioned on right side without overlapping left content
 
 **Component 6: CardHoverEffects**
 - Purpose: Visual feedback system for all cards on the homepage
-- Props: hoverOutline, focusOutline, transitionDuration
-- Style: Outline effects with good contrast, smooth transitions
-- Behavior: Show outline on hover and focus, smooth disappearance when not active
+- Props: hoverOutline, focusOutline, transitionDuration, glowEffect
+- Style: Neon orange outline effects (#f97316) with glow, smooth transitions
+- Behavior: Show neon orange outline with glow on hover and focus, smooth disappearance when not active
 
 **Component 7: LearningModulesSection**
 - Purpose: Display course modules from project_docs/course_structure.md and COURSE_DETAILS.md
@@ -253,43 +282,77 @@ Based on the project constitution principles:
 - Behavior: Links to appropriate content sections
 
 **Component 8: NavigationBar**
-- Purpose: Top navigation with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
-- Props: navItems, themeToggle
-- Style: Clean, professional header with RoboCraft branding
-- Behavior: Responsive navigation and theme switching
+- Purpose: Top navigation with RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode toggle
+- Props: navItems, themeToggle, searchConfig, githubLink
+- Style: Clean, professional header with RoboCraft branding, orange accent for nav items
+- Behavior: Responsive navigation, theme switching with persistence, search functionality
 
 **Component 9: FooterSection**
-- Purpose: Comprehensive footer with Learn section, Resources and Copyright
+- Purpose: Comprehensive footer with Docs (Textbook), Community (GitHub, LinkedIn), More (Codebase), Copyright
 - Props: footerLinks
 - Style: Organized sections with appropriate redirects
-- Behavior: Links to book content, modules, specific chapters
+- Behavior: Links to GitHub (github.com/sheikh-mohammad), LinkedIn (linkedin.com/in/sheikh-mohammad-li/), Codebase (repo link)
+
+**Component 10: ColorModeSystem**
+- Purpose: Dark/Light mode management with proper color palettes
+- Props: defaultMode, persistPreference
+- Style: Dark mode (black primary, orange secondary, white minimal), Light mode (white primary, orange secondary, black minimal)
+- Behavior: Smooth transitions, preference persistence, system preference detection
+
+**Component 11: TypographySystem**
+- Purpose: Google Sans Code font integration across all text
+- Props: fontFamily, fontWeights, fontSizes
+- Style: Monospace professional coding aesthetic
+- Behavior: Optimized font loading, fallback fonts
+
+**Component 12: ProminencyEffects**
+- Purpose: Visual effects system for professional appearance
+- Props: elevationLevels, shadowStyles
+- Style: Subtle shadows, depth, hierarchy
+- Behavior: Consistent visual language across components
 
 ### 2.2 Styling Strategy
 
-- Primary theme: Deep space dark (#08090d)
-- Primary accent: Industrial orange (#f97316)
+- Primary theme: Deep space dark (#08090d) for dark mode, White (#ffffff) for light mode
+- Primary accent: Industrial orange (#f97316) - CTAs, navbar items, hover effects
+- Neon orange: Industrial orange (#f97316) with glow effect - card hover outlines
 - Secondary accent: Warm amber (#fb923c)
-- Typography: Space Grotesk for headlines, JetBrains Mono for technical text, IBM Plex Sans for body
-- Motion: Staggered reveals, pulsing dots, subtle radial gradients, System Heartbeat Core animations
-- Visual Motifs: Grid lines, schematic elements, radial glow for System Heartbeat Core
+- Typography: Google Sans Code for all text (homepage and docs)
+- Motion: Staggered reveals, pulsing dots, subtle radial gradients, System Heartbeat Core animations, cursor-tracking robot rotation
+- Visual Motifs: Grid lines, schematic elements, radial glow for System Heartbeat Core, neon orange outlines with glow
+- Color Modes: Dark mode (black primary, orange secondary, white minimal), Light mode (white primary, orange secondary, black minimal)
+- Visual Effects: Prominency effects with subtle shadows and elevation for professional appearance
 
 ### 2.3 Implementation Steps
 
 1. Create new component files in src/components/
 2. Update src/pages/index.js to use new components
 3. Apply industrial-themed styling with CSS modules
-4. Integrate course content from existing markdown files (project_docs/course_structure.md, COURSE_DETAILS.md)
-5. Implement System Heartbeat Core component with all interaction states
-6. Replace Schematic-Style Robot with Interactive 3D Robot Preview component
-7. Implement Interactive 3D Robot Preview component with drag rotation and hover tooltips
-8. Implement Card Hover Effects for all card components
-9. Create Learning Modules section using content from project_docs/course_structure.md and COURSE_DETAILS.md
-10. Implement Navigation Bar with LEARN FREE, MODULES, TECHNOLOGY, Search and Dark/Light mode
-11. Implement comprehensive Footer with Learn section, Resources and Copyright
-12. Update all CTAs to redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
-13. Implement responsive design
-14. Add accessibility attributes
-15. Optimize performance for 3D model interactions
+4. Integrate Google Sans Code font for all text (homepage and docs)
+5. Implement Dark/Light mode system with proper color palettes
+6. Integrate course content from existing markdown files (project_docs/course_structure.md, COURSE_DETAILS.md)
+7. Implement System Heartbeat Core component with all interaction states
+8. Implement Interactive 3D Robot Preview component with cursor-tracking rotation (follows mouse movement)
+9. Fix hero section layout: content on left (System Heartbeat Core, title, subtitle, description, CTAs), robot on right without overlap
+10. Implement neon orange hover effects with glow for all card components
+11. Update navbar items (LEARN FREE, MODULES, TECHNOLOGY) to orange color (#f97316)
+12. Add GitHub link to navbar (github.com/sheikh-mohammad)
+13. Integrate embedded Docusaurus search bar in navbar (same as robocraft/docs)
+14. Add Dark/Light mode toggle button in navbar with same icon as robocraft/docs
+15. Add same logo to both homepage and docs navbar
+16. Create Learning Modules section using content from project_docs/course_structure.md and COURSE_DETAILS.md
+17. Implement Navigation Bar with all required features (logo, nav items, GitHub, search, theme toggle)
+18. Implement comprehensive Footer with Docs (Textbook), Community (GitHub, LinkedIn), More (Codebase), Copyright
+19. Update all CTAs to redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
+20. Update Docusaurus theme configuration to match homepage theme (dark space foundation with orange accents)
+21. Update robocraft/docs font to Google Sans Code
+22. Update robocraft/docs navbar to match homepage navbar exactly
+23. Remove "Edit this page" link and icon from all docs pages
+24. Replace robocraft/docs footer with homepage footer
+25. Implement prominency effects throughout for professional appearance
+26. Implement responsive design
+27. Add accessibility attributes
+28. Optimize performance for 3D model interactions and font loading
 
 ## Phase 3: Risk Analysis
 
@@ -341,9 +404,32 @@ Based on the project constitution principles:
 - [ ] Card hover outline disappears smoothly when cursor moves away
 - [ ] Card hover effects are consistent across all card types
 - [ ] Card hover effects are also visible on keyboard focus
-- [ ] Navigation includes RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, Search bar, Dark/Light mode button
-- [ ] Footer includes Learn section (Start Your Journey, Course Modules, Technology subsections), Resources section, Copyright
-- [ ] Footer links redirect to appropriate content (book, modules section, specific chapters)
+- [ ] Navigation includes RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode button
+- [ ] GitHub link in navbar points to github.com/sheikh-mohammad
+- [ ] Search bar is properly integrated in navbar (Algolia configuration)
+- [ ] Dark/Light mode toggle button uses same icon as robocraft/docs
+- [ ] Same logo appears in both homepage and docs navbar
+- [ ] Navbar design is unified across homepage and docs
+- [ ] Footer includes Docs section (Textbook link)
+- [ ] Footer includes Community section (GitHub: github.com/sheikh-mohammad, LinkedIn: linkedin.com/in/sheikh-mohammad-li/)
+- [ ] Footer includes More section (Codebase with repo link)
+- [ ] Footer copyright reads "Copyright © 2026 RoboCraft. Made with ❤️ by Sheikh Mohammad."
+- [ ] Same footer appears in both homepage and docs
+- [ ] Google Sans Code font is applied to all text on homepage
+- [ ] Google Sans Code font is applied to all text in robocraft/docs
+- [ ] Font loading is optimized for performance
+- [ ] Dark mode uses black (#08090d) primary, orange (#f97316) secondary, white minimal
+- [ ] Light mode uses white (#ffffff) primary, orange (#f97316) secondary, black minimal
+- [ ] Color mode transitions are smooth
+- [ ] Color mode preference persists across sessions
+- [ ] All components support both dark and light modes
+- [ ] robocraft/docs theme matches homepage theme (dark space foundation with orange accents)
+- [ ] robocraft/docs navbar matches homepage navbar exactly
+- [ ] "Edit this page" link and icon removed from all docs pages
+- [ ] robocraft/docs footer replaced with homepage footer
+- [ ] Prominency effects applied throughout for professional appearance
+- [ ] Visual hierarchy established through depth and elevation
+- [ ] Consistent visual language maintained across all components
 - [X] System Heartbeat Core appears in hero section with rhythmic pulse animation
 - [X] System Heartbeat Core responds to cursor movement with subtle pulse syncing
 - [X] System Heartbeat Core accelerates heartbeat when CTAs are hovered
@@ -362,6 +448,10 @@ Based on the project constitution principles:
 - [ ] Respects prefers-reduced-motion setting
 - [ ] 3D robot model performs smoothly (≥ 30fps) on target devices
 - [ ] Interactive 3D Robot Preview has acceptable performance with fallback for low-end devices
+- [ ] Font loading optimized with font-display: swap
+- [ ] Color mode transitions perform smoothly without layout shifts
+- [ ] All images and assets optimized for web delivery
+- [ ] Prominency effects do not impact performance negatively
 
 ## Phase 5: Delivery Plan
 

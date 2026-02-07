@@ -6,21 +6,21 @@ date_iso: "2026-01-28"
 surface: "agent"
 model: "Claude Sonnet 4.5"
 feature: "robocraft-homepage"
-branch: "002-robocraft-homepage"
+branch: "002-robocraft-ui"
 user: "dell"
 command: "sp.specify"
 labels: ["specification", "homepage", "design", "industrial-aesthetic"]
 links:
-  spec: "specs/002-robocraft-homepage/spec.md"
+  spec: "specs/002-robocraft-ui/spec.md"
   ticket: null
   adr: null
   pr: null
 files_yaml:
-  - "specs/002-robocraft-homepage/spec.md"
-  - "specs/002-robocraft-homepage/checklists/requirements.md"
+  - "specs/002-robocraft-ui/spec.md"
+  - "specs/002-robocraft-ui/checklists/requirements.md"
 tests_yaml:
   - "spec quality checklist validation"
-prompt_text: "Now start creating specs using this file @project_docs/002-robocraft-homepage-final.md Also add your personal things do not 100% copy from this make by using it"
+prompt_text: "Now start creating specs using this file @project_docs/002-robocraft-ui-final.md Also add your personal things do not 100% copy from this make by using it"
 response_text: "Created comprehensive specification for RoboCraft Industrial Homepage Redesign based on the provided feature document, including user scenarios, functional requirements, and success criteria. Created quality checklist to validate the spec."
 outcome: "SUCCESS"
 evaluation: "Specification created successfully with all mandatory sections completed and validated through quality checklist"
@@ -34,7 +34,7 @@ Created a comprehensive specification for the RoboCraft Industrial Homepage Rede
 
 ## Actions Taken
 
-1. Created the feature specification file at specs/002-robocraft-homepage/spec.md
+1. Created the feature specification file at specs/002-robocraft-ui/spec.md
 2. Developed user scenarios covering product identity, capabilities discovery, hardware assessment, and mobile experience
 3. Defined 20 functional and non-functional requirements with clear, testable language
 4. Established 10 measurable success criteria with specific metrics

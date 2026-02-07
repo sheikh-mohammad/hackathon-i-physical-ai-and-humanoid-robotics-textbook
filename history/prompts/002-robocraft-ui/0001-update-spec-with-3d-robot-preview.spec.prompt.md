@@ -5,8 +5,8 @@ stage: spec
 date: 2026-02-06
 surface: agent
 model: claude-sonnet-4-5-20250929
-feature: 002-robocraft-homepage
-branch: 002-robocraft-homepage
+feature: 002-robocraft-ui
+branch: 002-robocraft-ui
 user: dell
 command: /sp.phr
 labels: ["spec", "3d-robot", "homepage", "textbook"]
@@ -16,7 +16,7 @@ links:
   adr: null
   pr: null
 files:
- - D:\hackathon-1-physical-ai-humanoid-robotics-textbook\specs\002-robocraft-homepage\spec.md
+ - D:\hackathon-1-physical-ai-humanoid-robotics-textbook\specs\002-robocraft-ui\spec.md
  - D:\hackathon-1-physical-ai-humanoid-robotics-textbook\project_docs\ui_analysis.md
  - D:\hackathon-1-physical-ai-humanoid-robotics-textbook\project_docs\recommendations.md
  - D:\hackathon-1-physical-ai-humanoid-robotics-textbook\project_docs\README.md

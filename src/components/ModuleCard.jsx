@@ -25,18 +25,33 @@ const ModuleCard = ({
         position: 'relative',
         overflow: 'hidden',
         cursor: 'pointer',
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-        minHeight: '160px' // Ensure touch targets meet 44px minimum when considering padding
+        transition: 'transform 0.2s ease, box-shadow 0.2s ease, outline 0.2s ease',
+        minHeight: '160px', // Ensure touch targets meet 44px minimum when considering padding
+        outline: '2px solid transparent',
+        outlineOffset: '2px'
       }}
       onClick={onClick}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-5px)';
-        e.currentTarget.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+        e.currentTarget.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(249, 115, 22, 0.2)';
+        e.currentTarget.style.outline = isAdvanced ? '2px solid #fb923c' : '2px solid #f97316';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        e.currentTarget.style.outline = '2px solid transparent';
       }}
+      onFocus={(e) => {
+        e.currentTarget.style.outline = isAdvanced ? '2px solid #fb923c' : '2px solid #f97316';
+        e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(249, 115, 22, 0.4), 0 0 40px rgba(249, 115, 22, 0.2)';
+      }}
+      onBlur={(e) => {
+        e.currentTarget.style.outline = '2px solid transparent';
+        e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+      }}
+      tabIndex={0}
+      role="button"
+      aria-label={`${title} - ${difficulty}, ${duration}`}
     >
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
         <SignalDot isActive={!isAdvanced} isAdvanced={isAdvanced} style={{ marginRight: '0.75rem' }} />

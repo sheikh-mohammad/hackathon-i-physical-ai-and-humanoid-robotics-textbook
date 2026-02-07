@@ -5,20 +5,20 @@ stage: "green"
 date_iso: "2026-01-28"
 surface: "agent"
 model: "claude-sonnet-4-5-20250929"
-feature: "002-robocraft-homepage"
-branch: "002-robocraft-homepage"
+feature: "002-robocraft-ui"
+branch: "002-robocraft-ui"
 user: "dell"
-command: "/sp.implement @specs/002-robocraft-homepage\\ unmarked tasks"
+command: "/sp.implement @specs/002-robocraft-ui\\ unmarked tasks"
 labels: ["homepage", "ui", "animation", "interactive", "design", "robotics", "figure"]
 links:
-  spec: "specs/002-robocraft-homepage/spec.md"
+  spec: "specs/002-robocraft-ui/spec.md"
   ticket: null
   adr: null
   pr: null
 files_yaml: |
   - src/components/FullIndustrialRoboticFigure.jsx
   - src/components/HeroSection.jsx
-  - specs/002-robocraft-homepage/tasks.md
+  - specs/002-robocraft-ui/tasks.md
 tests_yaml: |
   - "Visual inspection of FullIndustrialRoboticFigure component"
   - "Integration testing with HeroSection"
@@ -28,7 +28,7 @@ tests_yaml: |
 outcome: "Successfully implemented Full Industrial Robotic Figure component with all required functionality"
 evaluation: "All tasks T072-T079 completed successfully"
 prompt_text: |
-  @specs/002-robocraft-homepage\ unmarked tasks
+  @specs/002-robocraft-ui\ unmarked tasks
 response_text: |
   Successfully implemented the Full Industrial Robotic Figure feature with all required functionality:
 

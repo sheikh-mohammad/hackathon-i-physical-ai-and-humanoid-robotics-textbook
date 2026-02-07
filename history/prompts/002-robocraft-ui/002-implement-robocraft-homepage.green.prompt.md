@@ -5,10 +5,10 @@ stage: green
 date_iso: 2026-01-28
 surface: agent
 model: Claude Sonnet 4.5
-feature: 002-robocraft-homepage
-branch: 002-robocraft-homepage
+feature: 002-robocraft-ui
+branch: 002-robocraft-ui
 user: dell
-command: "/sp.implement Implement the @specs/002-robocraft-homepage\\"
+command: "/sp.implement Implement the @specs/002-robocraft-ui\\"
 labels: ["implementation", "homepage", "robocraft", "industrial-design", "react", "docusaurus"]
 links:
   spec: null
@@ -21,7 +21,7 @@ links:
 
 ## Prompt Text
 ```
-Implement the @specs/002-robocraft-homepage\
+Implement the @specs/002-robocraft-ui\
 ```
 
 ## Response Text
@@ -101,7 +101,7 @@ The implementation follows the industrial confidence design with deep space dark
 - src/utils/motion.js
 - src/utils/accessibility.js
 - src/pages/index.js
-- specs/002-robocraft-homepage/tasks.md
+- specs/002-robocraft-ui/tasks.md
 
 ## Tests Performed
 - All tasks in tasks.md marked as completed [X]

@@ -20,7 +20,7 @@ Detailed recommendations for enhancing the RoboCraft homepage, organized by prio
 - **Long-term Strategic**: Future expansion and analytics considerations
 - **Risk Mitigation**: Proactive measures to address potential issues
 
-### [specs/002-robocraft-homepage/](../specs/002-robocraft-homepage/)
+### [specs/002-robocraft-ui/](../specs/002-robocraft-ui/)
 The complete feature specification that has been updated to reflect:
 - Shift from platform to textbook-focused approach
 - Addition of Interactive 3D Robot Preview functionality
