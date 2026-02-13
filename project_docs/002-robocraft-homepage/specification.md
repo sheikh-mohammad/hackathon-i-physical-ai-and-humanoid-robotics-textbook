@@ -1,223 +1,207 @@
-# RoboCraft Homepage Redesign
-**Branch:** robocraft-homepage
+# Feature Specification: RoboCraft Industrial Signal Homepage
 
-Redesign the **RoboCraft (Physical AI & Humanoid Robotics Textbook)** homepage using an **Industrial-Kinetic Futurism** aesthetic. The redesign establishes a serious, builder-grade identity aligned with cutting-edge robotics education.
-
-Implementation MUST use the **frontend-design skill**, be organized under `@src/`, and generate all visual assets locally under `@static/` and `@static/img/`.
-
-Homepage entry point:  
-`@src/pages/index.js`
-
-Content MUST be sourced from:
-- `@COURSE_DETAILS.md`
-- `@Hackathon_I_Physical_AI_&_Humanoid_Robotics_Textbook.md`
+**Feature Branch**: `003-robocraft-industrial-signal`
+**Created**: 2026-01-27
+**Status**: Proposed
+**Input**: User direction:  
+Redesign RoboCraft’s homepage as a serious Physical AI & Robotics Product using an orange-driven industrial confidence aesthetic — dark space foundation, warm industrial highlights, mechanical motion language, and solution-first messaging. The page should feel engineered, not decorative.
 
 ---
 
+## Key Locations:
+- **src/**: All files related to initial home page. Always check the directory before redesigning the homepage.
+- **src/pages/index.js**: Initial homepage of RoboCraft. You have to update this
+
 ## Success Evals (Defined First)
 
-### Platform-Focused Metrics
-- **Eval-001**: Lighthouse Performance score >= 90
-- **Eval-002**: Lighthouse Accessibility score >= 95
-- **Eval-003**: Design review confirms Industrial-Kinetic Futurism aesthetic implemented  
-  (5/5 motifs present: dark bg, orange accents, grid animation, JetBrains Mono, blueprint styling)
-- **Eval-004**: All 25 Functional Requirements (FR-001 through FR-025) pass acceptance tests
-- **Eval-005**: Responsive tests pass at 375px, 768px, 1440px
+- **Eval-001**: Lighthouse Performance ≥ 90
+- **Eval-002**: Lighthouse Accessibility ≥ 95
+- **Eval-003**: Visual audit confirms all industrial signal motifs present
+- **Eval-004**: All functional requirements FR-001 → FR-030 pass
+- **Eval-005**: Responsive behavior validated at 375px, 768px, 1440px
 
 ---
 
 ## Overview
 
-The RoboCraft landing page communicates a **Physical AI & Humanoid Robotics learning platform** through a cohesive **Industrial Confidence** visual system.
+The RoboCraft homepage establishes a confident, industrial identity for a Physical AI & Humanoid Robotics Product.  
+The experience emphasizes *capability, systems thinking, and real-world engineering*, replacing novelty-driven visuals with deliberate structure and motion.
 
-The design intentionally avoids generic templates in favor of:
-- Mechanical precision
-- Blueprint-inspired layouts
-- Kinetic motion cues
-- Builder-centric messaging
-
----
-
-## Design Direction (Final: Industrial Confidence — Orange Edition)
-
-### Theme
-- **Deep space dark (#08090d)** – premium, serious, enterprise-grade foundation
-
-### Primary Color (Accent)
-- **Industrial Orange (#f97316)** – interactive elements, CTAs, highlights  
-  Confident, decisive, execution-focused (not neon, not playful)
-
-### Secondary Accent (Glow / Hover)
-- **Warm amber (#fb923c)** – soft glows, hover states, gradient edges
-
-### Success / Active Color
-- **Green (#22c55e)** – active states, pulsing indicators, system-healthy signals  
-  (unchanged for UX clarity)
+The design communicates:
+- This is a **Product**, not a tutorial
+- This is **built for builders**
+- This is **free, open, and serious**
 
 ---
 
-### Typography
-- **Headlines**: Space Grotesk – engineered, modern, confident
-- **Technical / Code**: JetBrains Mono – precise, industrial
-- **Body**: IBM Plex Sans – readable, neutral, professional
+## Design Direction (Final: Industrial Confidence — Orange)
+
+- **Theme**: Deep space dark `#08090d` — controlled, premium foundation
+- **Primary Accent**: Industrial orange `#f97316` — CTAs, focus states, interaction
+- **Secondary Accent**: Warm amber `#fb923c` — glows, gradients, hover energy
+- **Success Color**: System green `#22c55e` — active states, health indicators
+- **Typography**:
+  - Headlines: Space Grotesk
+  - Technical/UI: JetBrains Mono
+  - Body: IBM Plex Sans
+- **Motion**:
+  - Staggered section reveals
+  - Pulsing signal dots
+  - Mouse-tracking radial gradient orb (subtle, low opacity)
+- **Visual Motifs**:
+  - Robot assembly schematic SVG
+  - Grid and alignment overlays
+  - Floating system labels and callouts
+- **Messaging**:
+  - Outcome-driven copy
+  - Personal builder journey framing
+  - Explicit commitment: **“Free forever. No lock-in.”**
 
 ---
 
-### Motion & Interaction
-- Staggered fade-in animations for sections
-- Pulsing orange indicators for active systems
-- Mouse-tracking gradient orb  
-  Gradient: `#f97316 → #fb923c → transparent`  
-  Low opacity, slow easing
-- All motion respects `prefers-reduced-motion`
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 – First Impression & Trust (Priority: P1)
+
+As a first-time visitor, I want to immediately understand that RoboCraft is a serious Physical AI Product so that I trust it and continue exploring.
+
+**Independent Test**: Load homepage and evaluate hero section clarity and credibility.
+
+**Acceptance Scenarios**:
+1. **Given** the page loads, **Then** the hero renders within 2 seconds with headline, visual system, and CTA
+2. **Given** the hero is visible, **Then** the Product’s Physical AI focus is clear without scrolling
+3. **Given** I see the CTA, **Then** it feels action-oriented and credible
 
 ---
 
-### Visual Motifs
-- **Robot Assembly SVG**
-  - Orange highlights on joints, sensors, and labels
-  - Animated tech stack labels (ROS 2, Isaac, Gazebo, VLA)
-- **Grid Pattern Background**
-  - Subtle dark gray lines
-  - Orange intersection pulses
-- **Floating System Labels**
-  - Dark cards with orange top or left accent
-  - Blueprint-style annotation layout
+### User Story 2 – Product Capabilities Discovery (Priority: P1)
+
+As a visitor, I want to understand what the Product enables, not just what it teaches.
+
+**Independent Test**: Scroll to capabilities/modules section.
+
+**Acceptance Scenarios**:
+1. **Given** I scroll, **Then** Product modules appear in a clear progression
+2. **Given** I hover a module, **Then** visual feedback reinforces interactivity
+3. **Given** advanced modules, **Then** they are visually distinguished
 
 ---
 
-### Messaging & Tone
-- Solution-first, builder-focused copy
-- Personal journey framing: “Built from real problems, not theory.”
-- Confident positioning: **Free forever. No lock-in. No gimmicks.**
+### User Story 3 – Hardware & System Readiness (Priority: P2)
+
+As a learner, I want to quickly assess whether my hardware setup is sufficient.
+
+**Independent Test**: View hardware/system requirements section.
+
+**Acceptance Scenarios**:
+1. **Given** I reach hardware section, **Then** I see three clear tiers
+2. **Given** a recommended option, **Then** it is clearly marked
+3. **Given** no hardware, **Then** simulation-only path is obvious
 
 ---
 
-## User Scenarios & Testing (Mandatory)
+### User Story 4 – Mobile Professionalism (Priority: P2)
 
-### User Story 1 – First-Time Visitor Landing (Priority: P1)
+As a mobile user, I want the experience to feel intentional and usable.
 
-A new visitor immediately understands what RoboCraft offers, feels the Physical AI theme, and is motivated to start learning.
+**Independent Test**: Load site at 375px width.
 
-**Acceptance Scenarios**
-1. Hero loads within 2 seconds with animated grid, robot assembly, and CTAs
-2. Value proposition clearly communicates Physical AI & Robotics
-3. “Begin Building” navigates to `/docs/`
-
----
-
-### User Story 2 – Curriculum Discovery (Priority: P1)
-
-Visitors understand the full learning journey from fundamentals to humanoid autonomy.
-
-**Acceptance Scenarios**
-1. All 4 modules display with correct hierarchy
-2. Hover interaction provides visual feedback
-3. Modules 3 and 4 are marked with badges (“AI-Powered”, “Capstone”)
+**Acceptance Scenarios**:
+1. **Given** mobile viewport, **Then** no horizontal scrolling occurs
+2. **Given** stacked sections, **Then** hierarchy remains clear
+3. **Given** CTAs, **Then** touch targets meet 44px minimum
 
 ---
 
-### User Story 3 – Hardware Requirements Assessment (Priority: P2)
+## Requirements *(mandatory)*
 
-Users can assess participation feasibility without friction.
+### Functional Requirements
 
-**Acceptance Scenarios**
-1. Three hardware tiers are visible with cost estimates
-2. Cloud + Edge tier is marked “RECOMMENDED”
-3. Simulation-only option is clearly viable
+#### Hero & Identity
+- **FR-001**: Hero MUST communicate RoboCraft as a Physical AI Product
+- **FR-002**: Hero MUST include industrial schematic or robot assembly visual
+- **FR-003**: Hero MUST include primary CTA using orange accent
+- **FR-004**: Hero MUST include secondary exploratory CTA
+- **FR-005**: Hero MUST use grid-based animated background
 
----
+#### Product Sections
+- **FR-006**: Page MUST present Product modules in structured sequence
+- **FR-007**: Each module MUST include title, description, and signal indicator
+- **FR-008**: Advanced modules MUST have visual differentiation
+- **FR-009**: Feature section MUST highlight at least 6 Product capabilities
+- **FR-010**: At least 2 features MUST be marked as “Core”
 
-### User Story 4 – Mobile Responsive Experience (Priority: P2)
+#### Hardware & Systems
+- **FR-011**: Page MUST display 3 system/hardware tiers
+- **FR-012**: Each tier MUST include cost and recommendation context
+- **FR-013**: One tier MUST be visually marked as recommended
 
-Users have a fully functional experience on mobile devices.
+#### Visual & Motion
+- **FR-014**: Design MUST use defined CSS color tokens
+- **FR-015**: Orange MUST be reserved for interaction and emphasis
+- **FR-016**: Motion MUST be staggered and non-blocking
+- **FR-017**: Page MUST respect prefers-reduced-motion
 
-**Acceptance Scenarios**
-1. No horizontal scrolling at 375px width
-2. Modules stack vertically
-3. Touch targets are at least 44px
+#### Typography & Layout
+- **FR-018**: Headlines MUST use Space Grotesk
+- **FR-019**: Technical labels MUST use JetBrains Mono
+- **FR-020**: Layout MUST favor sharp edges over rounded cards
 
----
-
-### User Story 5 – Dark / Light Mode Compatibility (Priority: P3)
-
-The page respects system color preferences while maintaining brand identity.
-
----
-
-## Functional Requirements
-
-### Hero Section
-- **FR-001**: Display Robot Assembly SVG with animated tech stack labels
-- **FR-002**: Display brand mark “ROBOCRAFT PLATFORM” and headline
-- **FR-003**: Display tech stack pills with pulsing indicators
-- **FR-004**: Primary CTA “Begin Building” links to `/docs/`
-- **FR-005**: Secondary CTA scrolls to hardware section
-- **FR-006**: Animated grid background with mouse-tracking gradient orb
-
-### Modules Section
-- **FR-007**: Display all 4 course modules
-- **FR-008**: Show icon, number, title, description, topics, week range
-- **FR-009**: Modules 3 and 4 use distinctive badge styling
-- **FR-010**: Hover interaction provides visual feedback
-
-### Features Section
-- **FR-011**: Display 6 platform features
-- **FR-012**: Use custom industrial-style icons
-- **FR-013**: Two features marked as “Core”
-
-### Hardware Section
-- **FR-014**: Display 3 hardware tiers
-- **FR-015**: Show name, description, and cost estimate
-- **FR-016**: Cloud + Edge tier marked “RECOMMENDED”
-
-### CTA Section
-- **FR-017**: End page with a strong CTA block
-- **FR-018**: Include “Begin Learning” button
-
-### Visual & Motion
-- **FR-019**: Use CSS variables for dark industrial theme
-- **FR-020**: Use Space Grotesk, JetBrains Mono, IBM Plex Sans
-- **FR-021**: Implement staggered load animations
-- **FR-022**: Scroll-triggered reveals
-- **FR-023**: Respect reduced motion preferences
-
-### Responsive
-- **FR-024**: Responsive from 320px to 2560px
-- **FR-025**: Touch targets >= 44px on mobile
+#### Responsiveness & Accessibility
+- **FR-021**: Page MUST be responsive from 320px–2560px
+- **FR-022**: Touch targets MUST be ≥ 44px on mobile
+- **FR-023**: Color contrast MUST meet WCAG 2.1 AA
+- **FR-024**: Focus states MUST be visible for keyboard navigation
 
 ---
 
-## Non-Functional Requirements
-- Lighthouse Performance >= 90
-- Lighthouse Accessibility >= 95
-- Core content loads within 2 seconds on 3G
-- WCAG 2.1 AA contrast compliance
+### Non-Functional Requirements
+
+- **NFR-001**: Lighthouse Performance ≥ 90
+- **NFR-002**: Lighthouse Accessibility ≥ 95
+- **NFR-003**: Initial content visible < 2s on 3G
+- **NFR-004**: Animations sustain 60fps on mid-range devices
+
+---
+
+## Key Entities
+
+- **Hero System**: Primary identity and trust anchor
+- **Module Signal Card**: Reusable Product capability unit
+- **Feature Block**: Product capability explanation
+- **Hardware Tier Card**: System readiness indicator
+- **CTA Block**: Conversion and commitment section
+
+---
+
+## Success Criteria *(mandatory)*
+
+- **SC-001**: Users identify RoboCraft as a Product within first viewport
+- **SC-002**: All five major sections render correctly on mobile and desktop
+- **SC-003**: Orange accent is used consistently and sparingly
+- **SC-004**: Grid and schematic motifs appear in ≥ 2 sections
+- **SC-005**: Page passes Lighthouse performance and accessibility targets
+- **SC-006**: Motion enhances hierarchy without reducing readability
+- **SC-007**: Visual audit confirms industrial (not sci-fi) aesthetic
+- **SC-008**: “Free forever” messaging is clearly visible and credible
 
 ---
 
 ## Non-Goals
-- Backend or authentication changes
+
+- Backend, auth, or RAG changes
 - Navigation or footer redesign
-- New sections or IA changes
 - Internationalization
-- Advanced interactivity beyond motion and hover
-
----
-
-## Dependencies
-- `/img/book-cover-page.png`
-- Google Fonts: Space Grotesk, JetBrains Mono, IBM Plex Sans
-- Docusaurus layout and routing
-- Local dev: `http://localhost:3000/`
+- Gamification or playful visuals
+- Heavy 3D rendering or WebGL effects
 
 ---
 
 ## Risks & Mitigations
 
 | Risk | Impact | Mitigation |
-|-----|--------|------------|
-| Font loading delays | Visual flash | Use `font-display: swap` |
-| Animation performance | Jank | GPU-friendly properties |
-| Dark theme contrast | Readability | WCAG contrast testing |
-| CSS complexity | Technical debt | Consistent CSS variables |
+|-----|-------|------------|
+| Orange overuse | Visual fatigue | Restrict to interaction tokens |
+| Animation overload | Performance drop | Stagger + reduced-motion support |
+| Dark contrast issues | Accessibility | Continuous contrast audits |
+| Complex visuals | Maintenance cost | Tokenized CSS + documented motifs |
