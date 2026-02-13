@@ -18,7 +18,7 @@ const HeroSection = ({ title, subtitle, description }) => {
 
   // Handle CTA clicks with proper redirects
   const handlePrimaryCtaClick = () => {
-    window.location.href = '/robocraft/docs';
+    window.location.href = '/docs';
   };
 
   const handleSecondaryCtaClick = () => {

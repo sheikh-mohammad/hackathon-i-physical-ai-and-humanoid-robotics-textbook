@@ -30,20 +30,34 @@ The design communicates:
 - This is **built for learners**
 - This is **free, open, and serious**
 
+**Project Structure Note**: All Docusaurus-related files are organized in the `frontend/` directory at the root level:
+- `frontend/.docusaurus/` - Docusaurus build cache
+- `frontend/build/` - Production build output
+- `frontend/node_modules/` - Node.js dependencies
+- `frontend/src/` - Source code (components, pages, CSS)
+- `frontend/static/` - Static assets (images, fonts)
+- `frontend/docusaurus.config.js` - Main configuration
+- `frontend/package.json` - Dependencies and scripts
+- `frontend/package-lock.json` - Dependency lock file
+- `frontend/sidebars.js` - Sidebar configuration
+
 ---
 
 Key Locations:
-- **src/**: All files related to initial home page are in this. Always check the directory before redesigning the homepage. You have create home page related things in this
-- **src/pages/index.js**: Initial homepage of RoboCraft. You have to redesign this
+- **frontend/src/**: All files related to initial home page are in this. Always check the directory before redesigning the homepage. You have create home page related things in this
+- **frontend/src/pages/index.js**: Initial homepage of RoboCraft. You have to redesign this
+- **frontend/docusaurus.config.js**: Main Docusaurus configuration file
+- **frontend/package.json**: Node.js dependencies and scripts
+- **frontend/static/**: Static assets (images, fonts, etc.)
 - **COURSE_DETAILS.md**: This is the main product details/content (hardware, roadmap, etc)
-- **project_docs/course_structure**: : This is main course structure of product robocraft. Adding from here is mandatory.
+- **project_docs/course_structure**: This is main course structure of product robocraft. Adding from here is mandatory.
 
 Implementation Notes:
 - **The frontend-design skill MUST be invoked at the start of implementation (task 001)** to ensure proper industrial aesthetic design
 - All UI components and styling should leverage the frontend-design skill for consistency
 - Interactive 3D Robot Preview with drag rotation and hover tooltips
 - Content positioned on left, Interactive 3D Robot Preview positioned on right for hierarchical look
-- Buttons should redirect to actual content (e.g., robocraft/docs, modules section) not trigger alerts
+- Buttons should redirect to actual content (e.g., /docs, modules section) not trigger alerts
 
 ---
 
@@ -74,12 +88,12 @@ Implementation Notes:
 - **Navigation**:
   - Navbar items in orange color for consistency
   - GitHub link in navbar (github.com/sheikh-mohammad)
-  - Embedded Docusaurus search bar (same as robocraft/docs)
-  - Dark/Light mode toggle button with icon (same as robocraft/docs)
+  - Embedded Docusaurus search bar (same as /docs)
+  - Dark/Light mode toggle button with icon (same as /docs)
   - Same logo in navbar for both homepage and docs
   - Unified navbar design across homepage and docs
 - **Docs Theme**:
-  - robocraft/docs should use homepage theme (dark space foundation with orange accents)
+  - /docs should use homepage theme (dark space foundation with orange accents)
   - All Docusaurus theme colors should match homepage industrial aesthetic
   - Font changed to Google Sans Code for consistency
   - Navbar updated to match homepage navbar exactly
@@ -178,9 +192,9 @@ As a visitor, I want to understand this is a learning textbook for building robo
 
 **Acceptance Scenarios**:
 1. **Given** the page loads, **Then** messaging emphasizes learning and textbook content over platform building
-2. **Given** I see CTAs, **Then** they redirect to actual book content (robocraft/docs) rather than triggering alerts
+2. **Given** I see CTAs, **Then** they redirect to actual book content (/docs) rather than triggering alerts
 3. **Given** I explore the hero content, **Then** it's positioned on the left with the Interactive 3D Robot Preview on the right for hierarchical organization
-4. **Given** I see the "Start Building" CTA, **Then** it's renamed to "Start Learning" and redirects to robocraft/docs
+4. **Given** I see the "Start Building" CTA, **Then** it's renamed to "Start Learning" and redirects to /docs
 5. **Given** I see the "View Modules" CTA, **Then** it redirects to modules section below
 
 ---
@@ -222,7 +236,7 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 #### Hero & Identity
 - **FR-001**: Hero MUST communicate RoboCraft as a Physical AI textbook (not a platform)
 - **FR-002**: Hero MUST include Interactive 3D Robot Preview (rotatable 3D model showing what learners will build)
-- **FR-003**: Hero MUST include primary CTA "Start Learning" redirecting to robocraft/docs using orange accent
+- **FR-003**: Hero MUST include primary CTA "Start Learning" redirecting to /docs using orange accent
 - **FR-004**: Hero MUST include secondary CTA "View Modules" redirecting to modules section below
 - **FR-005**: Hero MUST use grid-based animated background
 - **FR-006**: Hero content MUST be positioned on the left with Interactive 3D Robot Preview on the right for hierarchical look
@@ -256,9 +270,9 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 #### Content & Redirects
 - **FR-024**: All buttons MUST redirect to actual content, not trigger alerts
 - **FR-025**: "Start Building" CTA MUST be changed to "Start Learning"
-- **FR-026**: "Start Learning" CTA MUST redirect to robocraft/docs
+- **FR-026**: "Start Learning" CTA MUST redirect to /docs
 - **FR-027**: "View Modules" CTA MUST redirect to modules section below
-- **FR-028**: Bottom CTA "Get Started Today" MUST redirect to robocraft/docs
+- **FR-028**: Bottom CTA "Get Started Today" MUST redirect to /docs
 - **FR-029**: All content MUST focus on textbook approach, not platform building
 
 #### Course Content Integration
@@ -295,25 +309,25 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 #### Navigation & Footer
 - **FR-051**: Navbar MUST include RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode button
 - **FR-052**: Navbar items (LEARN FREE, MODULES, TECHNOLOGY) MUST be in orange color (#f97316) for consistency
-- **FR-053**: Navbar MUST include embedded Docusaurus search bar (same as robocraft/docs page)
-- **FR-054**: Navbar MUST include Dark/Light mode toggle button with same icon as robocraft/docs
+- **FR-053**: Navbar MUST include embedded Docusaurus search bar (same as /docs page)
+- **FR-054**: Navbar MUST include Dark/Light mode toggle button with same icon as /docs
 - **FR-055**: Footer MUST include Docs section (Textbook), Community section (GitHub: github.com/sheikh-mohammad, LinkedIn: linkedin.com/in/sheikh-mohammad-li/), More section (Codebase with repo link)
 - **FR-056**: Footer MUST include copyright: "Copyright © 2026 RoboCraft. Made with ❤️ by Sheikh Mohammad."
 - **FR-057**: GitHub link MUST be added to navbar pointing to github.com/sheikh-mohammad
 - **FR-058**: Same logo MUST appear in both homepage and docs navbar
 
 #### Docs Theme Integration
-- **FR-059**: robocraft/docs theme MUST match homepage theme (dark space foundation with orange accents)
-- **FR-060**: All Docusaurus theme colors in robocraft/docs MUST use homepage industrial aesthetic
-- **FR-061**: robocraft/docs default theme MUST be changed to homepage theme
-- **FR-062**: robocraft/docs font MUST be changed to Google Sans Code
-- **FR-063**: robocraft/docs navbar MUST be updated to match homepage navbar exactly
+- **FR-059**: /docs theme MUST match homepage theme (dark space foundation with orange accents)
+- **FR-060**: All Docusaurus theme colors in /docs MUST use homepage industrial aesthetic
+- **FR-061**: /docs default theme MUST be changed to homepage theme
+- **FR-062**: /docs font MUST be changed to Google Sans Code
+- **FR-063**: /docs navbar MUST be updated to match homepage navbar exactly
 - **FR-064**: "Edit this page" link and icon MUST be removed from all docs pages
-- **FR-065**: robocraft/docs footer MUST be replaced with homepage footer
+- **FR-065**: /docs footer MUST be replaced with homepage footer
 
 #### Typography
 - **FR-066**: All text on homepage MUST use Google Sans Code font
-- **FR-067**: All text in robocraft/docs MUST use Google Sans Code font
+- **FR-067**: All text in /docs MUST use Google Sans Code font
 - **FR-068**: Font loading MUST be optimized for performance
 
 #### Color Mode System
@@ -380,7 +394,7 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 - **SC-018**: Interactive 3D Robot Preview enhances hero section without distracting from content
 - **SC-019**: All cards on homepage show hover outline effects
 - **SC-020**: Card hover effects provide clear visual feedback to users
-- **SC-021**: All CTAs redirect to actual content (robocraft/docs, modules section) instead of showing alerts
+- **SC-021**: All CTAs redirect to actual content (/docs, modules section) instead of showing alerts
 - **SC-022**: Content focuses on textbook learning rather than platform building
 - **SC-023**: Modules section effectively presents content from project_docs/course_structure.md and COURSE_DETAILS.md
 - **SC-024**: Weekly breakdown section is properly implemented from COURSE_DETAILS.md content

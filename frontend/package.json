@@ -1,6 +1,6 @@
 {
-  "name": "docusaurus-book",
-  "version": "0.0.0",
+  "name": "robocraft",
+  "version": "3.1.5",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",

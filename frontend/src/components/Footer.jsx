@@ -31,7 +31,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs"
+                  href="/docs"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs/"
+                  href="/docs/"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -92,7 +92,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs/module-2-the-robotic-nervous-system-ros-2"
+                  href="/docs/module-2-the-robotic-nervous-system-ros-2"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs/module-3-the-digital-twin-gazebo-unity"
+                  href="/docs/module-3-the-digital-twin-gazebo-unity"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -122,7 +122,7 @@ const Footer = () => {
               </li>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs/module-4-the-ai-robot-brain-nvidia-isaac"
+                  href="/docs/module-4-the-ai-robot-brain-nvidia-isaac"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -146,7 +146,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs"
+                  href="/docs"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -161,7 +161,7 @@ const Footer = () => {
               </li>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs/module-0-getting-started-with-physical-ai/course-overview"
+                  href="/docs/module-0-getting-started-with-physical-ai/course-overview"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',
@@ -176,7 +176,7 @@ const Footer = () => {
               </li>
               <li style={{ marginBottom: '0.75rem' }}>
                 <a
-                  href="/robocraft/docs/module-0-getting-started-with-physical-ai/hardware-requirements"
+                  href="/docs/module-0-getting-started-with-physical-ai/hardware-requirements"
                   className={styles.bodyText}
                   style={{
                     color: '#94a3b8',

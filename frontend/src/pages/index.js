@@ -19,7 +19,7 @@ import colorStyles from '../css/colors.module.css';
 const RoboCraftHomepage = () => {
   const handleTierSelect = (tier) => {
     // Navigate to hardware requirements documentation
-    window.location.href = '/robocraft/docs/module-0-getting-started-with-physical-ai/hardware-requirements';
+    window.location.href = '/docs/module-0-getting-started-with-physical-ai/hardware-requirements';
   };
 
   return (

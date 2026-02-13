@@ -31,7 +31,7 @@ const Navbar = () => {
       }}>
         {/* Logo */}
         <a
-          href="/robocraft"
+          href="/"
           className={`${styles.headline} ${colorStyles.textAccentPrimary}`}
           style={{
             fontSize: '1.5rem',
@@ -58,7 +58,7 @@ const Navbar = () => {
           flexWrap: 'wrap'
         }}>
           <a
-            href="/robocraft/docs"
+            href="/docs"
             className={`${styles.bodyText}`}
             style={{
               textDecoration: 'none',
@@ -97,7 +97,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="/robocraft/docs/module-0-getting-started-with-physical-ai"
+            href="/docs/module-0-getting-started-with-physical-ai"
             className={`${styles.bodyText}`}
             style={{
               textDecoration: 'none',
