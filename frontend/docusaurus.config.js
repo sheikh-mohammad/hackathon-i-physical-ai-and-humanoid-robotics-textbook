@@ -2,7 +2,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Physical AI Humanoid and Robotics Textbook",
+  title: "Robocraft",
   tagline: "Comprehensive guide to Physical AI and Humanoid Robotics",
   favicon: "static/img/favicon.png",
 
@@ -10,7 +10,7 @@ const config = {
   url: "https://sheikh-mohammad.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/hackathon-i-physical-ai-and-humanoid-robotics-textbook/",
 
   // GitHub pages deployment config.
   organizationName: "sheikh-mohammad", // Usually your GitHub org/user name.

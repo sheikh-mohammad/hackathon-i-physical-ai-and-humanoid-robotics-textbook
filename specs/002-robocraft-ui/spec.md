@@ -30,13 +30,27 @@ The design communicates:
 - This is **built for learners**
 - This is **free, open, and serious**
 
+**Project Structure Note**: All Docusaurus-related files are organized in the `frontend/` directory at the root level:
+- `frontend/.docusaurus/` - Docusaurus build cache
+- `frontend/build/` - Production build output
+- `frontend/node_modules/` - Node.js dependencies
+- `frontend/src/` - Source code (components, pages, CSS)
+- `frontend/static/` - Static assets (images, fonts)
+- `frontend/docusaurus.config.js` - Main configuration
+- `frontend/package.json` - Dependencies and scripts
+- `frontend/package-lock.json` - Dependency lock file
+- `frontend/sidebars.js` - Sidebar configuration
+
 ---
 
 Key Locations:
-- **src/**: All files related to initial home page are in this. Always check the directory before redesigning the homepage. You have create home page related things in this
-- **src/pages/index.js**: Initial homepage of RoboCraft. You have to redesign this
+- **frontend/src/**: All files related to initial home page are in this. Always check the directory before redesigning the homepage. You have create home page related things in this
+- **frontend/src/pages/index.js**: Initial homepage of RoboCraft. You have to redesign this
+- **frontend/docusaurus.config.js**: Main Docusaurus configuration file
+- **frontend/package.json**: Node.js dependencies and scripts
+- **frontend/static/**: Static assets (images, fonts, etc.)
 - **COURSE_DETAILS.md**: This is the main product details/content (hardware, roadmap, etc)
-- **project_docs/course_structure**: : This is main course structure of product robocraft. Adding from here is mandatory.
+- **project_docs/course_structure**: This is main course structure of product robocraft. Adding from here is mandatory.
 
 Implementation Notes:
 - **The frontend-design skill MUST be invoked at the start of implementation (task 001)** to ensure proper industrial aesthetic design

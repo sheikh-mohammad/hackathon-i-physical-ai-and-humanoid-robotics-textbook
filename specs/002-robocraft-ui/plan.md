@@ -3,10 +3,22 @@
 ## Technical Context
 
 **Feature**: Redesign of the RoboCraft homepage with industrial-themed UI components and styling, including System Heartbeat Core and Schematic-Style Robot
-**Location**: src/pages/index.js (main homepage file)
+**Location**: frontend/src/pages/index.js (main homepage file)
 **Technology Stack**: JavaScript, React JS, Docusaurus 3.1.0, CSS Modules
 **Design Theme**: Industrial Confidence — Orange (Deep space dark #08090d with industrial orange #f97316 accents)
 **Primary Goal**: Create a new industrial-themed homepage for RoboCraft robotics education platform with a System Heartbeat Core and Schematic-Style Robot that visually communicates platform vitality and tech stack structure
+**Project Structure**: All Docusaurus-related files are organized in the frontend/ directory at the root level
+
+**Frontend Directory Structure**:
+- `frontend/.docusaurus/` - Docusaurus build cache (generated)
+- `frontend/build/` - Production build output (generated)
+- `frontend/node_modules/` - Node.js dependencies (generated)
+- `frontend/src/` - Source code (components, pages, CSS, utils)
+- `frontend/static/` - Static assets (images, fonts, icons)
+- `frontend/docusaurus.config.js` - Main Docusaurus configuration
+- `frontend/package.json` - Node.js dependencies and scripts
+- `frontend/package-lock.json` - Dependency lock file
+- `frontend/sidebars.js` - Documentation sidebar configuration
 
 ## Design Direction
 
@@ -114,7 +126,7 @@ Based on the project constitution principles:
 #### 0.1.1 Resolve Unknowns
 
 **Task 0.1.1**: Research existing homepage structure
-- Location: src/pages/index.js
+- Location: frontend/src/pages/index.js
 - Purpose: Understand current implementation before redesign
 - Method: Analyzed existing code and identified components to replace
 - Status: COMPLETED - Basic Docusaurus homepage structure identified
@@ -325,8 +337,8 @@ Based on the project constitution principles:
 
 ### 2.3 Implementation Steps
 
-1. Create new component files in src/components/
-2. Update src/pages/index.js to use new components
+1. Create new component files in frontend/src/components/
+2. Update frontend/src/pages/index.js to use new components
 3. Apply industrial-themed styling with CSS modules
 4. Integrate Google Sans Code font for all text (homepage and docs)
 5. Implement Dark/Light mode system with proper color palettes
