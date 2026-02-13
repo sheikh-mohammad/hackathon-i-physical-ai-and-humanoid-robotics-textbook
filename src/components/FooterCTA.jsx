@@ -5,11 +5,11 @@ import colorStyles from '../css/colors.module.css';
 
 /**
  * FooterCTA Component
- * Bottom call-to-action section that redirects to robocraft/docs
+ * Bottom call-to-action section that redirects to /docs
  */
 const FooterCTA = () => {
   const handleCtaClick = () => {
-    window.location.href = '/robocraft/docs';
+    window.location.href = '/docs';
   };
 
   return (

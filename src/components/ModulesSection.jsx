@@ -102,7 +102,7 @@ const ModulesSection = () => {
             isAdvanced={module.isAdvanced}
             onClick={() => {
               // Navigate to module documentation
-              window.location.href = `/robocraft/docs/module-${module.id}`;
+              window.location.href = `/docs/module-${module.id}`;
             }}
           />
         ))}

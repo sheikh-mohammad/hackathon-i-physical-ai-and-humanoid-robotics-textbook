@@ -43,12 +43,12 @@
 - **Navigation**:
   - Navbar items in orange color for consistency
   - GitHub link in navbar (github.com/sheikh-mohammad)
-  - Embedded Docusaurus search bar (same as robocraft/docs)
-  - Dark/Light mode toggle button with same icon as robocraft/docs
+  - Embedded Docusaurus search bar (same as /docs)
+  - Dark/Light mode toggle button with same icon as /docs
   - Same logo in navbar for both homepage and docs
   - Unified navbar design across homepage and docs
 - **Docs Theme**:
-  - robocraft/docs should use homepage theme (dark space foundation with orange accents)
+  - /docs should use homepage theme (dark space foundation with orange accents)
   - All Docusaurus theme colors should match homepage industrial aesthetic
   - Font changed to Google Sans Code for consistency
   - Navbar updated to match homepage navbar exactly
@@ -337,18 +337,18 @@ Based on the project constitution principles:
 10. Implement neon orange hover effects with glow for all card components
 11. Update navbar items (LEARN FREE, MODULES, TECHNOLOGY) to orange color (#f97316)
 12. Add GitHub link to navbar (github.com/sheikh-mohammad)
-13. Integrate embedded Docusaurus search bar in navbar (same as robocraft/docs)
-14. Add Dark/Light mode toggle button in navbar with same icon as robocraft/docs
+13. Integrate embedded Docusaurus search bar in navbar (same as /docs)
+14. Add Dark/Light mode toggle button in navbar with same icon as /docs
 15. Add same logo to both homepage and docs navbar
 16. Create Learning Modules section using content from project_docs/course_structure.md and COURSE_DETAILS.md
 17. Implement Navigation Bar with all required features (logo, nav items, GitHub, search, theme toggle)
 18. Implement comprehensive Footer with Docs (Textbook), Community (GitHub, LinkedIn), More (Codebase), Copyright
-19. Update all CTAs to redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
+19. Update all CTAs to redirect to actual content (/docs, modules section) instead of triggering alerts
 20. Update Docusaurus theme configuration to match homepage theme (dark space foundation with orange accents)
-21. Update robocraft/docs font to Google Sans Code
-22. Update robocraft/docs navbar to match homepage navbar exactly
+21. Update /docs font to Google Sans Code
+22. Update /docs navbar to match homepage navbar exactly
 23. Remove "Edit this page" link and icon from all docs pages
-24. Replace robocraft/docs footer with homepage footer
+24. Replace /docs footer with homepage footer
 25. Implement prominency effects throughout for professional appearance
 26. Implement responsive design
 27. Add accessibility attributes
@@ -386,16 +386,16 @@ Based on the project constitution principles:
 - [ ] All course content is accessible and properly displayed from project_docs/course_structure.md and COURSE_DETAILS.md
 - [ ] Navigation works correctly with proper redirects
 - [ ] Mobile responsiveness meets touch target requirements (>= 44px)
-- [ ] All links and CTAs redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
+- [ ] All links and CTAs redirect to actual content (/docs, modules section) instead of triggering alerts
 - [ ] Interactive 3D Robot Preview appears on the right side of hero section
 - [ ] Interactive 3D Robot Preview is rotatable by dragging
 - [ ] Interactive 3D Robot Preview shows hover tooltips with technical labels ("Servo motors", "AI vision system", "Balance sensors")
 - [ ] Interactive 3D Robot Preview has subtle animations (breathing motion, eye glow, joint articulation)
 - [ ] Interactive 3D Robot Preview does not dominate text content on left side
 - [ ] Content positioned on left, Interactive 3D Robot Preview positioned on right for hierarchical look
-- [ ] "Start Building" CTA changed to "Start Learning" and redirects to robocraft/docs
+- [ ] "Start Building" CTA changed to "Start Learning" and redirects to /docs
 - [ ] "View Modules" CTA redirects to modules section below
-- [ ] Bottom CTA "Get Started Today" redirects to robocraft/docs
+- [ ] Bottom CTA "Get Started Today" redirects to /docs
 - [ ] Modules section created using content from project_docs/course_structure.md and COURSE_DETAILS.md
 - [ ] Weekly breakdown section added from COURSE_DETAILS.md content
 - [ ] Additional sections added from COURSE_DETAILS.md by analyzing it
@@ -407,7 +407,7 @@ Based on the project constitution principles:
 - [ ] Navigation includes RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode button
 - [ ] GitHub link in navbar points to github.com/sheikh-mohammad
 - [ ] Search bar is properly integrated in navbar (Algolia configuration)
-- [ ] Dark/Light mode toggle button uses same icon as robocraft/docs
+- [ ] Dark/Light mode toggle button uses same icon as /docs
 - [ ] Same logo appears in both homepage and docs navbar
 - [ ] Navbar design is unified across homepage and docs
 - [ ] Footer includes Docs section (Textbook link)
@@ -416,17 +416,17 @@ Based on the project constitution principles:
 - [ ] Footer copyright reads "Copyright © 2026 RoboCraft. Made with ❤️ by Sheikh Mohammad."
 - [ ] Same footer appears in both homepage and docs
 - [ ] Google Sans Code font is applied to all text on homepage
-- [ ] Google Sans Code font is applied to all text in robocraft/docs
+- [ ] Google Sans Code font is applied to all text in /docs
 - [ ] Font loading is optimized for performance
 - [ ] Dark mode uses black (#08090d) primary, orange (#f97316) secondary, white minimal
 - [ ] Light mode uses white (#ffffff) primary, orange (#f97316) secondary, black minimal
 - [ ] Color mode transitions are smooth
 - [ ] Color mode preference persists across sessions
 - [ ] All components support both dark and light modes
-- [ ] robocraft/docs theme matches homepage theme (dark space foundation with orange accents)
-- [ ] robocraft/docs navbar matches homepage navbar exactly
+- [ ] /docs theme matches homepage theme (dark space foundation with orange accents)
+- [ ] /docs navbar matches homepage navbar exactly
 - [ ] "Edit this page" link and icon removed from all docs pages
-- [ ] robocraft/docs footer replaced with homepage footer
+- [ ] /docs footer replaced with homepage footer
 - [ ] Prominency effects applied throughout for professional appearance
 - [ ] Visual hierarchy established through depth and elevation
 - [ ] Consistent visual language maintained across all components

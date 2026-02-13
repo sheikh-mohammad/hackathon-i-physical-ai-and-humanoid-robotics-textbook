@@ -174,17 +174,17 @@
 
 **Purpose**: Update content to focus on textbook approach, implement proper redirects, and add comprehensive navigation and footer
 
-- [X] T086 Update all CTAs to redirect to actual content (robocraft/docs, modules section) instead of triggering alerts
-- [X] T087 Change "Start Building" CTA to "Start Learning" and redirect to robocraft/docs in src/components/HeroSection.jsx
+- [X] T086 Update all CTAs to redirect to actual content (/docs, modules section) instead of triggering alerts
+- [X] T087 Change "Start Building" CTA to "Start Learning" and redirect to /docs in src/components/HeroSection.jsx
 - [X] T088 Update "View Modules" CTA to redirect to modules section below in src/components/HeroSection.jsx
 - [X] T089 Create modules section using content from project_docs/course_structure.md and COURSE_DETAILS.md in src/components/ModulesSection.jsx
 - [X] T090 Add additional sections to homepage from COURSE_DETAILS.md by analyzing it in src/components/
 - [X] T091 Add weekly breakdown section from COURSE_DETAILS.md content in src/components/WeeklyBreakdownSection.jsx
-- [X] T092 Update bottom CTA "Get Started Today" to redirect to robocraft/docs in src/components/FooterCTA.jsx
+- [X] T092 Update bottom CTA "Get Started Today" to redirect to /docs in src/components/FooterCTA.jsx
 - [X] T093 Implement comprehensive footer with Docs (Textbook), Community (GitHub: github.com/sheikh-mohammad, LinkedIn: linkedin.com/in/sheikh-mohammad-li/), More (Codebase), Copyright in src/components/Footer.jsx
 - [X] T094 Update navigation bar: add RoboCraft logo, change navbar items (LEARN FREE, MODULES, TECHNOLOGY) to orange color (#f97316), add GitHub link in src/components/Navbar.jsx
 - [X] T095 Integrate embedded Docusaurus search bar in navbar (configured in docusaurus.config.js with Algolia)
-- [X] T096 Add Dark/Light mode toggle button in navbar with same icon as robocraft/docs (Docusaurus default with orange theme applied)
+- [X] T096 Add Dark/Light mode toggle button in navbar with same icon as /docs (Docusaurus default with orange theme applied)
 - [X] T097 Ensure all content emphasizes textbook approach over platform-building approach
 
 ## Phase 11: Typography & Font Integration
@@ -206,7 +206,7 @@
 - [X] T105 Implement Light mode color palette (white #ffffff primary, orange #f97316 secondary, black minimal) in src/css/custom.css
 - [X] T106 Create smooth transitions between color modes in src/css/custom.css
 - [X] T107 Implement user preference persistence using localStorage in src/utils/colorMode.js
-- [X] T108 Update Dark/Light mode toggle button to use same icon as robocraft/docs in src/components/Navbar.jsx
+- [X] T108 Update Dark/Light mode toggle button to use same icon as /docs in src/components/Navbar.jsx
 - [X] T109 Ensure all components support both color modes in src/components/
 - [ ] T110 Test color mode switching across all pages and components
 
@@ -229,20 +229,20 @@
 - [X] T118 Add Community section with GitHub (github.com/sheikh-mohammad) and LinkedIn (linkedin.com/in/sheikh-mohammad-li/) in src/components/Footer.jsx
 - [X] T119 Add More section with Codebase (repo link) in src/components/Footer.jsx
 - [X] T120 Update copyright to "Copyright © 2026 RoboCraft. Made with ❤️ by Sheikh Mohammad." in src/components/Footer.jsx
-- [X] T121 Apply same footer to robocraft/docs by updating docusaurus.config.js
+- [X] T121 Apply same footer to /docs by updating docusaurus.config.js
 - [ ] T122 Test all footer links redirect correctly
 
 ## Phase 15: Docusaurus Docs Integration
 
-**Purpose**: Update robocraft/docs to match homepage theme and design
+**Purpose**: Update /docs to match homepage theme and design
 
 - [X] T123 Update Docusaurus theme configuration in docusaurus.config.js to use homepage theme colors
 - [X] T124 Change Docusaurus primary color to industrial orange (#f97316) in src/css/custom.css
 - [X] T125 Update Docusaurus background colors to match color mode system in src/css/custom.css
 - [X] T126 Ensure all Docusaurus theme colors match homepage industrial aesthetic in src/css/custom.css
-- [X] T127 Update robocraft/docs navbar to match homepage navbar exactly in docusaurus.config.js
+- [X] T127 Update /docs navbar to match homepage navbar exactly in docusaurus.config.js
 - [X] T128 Remove "Edit this page" link and icon from all docs pages in docusaurus.config.js (set editUrl to undefined)
-- [X] T129 Replace robocraft/docs footer with homepage footer in docusaurus.config.js
+- [X] T129 Replace /docs footer with homepage footer in docusaurus.config.js
 - [X] T130 Test docs pages render correctly with new theme
 
 ## Phase 16: Prominency Effects Implementation
