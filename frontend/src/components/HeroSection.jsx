@@ -18,7 +18,7 @@ const HeroSection = ({ title, subtitle, description }) => {
 
   // Handle CTA clicks with proper redirects
   const handlePrimaryCtaClick = () => {
-    window.location.href = '/docs';
+    window.location.href = '/hackathon-i-physical-ai-and-humanoid-robotics-textbook/docs';
   };
 
   const handleSecondaryCtaClick = () => {

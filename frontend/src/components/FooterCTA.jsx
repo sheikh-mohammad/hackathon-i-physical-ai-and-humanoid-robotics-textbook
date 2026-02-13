@@ -5,11 +5,11 @@ import colorStyles from '../css/colors.module.css';
 
 /**
  * FooterCTA Component
- * Bottom call-to-action section that redirects to /docs
+ * Bottom call-to-action section that redirects to /hackathon-i-physical-ai-and-humanoid-robotics-textbook/docs
  */
 const FooterCTA = () => {
   const handleCtaClick = () => {
-    window.location.href = '/docs';
+    window.location.href = '/hackathon-i-physical-ai-and-humanoid-robotics-textbook/docs';
   };
 
   return (

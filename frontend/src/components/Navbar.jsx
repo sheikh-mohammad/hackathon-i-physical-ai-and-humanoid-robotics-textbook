@@ -31,7 +31,7 @@ const Navbar = () => {
       }}>
         {/* Logo */}
         <a
-          href="/"
+          href="/hackathon-i-physical-ai-and-humanoid-robotics-textbook/"
           className={`${styles.headline} ${colorStyles.textAccentPrimary}`}
           style={{
             fontSize: '1.5rem',
@@ -58,7 +58,7 @@ const Navbar = () => {
           flexWrap: 'wrap'
         }}>
           <a
-            href="/docs"
+            href="/hackathon-i-physical-ai-and-humanoid-robotics-textbook/docs"
             className={`${styles.bodyText}`}
             style={{
               textDecoration: 'none',
@@ -97,7 +97,7 @@ const Navbar = () => {
           </a>
 
           <a
-            href="/docs/module-0-getting-started-with-physical-ai"
+            href="/hackathon-i-physical-ai-and-humanoid-robotics-textbook/docs/module-0-getting-started-with-physical-ai"
             className={`${styles.bodyText}`}
             style={{
               textDecoration: 'none',
