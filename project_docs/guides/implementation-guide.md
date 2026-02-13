@@ -157,7 +157,7 @@ Context + Task → [Subagent] → Result + Insights
 #### Step 1: Complete Current Work
 ```bash
 # Switch to current feature branch
-git checkout 002-robocraft-homepage
+git checkout 002-robocraft-ui
 
 # Complete the holographic homepage
 # Ensure all design elements are implemented

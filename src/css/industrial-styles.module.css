@@ -1,127 +1,785 @@
-/* Industrial-themed styling for RoboCraft homepage */
+/* Base CSS Modules for Industrial Theme */
 
-/* Base industrial container styles */
-.industrialContainer {
-  position: relative;
-  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
-  border: 1px solid rgba(128, 128, 128, 0.3);
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Industrial card styles */
-.industrialCard {
-  background: linear-gradient(160deg, #2a2a2a, #1a1a1a);
-  border: 1px solid rgba(100, 100, 100, 0.4);
-  box-shadow:
-    0 6px 24px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(200, 200, 200, 0.05),
-    inset 0 -2px 0 rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
-  padding: 24px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Steel and copper accent colors */
-.steelAccent {
-  color: #b0b0b0;
-}
-
-.copperAccent {
-  color: #b87333;
-}
-
-/* Blueprint-style borders */
-.blueprintBorder {
-  border: 2px dashed rgba(128, 128, 128, 0.4);
-  position: relative;
-}
-
-.blueprintBorder::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    linear-gradient(90deg, transparent 49%, rgba(128, 128, 128, 0.1) 50%, transparent 51%),
-    linear-gradient(transparent 49%, rgba(128, 128, 128, 0.1) 50%, transparent 51%);
-  background-size: 20px 20px;
-  pointer-events: none;
-}
-
-/* Mechanical precision elements */
-.mechanicalElement {
-  position: relative;
-}
-
-.mechanicalElement::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 1px solid rgba(184, 115, 51, 0.3);
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-/* Glowing circuit pathway effect */
-.circuitPathway {
-  position: relative;
-}
-
-.circuitPathway::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%),
-    linear-gradient(45deg, transparent 49%, rgba(0, 255, 255, 0.3) 50%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, rgba(0, 255, 255, 0.2) 50%, transparent 51%);
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Kinetic motion highlight */
-.kineticHighlight {
-  position: relative;
-}
-
-.kineticHighlight:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(0, 255, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-/* Dark industrial theme */
+/* Base styles for dark theme */
 .darkTheme {
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-  color: #e0e0e0;
+  background-color: #08090d;
+  color: #ffffff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
 }
 
-/* Light industrial theme */
-.lightTheme {
-  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-  color: #333333;
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Industrial button styles */
+.industrialButton {
+  background-color: #f97316; /* Industrial orange */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0; /* Sharp edges as per requirements */
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.industrialButton:hover {
+  background-color: #fb923c; /* Warm amber */
+  transform: translateY(-2px);
+}
+
+.industrialButton:focus {
+  outline: 2px solid rgba(249, 115, 22, 0.5);
+  outline-offset: 2px;
+}
+
+.industrialButton.secondary {
+  background-color: transparent;
+  border: 2px solid #f97316;
+  color: #f97316;
+}
+
+.industrialButton.secondary:hover {
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+/* Card styles with sharp edges */
+.card {
+  background-color: #1e293b; /* Steel dark */
+  border: 1px solid #334155; /* Steel medium */
+  border-radius: 0; /* Sharp edges as per requirements */
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, outline 0.2s ease, box-shadow 0.2s ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.card:hover {
+  outline: 2px solid #f97316;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(249, 115, 22, 0.4),
+    0 0 40px rgba(249, 115, 22, 0.2);
+}
+
+.card:focus-within {
+  outline: 2px solid #f97316;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(249, 115, 22, 0.4),
+    0 0 40px rgba(249, 115, 22, 0.2);
+}
+
+/* Grid layout */
+.gridContainer {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid2Col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid3Col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid4Col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Typography */
+.headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.technicalText {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.bodyText {
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Animation utilities */
+.staggeredReveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggeredRevealAnimation 0.6s forwards;
+}
+
+@keyframes staggeredRevealAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse {
+  animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Grid overlay background pattern */
+.gridOverlay {
+  background-image:
+    linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .industrialCard {
-    padding: 16px;
-    margin: 8px;
+  .grid2Col,
+  .grid3Col,
+  .grid4Col {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* System Heartbeat Core Styles */
+.systemHeartbeatCore {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+}
+
+.coreElement {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coreNode {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f97316, #ea580c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 20px rgba(249, 115, 22, 0.3),
+    0 0 40px rgba(249, 115, 22, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+/* Concentric rings */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  pointer-events: none;
+}
+
+.ring1 {
+  width: 100%;
+  height: 100%;
+}
+
+.ring2 {
+  width: 120%;
+  height: 120%;
+}
+
+.ring3 {
+  width: 140%;
+  height: 140%;
+}
+
+/* Core glow effects */
+.coreGlow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, transparent 70%);
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Grid background */
+.gridBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+}
+
+/* Radial glow behind core */
+.radialGlow {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background: radial-gradient(circle at center, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pulse animations */
+.pulse-idle .coreNode {
+  animation: idlePulse 3s ease-in-out infinite;
+}
+
+.pulse-sync .coreNode {
+  animation: syncPulse 1s ease-in-out infinite;
+}
+
+.pulse-accelerated .coreNode {
+  animation: acceleratedPulse 0.5s ease-in-out infinite;
+}
+
+@keyframes idlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 20px rgba(249, 115, 22, 0.3),
+      0 0 40px rgba(249, 115, 22, 0.2),
+      inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 30px rgba(249, 115, 22, 0.4),
+      0 0 50px rgba(249, 115, 22, 0.3),
+      inset 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes syncPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 25px rgba(249, 115, 22, 0.35),
+      0 0 45px rgba(249, 115, 22, 0.25);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow:
+      0 0 35px rgba(249, 115, 22, 0.45),
+      0 0 55px rgba(249, 115, 22, 0.35);
+  }
+}
+
+@keyframes acceleratedPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 30px rgba(249, 115, 22, 0.4),
+      0 0 50px rgba(249, 115, 22, 0.3);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 40px rgba(249, 115, 22, 0.5),
+      0 0 60px rgba(249, 115, 22, 0.4);
+  }
+}
+
+/* Ring animations */
+.pulse-idle .ring {
+  animation: ringIdlePulse 3s ease-in-out infinite;
+}
+
+.pulse-sync .ring {
+  animation: ringSyncPulse 1s ease-in-out infinite;
+}
+
+.pulse-accelerated .ring {
+  animation: ringAcceleratedPulse 0.5s ease-in-out infinite;
+}
+
+@keyframes ringIdlePulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ringSyncPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes ringAcceleratedPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Scroll transformation */
+.scroll-normal .coreElement {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-transformed .coreElement {
+  opacity: 0.7;
+  transform: scale(0.8);
+}
+
+.scroll-transformed .coreNode {
+  background: linear-gradient(145deg, #fb923c, #f59e0b);
+  box-shadow:
+    0 0 10px rgba(251, 146, 60, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.scroll-transformed .ring {
+  border: 1px solid rgba(251, 146, 60, 0.5);
+}
+
+.scroll-transformed .ring1 {
+  animation: schematicRing1 2s ease-in-out infinite;
+}
+
+.scroll-transformed .ring2 {
+  animation: schematicRing2 2s ease-in-out infinite;
+}
+
+.scroll-transformed .ring3 {
+  animation: schematicRing3 2s ease-in-out infinite;
+}
+
+@keyframes schematicRing1 {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes schematicRing2 {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes schematicRing3 {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.2; }
+}
+
+/* Reduced motion support */
+.reducedMotion .coreNode,
+.reducedMotion .ring {
+  animation: none !important;
+  transform: none !important;
+}
+
+.reducedMotion .coreNode {
+  animation: none !important;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Core messaging */
+.coreMessaging {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.coreMessage {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+  opacity: 0.9;
+}
+
+.microCopy {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #fb923c;
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* CTA tracker (hidden element to detect hover) */
+.ctaTracker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .systemHeartbeatCore {
+    width: 160px;
+    height: 160px;
+  }
+
+  .coreNode {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coreMessage {
+    font-size: 0.8rem;
+  }
+
+  .microCopy {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .systemHeartbeatCore {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .coreNode {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Autonomous Robotic Arm Styles */
+.autonomousRoboticArm {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.roboticArmSvg {
+  width: 120px;
+  height: 120px;
+  transition: all 0.3s ease;
+}
+
+.wireframeMode {
+  filter: drop-shadow(0 0 2px rgba(249, 115, 22, 0.5));
+}
+
+.wireframeOverlay {
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.wireframeOverlay.visible {
+  opacity: 0.8;
+}
+
+.calibrating .roboticArmSvg {
+  animation: subtleCalibration 4s ease-in-out infinite;
+}
+
+@keyframes subtleCalibration {
+  0%, 100% {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(-1deg) scale(0.99);
+  }
+  75% {
+    transform: rotate(1deg) scale(1.005);
+  }
+}
+
+.blueprintMode {
+  opacity: 0.7;
+}
+
+.blueprintMode .roboticArmSvg {
+  filter: brightness(1.2) saturate(1.5);
+}
+
+.blueprintMode .wireframeOverlay {
+  opacity: 0.8;
+  stroke: #FB923C;
+}
+
+.armMicrocopy {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: max-content;
+  max-width: 150px;
+}
+
+.microcopyText {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #FB923C;
+  margin: 0;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.microcopyText.blueprintText {
+  color: #22C55E;
+  opacity: 0.9;
+  font-size: 0.65rem;
+}
+
+/* Positioning variants for the arm */
+.armPositionTopRight {
+  top: 15%;
+  left: auto;
+  right: 15%;
+}
+
+.armPositionBottomLeft {
+  top: auto;
+  bottom: 15%;
+  left: 15%;
+}
+
+.armPositionCenterRight {
+  top: 50%;
+  left: auto;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+/* Reduced motion support */
+.reducedMotion .roboticArmSvg,
+.reducedMotion .wireframeOverlay {
+  animation: none !important;
+  transition: none !important;
+}
+
+.reducedMotion .calibrating .roboticArmSvg {
+  animation: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .autonomousRoboticArm {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+  }
+
+  .armMicrocopy {
+    max-width: 120px;
+  }
+
+  .microcopyText {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .autonomousRoboticArm {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    top: 40%;
+  }
+
+  .roboticArmSvg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .armMicrocopy {
+    max-width: 100px;
+  }
+
+  .microcopyText {
+    font-size: 0.55rem;
+  }
+}
+
+/* Full Industrial Robotic Figure Styles */
+.fullIndustrialRoboticFigure {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.roboticFigureSvg {
+  width: 200px;
+  height: 260px;
+  transition: all 0.5s ease;
+}
+
+.subtleMovement {
+  animation: subtleIdleMovement 8s ease-in-out infinite;
+}
+
+@keyframes subtleIdleMovement {
+  0%, 100% {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0.2deg) scale(1.005);
+  }
+  50% {
+    transform: rotate(-0.1deg) scale(0.998);
+  }
+  75% {
+    transform: rotate(0.1deg) scale(1.002);
+  }
+}
+
+.idleMovement {
+  opacity: 1;
+}
+
+.figureIndicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(249, 115, 22, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.indicatorText {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6rem;
+  color: #FB923C;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.monoFont {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Positioning for different layouts */
+.figurePositionRight {
+  right: 5%;
+  left: auto;
+}
+
+.figurePositionCenterRight {
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.figurePositionBottomRight {
+  top: auto;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Reduced motion support */
+.reducedMotion .roboticFigureSvg,
+.reducedMotion .subtleMovement {
+  animation: none !important;
+  transition: none !important;
+}
+
+.reducedMotion .subtleIdleMovement {
+  animation: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .fullIndustrialRoboticFigure {
+    width: 160px;
+    height: 220px;
+    right: 2%;
+  }
+
+  .roboticFigureSvg {
+    width: 160px;
+    height: 220px;
+  }
+
+  .indicatorText {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullIndustrialRoboticFigure {
+    width: 140px;
+    height: 190px;
+    right: 10px;
+    top: 60%;
+  }
+
+  .roboticFigureSvg {
+    width: 140px;
+    height: 190px;
+  }
+
+  .figureIndicator {
+    top: 5px;
+    right: 5px;
+  }
+
+  .indicatorText {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fullIndustrialRoboticFigure {
+    display: none; /* Hide on very small screens to preserve space */
   }
 }

@@ -1,0 +1,185 @@
+/**
+ * Prominency Effects CSS Module
+ * Professional appearance through depth and elevation
+ */
+
+/* Elevation levels with subtle shadows */
+.elevation-0 {
+  box-shadow: none;
+}
+
+.elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.elevation-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15),
+              0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.elevation-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15),
+              0 3px 6px rgba(0, 0, 0, 0.10);
+}
+
+.elevation-4 {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15),
+              0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.elevation-5 {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
+              0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode elevation adjustments */
+[data-theme='light'] .elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+              0 1px 2px rgba(0, 0, 0, 0.16);
+}
+
+[data-theme='light'] .elevation-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10),
+              0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .elevation-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10),
+              0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .elevation-4 {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.10),
+              0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .elevation-5 {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12),
+              0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover elevation effects */
+.elevation-hover-1:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15),
+              0 2px 4px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.elevation-hover-2:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15),
+              0 3px 6px rgba(0, 0, 0, 0.10);
+  transform: translateY(-4px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card prominency */
+.card-prominent {
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-prominent:hover {
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.15),
+              0 3px 6px rgba(249, 115, 22, 0.10);
+  transform: translateY(-4px);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Navigation prominency */
+.nav-prominent {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  background: rgba(8, 9, 13, 0.95);
+}
+
+[data-theme='light'] .nav-prominent {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Footer prominency */
+.footer-prominent {
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  background: var(--ifm-footer-background-color);
+}
+
+/* Button prominency */
+.button-prominent {
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-prominent:hover {
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.4);
+  transform: translateY(-2px);
+}
+
+.button-prominent:active {
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+  transform: translateY(0);
+}
+
+/* Section prominency */
+.section-prominent {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.section-prominent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(249, 115, 22, 0.3) 50%,
+    transparent
+  );
+}
+
+/* Depth layers */
+.depth-layer-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.depth-layer-2 {
+  position: relative;
+  z-index: 2;
+}
+
+.depth-layer-3 {
+  position: relative;
+  z-index: 3;
+}
+
+/* Glow effects for prominency */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3),
+              0 0 40px rgba(249, 115, 22, 0.1);
+}
+
+.glow-orange-hover:hover {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.4),
+              0 0 60px rgba(249, 115, 22, 0.2);
+}
+
+/* Smooth transitions for all prominency effects */
+.elevation-1,
+.elevation-2,
+.elevation-3,
+.elevation-4,
+.elevation-5,
+.card-prominent,
+.button-prominent {
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

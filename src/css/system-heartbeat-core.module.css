@@ -1,0 +1,328 @@
+/* System Heartbeat Core Styles */
+
+.systemHeartbeatCore {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+}
+
+.coreElement {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coreNode {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f97316, #ea580c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 20px rgba(249, 115, 22, 0.3),
+    0 0 40px rgba(249, 115, 22, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+/* Concentric rings */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  pointer-events: none;
+}
+
+.ring1 {
+  width: 100%;
+  height: 100%;
+}
+
+.ring2 {
+  width: 120%;
+  height: 120%;
+}
+
+.ring3 {
+  width: 140%;
+  height: 140%;
+}
+
+/* Core glow effects */
+.coreGlow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, transparent 70%);
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Grid background */
+.gridBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+}
+
+/* Radial glow behind core */
+.radialGlow {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background: radial-gradient(circle at center, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Pulse animations */
+.pulse-idle .coreNode {
+  animation: idlePulse 3s ease-in-out infinite;
+}
+
+.pulse-sync .coreNode {
+  animation: syncPulse 1s ease-in-out infinite;
+}
+
+.pulse-accelerated .coreNode {
+  animation: acceleratedPulse 0.5s ease-in-out infinite;
+}
+
+@keyframes idlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 20px rgba(249, 115, 22, 0.3),
+      0 0 40px rgba(249, 115, 22, 0.2),
+      inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 30px rgba(249, 115, 22, 0.4),
+      0 0 50px rgba(249, 115, 22, 0.3),
+      inset 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes syncPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 25px rgba(249, 115, 22, 0.35),
+      0 0 45px rgba(249, 115, 22, 0.25);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow:
+      0 0 35px rgba(249, 115, 22, 0.45),
+      0 0 55px rgba(249, 115, 22, 0.35);
+  }
+}
+
+@keyframes acceleratedPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 30px rgba(249, 115, 22, 0.4),
+      0 0 50px rgba(249, 115, 22, 0.3);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 40px rgba(249, 115, 22, 0.5),
+      0 0 60px rgba(249, 115, 22, 0.4);
+  }
+}
+
+/* Ring animations */
+.pulse-idle .ring {
+  animation: ringIdlePulse 3s ease-in-out infinite;
+}
+
+.pulse-sync .ring {
+  animation: ringSyncPulse 1s ease-in-out infinite;
+}
+
+.pulse-accelerated .ring {
+  animation: ringAcceleratedPulse 0.5s ease-in-out infinite;
+}
+
+@keyframes ringIdlePulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ringSyncPulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes ringAcceleratedPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Scroll transformation */
+.scroll-normal .coreElement {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-transformed .coreElement {
+  opacity: 0.7;
+  transform: scale(0.8);
+}
+
+.scroll-transformed .coreNode {
+  background: linear-gradient(145deg, #fb923c, #f59e0b);
+  box-shadow:
+    0 0 10px rgba(251, 146, 60, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.scroll-transformed .ring {
+  border: 1px solid rgba(251, 146, 60, 0.5);
+}
+
+.scroll-transformed .ring1 {
+  animation: schematicRing1 2s ease-in-out infinite;
+}
+
+.scroll-transformed .ring2 {
+  animation: schematicRing2 2s ease-in-out infinite;
+}
+
+.scroll-transformed .ring3 {
+  animation: schematicRing3 2s ease-in-out infinite;
+}
+
+@keyframes schematicRing1 {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes schematicRing2 {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes schematicRing3 {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.2; }
+}
+
+/* Reduced motion support */
+.reducedMotion .coreNode,
+.reducedMotion .ring {
+  animation: none !important;
+  transform: none !important;
+}
+
+.reducedMotion .coreNode {
+  animation: none !important;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Core messaging */
+.coreMessaging {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.coreMessage {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+  opacity: 0.9;
+}
+
+.microCopy {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #fb923c;
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* CTA tracker (hidden element to detect hover) */
+.ctaTracker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .systemHeartbeatCore {
+    width: 160px;
+    height: 160px;
+  }
+
+  .coreNode {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coreMessage {
+    font-size: 0.8rem;
+  }
+
+  .microCopy {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .systemHeartbeatCore {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.5rem;
+  }
+
+  .coreNode {
+    width: 50px;
+    height: 50px;
+  }
+}

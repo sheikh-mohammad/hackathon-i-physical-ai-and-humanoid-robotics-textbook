@@ -1,0 +1,27 @@
+/* Font imports for RoboCraft Industrial Homepage */
+
+/* Google Sans Code - Using Roboto Mono as Google's monospace alternative with font-display: swap for performance */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+/* Fallback: JetBrains Mono for enhanced monospace support */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* Font variable definitions - Google Sans Code aesthetic using Roboto Mono */
+:root {
+  --font-primary: 'Roboto Mono', 'JetBrains Mono', 'Courier New', monospace;
+  --font-google-sans-code: 'Roboto Mono', 'JetBrains Mono', monospace;
+
+  /* Legacy font variables for backward compatibility */
+  --font-headlines: var(--font-primary);
+  --font-technical: var(--font-primary);
+  --font-body: var(--font-primary);
+}
+
+/* Font usage classes */
+.font-primary,
+.font-google-sans-code,
+.font-headlines,
+.font-technical,
+.font-body {
+  font-family: var(--font-primary);
+}

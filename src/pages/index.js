@@ -1,169 +1,99 @@
-import React, { useState } from 'react';
-import { ColorPaletteProvider } from '../components/ColorPaletteProvider';
-import ThemeToggleController from '../components/ThemeToggleController';
-import ThemePreferenceManager from '../components/ThemePreferenceManager';
-import IndustrialThemeManager from '../components/IndustrialThemeManager';
-import AccessibilityThemeValidator from '../components/AccessibilityThemeValidator';
+import React from 'react';
+import IndustrialHomepage from '../components/IndustrialHomepage';
+import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-import ModuleCard from '../components/ModuleCard';
-import TechStackBadge from '../components/TechStackBadge';
-import NavigationPath from '../components/NavigationPath';
-import FooterResources from '../components/FooterResources';
-import RobotJointElement from '../components/RobotJointElement';
-import MechIcon from '../components/MechIcon';
-import CircuitPathwayRenderer from '../components/CircuitPathwayRenderer';
-import BlueprintRenderer from '../components/BlueprintRenderer';
+import ModulesSection from '../components/ModulesSection';
+import WeeklyBreakdownSection from '../components/WeeklyBreakdownSection';
+import FeaturesSection from '../components/FeaturesSection';
+import HardwareTiersSection from '../components/HardwareTiersSection';
+import FooterCTA from '../components/FooterCTA';
+import Footer from '../components/Footer';
 import styles from '../css/industrial-styles.module.css';
-import colorStyles from '../css/color-palette.module.css';
+import colorStyles from '../css/colors.module.css';
 
 /**
  * RoboCraftHomepage Component
- * Main page component for the RoboCraft holographic homepage
+ * Main page component for the RoboCraft textbook-focused homepage
+ * Updated to emphasize learning journey over platform building
  */
 const RoboCraftHomepage = () => {
-  const [modules] = useState([
-    {
-      id: 1,
-      title: "Introduction to Robotics",
-      description: "Learn the fundamentals of robotics including kinematics, dynamics, and control systems.",
-      icon: "gear",
-      duration: "3-4 hours",
-      difficulty: "Beginner"
-    },
-    {
-      id: 2,
-      title: "ROS 2 Development",
-      description: "Master ROS 2 concepts, nodes, topics, services, and message passing.",
-      icon: "circuit",
-      duration: "4-5 hours",
-      difficulty: "Intermediate"
-    },
-    {
-      id: 3,
-      title: "NVIDIA Isaac Integration",
-      description: "Integrate NVIDIA Isaac for perception, planning, and control in robotics.",
-      icon: "engine",
-      duration: "5-6 hours",
-      difficulty: "Advanced"
-    },
-    {
-      id: 4,
-      title: "Gazebo Simulation",
-      description: "Create realistic robot simulations with physics engines and sensor models.",
-      icon: "sensor",
-      duration: "4-5 hours",
-      difficulty: "Intermediate"
-    }
-  ]);
-
-  const navigationItems = [
-    { label: "Home", href: "/", icon: "robot" },
-    { label: "Courses", href: "/courses", icon: "gear" },
-    { label: "Documentation", href: "robocraft/docs", icon: "bolt" },
-    { label: "Community", href: "/community", icon: "sensor", cta: "New" }
-  ];
-
-  const resources = [
-    { label: "Getting Started Guide", href: "/guide", icon: "bolt" },
-    { label: "API Documentation", href: "/api", icon: "circuit" },
-    { label: "Tutorials", href: "/tutorials", icon: "gear" },
-    { label: "Examples", href: "/examples", icon: "engine" }
-  ];
-
-  const socialLinks = [
-    { label: "GitHub", href: "https://github.com", icon: "circuit" },
-    { label: "Discord", href: "https://discord.com", icon: "sensor" },
-    { label: "Forum", href: "https://forum.example.com", icon: "bolt" }
-  ];
-
-  const techStack = [
-    { tech: "ROS 2", icon: "circuit" },
-    { tech: "NVIDIA Isaac", icon: "engine" },
-    { tech: "Gazebo", icon: "sensor" },
-    { tech: "Python", icon: "bolt" },
-    { tech: "C++", icon: "gear" }
-  ];
+  const handleTierSelect = (tier) => {
+    // Navigate to hardware requirements documentation
+    window.location.href = '/robocraft/docs/module-0-getting-started-with-physical-ai/hardware-requirements';
+  };
 
   return (
-    <ColorPaletteProvider>
-      <ThemePreferenceManager />
-      <IndustrialThemeManager>
-        <AccessibilityThemeValidator>
-          <div className={`${styles.darkTheme} ${colorStyles.bgSteelDark}`} style={{ minHeight: '100vh', position: 'relative' }}>
-            {/* Background decorative elements */}
-            <div style={{ position: 'fixed', top: '10%', left: '5%', opacity: 0.1, zIndex: 0 }}>
-              <RobotJointElement size="large" animate={true} />
-            </div>
-            <div style={{ position: 'fixed', top: '20%', right: '10%', opacity: 0.1, zIndex: 0 }}>
-              <MechIcon type="circuit" size="large" animate={true} />
-            </div>
-            <div style={{ position: 'fixed', bottom: '15%', left: '15%', opacity: 0.1, zIndex: 0 }}>
-              <BlueprintRenderer type="diagram" animate={true} />
-            </div>
+    <>
+      <Navbar />
+      <IndustrialHomepage>
+        {/* Hero Section - Textbook Learning Focus */}
+        <HeroSection
+          title="RoboCraft"
+          subtitle="Physical AI & Humanoid Robotics Textbook"
+          description="Master intelligent humanoid robotics through our comprehensive open-access textbook covering Physical AI, ROS 2, NVIDIA Isaac, Gazebo simulation, and advanced AI integration. Learn at your own pace with hands-on projects and real-world applications."
+        />
 
-            {/* Main content */}
-            <div style={{ position: 'relative', zIndex: 1 }}>
-              {/* Header with theme toggle */}
-              <header style={{ padding: '1rem 2rem', display: 'flex', justifyContent: 'flex-end' }}>
-                <ThemeToggleController size="large" />
-              </header>
-
-              {/* Hero Section */}
-              <main style={{ padding: '0 2rem 2rem' }}>
-                <HeroSection
-                  title="RoboCraft"
-                  subtitle="Physical AI & Humanoid Robotics Textbook"
-                  description="Master the art of building intelligent humanoid robots with our comprehensive guide covering ROS 2, NVIDIA Isaac, Gazebo simulation, and advanced AI integration."
-                  ctaText="Start Learning"
-                  onCtaClick={() => alert('Starting the learning journey!')}
-                />
-
-                {/* Tech Stack Badges */}
-                <div style={{ margin: '2rem 0', display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {techStack.map((tech, index) => (
-                    <TechStackBadge
-                      key={index}
-                      tech={tech.tech}
-                      icon={tech.icon}
-                      color="copper"
-                    />
-                  ))}
+        {/* Learning Outcomes Section */}
+        <section style={{ padding: '3rem 2rem', backgroundColor: '#0f1419', textAlign: 'center' }}>
+          <div className={styles.container} style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className={`${styles.headline} ${colorStyles.textAccentPrimary}`} style={{ fontSize: '2rem', marginBottom: '2rem' }}>
+              What You'll Learn
+            </h2>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gap: '2rem'
+            }}>
+              {[
+                { title: 'Physical AI Principles', desc: 'Understand embodied intelligence and how AI systems function in the physical world' },
+                { title: 'ROS 2 Mastery', desc: 'Master the Robot Operating System for robotic control and communication' },
+                { title: 'Simulation Skills', desc: 'Simulate robots with Gazebo and Unity for realistic testing environments' },
+                { title: 'NVIDIA Isaac Platform', desc: 'Develop with cutting-edge AI robot platform and synthetic data generation' },
+                { title: 'Humanoid Design', desc: 'Design humanoid robots for natural human interactions and bipedal locomotion' },
+                { title: 'Conversational AI', desc: 'Integrate GPT models for voice-controlled conversational robotics' }
+              ].map((outcome, index) => (
+                <div key={index} className={styles.card} style={{ padding: '1.5rem', textAlign: 'left' }}>
+                  <h3 className={`${styles.technicalText} ${colorStyles.textAccentSecondary}`} style={{ fontSize: '1rem', marginBottom: '0.75rem' }}>
+                    {outcome.title}
+                  </h3>
+                  <p className={styles.bodyText} style={{ fontSize: '0.875rem', color: '#94a3b8', margin: 0 }}>
+                    {outcome.desc}
+                  </p>
                 </div>
-
-                {/* Navigation Path */}
-                <div style={{ margin: '2rem 0' }}>
-                  <NavigationPath items={navigationItems} orientation="horizontal" />
-                </div>
-
-                {/* Module Cards */}
-                <div style={{ margin: '2rem 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                  {modules.map(module => (
-                    <ModuleCard
-                      key={module.id}
-                      title={module.title}
-                      description={module.description}
-                      icon={module.icon}
-                      number={module.id}
-                      duration={module.duration}
-                      difficulty={module.difficulty}
-                      onClick={() => alert(`Opening module ${module.id}: ${module.title}`)}
-                    />
-                  ))}
-                </div>
-              </main>
-
-              {/* Footer */}
-              <footer style={{ marginTop: '3rem' }}>
-                <FooterResources
-                  resources={resources}
-                  socialLinks={socialLinks}
-                />
-              </footer>
+              ))}
             </div>
           </div>
-        </AccessibilityThemeValidator>
-      </IndustrialThemeManager>
-    </ColorPaletteProvider>
+        </section>
+
+        {/* Modules Section - Course Structure */}
+        <ModulesSection />
+
+        {/* Weekly Breakdown Section */}
+        <WeeklyBreakdownSection />
+
+        {/* Hardware Requirements Section */}
+        <HardwareTiersSection onTierSelect={handleTierSelect} />
+
+        {/* Why Physical AI Matters Section */}
+        <section style={{ padding: '4rem 2rem', backgroundColor: '#08090d', textAlign: 'center' }}>
+          <div className={styles.container} style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className={`${styles.headline} ${colorStyles.textAccentPrimary}`} style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
+              Why Physical AI Matters
+            </h2>
+            <p className={`${styles.bodyText} ${colorStyles.textPrimary}`} style={{ fontSize: '1.125rem', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+              Humanoid robots are poised to excel in our human-centered world because they share our physical form and can be trained with abundant data from interacting in human environments.
+            </p>
+            <p className={`${styles.bodyText} ${colorStyles.textPrimary}`} style={{ fontSize: '1.125rem', lineHeight: '1.8' }}>
+              This represents a significant transition from AI models confined to digital environments to embodied intelligence that operates in physical space. Learn how to bridge the gap between the digital brain and the physical body.
+            </p>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <FooterCTA />
+      </IndustrialHomepage>
+      <Footer />
+    </>
   );
 };
 
