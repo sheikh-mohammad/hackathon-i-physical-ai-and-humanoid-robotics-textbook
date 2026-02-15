@@ -7,11 +7,13 @@ import Interactive3DRobotPreview from './Interactive3DRobotPreview';
 import { conditionalAnimate } from '../utils/motion';
 import styles from '../css/industrial-styles.module.css';
 import colorStyles from '../css/colors.module.css';
+import heroMobileStyles from '../css/hero-mobile.module.css';
 
 /**
  * HeroSection Component
  * Landing area with main CTA for the industrial homepage
  * Updated to focus on textbook learning approach
+ * Mobile responsive: stacks vertically (content above, robot below)
  */
 const HeroSection = ({ title, subtitle, description }) => {
   const heroRef = useRef(null);
@@ -54,7 +56,7 @@ const HeroSection = ({ title, subtitle, description }) => {
   return (
     <section
       ref={heroRef}
-      className={`${styles.card} hero-section`}
+      className={`${styles.card} ${heroMobileStyles.heroSection} hero-section`}
       style={{
         position: 'relative',
         overflow: 'hidden',
@@ -90,7 +92,7 @@ const HeroSection = ({ title, subtitle, description }) => {
       </div>
 
       {/* Left Content Section */}
-      <div style={{
+      <div className={heroMobileStyles.heroContent} style={{
         position: 'relative',
         zIndex: 2,
         maxWidth: '600px',
@@ -132,7 +134,7 @@ const HeroSection = ({ title, subtitle, description }) => {
       </div>
 
       {/* Right Section - Interactive 3D Robot Preview with Signal Dot */}
-      <div className="animate-on-load" style={{
+      <div className={`${heroMobileStyles.heroRobot} animate-on-load`} style={{
         position: 'relative',
         zIndex: 1,
         flex: '0 0 auto',

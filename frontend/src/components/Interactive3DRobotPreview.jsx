@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from '../css/industrial-styles.module.css';
+import robotMobileStyles from '../css/robot-mobile.module.css';
 
 /**
  * Interactive3DRobotPreview Component
  * Interactive robot preview with cursor-tracking rotation
  * Follows mouse movement for natural interaction
+ * Mobile responsive: scales appropriately on smaller screens
  */
 const Interactive3DRobotPreview = () => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
@@ -55,6 +57,7 @@ const Interactive3DRobotPreview = () => {
   return (
     <div
       ref={containerRef}
+      className={robotMobileStyles.robotContainer}
       style={{
         position: 'relative',
         width: '300px',

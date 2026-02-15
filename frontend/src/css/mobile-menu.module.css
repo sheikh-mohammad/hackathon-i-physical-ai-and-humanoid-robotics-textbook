@@ -1,0 +1,193 @@
+/**
+ * Mobile Menu Styles
+ * Hamburger menu and mobile navigation overlay
+ */
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 4px;
+}
+
+.hamburgerLine {
+  width: 2rem;
+  height: 0.25rem;
+  background: #f97316;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* Desktop Navigation - Hidden on Mobile */
+.desktopNav {
+  display: flex;
+}
+
+/* Mobile Menu Overlay */
+.mobileMenuOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 9, 13, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Menu Container */
+.mobileMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 400px;
+  height: 100%;
+  background: #08090d;
+  border-left: 2px solid #f97316;
+  padding: 2rem;
+  animation: slideIn 0.3s ease;
+  overflow-y: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #f97316;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  color: #fb923c;
+  transform: rotate(90deg);
+}
+
+.closeButton:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 4px;
+}
+
+/* Mobile Menu Items */
+.mobileMenuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.mobileMenuItem {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+
+.mobileMenuItem:hover,
+.mobileMenuItem:focus {
+  color: #f97316;
+  border-left-color: #f97316;
+  background: rgba(249, 115, 22, 0.1);
+  padding-left: 1.5rem;
+}
+
+.mobileMenuItem:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+/* Mobile Responsive Breakpoint */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenuOverlay {
+    display: block;
+  }
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .desktopNav {
+    gap: 1rem;
+  }
+}
+
+/* Ensure touch targets are at least 44px */
+@media (max-width: 768px) {
+  .mobileMenuItem {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .hamburger {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .closeButton {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

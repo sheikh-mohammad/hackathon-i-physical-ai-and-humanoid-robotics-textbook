@@ -196,6 +196,135 @@ input, textarea, select,
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Mobile Responsive Docs Sidebar */
+@media (max-width: 996px) {
+  /* Sidebar hidden by default on mobile */
+  .theme-doc-sidebar-container {
+    display: none;
+  }
+
+  /* Sidebar overlay when open */
+  .theme-doc-sidebar-container[data-hidden="false"] {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(8, 9, 13, 0.95);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* Sidebar menu slides in from left */
+  .theme-doc-sidebar-container[data-hidden="false"] .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 350px;
+    height: 100%;
+    background: #08090d;
+    border-right: 2px solid #f97316;
+    overflow-y: auto;
+    animation: slideInFromLeft 0.3s ease;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Light mode sidebar */
+  [data-theme='light'] .theme-doc-sidebar-container[data-hidden="false"] .menu {
+    background: #ffffff;
+    border-right: 2px solid #f97316;
+  }
+
+  /* Sidebar toggle button styling */
+  .navbar__toggle {
+    color: #f97316 !important;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .navbar__toggle:hover {
+    color: #fb923c !important;
+    background: rgba(249, 115, 22, 0.1);
+  }
+
+  /* Sidebar close button */
+  .theme-doc-sidebar-container button[aria-label*="Close"] {
+    color: #f97316;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .theme-doc-sidebar-container button[aria-label*="Close"]:hover {
+    color: #fb923c;
+    background: rgba(249, 115, 22, 0.1);
+  }
+
+  /* Menu items touch targets */
+  .menu__link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Active menu item with orange accent */
+  .menu__link--active {
+    border-left: 3px solid #f97316;
+    background: rgba(249, 115, 22, 0.1);
+  }
+
+  /* Menu item hover state */
+  .menu__link:hover {
+    background: rgba(249, 115, 22, 0.1);
+    border-left: 3px solid #fb923c;
+  }
+}
+
+/* Animations for mobile sidebar */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Ensure sidebar is visible on desktop */
+@media (min-width: 997px) {
+  .theme-doc-sidebar-container {
+    display: block !important;
+  }
+}
+
+/* Touch target validation for all interactive elements */
+@media (max-width: 768px) {
+  a, button, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Ensure CTA buttons meet touch target requirements */
+  .button,
+  .button--primary,
+  .button--secondary {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
 /* Apply prominency effects to docs content */
 .markdown {
   position: relative;

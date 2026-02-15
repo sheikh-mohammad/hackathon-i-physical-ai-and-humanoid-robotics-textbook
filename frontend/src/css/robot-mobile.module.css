@@ -1,0 +1,62 @@
+/**
+ * Robot Mobile Styles
+ * Responsive scaling for Interactive 3D Robot Preview on mobile devices
+ */
+
+/* Robot Container */
+.robotContainer {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: default;
+  user-select: none;
+}
+
+/* Mobile Breakpoint - Scale Down Robot */
+@media (max-width: 768px) {
+  .robotContainer {
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* Small Mobile Devices - Further Scale Down */
+@media (max-width: 480px) {
+  .robotContainer {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .robotContainer {
+    width: 280px;
+    height: 380px;
+  }
+}
+
+/* Ensure robot doesn't overflow on small screens */
+@media (max-width: 768px) {
+  .robotContainer svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Adjust instruction text on mobile */
+@media (max-width: 768px) {
+  .robotContainer > div:last-child {
+    font-size: 0.7rem;
+    bottom: -25px;
+  }
+}
+
+/* Touch-friendly hover states on mobile */
+@media (max-width: 768px) and (hover: none) {
+  .robotContainer {
+    cursor: pointer;
+  }
+}
