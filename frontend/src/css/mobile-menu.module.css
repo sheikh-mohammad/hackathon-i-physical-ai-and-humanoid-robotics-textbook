@@ -161,10 +161,6 @@
   .desktopNav {
     display: none;
   }
-
-  .mobileMenuOverlay {
-    display: block;
-  }
 }
 
 /* Tablet Breakpoint */
