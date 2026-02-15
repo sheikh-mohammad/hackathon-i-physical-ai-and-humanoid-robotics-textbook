@@ -285,7 +285,33 @@
 - [X] T053 Run visual audit to confirm all industrial signal motifs are present
 - [X] T054 Update main homepage file to use new industrial components in frontend/src/pages/index.js
 
-## Phase 17: Final Integration & Testing
+## Phase 17: Mobile Responsive Enhancements
+
+**Purpose**: Implement mobile-specific responsive features for navbar, hero section, and docs sidebar
+
+- [ ] T156 Implement hamburger menu icon for navbar on mobile (< 768px) in frontend/src/components/Navbar.jsx
+- [ ] T157 Create mobile menu component with expand/collapse animation in frontend/src/components/MobileMenu.jsx
+- [ ] T158 Add smooth transition animations for hamburger menu open/close in frontend/src/css/mobile-menu.module.css
+- [ ] T159 Ensure all navbar items (LEARN FREE, MODULES, TECHNOLOGY, GitHub, Search, Dark/Light toggle) appear in mobile menu
+- [ ] T160 Maintain orange accent color (#f97316) for mobile menu items in frontend/src/css/mobile-menu.module.css
+- [ ] T161 Implement vertical stacking for hero section on mobile (content above, robot below) in frontend/src/components/HeroSection.jsx
+- [ ] T162 Add responsive scaling for Interactive 3D Robot Preview on mobile in frontend/src/components/Interactive3DRobotPreview.jsx
+- [ ] T163 Ensure proper spacing between stacked hero content on mobile in frontend/src/css/hero-mobile.module.css
+- [ ] T164 Implement docs sidebar toggle button for mobile in frontend/docusaurus.config.js or custom component
+- [ ] T165 Create overlay behavior for docs sidebar on mobile (sidebar overlays content) in frontend/src/css/custom.css
+- [ ] T166 Add smooth slide-in/slide-out animation for docs sidebar on mobile in frontend/src/css/custom.css
+- [ ] T167 Implement auto-close behavior for docs sidebar when item is selected on mobile
+- [ ] T168 Validate all touch targets meet 44px minimum across homepage and docs in frontend/src/components/
+- [ ] T169 Test hamburger menu functionality on mobile devices (expand, collapse, navigation)
+- [ ] T170 Test hero section vertical stacking on mobile (375px, 414px, 768px widths)
+- [ ] T171 Test docs sidebar toggle and overlay on mobile devices
+- [ ] T172 Verify mobile navigation maintains consistent orange accent throughout
+
+**Checkpoint**: All mobile responsive enhancements should be functional and tested
+
+---
+
+## Phase 18: Final Integration & Testing
 
 **Purpose**: Ensure all new features work together and meet quality standards
 
@@ -307,6 +333,10 @@
 - [ ] T153 Validate WCAG 2.1 AA compliance in both color modes
 - [ ] T154 Test keyboard navigation across all interactive elements
 - [ ] T155 Verify all animations respect prefers-reduced-motion setting
+- [ ] T173 Test hamburger menu on various mobile devices and browsers
+- [ ] T174 Verify hero section stacking works correctly on all mobile breakpoints
+- [ ] T175 Test docs sidebar toggle functionality on mobile
+- [ ] T176 Validate all mobile touch targets meet 44px minimum requirement
 
 **Note**: These are manual testing tasks that should be performed by the user or QA team. The implementation is complete and the build succeeded.
 
@@ -351,7 +381,8 @@
 4. **Footer Update (Phase 14)** → Depends on Phase 10
 5. **Docusaurus Docs Integration (Phase 15)** → Depends on Phases 11, 12, 13, 14
 6. **Prominency Effects (Phase 16)** → Can run in parallel with other phases after Foundational
-7. **Final Integration & Testing (Phase 17)** → Must be last, depends on ALL phases
+7. **Mobile Responsive Enhancements (Phase 17)** → Depends on Phases 2, 13, 15 (navbar, hero, docs must exist first)
+8. **Final Integration & Testing (Phase 18)** → Must be last, depends on ALL phases
 
 ### Within Each User Story
 
@@ -410,8 +441,9 @@ Task: "Add secondary exploratory CTA to hero in frontend/src/components/HeroSect
 9. Add Footer Update (Phase 14) → Test
 10. Add Docusaurus Docs Integration (Phase 15) → Test
 11. Add Prominency Effects (Phase 16) → Test
-12. Complete Final Integration & Testing (Phase 17) → Full validation
-13. Each story/feature adds value without breaking previous stories
+12. Add Mobile Responsive Enhancements (Phase 17) → Test mobile features
+13. Complete Final Integration & Testing (Phase 18) → Full validation
+14. Each story/feature adds value without breaking previous stories
 
 ### Parallel Team Strategy
 
@@ -429,8 +461,8 @@ With multiple developers:
    - Developer H: Color Mode System (Phase 12)
    - Developer I: Prominency Effects (Phase 16)
 3. Stories complete and integrate independently
-4. Sequential phases (13, 14, 15) complete after dependencies met
-5. Final testing (Phase 17) with full team
+4. Sequential phases (13, 14, 15, 17) complete after dependencies met
+5. Final testing (Phase 18) with full team
 
 ---
 
@@ -454,4 +486,6 @@ With multiple developers:
 - Task T123-T130 must integrate Docusaurus docs with homepage theme
 - Task T131-T137 must implement prominency effects throughout
 - Task T138-T155 must validate all new features work correctly together
+- Task T156-T172 must implement mobile responsive enhancements (hamburger menu, hero stacking, docs sidebar toggle)
+- Task T173-T176 must validate mobile responsive features work correctly
 - The frontend-design skill must be used as specified in the requirements (IR-001 through IR-003)

@@ -229,6 +229,40 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 
 ---
 
+### User Story 9 – Mobile Responsive Navigation (Priority: P1)
+
+As a mobile user, I want the navbar to transform into a hamburger menu and the hero section to adapt properly so that I can navigate and view content comfortably on my mobile device.
+
+**Independent Test**: Load homepage on mobile device (< 768px width).
+
+**Acceptance Scenarios**:
+1. **Given** I load the homepage on mobile, **Then** the navbar displays as a hamburger menu icon
+2. **Given** I tap the hamburger menu, **Then** it expands to show navigation items (LEARN FREE, MODULES, TECHNOLOGY, GitHub, Search, Dark/Light toggle)
+3. **Given** the menu is expanded, **Then** I can tap any navigation item to navigate
+4. **Given** I tap outside the menu or tap the close icon, **Then** the menu collapses smoothly
+5. **Given** I view the hero section on mobile, **Then** content stacks vertically (text content above, robot preview below)
+6. **Given** I view the robot preview on mobile, **Then** it scales appropriately without breaking layout
+7. **Given** I navigate on mobile, **Then** all touch targets are at least 44px for easy tapping
+
+---
+
+### User Story 10 – Mobile Responsive Docs Sidebar (Priority: P1)
+
+As a mobile user viewing the docs, I want the sidebar to be accessible via a toggle button so that I can navigate documentation without the sidebar blocking content.
+
+**Independent Test**: Load /docs page on mobile device (< 768px width).
+
+**Acceptance Scenarios**:
+1. **Given** I load /docs on mobile, **Then** the sidebar is hidden by default
+2. **Given** I see a hamburger/toggle button, **Then** I can tap it to reveal the sidebar
+3. **Given** the sidebar is revealed, **Then** it overlays the content without breaking layout
+4. **Given** the sidebar is open, **Then** I can navigate through documentation sections
+5. **Given** I tap outside the sidebar or tap close, **Then** the sidebar closes smoothly
+6. **Given** I select a doc item, **Then** the sidebar closes automatically and shows the selected content
+7. **Given** I use the sidebar on mobile, **Then** all navigation items have adequate touch targets (≥ 44px)
+
+---
+
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
@@ -297,6 +331,13 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 - **FR-042**: Touch targets MUST be ≥ 44px on mobile
 - **FR-043**: Color contrast MUST meet WCAG 2.1 AA
 - **FR-044**: Focus states MUST be visible for keyboard navigation
+- **FR-077**: Navbar MUST transform to hamburger menu on mobile devices (< 768px)
+- **FR-078**: Hamburger menu MUST expand/collapse smoothly with mobile-friendly navigation
+- **FR-079**: Hero section MUST stack content vertically on mobile (content above, robot below)
+- **FR-080**: Interactive 3D Robot Preview MUST scale appropriately on mobile devices
+- **FR-081**: Docs sidebar MUST be accessible on mobile via hamburger menu or toggle button
+- **FR-082**: Docs sidebar MUST overlay content on mobile without breaking layout
+- **FR-083**: Mobile navigation MUST maintain orange accent color consistency
 
 #### Card Hover Effects
 - **FR-045**: All cards on homepage MUST show neon orange hover outline effects when hovered
@@ -411,6 +452,14 @@ As a visitor, I want to see hover outline effects on all cards on the homepage s
 - **SC-035**: Prominency effects create professional appearance throughout
 - **SC-036**: Color mode preference persists across sessions
 - **SC-037**: Same logo appears in both homepage and docs navbar
+- **SC-038**: Navbar transforms to hamburger menu on mobile devices (< 768px)
+- **SC-039**: Hamburger menu expands/collapses smoothly with all navigation items accessible
+- **SC-040**: Hero section stacks vertically on mobile (content above, robot below)
+- **SC-041**: Interactive 3D Robot Preview scales appropriately on mobile without breaking layout
+- **SC-042**: Docs sidebar is accessible on mobile via toggle button
+- **SC-043**: Docs sidebar overlays content on mobile without layout issues
+- **SC-044**: All mobile touch targets meet 44px minimum requirement
+- **SC-045**: Mobile navigation maintains orange accent color consistency
 
 ---
 

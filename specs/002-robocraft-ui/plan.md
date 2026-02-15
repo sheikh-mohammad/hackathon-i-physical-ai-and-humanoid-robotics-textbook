@@ -87,6 +87,9 @@
 - Course content integration from existing markdown files
 - Navigation system with Docusaurus framework
 - Responsive design for all device sizes
+- Mobile-first responsive approach with hamburger menu for navbar
+- Mobile-optimized hero section with vertical stacking
+- Mobile-accessible docs sidebar with overlay toggle
 
 ### Unknowns
 - Specific layout requirements for course modules display
@@ -114,7 +117,11 @@ Based on the project constitution principles:
 ### Exit Gates
 - [ ] Homepage renders correctly with new industrial design
 - [ ] All links and navigation functional
-- [ ] Mobile responsiveness verified
+- [ ] Mobile responsiveness verified (navbar hamburger menu, hero section stacking, docs sidebar toggle)
+- [ ] Hamburger menu expands/collapses smoothly on mobile
+- [ ] Hero section stacks vertically on mobile (content above, robot below)
+- [ ] Docs sidebar accessible via toggle on mobile
+- [ ] All touch targets meet 44px minimum on mobile
 - [ ] Performance benchmarks met (Lighthouse scores)
 - [ ] Accessibility compliance verified
 - [ ] Cross-browser compatibility tested
@@ -260,8 +267,9 @@ Based on the project constitution principles:
 
 **Component 2: HeroSection**
 - Purpose: Landing area with main CTA
-- Props: title, subtitle, ctaText, ctaLink
+- Props: title, subtitle, ctaText, ctaLink, isMobile
 - Style: Industrial orange accent background
+- Mobile: Content stacks vertically (text content above, robot preview below), robot scales appropriately
 
 **Component 3: CourseGrid**
 - Purpose: Display available courses/modules
@@ -276,10 +284,11 @@ Based on the project constitution principles:
 
 **Component 5: Interactive3DRobotPreview**
 - Purpose: Interactive 3D humanoid robot model with cursor-tracking rotation, showing the actual robot they'll build/simulate with hover tooltips
-- Props: modelPath, cursorTracking, hoverTooltips, animationEnabled, position, size
+- Props: modelPath, cursorTracking, hoverTooltips, animationEnabled, position, size, isMobile
 - Style: 3D rotating humanoid model positioned on the right side of hero section, with subtle breathing motion, eye glow, joint articulation
 - Behavior: Cursor-tracking rotation (follows mouse movement - right movement = rotate right, left movement = rotate left), hover tooltips with technical labels ("Servo motors", "AI vision system", "Balance sensors")
-- Layout: Positioned on right side without overlapping left content
+- Layout: Positioned on right side without overlapping left content on desktop; scales and positions below content on mobile
+- Mobile: Scales appropriately, maintains interactivity, positioned below text content in vertical stack
 
 **Component 6: CardHoverEffects**
 - Purpose: Visual feedback system for all cards on the homepage
@@ -295,9 +304,10 @@ Based on the project constitution principles:
 
 **Component 8: NavigationBar**
 - Purpose: Top navigation with RoboCraft logo, LEARN FREE, MODULES, TECHNOLOGY, GitHub link, Search bar, Dark/Light mode toggle
-- Props: navItems, themeToggle, searchConfig, githubLink
+- Props: navItems, themeToggle, searchConfig, githubLink, isMobile
 - Style: Clean, professional header with RoboCraft branding, orange accent for nav items
-- Behavior: Responsive navigation, theme switching with persistence, search functionality
+- Behavior: Responsive navigation with hamburger menu on mobile (< 768px), theme switching with persistence, search functionality
+- Mobile: Transforms to hamburger menu icon, expands/collapses with smooth animation, maintains orange accent
 
 **Component 9: FooterSection**
 - Purpose: Comprehensive footer with Docs (Textbook), Community (GitHub, LinkedIn), More (Codebase), Copyright
@@ -362,9 +372,14 @@ Based on the project constitution principles:
 23. Remove "Edit this page" link and icon from all docs pages
 24. Replace /docs footer with homepage footer
 25. Implement prominency effects throughout for professional appearance
-26. Implement responsive design
-27. Add accessibility attributes
-28. Optimize performance for 3D model interactions and font loading
+26. Implement responsive design with mobile breakpoints (< 768px)
+27. Implement hamburger menu for navbar on mobile with smooth expand/collapse animation
+28. Implement vertical stacking for hero section on mobile (content above, robot below)
+29. Implement mobile-responsive robot preview with appropriate scaling
+30. Implement mobile-accessible docs sidebar with toggle button and overlay behavior
+31. Ensure all touch targets meet 44px minimum on mobile
+32. Add accessibility attributes
+33. Optimize performance for 3D model interactions and font loading
 
 ## Phase 3: Risk Analysis
 
@@ -405,6 +420,8 @@ Based on the project constitution principles:
 - [ ] Interactive 3D Robot Preview has subtle animations (breathing motion, eye glow, joint articulation)
 - [ ] Interactive 3D Robot Preview does not dominate text content on left side
 - [ ] Content positioned on left, Interactive 3D Robot Preview positioned on right for hierarchical look
+- [ ] On mobile, hero section stacks vertically with content above and robot below
+- [ ] On mobile, Interactive 3D Robot Preview scales appropriately without breaking layout
 - [ ] "Start Building" CTA changed to "Start Learning" and redirects to /docs
 - [ ] "View Modules" CTA redirects to modules section below
 - [ ] Bottom CTA "Get Started Today" redirects to /docs
@@ -422,6 +439,9 @@ Based on the project constitution principles:
 - [ ] Dark/Light mode toggle button uses same icon as /docs
 - [ ] Same logo appears in both homepage and docs navbar
 - [ ] Navbar design is unified across homepage and docs
+- [ ] On mobile (< 768px), navbar transforms to hamburger menu icon
+- [ ] Hamburger menu expands/collapses smoothly with all navigation items
+- [ ] Mobile menu maintains orange accent color for consistency
 - [ ] Footer includes Docs section (Textbook link)
 - [ ] Footer includes Community section (GitHub: github.com/sheikh-mohammad, LinkedIn: linkedin.com/in/sheikh-mohammad-li/)
 - [ ] Footer includes More section (Codebase with repo link)
@@ -439,6 +459,10 @@ Based on the project constitution principles:
 - [ ] /docs navbar matches homepage navbar exactly
 - [ ] "Edit this page" link and icon removed from all docs pages
 - [ ] /docs footer replaced with homepage footer
+- [ ] On mobile, docs sidebar is hidden by default
+- [ ] Docs sidebar toggle button is visible and accessible on mobile
+- [ ] Docs sidebar overlays content on mobile without breaking layout
+- [ ] Docs sidebar closes automatically when item is selected on mobile
 - [ ] Prominency effects applied throughout for professional appearance
 - [ ] Visual hierarchy established through depth and elevation
 - [ ] Consistent visual language maintained across all components
