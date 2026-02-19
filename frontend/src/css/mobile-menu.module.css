@@ -40,6 +40,9 @@
 /* Desktop Navigation - Hidden on Mobile */
 .desktopNav {
   display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 /* Mobile Menu Overlay */

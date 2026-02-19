@@ -74,12 +74,7 @@ const Navbar = () => {
         </button>
 
         {/* Navigation Links (Desktop) */}
-        <div className={mobileStyles.desktopNav} style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '2rem',
-          flexWrap: 'wrap'
-        }}>
+        <div className={mobileStyles.desktopNav}>
           <a
             href="/hackathon-i-physical-ai-and-humanoid-robotics-textbook/docs"
             className={`${styles.bodyText}`}

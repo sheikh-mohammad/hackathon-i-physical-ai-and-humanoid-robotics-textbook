@@ -220,7 +220,7 @@
 - [X] T107 Implement user preference persistence using localStorage in frontend/src/utils/colorMode.js
 - [X] T108 Update Dark/Light mode toggle button to use same icon as /docs in frontend/src/components/Navbar.jsx
 - [X] T109 Ensure all components support both color modes in frontend/src/components/
-- [ ] T110 Test color mode switching across all pages and components
+- [X] T110 Test color mode switching across all pages and components
 
 ## Phase 13: Navigation Enhancement
 
@@ -242,7 +242,7 @@
 - [X] T119 Add More section with Codebase (repo link) in frontend/src/components/Footer.jsx
 - [X] T120 Update copyright to "Copyright © 2026 RoboCraft. Made with ❤️ by Sheikh Mohammad." in frontend/src/components/Footer.jsx
 - [X] T121 Apply same footer to /docs by updating frontend/docusaurus.config.js
-- [ ] T122 Test all footer links redirect correctly
+- [X] T122 Test all footer links redirect correctly
 
 ## Phase 15: Docusaurus Docs Integration
 
@@ -267,7 +267,7 @@
 - [X] T134 Apply prominency effects to navigation and footer in frontend/src/components/
 - [X] T135 Apply prominency effects to docs pages in frontend/src/css/custom.css
 - [X] T136 Ensure consistent visual language across all components
-- [ ] T137 Test prominency effects in both dark and light modes
+- [X] T137 Test prominency effects in both dark and light modes
 
 ## Phase 10: Remove Old Components & Polish
 
@@ -315,19 +315,19 @@
 
 **Purpose**: Ensure all new features work together and meet quality standards
 
-- [ ] T138 Verify Google Sans Code font renders correctly across all pages (homepage and docs)
-- [ ] T139 Test Dark/Light mode switching across all components and pages
-- [ ] T140 Verify GitHub link in navbar redirects correctly to github.com/sheikh-mohammad
-- [ ] T141 Test search bar functionality in navbar
-- [ ] T142 Verify footer links redirect correctly (GitHub, LinkedIn, Codebase)
+- [X] T138 Verify Google Sans Code font renders correctly across all pages (homepage and docs)
+- [X] T139 Test Dark/Light mode switching across all components and pages
+- [X] T140 Verify GitHub link in navbar redirects correctly to github.com/sheikh-mohammad
+- [X] T141 Test search bar functionality in navbar
+- [X] T142 Verify footer links redirect correctly (GitHub, LinkedIn, Codebase)
 - [X] T143 Confirm "Edit this page" link is removed from all docs pages
 - [X] T144 Verify docs navbar matches homepage navbar exactly
 - [X] T145 Verify docs footer matches homepage footer exactly
-- [ ] T146 Test prominency effects in both dark and light modes
+- [X] T146 Test prominency effects in both dark and light modes
 - [ ] T147 Run Lighthouse audit and ensure scores meet requirements (performance >= 90, accessibility >= 95)
 - [ ] T148 Test responsive design on mobile, tablet, and desktop
 - [ ] T149 Verify color mode preference persists across sessions
-- [ ] T150 Test all CTAs redirect to correct destinations
+- [X] T150 Test all CTAs redirect to correct destinations
 - [X] T151 Verify same logo appears in both homepage and docs navbar
 - [ ] T152 Run cross-browser compatibility tests (Chrome, Firefox, Safari, Edge)
 - [ ] T153 Validate WCAG 2.1 AA compliance in both color modes
