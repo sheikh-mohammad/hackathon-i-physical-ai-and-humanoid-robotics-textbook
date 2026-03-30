@@ -133,7 +133,7 @@ export default function HeroSection() {
       <div
         className={styles.radialGradient}
         style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(249, 115, 22, 0.1), transparent 80%)`
+          background: `radial-gradient(600px circle at ${'${mousePosition.x}'}px ${'${mousePosition.y}'}px, rgba(249, 115, 22, 0.1), transparent 80%)`
         }}
       />
 
