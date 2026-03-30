@@ -110,6 +110,7 @@ export default function RoboCraftHomepage() {
 **File: `src/components/RoboCraftHomepage/HeroSection.jsx`**
 
 ```jsx
+{% raw %}
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
@@ -133,7 +134,7 @@ export default function HeroSection() {
       <div
         className={styles.radialGradient}
         style={{
-          background: `radial-gradient(600px circle at ${'${mousePosition.x}'}px ${'${mousePosition.y}'}px, rgba(249, 115, 22, 0.1), transparent 80%)`
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(249, 115, 22, 0.1), transparent 80%)`
         }}
       />
 
@@ -177,6 +178,7 @@ export default function HeroSection() {
     </section>
   );
 }
+{% endraw %}
 ```
 
 ## Step 4: Update Main Homepage
